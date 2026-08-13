@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-13T03:50:22.714Z",
+  "generated_at": "2026-08-13T03:52:40.566Z",
   "source": "komarket-sync",
   "rules_version": 3,
   "plugins": [
@@ -86,7 +86,6 @@
         "bookstore"
       ],
       "screenshots": [
-        "https://cdn.buymeacoffee.com/buttons/default-orange.png",
         "https://raw.githubusercontent.com/ZlibraryKO/zlibrary.koplugin/main/assets/search_and_download.gif"
       ]
     },
@@ -117,14 +116,14 @@
         "other"
       ],
       "screenshots": [
-        "https://ko-fi.com/img/githubbutton_sm.svg",
         "https://raw.githubusercontent.com/AndyHazz/bookshelf.koplugin/master/assets/bookshelf-logo.png",
         "https://github.com/user-attachments/assets/82f95a3e-7914-4236-855f-31d8dd09d83c",
         "https://github.com/user-attachments/assets/574976b3-c82d-4eeb-a8ac-848ea113aa35",
         "https://github.com/user-attachments/assets/abcdf0b2-a06b-46d4-9055-e710f2a124b5",
         "https://github.com/user-attachments/assets/b916c194-7423-4418-96c3-d0367119f45c",
         "https://github.com/user-attachments/assets/95799321-18fe-4495-84f4-73388a1ecc35",
-        "https://raw.githubusercontent.com/AndyHazz/bookshelf.koplugin/master/assets/hero-grid.png"
+        "https://raw.githubusercontent.com/AndyHazz/bookshelf.koplugin/master/assets/hero-grid.png",
+        "https://raw.githubusercontent.com/AndyHazz/bookshelf.koplugin/master/assets/start-menu.png"
       ]
     },
     {
@@ -768,9 +767,7 @@
       "categories": [
         "other"
       ],
-      "screenshots": [
-        "https://ko-fi.com/img/githubbutton_sm.svg"
-      ]
+      "screenshots": []
     },
     {
       "id": "Euphoriyy/appearance.koplugin",
@@ -812,7 +809,6 @@
         "beautify"
       ],
       "screenshots": [
-        "https://ko-fi.com/img/githubbutton_sm.svg",
         "https://raw.githubusercontent.com/Euphoriyy/appearance.koplugin/master/img/koreader.png",
         "https://raw.githubusercontent.com/Euphoriyy/appearance.koplugin/master/img/appbar.settings.svg"
       ]
@@ -1103,14 +1099,14 @@
         "other"
       ],
       "screenshots": [
-        "https://ko-fi.com/img/githubbutton_sm.svg",
         "https://github.com/user-attachments/assets/c12e7ab1-e3a9-4611-be17-0539527b6efc",
         "https://github.com/user-attachments/assets/4a3d2fb9-cc51-4342-a952-36f23bb1925c",
         "https://github.com/user-attachments/assets/555ab8c6-d9ce-4ebc-a6ac-cfdf097ec51d",
         "https://github.com/user-attachments/assets/371b3119-119a-4ccb-9660-a63879996c48",
         "https://github.com/user-attachments/assets/ea6711c7-7c18-4bb5-a15c-871cc0b74888",
         "https://github.com/user-attachments/assets/de2d7a78-a657-40cf-8628-f0787a827147",
-        "https://github.com/user-attachments/assets/52f851b7-8955-4739-b3a7-96ff8c2cbfe6"
+        "https://github.com/user-attachments/assets/52f851b7-8955-4739-b3a7-96ff8c2cbfe6",
+        "https://github.com/user-attachments/assets/e4e5d617-98c6-40bc-8844-f23fa5837e95"
       ]
     },
     {
@@ -1140,8 +1136,7 @@
         "other"
       ],
       "screenshots": [
-        "https://raw.githubusercontent.com/xusoo/shortcutstoolbar.koplugin/main/screenshot.png",
-        "https://cdn.buymeacoffee.com/buttons/v2/default-green.png"
+        "https://raw.githubusercontent.com/xusoo/shortcutstoolbar.koplugin/main/screenshot.png"
       ]
     },
     {
@@ -1667,7 +1662,6 @@
       ],
       "screenshots": [
         "https://github.com/user-attachments/assets/e2d5d86d-3376-46a6-a265-9be218021b14",
-        "https://ko-fi.com/img/githubbutton_sm.svg",
         "https://github.com/user-attachments/assets/0b22e6fe-46ae-4f1c-82ad-01cdeca7cd70",
         "https://github.com/user-attachments/assets/66661951-c5b5-4d9c-9c4c-c1817570c885",
         "https://github.com/user-attachments/assets/cc785f42-c1ba-490d-9d4b-7643aa8bb291",
@@ -2193,9 +2187,9 @@
         "https://raw.githubusercontent.com/gytwo/quickui.koplugin/main/pictures/Qui-settings-Qui.png",
         "https://raw.githubusercontent.com/gytwo/quickui.koplugin/main/pictures/Qui-settings-QA.png",
         "https://raw.githubusercontent.com/gytwo/quickui.koplugin/main/pictures/Qui-settings-QA-panel.png",
-        "https://raw.githubusercontent.com/gytwo/quickui.koplugin/main/pictures/Qui-settings-QA-panel-addbutton.png",
         "https://raw.githubusercontent.com/gytwo/quickui.koplugin/main/pictures/Qui-settings-QA-qa.png",
-        "https://raw.githubusercontent.com/gytwo/quickui.koplugin/main/pictures/Qui-settings-QA-qa-editqa.png"
+        "https://raw.githubusercontent.com/gytwo/quickui.koplugin/main/pictures/Qui-settings-QA-qa-editqa.png",
+        "https://raw.githubusercontent.com/gytwo/quickui.koplugin/main/pictures/Qui-settings-QA-bottom.png"
       ]
     },
     {
@@ -2497,7 +2491,6 @@
         "other"
       ],
       "screenshots": [
-        "https://ko-fi.com/img/githubbutton_sm.svg",
         "https://raw.githubusercontent.com/Euphoriyy/derainbowify.koplugin/master/img/derainbowify.png",
         "https://raw.githubusercontent.com/Euphoriyy/derainbowify.koplugin/master/img/koreader.png",
         "https://raw.githubusercontent.com/Euphoriyy/derainbowify.koplugin/master/img/appbar.contrast.svg"
@@ -3026,10 +3019,8 @@
         "https://raw.githubusercontent.com/bozo22/imagebookmarks.koplugin/main/images/imageviewer.png",
         "https://raw.githubusercontent.com/bozo22/imagebookmarks.koplugin/main/images/gear.svg",
         "https://raw.githubusercontent.com/bozo22/imagebookmarks.koplugin/main/images/viewer.png",
-        "https://raw.githubusercontent.com/bozo22/imagebookmarks.koplugin/main/images/viewerbuttons.png",
         "https://raw.githubusercontent.com/bozo22/imagebookmarks.koplugin/main/images/top_tools.svg",
-        "https://raw.githubusercontent.com/bozo22/imagebookmarks.koplugin/main/images/settings.png",
-        "https://raw.githubusercontent.com/bozo22/imagebookmarks.koplugin/main/images/physicalbuttonsettings.png"
+        "https://raw.githubusercontent.com/bozo22/imagebookmarks.koplugin/main/images/settings.png"
       ]
     },
     {
@@ -6993,9 +6984,7 @@
       "categories": [
         "other"
       ],
-      "screenshots": [
-        "https://storage.ko-fi.com/cdn/kofi4.png?v=6"
-      ]
+      "screenshots": []
     },
     {
       "id": "sam-don/kogrim.koplugin",
