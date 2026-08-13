@@ -1,9 +1,11 @@
 {
   "status": "ok",
-  "started_at": "2026-08-13T02:48:39.632Z",
-  "finished_at": "2026-08-13T02:50:06.722Z",
+  "started_at": "2026-08-13T02:54:29.502Z",
+  "finished_at": "2026-08-13T02:55:30.783Z",
   "plugins_count": 200,
-  "rules_version": 1,
-  "message": "Synced 200 plugins from topic/name rules",
-  "content_sha256": "fc7ed66324aa1b2f508ca818ff5e0c46120d59e75479192fd69bf2363defc02e"
+  "candidates": 400,
+  "rejected_count": 85,
+  "rules_version": 2,
+  "message": "Synced 200 verified plugins (rules v2)",
+  "content_sha256": "7fb3f915d79eb46b5319cc26e9c0da4810866c360353d99042ed61c10c1011e3"
 }
