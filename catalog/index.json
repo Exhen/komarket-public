@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-13T07:59:51.371Z",
+  "generated_at": "2026-08-13T08:09:32.781Z",
   "source": "komarket-sync",
   "rules_version": 3,
   "plugins": [
@@ -165,14 +165,14 @@
         "beautify"
       ],
       "screenshots": [
-        "https://raw.githubusercontent.com/AnthonyGress/zen_ui.koplugin/main/icons/zen_ui.svg",
         "https://raw.githubusercontent.com/AnthonyGress/zen_ui.koplugin/main/images/quickstart/onboarding/quicksettings.png",
         "https://raw.githubusercontent.com/AnthonyGress/zen_ui.koplugin/main/images/quickstart/onboarding/library_covers_full.png",
         "https://raw.githubusercontent.com/AnthonyGress/zen_ui.koplugin/main/images/quickstart/onboarding/library_list_full.png",
         "https://raw.githubusercontent.com/AnthonyGress/zen_ui.koplugin/main/images/quickstart/onboarding/context_menu.png",
         "https://raw.githubusercontent.com/AnthonyGress/zen_ui.koplugin/main/images/quickstart/onboarding/library_context.png",
         "https://raw.githubusercontent.com/AnthonyGress/zen_ui.koplugin/main/images/quickstart/onboarding/navbar.png",
-        "https://raw.githubusercontent.com/AnthonyGress/zen_ui.koplugin/main/images/quickstart/onboarding/zen_mode.png"
+        "https://raw.githubusercontent.com/AnthonyGress/zen_ui.koplugin/main/images/quickstart/onboarding/zen_mode.png",
+        "https://raw.githubusercontent.com/AnthonyGress/zen_ui.koplugin/main/images/quickstart/onboarding/lockdown_mode.png"
       ]
     },
     {
@@ -737,9 +737,7 @@
       "categories": [
         "other"
       ],
-      "screenshots": [
-        "https://raw.githubusercontent.com/stradichenko/audiobook.koplugin/master/new_audio_logo.svg"
-      ]
+      "screenshots": []
     },
     {
       "id": "advokatb/updatesmanager.koplugin",
@@ -809,8 +807,7 @@
         "beautify"
       ],
       "screenshots": [
-        "https://raw.githubusercontent.com/Euphoriyy/appearance.koplugin/master/img/koreader.png",
-        "https://raw.githubusercontent.com/Euphoriyy/appearance.koplugin/master/img/appbar.settings.svg"
+        "https://raw.githubusercontent.com/Euphoriyy/appearance.koplugin/master/img/koreader.png"
       ]
     },
     {
@@ -2148,9 +2145,7 @@
       "categories": [
         "sync"
       ],
-      "screenshots": [
-        "https://raw.githubusercontent.com/d0nizam/kosyncthing_plus.koplugin/main/assets/kosyncthing-plus-logo.svg"
-      ]
+      "screenshots": []
     },
     {
       "id": "gytwo/quickui.koplugin",
@@ -2394,9 +2389,7 @@
         "sync",
         "beautify"
       ],
-      "screenshots": [
-        "https://raw.githubusercontent.com/d0nizam/syncery.koplugin/main/assets/syncery.svg"
-      ]
+      "screenshots": []
     },
     {
       "id": "DisastrousPatience83/Floating-Dictionary.koplugin",
@@ -2495,8 +2488,7 @@
       ],
       "screenshots": [
         "https://raw.githubusercontent.com/Euphoriyy/derainbowify.koplugin/master/img/derainbowify.png",
-        "https://raw.githubusercontent.com/Euphoriyy/derainbowify.koplugin/master/img/koreader.png",
-        "https://raw.githubusercontent.com/Euphoriyy/derainbowify.koplugin/master/img/appbar.contrast.svg"
+        "https://raw.githubusercontent.com/Euphoriyy/derainbowify.koplugin/master/img/koreader.png"
       ]
     },
     {
@@ -3020,9 +3012,7 @@
       "screenshots": [
         "https://raw.githubusercontent.com/bozo22/imagebookmarks.koplugin/main/images/imagebookmarks_demo.gif",
         "https://raw.githubusercontent.com/bozo22/imagebookmarks.koplugin/main/images/imageviewer.png",
-        "https://raw.githubusercontent.com/bozo22/imagebookmarks.koplugin/main/images/gear.svg",
         "https://raw.githubusercontent.com/bozo22/imagebookmarks.koplugin/main/images/viewer.png",
-        "https://raw.githubusercontent.com/bozo22/imagebookmarks.koplugin/main/images/top_tools.svg",
         "https://raw.githubusercontent.com/bozo22/imagebookmarks.koplugin/main/images/settings.png"
       ]
     },
@@ -3702,14 +3692,14 @@
         "beautify"
       ],
       "screenshots": [
-        "https://raw.githubusercontent.com/rameezk/rebind.koplugin/main/assets/rebind.svg",
         "https://raw.githubusercontent.com/rameezk/rebind.koplugin/main/screenshots/file-browser-menu.png",
         "https://raw.githubusercontent.com/rameezk/rebind.koplugin/main/screenshots/reader-tools-menu.png",
         "https://raw.githubusercontent.com/rameezk/rebind.koplugin/main/screenshots/diff-picker.png",
         "https://raw.githubusercontent.com/rameezk/rebind.koplugin/main/screenshots/sort-move-dialog.png",
         "https://raw.githubusercontent.com/rameezk/rebind.koplugin/main/screenshots/bookshelf-menu.png",
         "https://raw.githubusercontent.com/rameezk/rebind.koplugin/main/screenshots/language-picker.png",
-        "https://raw.githubusercontent.com/rameezk/rebind.koplugin/main/screenshots/language-editions.png"
+        "https://raw.githubusercontent.com/rameezk/rebind.koplugin/main/screenshots/language-editions.png",
+        "https://raw.githubusercontent.com/rameezk/rebind.koplugin/main/screenshots/translate-gaps.png"
       ]
     },
     {
