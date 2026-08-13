@@ -79,6 +79,10 @@
           "type": "array",
           "description": "Absolute image URLs extracted from repository README",
           "items": { "type": "string", "format": "uri" }
+        },
+        "editorial_note": {
+          "type": ["string", "null"],
+          "description": "Curated note from catalog/editorial.json (merged at sync/serve time; source of truth is editorial.json)"
         }
       }
     }
