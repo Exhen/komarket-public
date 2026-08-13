@@ -24,7 +24,7 @@ komarket.koplugin/  # 拷贝到 KOReader plugins/ 即可使用
    - Android：`/sdcard/koreader/plugins/`
 2. 编辑 `komarket.koplugin/config.lua`，把 `catalog_url` 改成你的 raw 地址，例如：
    ```lua
-   catalog_url = "https://raw.githubusercontent.com/<owner>/komarket-public/main/catalog/index.json",
+   catalog_url = "https://raw.githubusercontent.com/Exhen/komarket-public/main/catalog/index.json",
    ```
    可选设置 `mirror_catalog_url` 指向 KOMarket 私有服务器镜像。
 3. 重启 KOReader → **工具 / 更多工具 → 卡欧市场**。
