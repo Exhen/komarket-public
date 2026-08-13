@@ -1,8 +1,9 @@
 {
-  "status": "never",
-  "started_at": null,
-  "finished_at": null,
-  "plugins_count": 0,
+  "status": "ok",
+  "started_at": "2026-08-13T02:48:39.632Z",
+  "finished_at": "2026-08-13T02:50:06.722Z",
+  "plugins_count": 200,
   "rules_version": 1,
-  "message": "Awaiting first sync from KOMarket private server."
+  "message": "Synced 200 plugins from topic/name rules",
+  "content_sha256": "fc7ed66324aa1b2f508ca818ff5e0c46120d59e75479192fd69bf2363defc02e"
 }
