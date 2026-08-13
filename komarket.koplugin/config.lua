@@ -1,14 +1,12 @@
 --[[--
 KOMarket plugin defaults.
 
-Override catalog_url after publishing komarket-public, e.g.:
-  https://raw.githubusercontent.com/<owner>/komarket-public/main/catalog/index.json
-
+catalog_url points at the public komarket-public catalog.
 mirror_catalog_url: optional KOMarket server mirror (faster / more reliable).
 ]]
 
 local Config = {
-    -- Primary catalog (public repo JSON). Replace <owner> after first push.
+    -- Primary catalog (public repo JSON).
     catalog_url = "https://raw.githubusercontent.com/Exhen/komarket-public/main/catalog/index.json",
     -- Optional mirror served by private KOMarket web server.
     mirror_catalog_url = nil,
