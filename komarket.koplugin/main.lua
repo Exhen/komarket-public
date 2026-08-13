@@ -25,6 +25,9 @@ local KOMarket = WidgetContainer:extend{
 function KOMarket:init()
     self.ui.menu:registerToMainMenu(self)
     self._catalog = Catalog.loadCached()
+    self._categories = Catalog.loadCachedCategories()
+    self._filter_category = "all"
+    self._filter_query = nil
 end
 
 function KOMarket:addToMainMenu(menu_items)
@@ -71,20 +74,61 @@ function KOMarket:refreshCatalog(callback)
         return
     end
     self._catalog = data
+    local cats, cat_src = Catalog.fetchCategories()
+    self._categories = cats or Catalog.loadCachedCategories()
     logger.info("KOMarket: catalog ready from", src_or_err, "count", #(data.plugins or {}))
+    logger.info("KOMarket: categories from", cat_src, "count", #(self._categories or {}))
     if callback then
         callback(true)
     end
 end
 
-function KOMarket:showBrowser(filter_query)
+function KOMarket:categoryLabel(id)
+    if not id or id == "all" then
+        return _("全部")
+    end
+    return Catalog.categoryName(self._categories, id)
+end
+
+function KOMarket:formatCategoryTags(plugin)
+    local cats = plugin.categories or {}
+    if #cats == 0 then
+        return ""
+    end
+    local names = {}
+    for _, cid in ipairs(cats) do
+        names[#names + 1] = self:categoryLabel(cid)
+    end
+    return table.concat(names, "/")
+end
+
+function KOMarket:closeBrowser()
+    if self._browser_menu then
+        UIManager:close(self._browser_menu)
+        self._browser_menu = nil
+    end
+end
+
+function KOMarket:showBrowser(filter_query, category_id)
+    if filter_query ~= nil then
+        self._filter_query = filter_query
+        if filter_query == "" then
+            self._filter_query = nil
+        end
+    end
+    if category_id ~= nil then
+        self._filter_category = category_id
+    end
+
     local catalog = self._catalog or Catalog.loadCached()
     if not catalog or type(catalog.plugins) ~= "table" then
         self:notify(_("目录为空，请先刷新。"))
         return
     end
 
-    local plugins = Catalog.filterPlugins(catalog.plugins, filter_query)
+    local q = self._filter_query
+    local cat = self._filter_category or "all"
+    local plugins = Catalog.filterPlugins(catalog.plugins, q, cat)
     table.sort(plugins, function(a, b)
         local sa, sb = tonumber(a.stars) or 0, tonumber(b.stars) or 0
         if sa == sb then
@@ -95,9 +139,15 @@ function KOMarket:showBrowser(filter_query)
 
     local item_table = {
         {
+            text = _("📂 分类筛选…"),
+            callback = function()
+                self:showCategoryPicker()
+            end,
+        },
+        {
             text = _("🔍 搜索…"),
             callback = function()
-                self:showSearch(filter_query)
+                self:showSearch(q)
             end,
         },
         {
@@ -106,7 +156,7 @@ function KOMarket:showBrowser(filter_query)
                 self:withNetwork(function()
                     self:refreshCatalog(function(ok)
                         if ok then
-                            self:showBrowser(filter_query)
+                            self:showBrowser()
                         end
                     end)
                 end)
@@ -114,14 +164,28 @@ function KOMarket:showBrowser(filter_query)
         },
     }
 
-    if filter_query and filter_query ~= "" then
+    if cat and cat ~= "all" then
         item_table[#item_table + 1] = {
-            text = T(_("清除搜索：%1"), filter_query),
+            text = T(_("清除分类：%1"), self:categoryLabel(cat)),
             callback = function()
-                self:showBrowser(nil)
+                self:showBrowser(q, "all")
             end,
         }
     end
+
+    if q and q ~= "" then
+        item_table[#item_table + 1] = {
+            text = T(_("清除搜索：%1"), q),
+            callback = function()
+                self:showBrowser("", cat)
+            end,
+        }
+    end
+
+    item_table[#item_table + 1] = {
+        text = T(_("—— %1 个插件 ——"), tostring(#plugins)),
+        enabled = false,
+    }
 
     if #plugins == 0 then
         item_table[#item_table + 1] = {
@@ -134,7 +198,13 @@ function KOMarket:showBrowser(filter_query)
         local installed = Installer.isInstalled(plugin.install_dirname)
         local stars = tonumber(plugin.stars) or 0
         local mark = installed and "✓ " or ""
-        local text = T("%1%2  ★%3", mark, plugin.name or plugin.slug or plugin.id, stars)
+        local tags = self:formatCategoryTags(plugin)
+        local text
+        if tags ~= "" then
+            text = T("%1%2  [%3] ★%4", mark, plugin.name or plugin.slug or plugin.id, tags, stars)
+        else
+            text = T("%1%2  ★%3", mark, plugin.name or plugin.slug or plugin.id, stars)
+        end
         item_table[#item_table + 1] = {
             text = text,
             callback = function()
@@ -144,11 +214,19 @@ function KOMarket:showBrowser(filter_query)
     end
 
     local title = _("卡欧市场")
-    if filter_query and filter_query ~= "" then
-        title = T(_("卡欧市场 · %1"), filter_query)
+    local parts = {}
+    if cat and cat ~= "all" then
+        parts[#parts + 1] = self:categoryLabel(cat)
+    end
+    if q and q ~= "" then
+        parts[#parts + 1] = q
+    end
+    if #parts > 0 then
+        title = T(_("卡欧市场 · %1"), table.concat(parts, " · "))
     end
     title = title .. "  v" .. tostring(VERSION)
 
+    self:closeBrowser()
     local menu = Menu:new{
         title = title,
         item_table = item_table,
@@ -160,6 +238,48 @@ function KOMarket:showBrowser(filter_query)
     }
     UIManager:show(menu)
     self._browser_menu = menu
+end
+
+function KOMarket:showCategoryPicker()
+    local catalog = self._catalog or Catalog.loadCached()
+    local all_plugins = (catalog and catalog.plugins) or {}
+    local categories = self._categories or Catalog.loadCachedCategories()
+    local current = self._filter_category or "all"
+
+    local function countFor(cid)
+        if cid == "all" then
+            return #all_plugins
+        end
+        return #Catalog.filterByCategory(all_plugins, cid)
+    end
+
+    local item_table = {
+        {
+            text = (current == "all" and "✓ " or "") .. T(_("全部（%1）"), tostring(countFor("all"))),
+            callback = function()
+                self:showBrowser(self._filter_query, "all")
+            end,
+        },
+    }
+
+    for _, c in ipairs(categories) do
+        local cid = c.id
+        local label = c.name or cid
+        local mark = current == cid and "✓ " or ""
+        item_table[#item_table + 1] = {
+            text = T("%1%2（%3）", mark, label, tostring(countFor(cid))),
+            callback = function()
+                self:showBrowser(self._filter_query, cid)
+            end,
+        }
+    end
+
+    UIManager:show(Menu:new{
+        title = _("选择分类"),
+        item_table = item_table,
+        is_borderless = true,
+        is_popout = false,
+    })
 end
 
 function KOMarket:showSearch(prefill)
@@ -182,7 +302,7 @@ function KOMarket:showSearch(prefill)
                     callback = function()
                         local q = dialog:getInputText()
                         UIManager:close(dialog)
-                        self:showBrowser(q)
+                        self:showBrowser(q, self._filter_category)
                     end,
                 },
             },
@@ -194,55 +314,43 @@ end
 
 function KOMarket:showPluginActions(plugin)
     local installed = Installer.isInstalled(plugin.install_dirname)
+    local tags = self:formatCategoryTags(plugin)
     local lines = {
         plugin.name or plugin.id,
         "",
         plugin.summary or "",
         "",
-        T(_("作者：%1"), plugin.owner or "?"),
-        T(_("仓库：%1/%2"), plugin.owner or "?", plugin.repo or "?"),
-        T(_("目录名：%1"), plugin.install_dirname or "?"),
-        T(_("更新：%1"), plugin.updated_at or "?"),
-        T(_("星标：%1"), tostring(plugin.stars or 0)),
-        installed and _("状态：已安装") or _("状态：未安装"),
     }
+    if plugin.editorial_note and plugin.editorial_note ~= "" then
+        lines[#lines + 1] = T(_("编辑注：%1"), plugin.editorial_note)
+        lines[#lines + 1] = ""
+    end
+    lines[#lines + 1] = T(_("作者：%1"), plugin.owner or "?")
+    lines[#lines + 1] = T(_("仓库：%1/%2"), plugin.owner or "?", plugin.repo or "?")
+    lines[#lines + 1] = T(_("目录名：%1"), plugin.install_dirname or "?")
+    if tags ~= "" then
+        lines[#lines + 1] = T(_("分类：%1"), tags)
+    end
+    lines[#lines + 1] = T(_("更新：%1"), plugin.updated_at or "?")
+    lines[#lines + 1] = T(_("星标：%1"), tostring(plugin.stars or 0))
+    lines[#lines + 1] = installed and _("状态：已安装") or _("状态：未安装")
     local detail = table.concat(lines, "\n")
 
-    local buttons = {
-        {
-            {
-                text = _("关闭"),
-                callback = function() end,
-            },
-        },
-    }
-
+    local ok_text = _("安装")
+    local ok_callback = function()
+        self:confirmInstall(plugin, false)
+    end
     if installed then
-        buttons[1][#buttons[1] + 1] = {
-            text = _("更新/重装"),
-            callback = function()
-                self:confirmInstall(plugin, true)
-            end,
-        }
-        buttons[1][#buttons[1] + 1] = {
-            text = _("卸载"),
-            callback = function()
-                self:confirmUninstall(plugin)
-            end,
-        }
-    else
-        buttons[1][#buttons[1] + 1] = {
-            text = _("安装"),
-            callback = function()
-                self:confirmInstall(plugin, false)
-            end,
-        }
+        ok_text = _("更新/重装")
+        ok_callback = function()
+            self:confirmInstall(plugin, true)
+        end
     end
 
     UIManager:show(ConfirmBox:new{
         text = detail,
-        ok_text = buttons[1][#buttons[1]].text,
-        ok_callback = buttons[1][#buttons[1]].callback,
+        ok_text = ok_text,
+        ok_callback = ok_callback,
         cancel_text = _("关闭"),
     })
 end

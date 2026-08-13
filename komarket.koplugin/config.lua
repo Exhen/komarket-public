@@ -8,8 +8,11 @@ mirror_catalog_url: optional KOMarket server mirror (faster / more reliable).
 local Config = {
     -- Primary catalog (public repo JSON).
     catalog_url = "https://raw.githubusercontent.com/Exhen/komarket-public/main/catalog/index.json",
+    -- Categories definition (optional; fallback built-in labels used if fetch fails).
+    categories_url = "https://raw.githubusercontent.com/Exhen/komarket-public/main/catalog/categories.json",
     -- Optional mirror served by private KOMarket web server.
     mirror_catalog_url = nil,
+    mirror_categories_url = nil,
     -- Allowlist host suffixes for download_url.
     allowed_download_hosts = {
         "github.com",

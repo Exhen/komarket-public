@@ -19,6 +19,20 @@ local Catalog = {}
 
 local CACHE_DIR = DataStorage:getDataDir() .. "/cache/komarket"
 local CACHE_FILE = CACHE_DIR .. "/index.json"
+local CATEGORIES_CACHE_FILE = CACHE_DIR .. "/categories.json"
+
+local DEFAULT_CATEGORIES = {
+    { id = "beautify", name = "美化" },
+    { id = "sync", name = "同步" },
+    { id = "download", name = "下载" },
+    { id = "bookstore", name = "三方书库" },
+    { id = "llm", name = "LLM" },
+    { id = "rss", name = "RSS" },
+    { id = "ime", name = "输入法" },
+    { id = "remote", name = "遥控" },
+    { id = "comic", name = "漫画" },
+    { id = "other", name = "其他" },
+}
 local MAX_REDIRECTS = 5
 
 local function ensureCacheDir()
@@ -174,16 +188,91 @@ function Catalog.fetchIndex(opts)
     return nil, last_err or "no catalog url configured"
 end
 
-function Catalog.filterPlugins(plugins, query)
-    if not query or query == "" then
+function Catalog.categoriesUrls()
+    local urls = {}
+    if Config.mirror_categories_url and Config.mirror_categories_url ~= "" then
+        urls[#urls + 1] = Config.mirror_categories_url
+    end
+    if Config.categories_url and Config.categories_url ~= "" then
+        urls[#urls + 1] = Config.categories_url
+    end
+    -- Derive from catalog URL when possible
+    for _, catalog_url in ipairs(Catalog.catalogUrls()) do
+        local derived = catalog_url:gsub("index%.json$", "categories.json")
+        if derived ~= catalog_url then
+            urls[#urls + 1] = derived
+        end
+    end
+    return urls
+end
+
+function Catalog.loadCachedCategories()
+    local raw = readFile(CATEGORIES_CACHE_FILE)
+    if raw and raw ~= "" then
+        local ok, data = pcall(JSON.decode, raw)
+        if ok and type(data) == "table" and type(data.categories) == "table" then
+            return data.categories
+        end
+    end
+    return DEFAULT_CATEGORIES
+end
+
+function Catalog.fetchCategories()
+    local last_err
+    for _, url in ipairs(Catalog.categoriesUrls()) do
+        local body, err = httpGet(url, 256 * 1024)
+        if body then
+            local ok, data = pcall(JSON.decode, body)
+            if ok and type(data) == "table" and type(data.categories) == "table" then
+                writeFile(CATEGORIES_CACHE_FILE, body)
+                return data.categories, url
+            end
+            last_err = "invalid categories JSON"
+        else
+            last_err = err
+        end
+    end
+    return Catalog.loadCachedCategories(), last_err and ("fallback:" .. tostring(last_err)) or "builtin"
+end
+
+function Catalog.categoryName(categories, id)
+    for _, c in ipairs(categories or DEFAULT_CATEGORIES) do
+        if c.id == id then
+            return c.name or id
+        end
+    end
+    return id
+end
+
+function Catalog.filterByCategory(plugins, category_id)
+    if not category_id or category_id == "" or category_id == "all" then
         return plugins
+    end
+    local out = {}
+    for _, p in ipairs(plugins or {}) do
+        local cats = p.categories or {}
+        for _, cid in ipairs(cats) do
+            if cid == category_id then
+                out[#out + 1] = p
+                break
+            end
+        end
+    end
+    return out
+end
+
+function Catalog.filterPlugins(plugins, query, category_id)
+    local list = Catalog.filterByCategory(plugins, category_id)
+    if not query or query == "" then
+        return list
     end
     query = string.lower(query)
     local out = {}
-    for _, p in ipairs(plugins or {}) do
+    for _, p in ipairs(list or {}) do
         local hay = table.concat({
             tostring(p.name or ""),
             tostring(p.summary or ""),
+            tostring(p.editorial_note or ""),
             tostring(p.owner or ""),
             tostring(p.repo or ""),
             table.concat(p.topics or {}, " "),
