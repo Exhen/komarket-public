@@ -5,17 +5,21 @@ HTTP helpers and catalog fetch for KOMarket.
 local DataStorage = require("datastorage")
 local JSON = require("json")
 local http = require("socket.http")
-local ltn12 = require("ltn12")
 local socket = require("socket")
+local socketurl = require("socket.url")
 local socketutil = require("socketutil")
 local lfs = require("libs/libkoreader-lfs")
 local logger = require("logger")
 local Config = require("config")
 
+-- Ensure LuaSec is loaded so https:// URLs work via LuaSocket scheme handling.
+pcall(require, "ssl.https")
+
 local Catalog = {}
 
 local CACHE_DIR = DataStorage:getDataDir() .. "/cache/komarket"
 local CACHE_FILE = CACHE_DIR .. "/index.json"
+local MAX_REDIRECTS = 5
 
 local function ensureCacheDir()
     local attr = lfs.attributes(CACHE_DIR)
@@ -66,50 +70,70 @@ function Catalog.loadCached()
     return data
 end
 
+local function isRedirect(code)
+    code = tonumber(code)
+    return code == 301 or code == 302 or code == 303 or code == 307 or code == 308
+end
+
 local function httpGet(url, max_bytes)
-    local chunks = {}
-    local total = 0
-    local size_ok = true
+    local current = url
+    for _ = 0, MAX_REDIRECTS do
+        local chunks = {}
+        local total = 0
+        local sink_error
 
-    socketutil:set_timeout(Config.connect_timeout_s, Config.request_timeout_s)
-    local request = {
-        url = url,
-        method = "GET",
-        headers = {
-            ["User-Agent"] = Config.user_agent,
-            ["Accept"] = "application/json",
-        },
-        sink = ltn12.sink.simplify(function(chunk, err_msg)
-            if err_msg then
-                return nil, err_msg
-            end
-            if chunk then
-                total = total + #chunk
-                if total > max_bytes then
-                    size_ok = false
-                    return nil, "response too large"
+        socketutil:set_timeout(Config.connect_timeout_s, Config.request_timeout_s)
+        -- socket.skip(1, http.request(...)) => code, headers, status
+        local code, headers, status = socket.skip(1, http.request({
+            url = current,
+            method = "GET",
+            headers = {
+                ["User-Agent"] = Config.user_agent or socketutil.USER_AGENT,
+                ["Accept"] = "application/json,text/plain,*/*",
+                ["Connection"] = "close",
+            },
+            sink = function(chunk, err_msg)
+                if err_msg then
+                    sink_error = err_msg
+                    return nil, err_msg
                 end
-                chunks[#chunks + 1] = chunk
+                if chunk then
+                    total = total + #chunk
+                    if total > max_bytes then
+                        sink_error = "response too large"
+                        return nil, sink_error
+                    end
+                    chunks[#chunks + 1] = chunk
+                end
+                return 1
+            end,
+            redirect = false,
+        }))
+        socketutil:reset_timeout()
+
+        if sink_error then
+            return nil, sink_error
+        end
+        if not code then
+            return nil, status or "request failed"
+        end
+
+        local numeric = tonumber(code) or 0
+        if numeric >= 200 and numeric < 300 then
+            return table.concat(chunks), headers
+        end
+        if isRedirect(numeric) then
+            local loc = headers and (headers.location or headers.Location)
+            if not loc then
+                return nil, "redirect without Location"
             end
-            return true
-        end),
-        redirect = true,
-    }
-
-    local ok, code, headers = socket.skip(1, http.request(request))
-    socketutil:reset_timeout()
-
-    if not size_ok then
-        return nil, "response too large"
+            current = socketurl.absolute(current, loc)
+            logger.info("KOMarket: redirect", numeric, "->", current)
+        else
+            return nil, status or ("HTTP " .. tostring(code))
+        end
     end
-    if not ok then
-        return nil, tostring(code or "request failed")
-    end
-    local status = tonumber(code) or 0
-    if status < 200 or status >= 300 then
-        return nil, "HTTP " .. tostring(code)
-    end
-    return table.concat(chunks), headers
+    return nil, "too many redirects"
 end
 
 function Catalog.catalogUrls()

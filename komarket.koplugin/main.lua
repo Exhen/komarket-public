@@ -30,7 +30,7 @@ end
 function KOMarket:addToMainMenu(menu_items)
     menu_items.komarket = {
         text = _("卡欧市场"),
-        sorting_hint = "more_tools",
+        sorting_hint = "setting",
         callback = function()
             self:openMarket()
         end,
