@@ -74,6 +74,11 @@
               "other"
             ]
           }
+        },
+        "screenshots": {
+          "type": "array",
+          "description": "Absolute image URLs extracted from repository README",
+          "items": { "type": "string", "format": "uri" }
         }
       }
     }
