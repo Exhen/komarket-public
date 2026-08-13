@@ -1,11 +1,23 @@
 {
   "status": "ok",
-  "started_at": "2026-08-13T02:54:29.502Z",
-  "finished_at": "2026-08-13T02:55:30.783Z",
+  "started_at": "2026-08-13T03:38:57.884Z",
+  "finished_at": "2026-08-13T03:40:04.653Z",
   "plugins_count": 200,
   "candidates": 400,
-  "rejected_count": 85,
-  "rules_version": 2,
-  "message": "Synced 200 verified plugins (rules v2)",
-  "content_sha256": "7fb3f915d79eb46b5319cc26e9c0da4810866c360353d99042ed61c10c1011e3"
+  "rejected_count": 86,
+  "rules_version": 3,
+  "category_counts": {
+    "beautify": 19,
+    "sync": 25,
+    "download": 7,
+    "bookstore": 15,
+    "llm": 10,
+    "rss": 2,
+    "ime": 1,
+    "remote": 1,
+    "comic": 5,
+    "other": 129
+  },
+  "message": "Synced 200 verified plugins (rules v3)",
+  "content_sha256": "95e1d3b26bb2995b65c0e99c1fe8a40bbd2d40aa455971005fa32bf8e0378fa4"
 }
