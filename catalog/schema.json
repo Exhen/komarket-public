@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://komarket.local/catalog/schema.json",
+  "title": "KOMarket Catalog Index",
+  "type": "object",
+  "required": ["schema_version", "generated_at", "plugins"],
+  "properties": {
+    "schema_version": { "type": "integer", "minimum": 1 },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "source": { "type": "string" },
+    "plugins": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/plugin" }
+    }
+  },
+  "$defs": {
+    "plugin": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "slug",
+        "summary",
+        "owner",
+        "repo",
+        "install_dirname",
+        "download_url"
+      ],
+      "properties": {
+        "id": { "type": "string", "description": "Stable id, usually owner/repo" },
+        "name": { "type": "string" },
+        "slug": { "type": "string" },
+        "summary": { "type": "string" },
+        "description": { "type": "string" },
+        "owner": { "type": "string" },
+        "repo": { "type": "string" },
+        "homepage": { "type": "string" },
+        "topics": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "stars": { "type": "integer", "minimum": 0 },
+        "updated_at": { "type": "string" },
+        "latest_tag": { "type": ["string", "null"] },
+        "latest_commit": { "type": ["string", "null"] },
+        "download_url": { "type": "string" },
+        "download_source": {
+          "type": "string",
+          "enum": ["release_asset", "zipball", "mirror"]
+        },
+        "sha256": { "type": ["string", "null"] },
+        "install_dirname": {
+          "type": "string",
+          "pattern": "^.+\\.koplugin$"
+        },
+        "koreader_min": { "type": ["string", "null"] },
+        "koreader_max": { "type": ["string", "null"] },
+        "license": { "type": ["string", "null"] },
+        "categories": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}
