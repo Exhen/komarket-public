@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-13T03:34:45.505Z",
+  "generated_at": "2026-08-13T03:40:04.652Z",
   "source": "komarket-sync",
   "rules_version": 3,
   "plugins": [
@@ -22,7 +22,7 @@
         "plugin",
         "reader"
       ],
-      "stars": 1296,
+      "stars": 1297,
       "updated_at": "2026-08-12T00:45:04Z",
       "latest_tag": "2.1.1",
       "latest_commit": null,
@@ -63,7 +63,7 @@
         "zlibrary",
         "zlibrary-plugin"
       ],
-      "stars": 596,
+      "stars": 597,
       "updated_at": "2026-08-10T08:01:14Z",
       "latest_tag": "v1.0.45-ac22135c644bc7da0838194709b2d480079cc01f",
       "latest_commit": null,
@@ -197,7 +197,7 @@
       "topics": [
         "koreader-plugin"
       ],
-      "stars": 426,
+      "stars": 427,
       "updated_at": "2026-08-10T04:55:37Z",
       "latest_tag": "v1.12.0",
       "latest_commit": null,
@@ -254,7 +254,7 @@
       "topics": [
         "koreader-plugin"
       ],
-      "stars": 366,
+      "stars": 367,
       "updated_at": "2026-07-27T08:52:13Z",
       "latest_tag": "v5.22.0",
       "latest_commit": null,
@@ -2945,33 +2945,6 @@
       ]
     },
     {
-      "id": "wtb04/wireguard.koplugin",
-      "name": "wireguard",
-      "slug": "wtb04-wireguard-koplugin",
-      "summary": "WireGuard VPN plugin for KOReader",
-      "description": "WireGuard VPN plugin for KOReader",
-      "owner": "wtb04",
-      "repo": "wireguard.koplugin",
-      "homepage": "https://woutertenbrinke.nl/projects/koreader-wireguard",
-      "topics": [],
-      "stars": 5,
-      "updated_at": "2026-06-07T20:44:52Z",
-      "latest_tag": "v1.0.3",
-      "latest_commit": null,
-      "download_url": "https://github.com/wtb04/wireguard.koplugin/releases/download/v1.0.3/wireguard.koplugin-v1.0.3.zip",
-      "download_source": "release_asset",
-      "sha256": null,
-      "install_dirname": "wireguard.koplugin",
-      "plugin_path": ".",
-      "layout": "root-files",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": "MIT",
-      "categories": [
-        "other"
-      ]
-    },
-    {
       "id": "dani84bs/kojump.koplugin",
       "name": "kojump",
       "slug": "dani84bs-kojump-koplugin",
@@ -2993,6 +2966,33 @@
       "download_source": "release_asset",
       "sha256": null,
       "install_dirname": "kojump.koplugin",
+      "plugin_path": ".",
+      "layout": "root-files",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": "MIT",
+      "categories": [
+        "other"
+      ]
+    },
+    {
+      "id": "wtb04/wireguard.koplugin",
+      "name": "wireguard",
+      "slug": "wtb04-wireguard-koplugin",
+      "summary": "WireGuard VPN plugin for KOReader",
+      "description": "WireGuard VPN plugin for KOReader",
+      "owner": "wtb04",
+      "repo": "wireguard.koplugin",
+      "homepage": "https://woutertenbrinke.nl/projects/koreader-wireguard",
+      "topics": [],
+      "stars": 5,
+      "updated_at": "2026-06-07T20:44:52Z",
+      "latest_tag": "v1.0.3",
+      "latest_commit": null,
+      "download_url": "https://github.com/wtb04/wireguard.koplugin/releases/download/v1.0.3/wireguard.koplugin-v1.0.3.zip",
+      "download_source": "release_asset",
+      "sha256": null,
+      "install_dirname": "wireguard.koplugin",
       "plugin_path": ".",
       "layout": "root-files",
       "koreader_min": null,
@@ -4165,33 +4165,6 @@
       ]
     },
     {
-      "id": "HighLibrarian/BookKeeper.koplugin",
-      "name": "BookKeeper",
-      "slug": "highlibrarian-bookkeeper-koplugin",
-      "summary": "a KoReader plugin that sends reading stats through a webhook.",
-      "description": "a KoReader plugin that sends reading stats through a webhook.",
-      "owner": "HighLibrarian",
-      "repo": "BookKeeper.koplugin",
-      "homepage": "https://github.com/HighLibrarian/BookKeeper.koplugin",
-      "topics": [],
-      "stars": 1,
-      "updated_at": "2026-08-05T15:45:34Z",
-      "latest_tag": null,
-      "latest_commit": null,
-      "download_url": "https://github.com/HighLibrarian/BookKeeper.koplugin/archive/refs/heads/main.zip",
-      "download_source": "zipball",
-      "sha256": null,
-      "install_dirname": "BookKeeper.koplugin",
-      "plugin_path": ".",
-      "layout": "root-files",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": null,
-      "categories": [
-        "other"
-      ]
-    },
-    {
       "id": "t2ym5u/wordle.koplugin",
       "name": "wordle",
       "slug": "t2ym5u-wordle-koplugin",
@@ -4216,6 +4189,33 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
+      "categories": [
+        "other"
+      ]
+    },
+    {
+      "id": "HighLibrarian/BookKeeper.koplugin",
+      "name": "BookKeeper",
+      "slug": "highlibrarian-bookkeeper-koplugin",
+      "summary": "a KoReader plugin that sends reading stats through a webhook.",
+      "description": "a KoReader plugin that sends reading stats through a webhook.",
+      "owner": "HighLibrarian",
+      "repo": "BookKeeper.koplugin",
+      "homepage": "https://github.com/HighLibrarian/BookKeeper.koplugin",
+      "topics": [],
+      "stars": 1,
+      "updated_at": "2026-08-05T15:45:34Z",
+      "latest_tag": null,
+      "latest_commit": null,
+      "download_url": "https://github.com/HighLibrarian/BookKeeper.koplugin/archive/refs/heads/main.zip",
+      "download_source": "zipball",
+      "sha256": null,
+      "install_dirname": "BookKeeper.koplugin",
+      "plugin_path": ".",
+      "layout": "root-files",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": null,
       "categories": [
         "other"
       ]
@@ -4461,36 +4461,6 @@
       ]
     },
     {
-      "id": "sypianski/textolimiti.koplugin",
-      "name": "textolimiti",
-      "slug": "sypianski-textolimiti-koplugin",
-      "summary": "KOReader plugin: honest reading-% by marking where the real book text starts and ends (front matter / endnotes excluded)",
-      "description": "KOReader plugin: honest reading-% by marking where the real book text starts and ends (front matter / endnotes excluded)",
-      "owner": "sypianski",
-      "repo": "textolimiti.koplugin",
-      "homepage": "https://github.com/sypianski/textolimiti.koplugin",
-      "topics": [
-        "koplugin",
-        "koreader"
-      ],
-      "stars": 1,
-      "updated_at": "2026-07-24T11:30:54Z",
-      "latest_tag": null,
-      "latest_commit": null,
-      "download_url": "https://github.com/sypianski/textolimiti.koplugin/archive/refs/heads/main.zip",
-      "download_source": "zipball",
-      "sha256": null,
-      "install_dirname": "textolimiti.koplugin",
-      "plugin_path": ".",
-      "layout": "root-files",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": "AGPL-3.0",
-      "categories": [
-        "other"
-      ]
-    },
-    {
       "id": "sypianski/kotheme.koplugin",
       "name": "kotheme",
       "slug": "sypianski-kotheme-koplugin",
@@ -4541,6 +4511,36 @@
       "download_source": "zipball",
       "sha256": null,
       "install_dirname": "marjenoti.koplugin",
+      "plugin_path": ".",
+      "layout": "root-files",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": "AGPL-3.0",
+      "categories": [
+        "other"
+      ]
+    },
+    {
+      "id": "sypianski/textolimiti.koplugin",
+      "name": "textolimiti",
+      "slug": "sypianski-textolimiti-koplugin",
+      "summary": "KOReader plugin: honest reading-% by marking where the real book text starts and ends (front matter / endnotes excluded)",
+      "description": "KOReader plugin: honest reading-% by marking where the real book text starts and ends (front matter / endnotes excluded)",
+      "owner": "sypianski",
+      "repo": "textolimiti.koplugin",
+      "homepage": "https://github.com/sypianski/textolimiti.koplugin",
+      "topics": [
+        "koplugin",
+        "koreader"
+      ],
+      "stars": 1,
+      "updated_at": "2026-07-24T11:30:54Z",
+      "latest_tag": null,
+      "latest_commit": null,
+      "download_url": "https://github.com/sypianski/textolimiti.koplugin/archive/refs/heads/main.zip",
+      "download_source": "zipball",
+      "sha256": null,
+      "install_dirname": "textolimiti.koplugin",
       "plugin_path": ".",
       "layout": "root-files",
       "koreader_min": null,
@@ -4844,33 +4844,6 @@
       ]
     },
     {
-      "id": "MJCopper/simplewiki.koplugin",
-      "name": "simplewiki",
-      "slug": "mjcopper-simplewiki-koplugin",
-      "summary": "KOReader Offline Simple Wiki English",
-      "description": "KOReader Offline Simple Wiki English",
-      "owner": "MJCopper",
-      "repo": "simplewiki.koplugin",
-      "homepage": "https://github.com/MJCopper/simplewiki.koplugin",
-      "topics": [],
-      "stars": 1,
-      "updated_at": "2026-05-04T10:45:28Z",
-      "latest_tag": null,
-      "latest_commit": null,
-      "download_url": "https://github.com/MJCopper/simplewiki.koplugin/archive/refs/heads/main.zip",
-      "download_source": "zipball",
-      "sha256": null,
-      "install_dirname": "simplewiki.koplugin",
-      "plugin_path": ".",
-      "layout": "root-files",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": "GPL-3.0",
-      "categories": [
-        "other"
-      ]
-    },
-    {
       "id": "wuyscc/opdsnav.koplugin",
       "name": "opdsnav",
       "slug": "wuyscc-opdsnav-koplugin",
@@ -4895,6 +4868,33 @@
       "license": null,
       "categories": [
         "bookstore"
+      ]
+    },
+    {
+      "id": "MJCopper/simplewiki.koplugin",
+      "name": "simplewiki",
+      "slug": "mjcopper-simplewiki-koplugin",
+      "summary": "KOReader Offline Simple Wiki English",
+      "description": "KOReader Offline Simple Wiki English",
+      "owner": "MJCopper",
+      "repo": "simplewiki.koplugin",
+      "homepage": "https://github.com/MJCopper/simplewiki.koplugin",
+      "topics": [],
+      "stars": 1,
+      "updated_at": "2026-05-04T10:45:28Z",
+      "latest_tag": null,
+      "latest_commit": null,
+      "download_url": "https://github.com/MJCopper/simplewiki.koplugin/archive/refs/heads/main.zip",
+      "download_source": "zipball",
+      "sha256": null,
+      "install_dirname": "simplewiki.koplugin",
+      "plugin_path": ".",
+      "layout": "root-files",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": "GPL-3.0",
+      "categories": [
+        "other"
       ]
     },
     {
@@ -4981,33 +4981,6 @@
       ]
     },
     {
-      "id": "Fiddelis/linefocus.koplugin",
-      "name": "linefocus",
-      "slug": "fiddelis-linefocus-koplugin",
-      "summary": "",
-      "description": "",
-      "owner": "Fiddelis",
-      "repo": "linefocus.koplugin",
-      "homepage": "https://github.com/Fiddelis/linefocus.koplugin",
-      "topics": [],
-      "stars": 0,
-      "updated_at": "2026-08-13T01:20:36Z",
-      "latest_tag": "v0.1.1",
-      "latest_commit": null,
-      "download_url": "https://github.com/Fiddelis/linefocus.koplugin/releases/download/v0.1.1/linefocus.koplugin.zip",
-      "download_source": "release_asset",
-      "sha256": null,
-      "install_dirname": "linefocus.koplugin",
-      "plugin_path": ".",
-      "layout": "root-files",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": "MIT",
-      "categories": [
-        "other"
-      ]
-    },
-    {
       "id": "Exhen/EpubImageEnhance.koplugin",
       "name": "EpubImageEnhance",
       "slug": "exhen-epubimageenhance-koplugin",
@@ -5030,6 +5003,33 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
+      "categories": [
+        "other"
+      ]
+    },
+    {
+      "id": "Fiddelis/linefocus.koplugin",
+      "name": "linefocus",
+      "slug": "fiddelis-linefocus-koplugin",
+      "summary": "",
+      "description": "",
+      "owner": "Fiddelis",
+      "repo": "linefocus.koplugin",
+      "homepage": "https://github.com/Fiddelis/linefocus.koplugin",
+      "topics": [],
+      "stars": 0,
+      "updated_at": "2026-08-13T01:20:36Z",
+      "latest_tag": "v0.1.1",
+      "latest_commit": null,
+      "download_url": "https://github.com/Fiddelis/linefocus.koplugin/releases/download/v0.1.1/linefocus.koplugin.zip",
+      "download_source": "release_asset",
+      "sha256": null,
+      "install_dirname": "linefocus.koplugin",
+      "plugin_path": ".",
+      "layout": "root-files",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": "MIT",
       "categories": [
         "other"
       ]
@@ -5257,33 +5257,6 @@
       ]
     },
     {
-      "id": "Cusanity/settingsync.koplugin",
-      "name": "settingsync",
-      "slug": "cusanity-settingsync-koplugin",
-      "summary": "",
-      "description": "",
-      "owner": "Cusanity",
-      "repo": "settingsync.koplugin",
-      "homepage": "https://github.com/Cusanity/settingsync.koplugin",
-      "topics": [],
-      "stars": 0,
-      "updated_at": "2026-08-08T17:24:10Z",
-      "latest_tag": null,
-      "latest_commit": null,
-      "download_url": "https://github.com/Cusanity/settingsync.koplugin/archive/refs/heads/master.zip",
-      "download_source": "zipball",
-      "sha256": null,
-      "install_dirname": "settingsync.koplugin",
-      "plugin_path": ".",
-      "layout": "root-files",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": "AGPL-3.0",
-      "categories": [
-        "sync"
-      ]
-    },
-    {
       "id": "PotatoInfinity/kolichess.koplugin",
       "name": "kolichess",
       "slug": "potatoinfinity-kolichess-koplugin",
@@ -5301,35 +5274,6 @@
       "download_source": "zipball",
       "sha256": null,
       "install_dirname": "kolichess.koplugin",
-      "plugin_path": ".",
-      "layout": "root-files",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": "GPL-3.0",
-      "categories": [
-        "other"
-      ]
-    },
-    {
-      "id": "t2ym5u/sudokukiller.koplugin",
-      "name": "sudokukiller",
-      "slug": "t2ym5u-sudokukiller-koplugin",
-      "summary": "KOReader Killer Sudoku plugin",
-      "description": "KOReader Killer Sudoku plugin",
-      "owner": "t2ym5u",
-      "repo": "sudokukiller.koplugin",
-      "homepage": "https://github.com/t2ym5u/sudokukiller.koplugin",
-      "topics": [
-        "koreader-plugins"
-      ],
-      "stars": 0,
-      "updated_at": "2026-08-07T08:41:55Z",
-      "latest_tag": "v1.2.18",
-      "latest_commit": null,
-      "download_url": "https://github.com/t2ym5u/sudokukiller.koplugin/releases/download/v1.2.18/sudokukiller.koplugin.zip",
-      "download_source": "release_asset",
-      "sha256": null,
-      "install_dirname": "sudokukiller.koplugin",
       "plugin_path": ".",
       "layout": "root-files",
       "koreader_min": null,
@@ -5367,6 +5311,33 @@
       ]
     },
     {
+      "id": "Cusanity/settingsync.koplugin",
+      "name": "settingsync",
+      "slug": "cusanity-settingsync-koplugin",
+      "summary": "",
+      "description": "",
+      "owner": "Cusanity",
+      "repo": "settingsync.koplugin",
+      "homepage": "https://github.com/Cusanity/settingsync.koplugin",
+      "topics": [],
+      "stars": 0,
+      "updated_at": "2026-08-08T17:24:10Z",
+      "latest_tag": null,
+      "latest_commit": null,
+      "download_url": "https://github.com/Cusanity/settingsync.koplugin/archive/refs/heads/master.zip",
+      "download_source": "zipball",
+      "sha256": null,
+      "install_dirname": "settingsync.koplugin",
+      "plugin_path": ".",
+      "layout": "root-files",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": "AGPL-3.0",
+      "categories": [
+        "sync"
+      ]
+    },
+    {
       "id": "hesan1232/reading.koplugin",
       "name": "reading",
       "slug": "hesan1232-reading-koplugin",
@@ -5392,6 +5363,35 @@
       "categories": [
         "bookstore",
         "sync"
+      ]
+    },
+    {
+      "id": "t2ym5u/sudokukiller.koplugin",
+      "name": "sudokukiller",
+      "slug": "t2ym5u-sudokukiller-koplugin",
+      "summary": "KOReader Killer Sudoku plugin",
+      "description": "KOReader Killer Sudoku plugin",
+      "owner": "t2ym5u",
+      "repo": "sudokukiller.koplugin",
+      "homepage": "https://github.com/t2ym5u/sudokukiller.koplugin",
+      "topics": [
+        "koreader-plugins"
+      ],
+      "stars": 0,
+      "updated_at": "2026-08-07T08:41:55Z",
+      "latest_tag": "v1.2.18",
+      "latest_commit": null,
+      "download_url": "https://github.com/t2ym5u/sudokukiller.koplugin/releases/download/v1.2.18/sudokukiller.koplugin.zip",
+      "download_source": "release_asset",
+      "sha256": null,
+      "install_dirname": "sudokukiller.koplugin",
+      "plugin_path": ".",
+      "layout": "root-files",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": "GPL-3.0",
+      "categories": [
+        "other"
       ]
     },
     {
@@ -5453,35 +5453,6 @@
       ]
     },
     {
-      "id": "t2ym5u/thermosudoku.koplugin",
-      "name": "thermosudoku",
-      "slug": "t2ym5u-thermosudoku-koplugin",
-      "summary": "Sudoku with thermometer constraints",
-      "description": "Sudoku with thermometer constraints",
-      "owner": "t2ym5u",
-      "repo": "thermosudoku.koplugin",
-      "homepage": "https://github.com/t2ym5u/thermosudoku.koplugin",
-      "topics": [
-        "koreader-plugins"
-      ],
-      "stars": 0,
-      "updated_at": "2026-08-05T13:07:50Z",
-      "latest_tag": "v1.2.15",
-      "latest_commit": null,
-      "download_url": "https://github.com/t2ym5u/thermosudoku.koplugin/releases/download/v1.2.15/thermosudoku.koplugin.zip",
-      "download_source": "release_asset",
-      "sha256": null,
-      "install_dirname": "thermosudoku.koplugin",
-      "plugin_path": ".",
-      "layout": "root-files",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": "GPL-3.0",
-      "categories": [
-        "other"
-      ]
-    },
-    {
       "id": "t2ym5u/tents.koplugin",
       "name": "tents",
       "slug": "t2ym5u-tents-koplugin",
@@ -5501,6 +5472,35 @@
       "download_source": "release_asset",
       "sha256": null,
       "install_dirname": "tents.koplugin",
+      "plugin_path": ".",
+      "layout": "root-files",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": "GPL-3.0",
+      "categories": [
+        "other"
+      ]
+    },
+    {
+      "id": "t2ym5u/thermosudoku.koplugin",
+      "name": "thermosudoku",
+      "slug": "t2ym5u-thermosudoku-koplugin",
+      "summary": "Sudoku with thermometer constraints",
+      "description": "Sudoku with thermometer constraints",
+      "owner": "t2ym5u",
+      "repo": "thermosudoku.koplugin",
+      "homepage": "https://github.com/t2ym5u/thermosudoku.koplugin",
+      "topics": [
+        "koreader-plugins"
+      ],
+      "stars": 0,
+      "updated_at": "2026-08-05T13:07:50Z",
+      "latest_tag": "v1.2.15",
+      "latest_commit": null,
+      "download_url": "https://github.com/t2ym5u/thermosudoku.koplugin/releases/download/v1.2.15/thermosudoku.koplugin.zip",
+      "download_source": "release_asset",
+      "sha256": null,
+      "install_dirname": "thermosudoku.koplugin",
       "plugin_path": ".",
       "layout": "root-files",
       "koreader_min": null,
@@ -5801,35 +5801,6 @@
       ]
     },
     {
-      "id": "t2ym5u/shikaku.koplugin",
-      "name": "shikaku",
-      "slug": "t2ym5u-shikaku-koplugin",
-      "summary": "Divide the grid into rectangles",
-      "description": "Divide the grid into rectangles",
-      "owner": "t2ym5u",
-      "repo": "shikaku.koplugin",
-      "homepage": "https://github.com/t2ym5u/shikaku.koplugin",
-      "topics": [
-        "koreader-plugins"
-      ],
-      "stars": 0,
-      "updated_at": "2026-08-05T13:07:01Z",
-      "latest_tag": "v1.1.13",
-      "latest_commit": null,
-      "download_url": "https://github.com/t2ym5u/shikaku.koplugin/releases/download/v1.1.13/shikaku.koplugin.zip",
-      "download_source": "release_asset",
-      "sha256": null,
-      "install_dirname": "shikaku.koplugin",
-      "plugin_path": ".",
-      "layout": "root-files",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": "GPL-3.0",
-      "categories": [
-        "other"
-      ]
-    },
-    {
       "id": "t2ym5u/sandwichsudoku.koplugin",
       "name": "sandwichsudoku",
       "slug": "t2ym5u-sandwichsudoku-koplugin",
@@ -5849,6 +5820,35 @@
       "download_source": "release_asset",
       "sha256": null,
       "install_dirname": "sandwichsudoku.koplugin",
+      "plugin_path": ".",
+      "layout": "root-files",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": "GPL-3.0",
+      "categories": [
+        "other"
+      ]
+    },
+    {
+      "id": "t2ym5u/pluginmanager.koplugin",
+      "name": "pluginmanager",
+      "slug": "t2ym5u-pluginmanager-koplugin",
+      "summary": "Browse, install, and update KOReader game plugins from the repo",
+      "description": "Browse, install, and update KOReader game plugins from the repo",
+      "owner": "t2ym5u",
+      "repo": "pluginmanager.koplugin",
+      "homepage": "https://github.com/t2ym5u/pluginmanager.koplugin",
+      "topics": [
+        "koreader-plugins"
+      ],
+      "stars": 0,
+      "updated_at": "2026-08-05T13:06:47Z",
+      "latest_tag": "v1.3.1",
+      "latest_commit": null,
+      "download_url": "https://github.com/t2ym5u/pluginmanager.koplugin/releases/download/v1.3.1/pluginmanager.koplugin.zip",
+      "download_source": "release_asset",
+      "sha256": null,
+      "install_dirname": "pluginmanager.koplugin",
       "plugin_path": ".",
       "layout": "root-files",
       "koreader_min": null,
@@ -5917,25 +5917,25 @@
       ]
     },
     {
-      "id": "t2ym5u/pluginmanager.koplugin",
-      "name": "pluginmanager",
-      "slug": "t2ym5u-pluginmanager-koplugin",
-      "summary": "Browse, install, and update KOReader game plugins from the repo",
-      "description": "Browse, install, and update KOReader game plugins from the repo",
+      "id": "t2ym5u/shikaku.koplugin",
+      "name": "shikaku",
+      "slug": "t2ym5u-shikaku-koplugin",
+      "summary": "Divide the grid into rectangles",
+      "description": "Divide the grid into rectangles",
       "owner": "t2ym5u",
-      "repo": "pluginmanager.koplugin",
-      "homepage": "https://github.com/t2ym5u/pluginmanager.koplugin",
+      "repo": "shikaku.koplugin",
+      "homepage": "https://github.com/t2ym5u/shikaku.koplugin",
       "topics": [
         "koreader-plugins"
       ],
       "stars": 0,
-      "updated_at": "2026-08-05T13:06:47Z",
-      "latest_tag": "v1.3.1",
+      "updated_at": "2026-08-05T13:07:01Z",
+      "latest_tag": "v1.1.13",
       "latest_commit": null,
-      "download_url": "https://github.com/t2ym5u/pluginmanager.koplugin/releases/download/v1.3.1/pluginmanager.koplugin.zip",
+      "download_url": "https://github.com/t2ym5u/shikaku.koplugin/releases/download/v1.1.13/shikaku.koplugin.zip",
       "download_source": "release_asset",
       "sha256": null,
-      "install_dirname": "pluginmanager.koplugin",
+      "install_dirname": "shikaku.koplugin",
       "plugin_path": ".",
       "layout": "root-files",
       "koreader_min": null,
@@ -5946,25 +5946,25 @@
       ]
     },
     {
-      "id": "t2ym5u/pickomino.koplugin",
-      "name": "pickomino",
-      "slug": "t2ym5u-pickomino-koplugin",
-      "summary": "Combinatorial dice and tile logic game",
-      "description": "Combinatorial dice and tile logic game",
+      "id": "t2ym5u/numletters.koplugin",
+      "name": "numletters",
+      "slug": "t2ym5u-numletters-koplugin",
+      "summary": "Chiffres et Lettres plugin for KOReader",
+      "description": "Chiffres et Lettres plugin for KOReader",
       "owner": "t2ym5u",
-      "repo": "pickomino.koplugin",
-      "homepage": "https://github.com/t2ym5u/pickomino.koplugin",
+      "repo": "numletters.koplugin",
+      "homepage": "https://github.com/t2ym5u/numletters.koplugin",
       "topics": [
         "koreader-plugins"
       ],
       "stars": 0,
-      "updated_at": "2026-08-05T13:06:41Z",
-      "latest_tag": "v1.1.12",
+      "updated_at": "2026-08-05T13:06:31Z",
+      "latest_tag": "v1.1.14",
       "latest_commit": null,
-      "download_url": "https://github.com/t2ym5u/pickomino.koplugin/releases/download/v1.1.12/pickomino.koplugin.zip",
+      "download_url": "https://github.com/t2ym5u/numletters.koplugin/releases/download/v1.1.14/numletters.koplugin.zip",
       "download_source": "release_asset",
       "sha256": null,
-      "install_dirname": "pickomino.koplugin",
+      "install_dirname": "numletters.koplugin",
       "plugin_path": ".",
       "layout": "root-files",
       "koreader_min": null,
