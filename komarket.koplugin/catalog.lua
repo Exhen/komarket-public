@@ -163,6 +163,7 @@ function Catalog.filterPlugins(plugins, query)
             tostring(p.owner or ""),
             tostring(p.repo or ""),
             table.concat(p.topics or {}, " "),
+            table.concat(p.categories or {}, " "),
         }, " "):lower()
         if hay:find(query, 1, true) then
             out[#out + 1] = p

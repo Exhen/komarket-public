@@ -58,7 +58,22 @@
         "license": { "type": ["string", "null"] },
         "categories": {
           "type": "array",
-          "items": { "type": "string" }
+          "description": "Category ids: beautify|sync|download|bookstore|llm|rss|ime|remote|comic|other",
+          "items": {
+            "type": "string",
+            "enum": [
+              "beautify",
+              "sync",
+              "download",
+              "bookstore",
+              "llm",
+              "rss",
+              "ime",
+              "remote",
+              "comic",
+              "other"
+            ]
+          }
         }
       }
     }
