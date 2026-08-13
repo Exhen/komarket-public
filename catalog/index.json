@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-13T02:55:30.783Z",
+  "generated_at": "2026-08-13T03:32:55.388Z",
   "source": "komarket-sync",
-  "rules_version": 2,
+  "rules_version": 3,
   "plugins": [
     {
       "id": "doctorhetfield-cmd/simpleui.koplugin",
@@ -35,7 +35,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "MIT",
-      "categories": []
+      "categories": [
+        "beautify"
+      ]
     },
     {
       "id": "ZlibraryKO/zlibrary.koplugin",
@@ -74,7 +76,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "bookstore"
+      ]
     },
     {
       "id": "AndyHazz/bookshelf.koplugin",
@@ -99,7 +103,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "AnthonyGress/zen_ui.koplugin",
@@ -136,7 +142,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "beautify"
+      ]
     },
     {
       "id": "finlater/weread.koplugin",
@@ -172,7 +180,10 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "bookstore",
+        "sync"
+      ]
     },
     {
       "id": "omer-faruq/appstore.koplugin",
@@ -199,7 +210,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "beautify"
+      ]
     },
     {
       "id": "Billiam/hardcoverapp.koplugin",
@@ -224,7 +237,10 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "MIT",
-      "categories": []
+      "categories": [
+        "bookstore",
+        "beautify"
+      ]
     },
     {
       "id": "AndyHazz/bookends.koplugin",
@@ -251,7 +267,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "patelneeraj/filebrowserplus.koplugin",
@@ -276,7 +294,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "Ajatt-Tools/anki.koplugin",
@@ -307,7 +327,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "pxlflux/customisablesleepscreen.koplugin",
@@ -339,7 +361,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "beautify"
+      ]
     },
     {
       "id": "zeeyado/koassistant.koplugin",
@@ -376,7 +400,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "llm"
+      ]
     },
     {
       "id": "OGKevin/kobo.koplugin",
@@ -408,7 +434,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "greywolf1499/opds_plus.koplugin",
@@ -448,7 +476,10 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "bookstore",
+        "beautify"
+      ]
     },
     {
       "id": "dani84bs/AnnotationSync.koplugin",
@@ -477,7 +508,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "MIT",
-      "categories": []
+      "categories": [
+        "sync"
+      ]
     },
     {
       "id": "stradichenko/audiobook.koplugin",
@@ -508,7 +541,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "remote"
+      ]
     },
     {
       "id": "advokatb/updatesmanager.koplugin",
@@ -533,7 +568,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "Euphoriyy/appearance.koplugin",
@@ -571,7 +608,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "beautify"
+      ]
     },
     {
       "id": "kristianpennacchia/zzz-readermenuredesign.koplugin",
@@ -599,7 +638,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "omer-faruq/rssreader.koplugin",
@@ -628,7 +669,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "rss"
+      ]
     },
     {
       "id": "omer-faruq/webbrowser.koplugin",
@@ -658,7 +701,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "IntrovertedMage/AO3Downloader.koplugin",
@@ -683,7 +728,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "download"
+      ]
     },
     {
       "id": "KORComic/comicreader.koplugin",
@@ -715,7 +762,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "comic"
+      ]
     },
     {
       "id": "naleo/audiobookshelf.koplugin",
@@ -740,7 +789,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "MIT",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "peterboda236/readinginsights.koplugin",
@@ -767,7 +818,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "xusoo/shortcutstoolbar.koplugin",
@@ -792,7 +845,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "MIT",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "ebanDev/iconschanger.koplugin",
@@ -817,7 +872,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "finlater/kindlebtcontroller.koplugin",
@@ -851,7 +908,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "MIT",
-      "categories": []
+      "categories": [
+        "remote"
+      ]
     },
     {
       "id": "hesan1232/fanqie.koplugin",
@@ -876,7 +935,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "KORComic/comicmeta.koplugin",
@@ -909,7 +970,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "comic"
+      ]
     },
     {
       "id": "gytwo/pinyin_enhancement.koplugin",
@@ -937,7 +1000,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "ime"
+      ]
     },
     {
       "id": "kaikozlov/acsm.koplugin",
@@ -967,7 +1032,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "MIT",
-      "categories": []
+      "categories": [
+        "bookstore"
+      ]
     },
     {
       "id": "kristianpennacchia/wordreference.koplugin",
@@ -995,7 +1062,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "Unlicense",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "omer-faruq/simpleui_ext.koplugin",
@@ -1022,7 +1091,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "beautify"
+      ]
     },
     {
       "id": "advokatb/readingstreak.koplugin",
@@ -1047,7 +1118,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "xblain/annotationsviewer.koplugin",
@@ -1074,7 +1147,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "kodermike/airplanemode.koplugin",
@@ -1099,7 +1174,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "omer-faruq/sudoku.koplugin",
@@ -1127,7 +1204,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "omer-faruq/instapaper.koplugin",
@@ -1154,7 +1233,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "rss"
+      ]
     },
     {
       "id": "Evgeniy-94/TelegramDownloader.koplugin",
@@ -1184,7 +1265,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "download"
+      ]
     },
     {
       "id": "brendanlefebvre/supersync.koplugin",
@@ -1209,7 +1292,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "sync"
+      ]
     },
     {
       "id": "abrahamnm/filesync.koplugin",
@@ -1241,7 +1326,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "sync"
+      ]
     },
     {
       "id": "agaragou/illustrations.koplugin",
@@ -1266,7 +1353,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "NOASSERTION",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "omer-faruq/memobook.koplugin",
@@ -1294,7 +1383,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "quanganhdo/plainui.koplugin",
@@ -1319,7 +1410,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "MIT",
-      "categories": []
+      "categories": [
+        "beautify"
+      ]
     },
     {
       "id": "norude/TTS.koplugin",
@@ -1344,7 +1437,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "d0nizam/kosyncthing_plus.koplugin",
@@ -1382,7 +1477,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "NOASSERTION",
-      "categories": []
+      "categories": [
+        "sync"
+      ]
     },
     {
       "id": "gytwo/quickui.koplugin",
@@ -1411,7 +1508,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "beautify"
+      ]
     },
     {
       "id": "kktse/dtdisplay.koplugin",
@@ -1440,7 +1539,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "ime"
+      ]
     },
     {
       "id": "DucNg/digitalclock.koplugin",
@@ -1465,7 +1566,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "ime"
+      ]
     },
     {
       "id": "d0nizam/syncery.koplugin",
@@ -1507,7 +1610,10 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "NOASSERTION",
-      "categories": []
+      "categories": [
+        "sync",
+        "beautify"
+      ]
     },
     {
       "id": "DisastrousPatience83/Floating-Dictionary.koplugin",
@@ -1532,7 +1638,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "ime"
+      ]
     },
     {
       "id": "Euphoriyy/derainbowify.koplugin",
@@ -1568,7 +1676,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "omer-faruq/wordsearch.koplugin",
@@ -1596,7 +1706,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "asxelot/wordwise.koplugin",
@@ -1630,7 +1742,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "KitanaCode/booknookcharms.koplugin",
@@ -1655,7 +1769,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "MIT",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "LoShady/DoctorBattery.koplugin",
@@ -1699,7 +1815,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "komadorirobin/library-sync.koplugin",
@@ -1724,7 +1842,10 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "MIT",
-      "categories": []
+      "categories": [
+        "bookstore",
+        "sync"
+      ]
     },
     {
       "id": "kbarni/frotz.koplugin",
@@ -1753,7 +1874,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "sadatdaniel/splitread.koplugin",
@@ -1778,7 +1901,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "ime"
+      ]
     },
     {
       "id": "omer-faruq/crossword.koplugin",
@@ -1806,7 +1931,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "gytwo/cloudlibrary.koplugin",
@@ -1834,7 +1961,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "sync"
+      ]
     },
     {
       "id": "jbreizh/quickmenu.koplugin",
@@ -1865,7 +1994,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "Craftwork2720/foldermemory.koplugin",
@@ -1893,7 +2024,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "cdrso/backlog.koplugin",
@@ -1924,7 +2057,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "MIT",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "Sirozha1337/storytellersync.koplugin",
@@ -1956,7 +2091,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "MIT",
-      "categories": []
+      "categories": [
+        "sync"
+      ]
     },
     {
       "id": "ZHA30/metadata.koplugin",
@@ -1986,7 +2123,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "beautify"
+      ]
     },
     {
       "id": "omer-faruq/slidepuzzle.koplugin",
@@ -2014,7 +2153,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "THE-XSX/readingfolio.koplugin",
@@ -2039,7 +2180,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "finlater/one.koplugin",
@@ -2070,7 +2213,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "Estela-Zelin84/inkstain.koplugin",
@@ -2100,7 +2245,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "Sirozha1337/fastdictlookup.koplugin",
@@ -2131,7 +2278,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "MIT",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "LK4D4/suwayomi.koplugin",
@@ -2161,7 +2310,11 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "comic",
+        "sync",
+        "download"
+      ]
     },
     {
       "id": "Craftwork2720/incognito.koplugin",
@@ -2189,7 +2342,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "THE-XSX/typefolio.koplugin",
@@ -2214,7 +2369,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "beautify"
+      ]
     },
     {
       "id": "kbarni/sokoban.koplugin",
@@ -2243,7 +2400,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "nojux-official/HighlightImport.koplugin",
@@ -2268,7 +2427,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "MIT",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "rameezk/rebind.koplugin",
@@ -2296,7 +2457,10 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "MIT",
-      "categories": []
+      "categories": [
+        "bookstore",
+        "beautify"
+      ]
     },
     {
       "id": "tachibana-shin/smartdelete.koplugin",
@@ -2325,7 +2489,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "CC0-1.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "markleenders/stopwatchtimer.koplugin",
@@ -2350,7 +2516,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "MIT",
-      "categories": []
+      "categories": [
+        "ime"
+      ]
     },
     {
       "id": "Bitboss2/Time-and-day-clock.koplugin",
@@ -2375,7 +2543,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "ime"
+      ]
     },
     {
       "id": "tachibana-shin/crop_enhancer.koplugin",
@@ -2405,7 +2575,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "MPL-2.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "kaikozlov/kindle.koplugin",
@@ -2436,7 +2608,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "asxelot/wifiindicator.koplugin",
@@ -2468,7 +2642,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "JimDBh/kokomga.koplugin",
@@ -2495,7 +2671,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "MIT",
-      "categories": []
+      "categories": [
+        "bookstore"
+      ]
     },
     {
       "id": "KitanaCode/boardgames.koplugin",
@@ -2520,7 +2698,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "MIT",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "luizcorreia/metaguiding.koplugin",
@@ -2545,7 +2725,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "omer-faruq/phrasedeck.koplugin",
@@ -2572,7 +2754,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "hluiz2628-blip/tarot.koplugin",
@@ -2605,7 +2789,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "omer-faruq/merchant.koplugin",
@@ -2632,7 +2818,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "yupmoon/vocabdeck.koplugin",
@@ -2659,7 +2847,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "anezih/imageprocessing.koplugin",
@@ -2692,7 +2882,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "comic"
+      ]
     },
     {
       "id": "dwigunakd/collectionsmosaic.koplugin",
@@ -2717,7 +2909,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "llm"
+      ]
     },
     {
       "id": "right9code/annas-fetch.koplugin",
@@ -2746,7 +2940,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "wtb04/wireguard.koplugin",
@@ -2771,7 +2967,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "MIT",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "dani84bs/kojump.koplugin",
@@ -2800,7 +2998,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "MIT",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "anezih/offlinetranslator.koplugin",
@@ -2831,7 +3031,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "comic"
+      ]
     },
     {
       "id": "ksaMask123/artgallery.koplugin",
@@ -2856,7 +3058,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "NOASSERTION",
-      "categories": []
+      "categories": [
+        "sync"
+      ]
     },
     {
       "id": "omer-faruq/smartdeck.koplugin",
@@ -2883,7 +3087,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "llm"
+      ]
     },
     {
       "id": "neodb-social/neodb.koplugin",
@@ -2915,7 +3121,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "sync"
+      ]
     },
     {
       "id": "tachibana-shin/weather.koplugin",
@@ -2944,7 +3152,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "beautify"
+      ]
     },
     {
       "id": "RafaelMeirim/metafileextract.koplugin",
@@ -2971,7 +3181,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "MIT",
-      "categories": []
+      "categories": [
+        "sync"
+      ]
     },
     {
       "id": "omer-faruq/send2telegram.koplugin",
@@ -2998,7 +3210,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "download"
+      ]
     },
     {
       "id": "DRDTR001/fulltextunderline.koplugin",
@@ -3023,7 +3237,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "Intedai/sendtodiscord.koplugin",
@@ -3058,7 +3274,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "HoseanRC/kdeconnect.koplugin",
@@ -3083,7 +3301,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "maerlin/screenmargins.koplugin",
@@ -3108,7 +3328,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "MIT",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "tachibana-shin/calibre_filemon.koplugin",
@@ -3138,7 +3360,10 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "bookstore",
+        "ime"
+      ]
     },
     {
       "id": "jgarcia24n/readaloud.koplugin",
@@ -3163,7 +3388,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "sync"
+      ]
     },
     {
       "id": "kbarni/checkers.koplugin",
@@ -3188,7 +3415,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "vardan-developer/20-20-20.koplugin",
@@ -3213,7 +3442,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "ime"
+      ]
     },
     {
       "id": "omer-faruq/send2notion.koplugin",
@@ -3240,7 +3471,10 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "sync",
+        "download"
+      ]
     },
     {
       "id": "jandamm/wpmstats.koplugin",
@@ -3267,7 +3501,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "ksaMask123/poker24.koplugin",
@@ -3292,7 +3528,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "MIT",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "denialbb/markdownreader.koplugin",
@@ -3317,7 +3555,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "omer-faruq/calendar.koplugin",
@@ -3344,7 +3584,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "beautify"
+      ]
     },
     {
       "id": "sypianski/rosetta.koplugin",
@@ -3372,7 +3614,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "llm"
+      ]
     },
     {
       "id": "asxelot/fastdict.koplugin",
@@ -3405,7 +3649,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "jperon/excludehistory.koplugin",
@@ -3430,7 +3676,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "naraxian/palmasleepscreen.koplugin",
@@ -3467,7 +3715,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "beautify"
+      ]
     },
     {
       "id": "linsyking/bluetooth.koplugin",
@@ -3492,7 +3742,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "remote"
+      ]
     },
     {
       "id": "yangyingchao/chinese.koplugin",
@@ -3517,7 +3769,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "lamida/calibreplus.koplugin",
@@ -3544,7 +3798,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "bookstore"
+      ]
     },
     {
       "id": "nhanhhunter/AI_Dictionary.koplugin",
@@ -3573,7 +3829,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "llm"
+      ]
     },
     {
       "id": "CalebLinGit/eyerest.koplugin",
@@ -3613,7 +3871,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "ime"
+      ]
     },
     {
       "id": "karlb/webdavfetcher.koplugin",
@@ -3638,7 +3898,10 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "MIT",
-      "categories": []
+      "categories": [
+        "sync",
+        "download"
+      ]
     },
     {
       "id": "hudsonbrendon/hatelemetry.koplugin",
@@ -3663,7 +3926,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "llm"
+      ]
     },
     {
       "id": "ndieschburg/varbook.koplugin",
@@ -3690,7 +3955,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "MIT",
-      "categories": []
+      "categories": [
+        "sync"
+      ]
     },
     {
       "id": "kelvinalfaro/cwamagicdownload.koplugin",
@@ -3715,7 +3982,10 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "bookstore",
+        "sync"
+      ]
     },
     {
       "id": "zackify/picturefeed.koplugin",
@@ -3740,7 +4010,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "lysak-yurii/lingueez.koplugin",
@@ -3775,7 +4047,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "sync"
+      ]
     },
     {
       "id": "ksaMask123/batterymonitor.koplugin",
@@ -3800,7 +4074,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "NOASSERTION",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "paulbockewitz/kocatchup.koplugin",
@@ -3830,7 +4106,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "llm"
+      ]
     },
     {
       "id": "hesan1232/koobone.koplugin",
@@ -3855,7 +4133,11 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "comic",
+        "sync",
+        "download"
+      ]
     },
     {
       "id": "Estela-Zelin84/tomatodo.koplugin",
@@ -3880,7 +4162,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "HighLibrarian/BookKeeper.koplugin",
@@ -3905,7 +4189,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "t2ym5u/wordle.koplugin",
@@ -3932,7 +4218,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "t2ym5u/pictionary.koplugin",
@@ -3959,7 +4247,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "t2ym5u/gomoku.koplugin",
@@ -3986,7 +4276,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "t2ym5u/dashboard.koplugin",
@@ -4013,7 +4305,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "t2ym5u/boggleparty.koplugin",
@@ -4040,7 +4334,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "OGKevin/statistics.koplugin",
@@ -4065,7 +4361,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "eikopf/paragraph-spacing.koplugin",
@@ -4090,7 +4388,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "MIT",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "ZHA30/novel.koplugin",
@@ -4119,7 +4419,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "sypianski/hairline.koplugin",
@@ -4156,7 +4458,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "beautify"
+      ]
     },
     {
       "id": "sypianski/textolimiti.koplugin",
@@ -4184,7 +4488,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "sypianski/kotheme.koplugin",
@@ -4212,7 +4518,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "beautify"
+      ]
     },
     {
       "id": "sypianski/marjenoti.koplugin",
@@ -4240,7 +4548,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "thorondir/hotspot.koplugin",
@@ -4265,7 +4575,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "hluiz2628-blip/biscoitodasorte.koplugin",
@@ -4295,7 +4607,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "iav/taskscheduler.koplugin",
@@ -4325,7 +4639,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "ime"
+      ]
     },
     {
       "id": "echoriiku/notesnook.koplugin",
@@ -4350,7 +4666,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "tachibana-shin/lunar.koplugin",
@@ -4379,7 +4697,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "dani84bs/RemoteLibrary.koplugin",
@@ -4409,7 +4729,10 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "MIT",
-      "categories": []
+      "categories": [
+        "remote",
+        "sync"
+      ]
     },
     {
       "id": "Devsur11/bookmeta.koplugin",
@@ -4434,7 +4757,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "rayanestefani8-collab/translatordoc.koplugin",
@@ -4459,7 +4784,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "MIT",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "markleenders/stoicquote.koplugin",
@@ -4488,7 +4815,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "SirProdigle/tana.koplugin",
@@ -4513,7 +4842,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "sync"
+      ]
     },
     {
       "id": "MJCopper/simplewiki.koplugin",
@@ -4538,7 +4869,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "wuyscc/opdsnav.koplugin",
@@ -4563,7 +4896,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "bookstore"
+      ]
     },
     {
       "id": "ElPandaP/taletrack.koplugin",
@@ -4588,7 +4923,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "LK4D4/statusbardisabler.koplugin",
@@ -4615,7 +4952,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "beautify"
+      ]
     },
     {
       "id": "4285f4/dither256.koplugin",
@@ -4640,7 +4979,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "Fiddelis/linefocus.koplugin",
@@ -4665,7 +5006,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "MIT",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "Exhen/EpubImageEnhance.koplugin",
@@ -4690,7 +5033,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "sam-don/kogrim.koplugin",
@@ -4715,7 +5060,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "dororo42/weread_K4.koplugin",
@@ -4740,7 +5087,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "bookstore"
+      ]
     },
     {
       "id": "noame19/copyparty.koplugin",
@@ -4765,7 +5114,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "NOASSERTION",
-      "categories": []
+      "categories": [
+        "sync"
+      ]
     },
     {
       "id": "jyliuu/insightful.koplugin",
@@ -4795,7 +5146,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "h4rryhaller/todotxt.koplugin",
@@ -4820,7 +5173,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "FDSFDS123/matrix.koplugin",
@@ -4845,7 +5200,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "llm"
+      ]
     },
     {
       "id": "leshier/weui.koplugin",
@@ -4870,7 +5227,10 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "MIT",
-      "categories": []
+      "categories": [
+        "bookstore",
+        "beautify"
+      ]
     },
     {
       "id": "iDynbek/kazakh.koplugin",
@@ -4895,7 +5255,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "Cusanity/settingsync.koplugin",
@@ -4920,7 +5282,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "AGPL-3.0",
-      "categories": []
+      "categories": [
+        "sync"
+      ]
     },
     {
       "id": "PotatoInfinity/kolichess.koplugin",
@@ -4945,7 +5309,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "t2ym5u/sudokukiller.koplugin",
@@ -4972,7 +5338,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "denialbb/flashcards.koplugin",
@@ -4997,7 +5365,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "hesan1232/reading.koplugin",
@@ -5022,7 +5392,10 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": null,
-      "categories": []
+      "categories": [
+        "bookstore",
+        "sync"
+      ]
     },
     {
       "id": "t2ym5u/wordladder.koplugin",
@@ -5049,7 +5422,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "t2ym5u/windoku.koplugin",
@@ -5076,7 +5451,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "t2ym5u/thermosudoku.koplugin",
@@ -5103,7 +5480,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "t2ym5u/tents.koplugin",
@@ -5130,7 +5509,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "t2ym5u/tatami.koplugin",
@@ -5157,7 +5538,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "t2ym5u/tapa.koplugin",
@@ -5184,7 +5567,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "t2ym5u/taboo.koplugin",
@@ -5211,7 +5596,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "t2ym5u/suguru.koplugin",
@@ -5238,7 +5625,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "t2ym5u/sudokux.koplugin",
@@ -5265,7 +5654,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "t2ym5u/startmenu.koplugin",
@@ -5292,7 +5683,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "t2ym5u/starbattle.koplugin",
@@ -5319,7 +5712,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "t2ym5u/solitaire.koplugin",
@@ -5346,7 +5741,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "t2ym5u/slitherlink.koplugin",
@@ -5373,7 +5770,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "t2ym5u/skyscraper.koplugin",
@@ -5400,7 +5799,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "t2ym5u/shikaku.koplugin",
@@ -5427,7 +5828,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "t2ym5u/sandwichsudoku.koplugin",
@@ -5454,7 +5857,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "t2ym5u/rippleeffect.koplugin",
@@ -5481,7 +5886,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "t2ym5u/quiz.koplugin",
@@ -5508,7 +5915,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "t2ym5u/pluginmanager.koplugin",
@@ -5535,7 +5944,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "t2ym5u/pickomino.koplugin",
@@ -5562,7 +5973,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     },
     {
       "id": "t2ym5u/othello.koplugin",
@@ -5589,7 +6002,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "llm"
+      ]
     },
     {
       "id": "t2ym5u/nurikabe.koplugin",
@@ -5616,7 +6031,9 @@
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
-      "categories": []
+      "categories": [
+        "other"
+      ]
     }
   ]
 }
