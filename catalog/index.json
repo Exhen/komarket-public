@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-13T06:50:08.000Z",
+  "generated_at": "2026-08-13T06:54:00.269Z",
   "source": "komarket-sync",
   "rules_version": 3,
   "plugins": [
@@ -38,12 +38,7 @@
       "categories": [
         "beautify"
       ],
-      "screenshots": [
-        "https://github.com/user-attachments/assets/4ea92760-c2bf-488b-9f5a-1f663157c97f",
-        "https://github.com/user-attachments/assets/a1a7a2c7-6c0f-484e-b6fa-c78474661480",
-        "https://github.com/user-attachments/assets/1707f5c2-e367-47b8-90a9-9a9549bd9e67",
-        "https://github.com/user-attachments/assets/fd443a96-e12c-4dc7-9e69-103c444458af"
-      ]
+      "screenshots": []
     },
     {
       "id": "ZlibraryKO/zlibrary.koplugin",
@@ -117,13 +112,10 @@
       ],
       "screenshots": [
         "https://raw.githubusercontent.com/AndyHazz/bookshelf.koplugin/master/assets/bookshelf-logo.png",
-        "https://github.com/user-attachments/assets/82f95a3e-7914-4236-855f-31d8dd09d83c",
-        "https://github.com/user-attachments/assets/574976b3-c82d-4eeb-a8ac-848ea113aa35",
-        "https://github.com/user-attachments/assets/abcdf0b2-a06b-46d4-9055-e710f2a124b5",
-        "https://github.com/user-attachments/assets/b916c194-7423-4418-96c3-d0367119f45c",
-        "https://github.com/user-attachments/assets/95799321-18fe-4495-84f4-73388a1ecc35",
         "https://raw.githubusercontent.com/AndyHazz/bookshelf.koplugin/master/assets/hero-grid.png",
-        "https://raw.githubusercontent.com/AndyHazz/bookshelf.koplugin/master/assets/start-menu.png"
+        "https://raw.githubusercontent.com/AndyHazz/bookshelf.koplugin/master/assets/start-menu.png",
+        "https://raw.githubusercontent.com/AndyHazz/bookshelf.koplugin/master/assets/micromodules.png",
+        "https://raw.githubusercontent.com/AndyHazz/bookshelf.koplugin/master/assets/bookshelf-logo-dark.png"
       ]
     },
     {
@@ -281,16 +273,7 @@
         "bookstore",
         "beautify"
       ],
-      "screenshots": [
-        "https://github.com/user-attachments/assets/0fd8f6fb-3a61-471f-9450-9a0b3dadc9d1",
-        "https://github.com/user-attachments/assets/99d16ef0-6dda-41d8-bfdc-32c97ae09d87",
-        "https://github.com/user-attachments/assets/73619448-9821-410a-901f-d8fc61185dd3",
-        "https://github.com/user-attachments/assets/55b33a0a-bda8-4ec9-918d-0409266abe3b",
-        "https://github.com/user-attachments/assets/5dba19a4-f72a-4894-820c-0cfdcc55bf68",
-        "https://github.com/user-attachments/assets/c386f153-330f-4e1f-afa1-12fdf48a1216",
-        "https://github.com/user-attachments/assets/2564e0f1-2c62-4463-957f-421a47d792d6",
-        "https://github.com/user-attachments/assets/dc8a397b-f36d-49da-b880-d04d47219ed0"
-      ]
+      "screenshots": []
     },
     {
       "id": "AndyHazz/bookends.koplugin",
@@ -422,9 +405,7 @@
       "categories": [
         "other"
       ],
-      "screenshots": [
-        "https://user-images.githubusercontent.com/34285115/228915515-b6d3eef6-d9e3-4899-9922-db040a29f2b3.png"
-      ]
+      "screenshots": []
     },
     {
       "id": "pxlflux/customisablesleepscreen.koplugin",
@@ -459,9 +440,7 @@
       "categories": [
         "beautify"
       ],
-      "screenshots": [
-        "https://github.com/user-attachments/assets/600a8f43-06e3-4e66-86df-a70fe0b28473"
-      ]
+      "screenshots": []
     },
     {
       "id": "zeeyado/koassistant.koplugin",
@@ -701,9 +680,7 @@
       "categories": [
         "beautify"
       ],
-      "screenshots": [
-        "https://github.com/user-attachments/assets/60db671c-e300-4b01-a230-5cc40e697f2a"
-      ]
+      "screenshots": []
     },
     {
       "id": "stradichenko/audiobook.koplugin",
@@ -842,13 +819,7 @@
       "categories": [
         "other"
       ],
-      "screenshots": [
-        "https://github.com/user-attachments/assets/2d82282a-96c9-43b7-aaea-fb27a74d2f52",
-        "https://github.com/user-attachments/assets/162b8b8c-c6b5-4149-a8d9-b5e9bbeb64dd",
-        "https://github.com/user-attachments/assets/9dbfec8c-88e0-4b91-9f13-7eb50f1f881c",
-        "https://github.com/user-attachments/assets/2a99493d-d86d-44f0-813f-4ee4ef1cd606",
-        "https://github.com/user-attachments/assets/6c5650b4-6718-4b9b-8a0e-2cd8a6ed4f47"
-      ]
+      "screenshots": []
     },
     {
       "id": "omer-faruq/rssreader.koplugin",
@@ -1062,13 +1033,7 @@
       "categories": [
         "other"
       ],
-      "screenshots": [
-        "https://github.com/user-attachments/assets/99ccfb5c-67b7-47a9-bdd0-cca2ece99c4e",
-        "https://github.com/user-attachments/assets/09d924c7-96d1-41d1-b68e-614da964cd63",
-        "https://github.com/user-attachments/assets/423a5c74-2578-4361-bc5a-acdfc3286ddf",
-        "https://github.com/user-attachments/assets/43c94cb7-28d1-4931-a658-8e321c528ea9",
-        "https://github.com/user-attachments/assets/a05ce960-48ae-4bf7-a5a3-54b161a3b211"
-      ]
+      "screenshots": []
     },
     {
       "id": "peterboda236/readinginsights.koplugin",
@@ -1098,16 +1063,7 @@
       "categories": [
         "other"
       ],
-      "screenshots": [
-        "https://github.com/user-attachments/assets/c12e7ab1-e3a9-4611-be17-0539527b6efc",
-        "https://github.com/user-attachments/assets/4a3d2fb9-cc51-4342-a952-36f23bb1925c",
-        "https://github.com/user-attachments/assets/555ab8c6-d9ce-4ebc-a6ac-cfdf097ec51d",
-        "https://github.com/user-attachments/assets/371b3119-119a-4ccb-9660-a63879996c48",
-        "https://github.com/user-attachments/assets/ea6711c7-7c18-4bb5-a15c-871cc0b74888",
-        "https://github.com/user-attachments/assets/de2d7a78-a657-40cf-8628-f0787a827147",
-        "https://github.com/user-attachments/assets/52f851b7-8955-4739-b3a7-96ff8c2cbfe6",
-        "https://github.com/user-attachments/assets/e4e5d617-98c6-40bc-8844-f23fa5837e95"
-      ]
+      "screenshots": []
     },
     {
       "id": "xusoo/shortcutstoolbar.koplugin",
@@ -1285,10 +1241,7 @@
       "categories": [
         "other"
       ],
-      "screenshots": [
-        "https://github.com/Fank1/foot-cream/releases/download/readme-assets/hero-img.png",
-        "https://github.com/Fank1/foot-cream/releases/download/readme-assets/styling.png"
-      ]
+      "screenshots": []
     },
     {
       "id": "hesan1232/fanqie.koplugin",
@@ -1456,11 +1409,7 @@
       "categories": [
         "other"
       ],
-      "screenshots": [
-        "https://github.com/user-attachments/assets/37878e48-2bc1-4eb3-9fb6-eaf65e1ef0f5",
-        "https://github.com/user-attachments/assets/70fc9fcc-af97-4224-825b-0e3b8ca2e897",
-        "https://github.com/user-attachments/assets/49362e3b-3d60-4f05-971b-ed3fd7b55d28"
-      ]
+      "screenshots": []
     },
     {
       "id": "omer-faruq/simpleui_ext.koplugin",
@@ -1660,13 +1609,7 @@
       "categories": [
         "other"
       ],
-      "screenshots": [
-        "https://github.com/user-attachments/assets/e2d5d86d-3376-46a6-a265-9be218021b14",
-        "https://github.com/user-attachments/assets/0b22e6fe-46ae-4f1c-82ad-01cdeca7cd70",
-        "https://github.com/user-attachments/assets/66661951-c5b5-4d9c-9c4c-c1817570c885",
-        "https://github.com/user-attachments/assets/cc785f42-c1ba-490d-9d4b-7643aa8bb291",
-        "https://github.com/user-attachments/assets/d4b50994-75e3-432f-85fe-105f402ef5e3"
-      ]
+      "screenshots": []
     },
     {
       "id": "arthurrump/syncthing.koplugin",
@@ -1825,10 +1768,7 @@
       "categories": [
         "download"
       ],
-      "screenshots": [
-        "https://github.com/user-attachments/assets/f03c7c82-3e69-4fcc-9ae8-210ccb7ae57b",
-        "https://github.com/user-attachments/assets/461d84f6-b8bd-482f-bd82-acabfb48e1ed"
-      ]
+      "screenshots": []
     },
     {
       "id": "brendanlefebvre/supersync.koplugin",
@@ -2343,9 +2283,7 @@
       "categories": [
         "other"
       ],
-      "screenshots": [
-        "https://github.com/user-attachments/assets/68ad0b89-9ab2-45f4-8765-8397d386daec"
-      ]
+      "screenshots": []
     },
     {
       "id": "d0nizam/syncery.koplugin",
@@ -2559,12 +2497,7 @@
       "categories": [
         "other"
       ],
-      "screenshots": [
-        "https://github.com/user-attachments/assets/6b5f8aaf-4d37-439d-91ad-71b387d89b64",
-        "https://github.com/user-attachments/assets/52cf8c6b-693b-4d66-a2d9-9103693ad422",
-        "https://github.com/user-attachments/assets/7192ce01-ade3-4075-87d8-c7d89af94f9f",
-        "https://github.com/user-attachments/assets/4eb7904d-7e1e-491d-af23-3da65c2e93c4"
-      ]
+      "screenshots": []
     },
     {
       "id": "omer-faruq/wordsearch.koplugin",
@@ -2665,10 +2598,7 @@
       "categories": [
         "other"
       ],
-      "screenshots": [
-        "https://github.com/user-attachments/assets/0c1f2240-46a4-4116-a0e1-49f5704960e7",
-        "https://github.com/user-attachments/assets/86a675b3-979a-4858-8faa-0de0e7c345fc"
-      ]
+      "screenshots": []
     },
     {
       "id": "KitanaCode/booknookcharms.koplugin",
@@ -3739,9 +3669,7 @@
       "categories": [
         "other"
       ],
-      "screenshots": [
-        "https://github.com/user-attachments/assets/1126afe3-81e6-4ad6-b5fb-fb384c8f6b80"
-      ]
+      "screenshots": []
     },
     {
       "id": "markleenders/stopwatchtimer.koplugin",
@@ -3769,11 +3697,7 @@
       "categories": [
         "other"
       ],
-      "screenshots": [
-        "https://github.com/user-attachments/assets/3068854b-667c-4bf1-8267-aea62e3dfce8",
-        "https://github.com/user-attachments/assets/dda778de-b663-46b0-902a-a9fd9bcfdf46",
-        "https://github.com/user-attachments/assets/0a2a5c1c-bb5b-4700-ac1e-72e88c59dcc3"
-      ]
+      "screenshots": []
     },
     {
       "id": "Bitboss2/Time-and-day-clock.koplugin",
@@ -3877,14 +3801,7 @@
       "categories": [
         "other"
       ],
-      "screenshots": [
-        "https://github.com/user-attachments/assets/1435ab1a-b0c4-42d5-b70c-64b47d37280e",
-        "https://github.com/user-attachments/assets/e3858865-b6f2-44cc-b3eb-ca1627c6db54",
-        "https://github.com/user-attachments/assets/8b41ef47-6fd5-4776-93c0-3156b8b11aec",
-        "https://github.com/user-attachments/assets/8c48ab01-f0e6-40dc-9254-de00c8538c27",
-        "https://github.com/user-attachments/assets/762adbec-0430-4fdb-bf00-aab68838731b",
-        "https://github.com/user-attachments/assets/cdb16c91-ea0e-478e-80fa-a85eb89c2d8b"
-      ]
+      "screenshots": []
     },
     {
       "id": "kaikozlov/kindle.koplugin",
@@ -4121,9 +4038,7 @@
       "categories": [
         "llm"
       ],
-      "screenshots": [
-        "https://github.com/user-attachments/assets/5304988e-1ceb-4603-8dbb-3b865a47e744"
-      ]
+      "screenshots": []
     },
     {
       "id": "hluiz2628-blip/tarot.koplugin",
@@ -4316,10 +4231,7 @@
       "categories": [
         "llm"
       ],
-      "screenshots": [
-        "https://github.com/user-attachments/assets/9d39e3d2-db87-42a8-a647-c7e524db8247",
-        "https://github.com/user-attachments/assets/568940a8-20e7-43f6-a113-7e386c79b2bf"
-      ]
+      "screenshots": []
     },
     {
       "id": "KodeshKit/tabbedreader.koplugin",
@@ -4651,15 +4563,7 @@
       "categories": [
         "other"
       ],
-      "screenshots": [
-        "https://github.com/user-attachments/assets/cf24f5b4-65fa-49e3-b0d7-a76f4cb3746a",
-        "https://github.com/user-attachments/assets/f5b835aa-d642-4b70-b166-bc2eaa6e69a3",
-        "https://github.com/user-attachments/assets/7732b631-bfbb-4c2d-90ad-08b76d7efb36",
-        "https://github.com/user-attachments/assets/907eb0db-cb8d-4447-b95f-1249ebee37df",
-        "https://github.com/user-attachments/assets/290eaa07-d578-4ed5-a112-8a6daf6c300d",
-        "https://github.com/user-attachments/assets/4e7ff1ea-16ff-4f11-9cdb-6129097f0642",
-        "https://github.com/user-attachments/assets/39f1229a-e5c3-4df6-975c-db1b1422cfd4"
-      ]
+      "screenshots": []
     },
     {
       "id": "RafaelMeirim/metafileextract.koplugin",
@@ -4885,16 +4789,7 @@
       "categories": [
         "other"
       ],
-      "screenshots": [
-        "https://github.com/user-attachments/assets/2a175e44-ad19-4577-8327-ae786119f278",
-        "https://github.com/user-attachments/assets/aa697b40-bf04-4d1f-af77-8fa253a0274b",
-        "https://github.com/user-attachments/assets/17fe04f7-bb50-4197-9962-6e7b54d8f3b2",
-        "https://github.com/user-attachments/assets/28748b55-d341-439d-9e20-b6968ae2b97f",
-        "https://github.com/user-attachments/assets/c4cb0777-ebcd-40be-b81c-21755a394fd0",
-        "https://github.com/user-attachments/assets/5e5180e8-5883-461c-96f4-67c9b04f2e43",
-        "https://github.com/user-attachments/assets/d4376519-e339-4b47-a72a-f884ff3bf70e",
-        "https://github.com/user-attachments/assets/3a9ca7e5-6ab9-4b1a-a3af-15b3aafea46f"
-      ]
+      "screenshots": []
     },
     {
       "id": "HoseanRC/kdeconnect.koplugin",
@@ -6430,11 +6325,7 @@
       "categories": [
         "other"
       ],
-      "screenshots": [
-        "https://github.com/user-attachments/assets/d32f2fbc-bbab-48d9-b9b6-03b4ec8d5005",
-        "https://github.com/user-attachments/assets/ef66ae26-9907-4d42-b29e-9b3cf10dd89b",
-        "https://github.com/user-attachments/assets/17ce8083-9a0f-4d88-9988-b107e7128670"
-      ]
+      "screenshots": []
     },
     {
       "id": "tachibana-shin/lunar.koplugin",
@@ -6466,12 +6357,7 @@
       "categories": [
         "other"
       ],
-      "screenshots": [
-        "https://github.com/user-attachments/assets/ba10b711-20bd-462f-ae7a-d1aef5f990af",
-        "https://github.com/user-attachments/assets/ca9a665b-9074-49aa-b04e-1ea83df7b9be",
-        "https://github.com/user-attachments/assets/b94b8ee0-0dc7-4f1c-9b73-10444df4c90f",
-        "https://github.com/user-attachments/assets/3f2d3c89-0a2d-4044-a3e3-9d2e36367702"
-      ]
+      "screenshots": []
     },
     {
       "id": "dani84bs/RemoteLibrary.koplugin",
@@ -10060,9 +9946,7 @@
       "categories": [
         "sync"
       ],
-      "screenshots": [
-        "https://www.qireader.com/static/icon.svg"
-      ]
+      "screenshots": []
     },
     {
       "id": "lawshinpersona/einkfixer.koplugin",
