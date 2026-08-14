@@ -1,360 +1,502 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "categories": [
     {
       "id": "beautify",
-      "name": "美化",
-      "name_en": "Beautify"
+      "name": {
+        "en": "Beautify",
+        "zh": "美化"
+      }
     },
     {
       "id": "typography",
-      "name": "排版",
-      "name_en": "Typography"
+      "name": {
+        "en": "Typography",
+        "zh": "排版"
+      }
     },
     {
       "id": "image",
-      "name": "图片",
-      "name_en": "Image"
+      "name": {
+        "en": "Image",
+        "zh": "图片"
+      }
     },
     {
       "id": "rss",
-      "name": "RSS",
-      "name_en": "RSS"
+      "name": {
+        "en": "RSS",
+        "zh": "RSS"
+      }
     },
     {
       "id": "download",
-      "name": "下载",
-      "name_en": "Download"
+      "name": {
+        "en": "Download",
+        "zh": "下载"
+      }
     },
     {
       "id": "bookstore",
-      "name": "书库",
-      "name_en": "Bookstore"
+      "name": {
+        "en": "Bookstore",
+        "zh": "书库"
+      }
     },
     {
       "id": "llm",
-      "name": "AI",
-      "name_en": "AI"
+      "name": {
+        "en": "AI",
+        "zh": "AI"
+      }
     },
     {
       "id": "dictionary",
-      "name": "词典",
-      "name_en": "Dictionary"
+      "name": {
+        "en": "Dictionary",
+        "zh": "词典"
+      }
     },
     {
       "id": "translate",
-      "name": "翻译",
-      "name_en": "Translate"
+      "name": {
+        "en": "Translate",
+        "zh": "翻译"
+      }
     },
     {
       "id": "annotation",
-      "name": "批注",
-      "name_en": "Annotation"
+      "name": {
+        "en": "Annotation",
+        "zh": "批注"
+      }
     },
     {
       "id": "sync",
-      "name": "同步",
-      "name_en": "Sync"
+      "name": {
+        "en": "Sync",
+        "zh": "同步"
+      }
     },
     {
       "id": "cloud",
-      "name": "云盘",
-      "name_en": "Cloud"
+      "name": {
+        "en": "Cloud",
+        "zh": "云盘"
+      }
     },
     {
       "id": "ime",
-      "name": "输入法",
-      "name_en": "Input Method"
+      "name": {
+        "en": "Input Method",
+        "zh": "输入法"
+      }
     },
     {
       "id": "remote",
-      "name": "遥控",
-      "name_en": "Remote"
+      "name": {
+        "en": "Remote",
+        "zh": "遥控"
+      }
     },
     {
       "id": "comic",
-      "name": "漫画",
-      "name_en": "Comic"
+      "name": {
+        "en": "Comic",
+        "zh": "漫画"
+      }
     },
     {
       "id": "audio",
-      "name": "朗读",
-      "name_en": "TTS"
+      "name": {
+        "en": "TTS",
+        "zh": "朗读"
+      }
     },
     {
       "id": "screensaver",
-      "name": "屏保",
-      "name_en": "Screensaver"
+      "name": {
+        "en": "Screensaver",
+        "zh": "屏保"
+      }
     },
     {
       "id": "gesture",
-      "name": "手势",
-      "name_en": "Gesture"
+      "name": {
+        "en": "Gesture",
+        "zh": "手势"
+      }
     },
     {
       "id": "statistics",
-      "name": "统计",
-      "name_en": "Statistics"
+      "name": {
+        "en": "Statistics",
+        "zh": "统计"
+      }
     },
     {
       "id": "calendar",
-      "name": "日历",
-      "name_en": "Calendar"
+      "name": {
+        "en": "Calendar",
+        "zh": "日历"
+      }
     },
     {
       "id": "file",
-      "name": "文件",
-      "name_en": "Files"
+      "name": {
+        "en": "Files",
+        "zh": "文件"
+      }
     },
     {
       "id": "network",
-      "name": "网络",
-      "name_en": "Network"
+      "name": {
+        "en": "Network",
+        "zh": "网络"
+      }
     },
     {
       "id": "other",
-      "name": "其他",
-      "name_en": "Other"
+      "name": {
+        "en": "Other",
+        "zh": "其他"
+      }
     },
     {
       "id": "安全",
-      "name": "安全",
-      "name_en": "安全"
+      "name": {
+        "en": "Security",
+        "zh": "安全"
+      }
     },
     {
       "id": "查词",
-      "name": "查词",
-      "name_en": "查词"
+      "name": {
+        "en": "Lookup",
+        "zh": "查词"
+      }
     },
     {
       "id": "词汇",
-      "name": "词汇",
-      "name_en": "词汇"
+      "name": {
+        "en": "Vocabulary",
+        "zh": "词汇"
+      }
     },
     {
       "id": "导出",
-      "name": "导出",
-      "name_en": "导出"
+      "name": {
+        "en": "Export",
+        "zh": "导出"
+      }
     },
     {
       "id": "定时",
-      "name": "定时",
-      "name_en": "定时"
+      "name": {
+        "en": "Scheduling",
+        "zh": "定时"
+      }
     },
     {
       "id": "动画",
-      "name": "动画",
-      "name_en": "动画"
+      "name": {
+        "en": "Animation",
+        "zh": "动画"
+      }
     },
     {
       "id": "多用户",
-      "name": "多用户",
-      "name_en": "多用户"
+      "name": {
+        "en": "Multi-user",
+        "zh": "多用户"
+      }
     },
     {
       "id": "复习",
-      "name": "复习",
-      "name_en": "复习"
+      "name": {
+        "en": "Review",
+        "zh": "复习"
+      }
     },
     {
       "id": "计时",
-      "name": "计时",
-      "name_en": "计时"
+      "name": {
+        "en": "Timer",
+        "zh": "计时"
+      }
     },
     {
       "id": "计算",
-      "name": "计算",
-      "name_en": "计算"
+      "name": {
+        "en": "Calculator",
+        "zh": "计算"
+      }
     },
     {
       "id": "健康",
-      "name": "健康",
-      "name_en": "健康"
+      "name": {
+        "en": "Health",
+        "zh": "健康"
+      }
     },
     {
       "id": "开发",
-      "name": "开发",
-      "name_en": "开发"
+      "name": {
+        "en": "Development",
+        "zh": "开发"
+      }
     },
     {
       "id": "练习",
-      "name": "练习",
-      "name_en": "练习"
+      "name": {
+        "en": "Practice",
+        "zh": "练习"
+      }
     },
     {
       "id": "逻辑",
-      "name": "逻辑",
-      "name_en": "逻辑"
+      "name": {
+        "en": "Logic",
+        "zh": "逻辑"
+      }
     },
     {
       "id": "逻辑推理",
-      "name": "逻辑推理",
-      "name_en": "逻辑推理"
+      "name": {
+        "en": "Logic puzzles",
+        "zh": "逻辑推理"
+      }
     },
     {
       "id": "模拟器",
-      "name": "模拟器",
-      "name_en": "模拟器"
+      "name": {
+        "en": "Emulator",
+        "zh": "模拟器"
+      }
     },
     {
       "id": "配置",
-      "name": "配置",
-      "name_en": "配置"
+      "name": {
+        "en": "Configuration",
+        "zh": "配置"
+      }
     },
     {
       "id": "拼音",
-      "name": "拼音",
-      "name_en": "拼音"
+      "name": {
+        "en": "Pinyin",
+        "zh": "拼音"
+      }
     },
     {
       "id": "棋类",
-      "name": "棋类",
-      "name_en": "棋类"
+      "name": {
+        "en": "Board games",
+        "zh": "棋类"
+      }
     },
     {
       "id": "启动",
-      "name": "启动",
-      "name_en": "启动"
+      "name": {
+        "en": "Launcher",
+        "zh": "启动"
+      }
     },
     {
       "id": "任务",
-      "name": "任务",
-      "name_en": "任务"
+      "name": {
+        "en": "Tasks",
+        "zh": "任务"
+      }
     },
     {
       "id": "日记",
-      "name": "日记",
-      "name_en": "日记"
+      "name": {
+        "en": "Journal",
+        "zh": "日记"
+      }
     },
     {
       "id": "生词本",
-      "name": "生词本",
-      "name_en": "生词本"
+      "name": {
+        "en": "Word list",
+        "zh": "生词本"
+      }
     },
     {
       "id": "省电",
-      "name": "省电",
-      "name_en": "省电"
+      "name": {
+        "en": "Power saving",
+        "zh": "省电"
+      }
     },
     {
       "id": "事件",
-      "name": "事件",
-      "name_en": "事件"
+      "name": {
+        "en": "Events",
+        "zh": "事件"
+      }
     },
     {
       "id": "视频",
-      "name": "视频",
-      "name_en": "视频"
+      "name": {
+        "en": "Video",
+        "zh": "视频"
+      }
     },
     {
       "id": "数独",
-      "name": "数独",
-      "name_en": "数独"
+      "name": {
+        "en": "Sudoku",
+        "zh": "数独"
+      }
     },
     {
       "id": "数字",
-      "name": "数字",
-      "name_en": "数字"
+      "name": {
+        "en": "Numbers",
+        "zh": "数字"
+      }
     },
     {
       "id": "搜索",
-      "name": "搜索",
-      "name_en": "搜索"
+      "name": {
+        "en": "Search",
+        "zh": "搜索"
+      }
     },
     {
       "id": "提醒",
-      "name": "提醒",
-      "name_en": "提醒"
+      "name": {
+        "en": "Reminders",
+        "zh": "提醒"
+      }
     },
     {
       "id": "通知",
-      "name": "通知",
-      "name_en": "通知"
+      "name": {
+        "en": "Notifications",
+        "zh": "通知"
+      }
     },
     {
       "id": "问答",
-      "name": "问答",
-      "name_en": "问答"
+      "name": {
+        "en": "Q&A",
+        "zh": "问答"
+      }
     },
     {
       "id": "休眠",
-      "name": "休眠",
-      "name_en": "休眠"
+      "name": {
+        "en": "Sleep",
+        "zh": "休眠"
+      }
     },
     {
       "id": "学习",
-      "name": "学习",
-      "name_en": "学习"
+      "name": {
+        "en": "Learning",
+        "zh": "学习"
+      }
     },
     {
       "id": "训练",
-      "name": "训练",
-      "name_en": "训练"
+      "name": {
+        "en": "Training",
+        "zh": "训练"
+      }
     },
     {
       "id": "益智",
-      "name": "益智",
-      "name_en": "益智"
+      "name": {
+        "en": "Puzzle",
+        "zh": "益智"
+      }
     },
     {
       "id": "隐私",
-      "name": "隐私",
-      "name_en": "隐私"
+      "name": {
+        "en": "Privacy",
+        "zh": "隐私"
+      }
     },
     {
       "id": "硬件",
-      "name": "硬件",
-      "name_en": "硬件"
+      "name": {
+        "en": "Hardware",
+        "zh": "硬件"
+      }
     },
     {
       "id": "优化",
-      "name": "优化",
-      "name_en": "优化"
+      "name": {
+        "en": "Optimization",
+        "zh": "优化"
+      }
     },
     {
       "id": "游戏",
-      "name": "游戏",
-      "name_en": "游戏"
+      "name": {
+        "en": "Games",
+        "zh": "游戏"
+      }
     },
     {
       "id": "游戏化",
-      "name": "游戏化",
-      "name_en": "游戏化"
+      "name": {
+        "en": "Gamification",
+        "zh": "游戏化"
+      }
     },
     {
       "id": "娱乐",
-      "name": "娱乐",
-      "name_en": "娱乐"
+      "name": {
+        "en": "Entertainment",
+        "zh": "娱乐"
+      }
     },
     {
       "id": "阅读",
-      "name": "阅读",
-      "name_en": "阅读"
+      "name": {
+        "en": "Reading",
+        "zh": "阅读"
+      }
     },
     {
       "id": "中文",
-      "name": "中文",
-      "name_en": "中文"
+      "name": {
+        "en": "Chinese",
+        "zh": "中文"
+      }
     },
     {
       "id": "专注",
-      "name": "专注",
-      "name_en": "专注"
+      "name": {
+        "en": "Focus",
+        "zh": "专注"
+      }
     },
     {
       "id": "字幕",
-      "name": "字幕",
-      "name_en": "字幕"
+      "name": {
+        "en": "Subtitles",
+        "zh": "字幕"
+      }
     },
     {
       "id": "自动化",
-      "name": "自动化",
-      "name_en": "自动化"
+      "name": {
+        "en": "Automation",
+        "zh": "自动化"
+      }
     },
     {
       "id": "ocr",
-      "name": "ocr",
-      "name_en": "ocr"
+      "name": {
+        "en": "OCR",
+        "zh": "ocr"
+      }
     }
   ]
 }

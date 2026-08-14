@@ -125,8 +125,27 @@ local function safeRelPath(path)
     return table.concat(parts, "/")
 end
 
---- Extract whole archive into dest_dir.
---- Archiver.Reader:extractToPath(entry, dest) extracts ONE entry, not the whole zip.
+local function writeFile(path, data)
+    local parent = parentPath(path)
+    if parent then
+        local ok, err = ensureDirectory(parent)
+        if not ok then
+            return nil, err
+        end
+    end
+    local f, err = io.open(path, "wb")
+    if not f then
+        return nil, err
+    end
+    local ok, werr = f:write(data)
+    f:close()
+    if not ok then
+        return nil, werr
+    end
+    return true
+end
+
+--- Extract whole archive into dest_dir (index entries first, then extractToMemory).
 local function extractArchive(archive_path, dest_dir)
     local ok, err = removeTree(dest_dir)
     if not ok then
@@ -140,6 +159,14 @@ local function extractArchive(archive_path, dest_dir)
     local archive = Archiver.Reader:new()
     if not archive:open(archive_path) then
         return nil, archive.err or "cannot open zip"
+    end
+
+    -- Index all entries before extracting (KOReader archiver cannot read twice).
+    for _ in archive:iterate() do
+    end
+    archive:close(true)
+    if not archive:open(archive_path) then
+        return nil, archive.err or "cannot reopen zip"
     end
 
     for entry in archive:iterate() do
@@ -157,21 +184,21 @@ local function extractArchive(archive_path, dest_dir)
                 removeTree(dest_dir)
                 return nil, err or "mkdir failed"
             end
-        elseif entry.mode == "file" or entry.mode == "link" then
-            local parent = parentPath(dest)
-            if parent then
-                ok, err = ensureDirectory(parent)
-                if not ok then
-                    archive:close()
-                    removeTree(dest_dir)
-                    return nil, err or "mkdir failed"
-                end
-            end
-            if not archive:extractToPath(entry.path, dest) then
+        elseif entry.mode == "link" then
+            logger.warn("KOMarket install: skip symlink in archive", entry.path)
+        elseif entry.mode == "file" then
+            local content = archive:extractToMemory(entry.path)
+            if content == nil then
                 local aerr = archive.err
                 archive:close()
                 removeTree(dest_dir)
                 return nil, aerr or "extract failed"
+            end
+            ok, err = writeFile(dest, content)
+            if not ok then
+                archive:close()
+                removeTree(dest_dir)
+                return nil, err or "write failed"
             end
         end
     end
@@ -186,35 +213,57 @@ local function extractArchive(archive_path, dest_dir)
     return true
 end
 
+local function hasPluginMarkers(dir)
+    return pathMode(dir .. "/_meta.lua") == "file"
+        and pathMode(dir .. "/main.lua") == "file"
+end
+
 local function findPluginRoot(extract_dir, expected_dirname)
+    if hasPluginMarkers(extract_dir) then
+        return extract_dir
+    end
+
     local direct = extract_dir .. "/" .. expected_dirname
-    if pathMode(direct) == "directory" and pathMode(direct .. "/_meta.lua") == "file" then
+    if hasPluginMarkers(direct) then
         return direct
     end
-    -- GitHub zipball: <repo>-<hash>/ or nested *.koplugin
-    for name in lfs.dir(extract_dir) do
-        if name ~= "." and name ~= ".." then
-            local child = extract_dir .. "/" .. name
-            if pathMode(child) == "directory" then
-                if pathMode(child .. "/_meta.lua") == "file" then
-                    return child
-                end
-                local nested = child .. "/" .. expected_dirname
-                if pathMode(nested) == "directory" and pathMode(nested .. "/_meta.lua") == "file" then
-                    return nested
-                end
-                for name2 in lfs.dir(child) do
-                    if name2:match("%.koplugin$") then
-                        local n2 = child .. "/" .. name2
-                        if pathMode(n2) == "directory" and pathMode(n2 .. "/_meta.lua") == "file" then
-                            return n2
-                        end
+
+    local function scan(dir, depth)
+        if depth > 5 or pathMode(dir) ~= "directory" then
+            return nil
+        end
+        if hasPluginMarkers(dir) then
+            return dir
+        end
+        local preferred = dir .. "/" .. expected_dirname
+        if hasPluginMarkers(preferred) then
+            return preferred
+        end
+        for name in lfs.dir(dir) do
+            if name ~= "." and name ~= ".." then
+                local child = dir .. "/" .. name
+                if pathMode(child) == "directory" and name:match("%.koplugin$") then
+                    if hasPluginMarkers(child) then
+                        return child
                     end
                 end
             end
         end
+        for name in lfs.dir(dir) do
+            if name ~= "." and name ~= ".." then
+                local child = dir .. "/" .. name
+                if pathMode(child) == "directory" then
+                    local found = scan(child, depth + 1)
+                    if found then
+                        return found
+                    end
+                end
+            end
+        end
+        return nil
     end
-    return nil
+
+    return scan(extract_dir, 0)
 end
 
 function Installer.pluginsDir()

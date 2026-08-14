@@ -40,6 +40,22 @@
           "items": { "type": "string" }
         },
         "stars": { "type": "integer", "minimum": 0 },
+        "stars_delta": {
+          "type": ["integer", "null"],
+          "description": "Star count change vs previous sync snapshot (null if first seen)"
+        },
+        "stars_delta_7d": {
+          "type": ["integer", "null"],
+          "description": "Star count change vs ~7 days ago in stars_history"
+        },
+        "stars_delta_30d": {
+          "type": ["integer", "null"],
+          "description": "Star count change vs ~30 days ago in stars_history"
+        },
+        "created_at": {
+          "type": ["string", "null"],
+          "description": "GitHub repository creation time"
+        },
         "updated_at": { "type": "string" },
         "latest_tag": { "type": ["string", "null"] },
         "latest_commit": { "type": ["string", "null"] },
@@ -81,8 +97,20 @@
           "items": { "type": "string", "format": "uri" }
         },
         "editorial_note": {
-          "type": ["string", "null"],
-          "description": "Curated note from catalog/editorial.json (merged at sync/serve time; source of truth is editorial.json)"
+          "oneOf": [
+            { "type": "null" },
+            { "type": "string" },
+            {
+              "type": "object",
+              "required": ["en", "zh"],
+              "properties": {
+                "en": { "type": "string" },
+                "zh": { "type": "string" }
+              },
+              "additionalProperties": false
+            }
+          ],
+          "description": "Curated note from catalog/editorial.json (merged at sync/serve time; { en, zh } with English as default display language)"
         }
       }
     }

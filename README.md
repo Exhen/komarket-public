@@ -19,6 +19,16 @@ komarket.koplugin/  # 拷贝到 KOReader plugins/ 即可使用
 
 ## 安装设备端插件
 
+**方式 A — KPM（Kindle 越狱 + 已装 KOReader）**
+
+```text
+;kpm install komarket
+```
+
+详见 [`kpm/README.md`](kpm/README.md)。
+
+**方式 B — 手动复制**
+
 1. 将本仓库中的 `komarket.koplugin` 文件夹复制到设备：
    - Kobo / Kindle：`koreader/plugins/`
    - Android：`/sdcard/koreader/plugins/`

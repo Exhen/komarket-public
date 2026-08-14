@@ -1,21 +1,25 @@
 --[[--
-卡欧市场 (KOMarket) — browse / search / install community koplugins.
+KOMarket — browse / search / install community koplugins.
 ]]
 
 local ConfirmBox = require("ui/widget/confirmbox")
 local InfoMessage = require("ui/widget/infomessage")
 local InputDialog = require("ui/widget/inputdialog")
 local Menu = require("ui/widget/menu")
+local ProgressbarDialog = require("ui/widget/progressbardialog")
 local NetworkMgr = require("ui/network/manager")
 local UIManager = require("ui/uimanager")
 local WidgetContainer = require("ui/widget/container/widgetcontainer")
 local logger = require("logger")
-local _ = require("gettext")
+local _ = require("komarket_gettext")
 local T = require("ffi/util").template
 
 local Catalog = require("catalog")
 local Installer = require("installer")
 local Updates = require("updates")
+local SharePack = require("share_pack")
+local ShareClient = require("share_client")
+local ShareImport = require("share_import")
 
 local KOMarket = WidgetContainer:extend{
     name = "komarket",
@@ -32,7 +36,7 @@ end
 
 function KOMarket:addToMainMenu(menu_items)
     menu_items.komarket = {
-        text = _("卡欧市场"),
+        text = _("KOMarket"),
         sorting_hint = "setting",
         callback = function()
             self:openMarket()
@@ -82,14 +86,14 @@ function KOMarket:refreshCatalog(opts, callback)
 
     if opts.loading_dialog then
         busy = InfoMessage:new{
-            text = opts.loading_text or _("正在刷新插件目录…"),
+            text = opts.loading_text or _("Refreshing plugin catalog…"),
             force_show = true,
         }
         UIManager:show(busy)
         UIManager:forceRePaint()
     elseif opts.toast then
         UIManager:show(InfoMessage:new{
-            text = _("正在刷新插件目录…"),
+            text = _("Refreshing plugin catalog…"),
             timeout = 2,
         })
     end
@@ -98,7 +102,7 @@ function KOMarket:refreshCatalog(opts, callback)
     closeBusy()
 
     if not data then
-        self:notify(T(_("刷新失败：%1"), tostring(src_or_err)))
+        self:notify(T(_("Failed to refresh: %1"), tostring(src_or_err)))
         if callback then
             callback(false)
         end
@@ -119,7 +123,7 @@ end
 
 function KOMarket:categoryLabel(id)
     if not id or id == "all" then
-        return _("全部")
+        return _("All")
     end
     return Catalog.categoryName(self._categories, id)
 end
@@ -177,19 +181,19 @@ function KOMarket:showBrowser(filter_query, category_id)
 
     local item_table = {
         {
-            text = _("📂 分类筛选…"),
+            text = _("📂 Filter by category…"),
             callback = function()
                 self:showCategoryPicker()
             end,
         },
         {
-            text = _("🔍 搜索…"),
+            text = _("🔍 Search…"),
             callback = function()
                 self:showSearch(q)
             end,
         },
         {
-            text = _("↻ 刷新目录"),
+            text = _("↻ Refresh catalog"),
             callback = function()
                 self:withNetwork(function()
                     self:refreshCatalog({
@@ -200,22 +204,34 @@ function KOMarket:showBrowser(filter_query, category_id)
             end,
         },
         {
-            text = _("⬆ 检查已安装更新…"),
+            text = _("⬆ Check installed updates…"),
             callback = function()
                 self:checkInstalledUpdates()
             end,
         },
         {
-            text = T(_("⬆ 检查卡欧市场更新（v%1）"), self:selfVersion()),
+            text = T(_("⬆ Check KOMarket update (v%1)"), self:selfVersion()),
             callback = function()
                 self:checkSelfUpdate()
+            end,
+        },
+        {
+            text = _("📤 Share my plugin list…"),
+            callback = function()
+                self:shareMyPlugins()
+            end,
+        },
+        {
+            text = _("📥 Import with share code…"),
+            callback = function()
+                self:importSharedPlugins()
             end,
         },
     }
 
     if cat and cat ~= "all" then
         item_table[#item_table + 1] = {
-            text = T(_("清除分类：%1"), self:categoryLabel(cat)),
+            text = T(_("Clear category: %1"), self:categoryLabel(cat)),
             callback = function()
                 self:showBrowser(q, "all")
             end,
@@ -224,7 +240,7 @@ function KOMarket:showBrowser(filter_query, category_id)
 
     if q and q ~= "" then
         item_table[#item_table + 1] = {
-            text = T(_("清除搜索：%1"), q),
+            text = T(_("Clear search: %1"), q),
             callback = function()
                 self:showBrowser("", cat)
             end,
@@ -232,13 +248,13 @@ function KOMarket:showBrowser(filter_query, category_id)
     end
 
     item_table[#item_table + 1] = {
-        text = T(_("—— %1 个插件 ——"), tostring(#plugins)),
+        text = T(_("—— %1 plugins ——"), tostring(#plugins)),
         enabled = false,
     }
 
     if #plugins == 0 then
         item_table[#item_table + 1] = {
-            text = _("（无匹配插件）"),
+            text = _("(no matching plugins)"),
             enabled = false,
         }
     end
@@ -262,7 +278,7 @@ function KOMarket:showBrowser(filter_query, category_id)
         }
     end
 
-    local title = _("卡欧市场")
+    local title = _("KOMarket")
     local parts = {}
     if cat and cat ~= "all" then
         parts[#parts + 1] = self:categoryLabel(cat)
@@ -271,7 +287,7 @@ function KOMarket:showBrowser(filter_query, category_id)
         parts[#parts + 1] = q
     end
     if #parts > 0 then
-        title = T(_("卡欧市场 · %1"), table.concat(parts, " · "))
+        title = T(_("KOMarket · %1"), table.concat(parts, " · "))
     end
     title = title .. "  v" .. self:selfVersion()
 
@@ -304,7 +320,7 @@ function KOMarket:showCategoryPicker()
 
     local item_table = {
         {
-            text = (current == "all" and "✓ " or "") .. T(_("全部（%1）"), tostring(countFor("all"))),
+            text = (current == "all" and "✓ " or "") .. T(_("All (%1)"), tostring(countFor("all"))),
             callback = function()
                 self:showBrowser(self._filter_query, "all")
             end,
@@ -324,7 +340,7 @@ function KOMarket:showCategoryPicker()
     end
 
     UIManager:show(Menu:new{
-        title = _("选择分类"),
+        title = _("Select category"),
         item_table = item_table,
         is_borderless = true,
         is_popout = false,
@@ -334,19 +350,19 @@ end
 function KOMarket:showSearch(prefill)
     local dialog
     dialog = InputDialog:new{
-        title = _("搜索插件"),
+        title = _("Search plugins"),
         input = prefill or "",
         buttons = {
             {
                 {
-                    text = _("取消"),
+                    text = _("Cancel"),
                     id = "close",
                     callback = function()
                         UIManager:close(dialog)
                     end,
                 },
                 {
-                    text = _("搜索"),
+                    text = _("Search"),
                     is_enter_default = true,
                     callback = function()
                         local q = dialog:getInputText()
@@ -370,27 +386,28 @@ function KOMarket:showPluginActions(plugin)
         plugin.summary or "",
         "",
     }
-    if plugin.editorial_note and plugin.editorial_note ~= "" then
-        lines[#lines + 1] = T(_("编辑注：%1"), plugin.editorial_note)
+    local note = Catalog.resolveEditorialNote(plugin.editorial_note)
+    if note ~= "" then
+        lines[#lines + 1] = T(_("Editor's note: %1"), note)
         lines[#lines + 1] = ""
     end
-    lines[#lines + 1] = T(_("作者：%1"), plugin.owner or "?")
-    lines[#lines + 1] = T(_("仓库：%1/%2"), plugin.owner or "?", plugin.repo or "?")
-    lines[#lines + 1] = T(_("目录名：%1"), plugin.install_dirname or "?")
+    lines[#lines + 1] = T(_("Author: %1"), plugin.owner or "?")
+    lines[#lines + 1] = T(_("Repository: %1/%2"), plugin.owner or "?", plugin.repo or "?")
+    lines[#lines + 1] = T(_("Install dir: %1"), plugin.install_dirname or "?")
     if tags ~= "" then
-        lines[#lines + 1] = T(_("分类：%1"), tags)
+        lines[#lines + 1] = T(_("Categories: %1"), tags)
     end
-    lines[#lines + 1] = T(_("更新：%1"), plugin.updated_at or "?")
-    lines[#lines + 1] = T(_("星标：%1"), tostring(plugin.stars or 0))
-    lines[#lines + 1] = installed and _("状态：已安装") or _("状态：未安装")
+    lines[#lines + 1] = T(_("Updated: %1"), plugin.updated_at or "?")
+    lines[#lines + 1] = T(_("Stars: %1"), tostring(plugin.stars or 0))
+    lines[#lines + 1] = installed and _("Status: installed") or _("Status: not installed")
     local detail = table.concat(lines, "\n")
 
-    local ok_text = _("安装")
+    local ok_text = _("Install")
     local ok_callback = function()
         self:confirmInstall(plugin, false)
     end
     if installed then
-        ok_text = _("更新/重装")
+        ok_text = _("Update / reinstall")
         ok_callback = function()
             self:confirmInstall(plugin, true)
         end
@@ -400,18 +417,18 @@ function KOMarket:showPluginActions(plugin)
         text = detail,
         ok_text = ok_text,
         ok_callback = ok_callback,
-        cancel_text = _("关闭"),
+        cancel_text = _("Close"),
     })
 end
 
 function KOMarket:confirmInstall(plugin, is_update)
     local tip = is_update
-        and T(_("确认更新/重装「%1」？\n将下载第三方插件代码。"), plugin.name or plugin.id)
-        or T(_("确认安装「%1」？\n将下载第三方插件代码。"), plugin.name or plugin.id)
+        and T(_("Update/reinstall \"%1\"?\nThird-party plugin code will be downloaded."), plugin.name or plugin.id)
+        or T(_("Install \"%1\"?\nThird-party plugin code will be downloaded."), plugin.name or plugin.id)
 
     UIManager:show(ConfirmBox:new{
         text = tip,
-        ok_text = _("继续"),
+        ok_text = _("Continue"),
         ok_callback = function()
             self:withNetwork(function()
                 self:doInstall(plugin, { updating = is_update })
@@ -442,11 +459,11 @@ function KOMarket:doInstall(plugin, opts)
     end
 
     local busy_text = opts.updating
-        and T(_("正在更新 %1 …"), plugin.name or plugin.id)
-        or T(_("正在安装 %1 …"), plugin.name or plugin.id)
+        and T(_("Updating %1 …"), plugin.name or plugin.id)
+        or T(_("Installing %1 …"), plugin.name or plugin.id)
     showBusy(busy_text)
 
-    local progress_fmt = opts.updating and _("更新中：%1") or _("安装中：%1")
+    local progress_fmt = opts.updating and _("Updating: %1") or _("Installing: %1")
     local ok, err = Installer.install(plugin, function(msg)
         showBusy(T(progress_fmt, msg))
     end, opts)
@@ -454,7 +471,7 @@ function KOMarket:doInstall(plugin, opts)
     closeBusy()
 
     if not ok then
-        local fail_fmt = opts.updating and _("更新失败：%1") or _("安装失败：%1")
+        local fail_fmt = opts.updating and _("Update failed: %1") or _("Install failed: %1")
         self:notify(T(fail_fmt, tostring(err)))
         return false, err
     end
@@ -462,10 +479,10 @@ function KOMarket:doInstall(plugin, opts)
     if not opts.quiet then
         UIManager:show(ConfirmBox:new{
             text = opts.updating
-                and _("更新完成。需要重启 KOReader 后才会加载新版本。")
-                or _("安装完成。需要重启 KOReader 后新插件才会加载。"),
-            ok_text = _("知道了"),
-            cancel_text = _("回到市场"),
+                and _("Update complete. Restart KOReader to load the new version.")
+                or _("Install complete. Restart KOReader to load the new plugin."),
+            ok_text = _("OK"),
+            cancel_text = _("Back to market"),
             cancel_callback = function()
                 self:showBrowser()
             end,
@@ -486,7 +503,7 @@ function KOMarket:checkSelfUpdate()
         end
 
         busy = InfoMessage:new{
-            text = _("正在检查卡欧市场更新…"),
+            text = _("Checking for KOMarket update…"),
             force_show = true,
         }
         UIManager:show(busy)
@@ -496,27 +513,27 @@ function KOMarket:checkSelfUpdate()
         closeBusy()
 
         if err then
-            self:notify(T(_("检查失败：%1"), tostring(err)))
+            self:notify(T(_("Check failed: %1"), tostring(err)))
             return
         end
         if not update then
-            self:notify(T(_("卡欧市场已是最新版本（v%1）。"), self:selfVersion()))
+            self:notify(T(_("KOMarket is up to date (v%1)."), self:selfVersion()))
             return
         end
 
         UIManager:show(ConfirmBox:new{
             text = T(
-                _("发现卡欧市场新版本：\n\n%1 → %2\n\n更新后必须重启 KOReader。"),
+                _("New KOMarket version available:\n\n%1 → %2\n\nRestart KOReader after updating."),
                 update.local_label,
                 update.remote_label
             ),
-            ok_text = _("更新"),
+            ok_text = _("Update"),
             ok_callback = function()
                 self:withNetwork(function()
                     self:doSelfUpdate(update.plugin)
                 end)
             end,
-            cancel_text = _("取消"),
+            cancel_text = _("Cancel"),
         })
     end)
 end
@@ -541,23 +558,23 @@ function KOMarket:doSelfUpdate(plugin)
         UIManager:forceRePaint()
     end
 
-    showBusy(T(_("正在更新卡欧市场 %1 …"), plugin.latest_tag or ""))
+    showBusy(T(_("Updating KOMarket %1 …"), plugin.latest_tag or ""))
 
     local ok, err = Installer.install(plugin, function(msg)
-        showBusy(T(_("更新中：%1"), msg))
+        showBusy(T(_("Updating: %1"), msg))
     end, { self_update = true })
 
     closeBusy()
 
     if not ok then
-        self:notify(T(_("更新失败：%1"), tostring(err)))
+        self:notify(T(_("Update failed: %1"), tostring(err)))
         return
     end
 
     UIManager:show(ConfirmBox:new{
-        text = _("卡欧市场已更新。\n\n请完全退出并重启 KOReader 后新版本才会生效。"),
-        ok_text = _("知道了"),
-        cancel_text = _("回到市场"),
+        text = _("KOMarket updated.\n\nFully quit and restart KOReader for the new version to take effect."),
+        ok_text = _("OK"),
+        cancel_text = _("Back to market"),
         cancel_callback = function()
             self:showBrowser()
         end,
@@ -576,7 +593,7 @@ function KOMarket:checkInstalledUpdates()
         end
 
         busy = InfoMessage:new{
-            text = _("正在检查已安装插件更新…"),
+            text = _("Checking installed plugin updates…"),
             force_show = true,
         }
         UIManager:show(busy)
@@ -590,13 +607,13 @@ function KOMarket:checkInstalledUpdates()
 
             local installed = Updates.listUserInstalled()
             if #installed == 0 then
-                self:notify(_("未找到用户安装的插件。"))
+                self:notify(_("No user-installed plugins found."))
                 return
             end
 
             local pending = Updates.scan(self._catalog)
             if #pending == 0 then
-                self:notify(T(_("已检查 %1 个已安装插件，均为最新版本。"), #installed))
+                self:notify(T(_("Checked %1 installed plugins; all are up to date."), #installed))
                 return
             end
 
@@ -607,7 +624,7 @@ end
 
 function KOMarket:confirmBatchUpdate(pending, checked_count)
     local lines = {
-        T(_("已检查 %1 个用户安装插件，发现 %2 个可更新："), checked_count, #pending),
+        T(_("Checked %1 user-installed plugins; %2 updates available:"), checked_count, #pending),
         "",
     }
     for i, item in ipairs(pending) do
@@ -619,17 +636,17 @@ function KOMarket:confirmBatchUpdate(pending, checked_count)
         )
     end
     lines[#lines + 1] = ""
-    lines[#lines + 1] = _("是否立即下载并更新这些插件？")
+    lines[#lines + 1] = _("Download and update all now?")
 
     UIManager:show(ConfirmBox:new{
         text = table.concat(lines, "\n"),
-        ok_text = _("全部更新"),
+        ok_text = _("Update all"),
         ok_callback = function()
             self:withNetwork(function()
                 self:runBatchUpdate(pending)
             end)
         end,
-        cancel_text = _("取消"),
+        cancel_text = _("Cancel"),
     })
 end
 
@@ -656,7 +673,7 @@ function KOMarket:runBatchUpdate(pending)
             UIManager:forceRePaint()
         end
 
-        showBusy(T(_("正在更新 %1（%2/%3）…"), item.plugin.name or item.install_dirname, i, total))
+        showBusy(T(_("Updating %1 (%2/%3)…"), item.plugin.name or item.install_dirname, i, total))
 
         local ok, err = self:doInstall(item.plugin, { updating = true, quiet = true })
         closeBusy()
@@ -673,22 +690,303 @@ function KOMarket:runBatchUpdate(pending)
     end
 
     local lines = {
-        T(_("更新完成：%1/%2 成功。"), ok_count, total),
+        T(_("Updates complete: %1/%2 succeeded."), ok_count, total),
     }
     if #fail_lines > 0 then
         lines[#lines + 1] = ""
-        lines[#lines + 1] = _("失败项：")
+        lines[#lines + 1] = _("Failed:")
         for i, line in ipairs(fail_lines) do
             lines[#lines + 1] = line
         end
     end
     lines[#lines + 1] = ""
-    lines[#lines + 1] = _("需要重启 KOReader 后新版本才会生效。")
+    lines[#lines + 1] = _("Restart KOReader for new versions to take effect.")
 
     UIManager:show(ConfirmBox:new{
         text = table.concat(lines, "\n"),
-        ok_text = _("知道了"),
-        cancel_text = _("回到市场"),
+        ok_text = _("OK"),
+        cancel_text = _("Back to market"),
+        cancel_callback = function()
+            self:showBrowser()
+        end,
+    })
+end
+
+function KOMarket:shareMyPlugins()
+    UIManager:show(ConfirmBox:new{
+        text = _(
+            "Upload your installed plugin list (excluding KOMarket) and get a 9-digit share code.\n\n" ..
+            "The recipient will download and install plugins in list order."
+        ),
+        ok_text = _("Continue"),
+        ok_callback = function()
+            self:withNetwork(function()
+                self:doSharePlugins()
+            end)
+        end,
+    })
+end
+
+function KOMarket:doSharePlugins()
+    local busy
+    local function closeBusy()
+        if busy then
+            UIManager:close(busy)
+            busy = nil
+        end
+    end
+    local function showBusy(text)
+        closeBusy()
+        busy = InfoMessage:new{ text = text, force_show = true }
+        UIManager:show(busy)
+        UIManager:forceRePaint()
+    end
+
+    showBusy(_("Refreshing plugin catalog…"))
+    self:refreshCatalog({ loading_dialog = false }, function(ok)
+        if not ok then
+            closeBusy()
+            return
+        end
+
+        showBusy(_("Generating plugin list…"))
+        local payload, err = SharePack.build(self._catalog)
+        if not payload then
+            closeBusy()
+            self:notify(T(_("Cannot share: %1"), tostring(err)))
+            return
+        end
+
+        showBusy(_("Uploading…"))
+        local resp, upload_err = ShareClient.uploadPluginList(payload, "")
+        closeBusy()
+
+        if not resp then
+            self:notify(T(_("Upload failed: %1"), tostring(upload_err)))
+            return
+        end
+
+        local code = ShareClient.formatCode(resp.code)
+        UIManager:show(ConfirmBox:new{
+            text = T(
+                _("Share code created:\n\n%1\n\n%2 plugins\nValid until %3\n\nSave it; others can import via \"Import with share code\"."),
+                code,
+                tostring(resp.plugin_count or #payload.plugins),
+                resp.expires_at or "?"
+            ),
+            ok_text = _("OK"),
+        })
+    end)
+end
+
+function KOMarket:importSharedPlugins()
+    local dialog
+    dialog = InputDialog:new{
+        title = _("Enter 9-digit share code"),
+        input = "",
+        input_type = "number",
+        description = _("Digits only, e.g. 123456789"),
+        buttons = {
+            {
+                {
+                    text = _("Cancel"),
+                    callback = function()
+                        UIManager:close(dialog)
+                    end,
+                },
+                {
+                    text = _("Look up"),
+                    is_enter_default = true,
+                    callback = function()
+                        local code = ShareClient.normalizeCode(dialog:getInputText())
+                        UIManager:close(dialog)
+                        if not code then
+                            self:notify(_("Share code must be 9 digits"))
+                            return
+                        end
+                        self:withNetwork(function()
+                            self:previewSharedPlugins(code)
+                        end)
+                    end,
+                },
+            },
+        },
+    }
+    UIManager:show(dialog)
+    dialog:onShowKeyboard()
+end
+
+function KOMarket:previewSharedPlugins(code)
+    local busy = InfoMessage:new{
+        text = _("Looking up share code…"),
+        force_show = true,
+    }
+    UIManager:show(busy)
+
+    local meta, err = ShareClient.fetchMeta(code)
+    UIManager:close(busy)
+
+    if not meta then
+        self:notify(T(_("Check failed: %1"), tostring(err)))
+        return
+    end
+    if type(meta.plugins) ~= "table" or #meta.plugins == 0 then
+        self:notify(_("Share code has no plugin list"))
+        return
+    end
+
+    local lines = {
+        T(_("Share code: %1"), ShareClient.formatCode(meta.code)),
+        "",
+    }
+    if meta.label and meta.label ~= "" then
+        lines[#lines + 1] = T(_("Name: %1"), meta.label)
+    end
+    lines[#lines + 1] = T(_("Plugin count: %1"), tostring(meta.plugin_count or #(meta.plugins or {})))
+    lines[#lines + 1] = T(_("Valid until: %1"), meta.expires_at or "?")
+    lines[#lines + 1] = ""
+    lines[#lines + 1] = _("Plugin list (install in this order):")
+    for i, item in ipairs(meta.plugins or {}) do
+        lines[#lines + 1] = T("%1. %2", tostring(i), item.name or item.install_dirname or "?")
+    end
+    lines[#lines + 1] = ""
+    lines[#lines + 1] = _("Plugins will be downloaded and installed in order; already installed ones are skipped.")
+
+    UIManager:show(ConfirmBox:new{
+        text = table.concat(lines, "\n"),
+        ok_text = _("Import"),
+        ok_callback = function()
+            self:withNetwork(function()
+                self:doImportSharedPlugins(code, meta)
+            end)
+        end,
+        cancel_text = _("Cancel"),
+    })
+end
+
+function KOMarket:doImportSharedPlugins(code, meta)
+    if not meta then
+        local fetch_err
+        meta, fetch_err = ShareClient.fetchMeta(code)
+        if not meta then
+            self:notify(T(_("Check failed: %1"), tostring(fetch_err or "unknown")))
+            return
+        end
+    end
+
+    local busy = InfoMessage:new{
+        text = _("Refreshing plugin catalog…"),
+        force_show = true,
+    }
+    UIManager:show(busy)
+    UIManager:forceRePaint()
+
+    self:refreshCatalog({ loading_dialog = false }, function(ok)
+        UIManager:close(busy)
+        if not ok then
+            return
+        end
+
+        local resolved, missing, resolve_err = ShareImport.resolvePlugins(meta.plugins, self._catalog)
+        if resolve_err then
+            self:notify(T(_("Import failed: %1"), tostring(resolve_err)))
+            return
+        end
+        if not resolved or #resolved == 0 then
+            if missing and #missing > 0 then
+                self:notify(T(_("Plugins not found in catalog:\n%1"), table.concat(missing, "\n")))
+            else
+                self:notify(_("No plugins to install"))
+            end
+            return
+        end
+
+        if missing and #missing > 0 then
+            UIManager:show(ConfirmBox:new{
+                text = T(
+                    _("The following plugins were not found and will be skipped:\n%1\n\nContinue with the remaining %2 plugins?"),
+                    table.concat(missing, "\n"),
+                    tostring(#resolved)
+                ),
+                ok_text = _("Continue"),
+                ok_callback = function()
+                    self:runSharedPluginInstall(resolved, missing)
+                end,
+                cancel_text = _("Cancel"),
+            })
+        else
+            self:runSharedPluginInstall(resolved, missing)
+        end
+    end)
+end
+
+function KOMarket:runSharedPluginInstall(plugins, missing)
+    local total = #plugins
+    local progress = ProgressbarDialog:new{
+        title = _("Import plugin list"),
+        subtitle = _("Preparing…"),
+        progress_max = total,
+    }
+    progress:show()
+
+    local function setSubtitle(text)
+        progress.subtitle = text
+        progress:redrawProgressbarIfNeeded()
+    end
+
+    local result = ShareImport.installSequential(plugins, {
+        on_item = function(i, max, plugin, phase, err)
+            local name = plugin.name or plugin.install_dirname or "?"
+            if phase == "start" then
+                setSubtitle(T(_("Processing %1 (%2/%3)…"), name, i, max))
+            elseif phase == "skip" then
+                setSubtitle(T(_("Already installed, skipping %1 (%2/%3)"), name, i, max))
+            elseif phase == "fail" then
+                setSubtitle(T(_("Failed %1: %2"), name, tostring(err)))
+            end
+        end,
+        on_progress = function(i, max, plugin, msg)
+            local name = plugin.name or plugin.install_dirname or "?"
+            setSubtitle(T(_("%1 (%2/%3): %4"), name, i, max, msg))
+        end,
+        on_step_done = function(i, max)
+            progress:reportProgress(i)
+        end,
+    })
+
+    progress:close()
+
+    local lines = {
+        T(_("Install complete: %1/%2 succeeded (%3 skipped)."),
+            tostring(result.ok_count - result.skipped),
+            tostring(result.total),
+            tostring(result.skipped)),
+    }
+    if missing and #missing > 0 then
+        lines[#lines + 1] = ""
+        lines[#lines + 1] = _("Not found:")
+        for i, name in ipairs(missing) do
+            lines[#lines + 1] = "• " .. name
+        end
+    end
+    if #result.failures > 0 then
+        lines[#lines + 1] = ""
+        lines[#lines + 1] = _("Failed:")
+        for i, item in ipairs(result.failures) do
+            lines[#lines + 1] = T(
+                "• %1：%2",
+                item.plugin.name or item.plugin.install_dirname,
+                tostring(item.err)
+            )
+        end
+    end
+    lines[#lines + 1] = ""
+    lines[#lines + 1] = _("Restart KOReader for new plugins to load.")
+
+    UIManager:show(ConfirmBox:new{
+        text = table.concat(lines, "\n"),
+        ok_text = _("OK"),
+        cancel_text = _("Back to market"),
         cancel_callback = function()
             self:showBrowser()
         end,
@@ -697,14 +995,14 @@ end
 
 function KOMarket:confirmUninstall(plugin)
     UIManager:show(ConfirmBox:new{
-        text = T(_("确认卸载「%1」？"), plugin.name or plugin.id),
-        ok_text = _("卸载"),
+        text = T(_("Uninstall \"%1\"?"), plugin.name or plugin.id),
+        ok_text = _("Uninstall"),
         ok_callback = function()
             local ok, err = Installer.uninstall(plugin.install_dirname)
             if not ok then
-                self:notify(T(_("卸载失败：%1"), tostring(err)))
+                self:notify(T(_("Uninstall failed: %1"), tostring(err)))
             else
-                self:notify(_("已卸载。重启后生效。"))
+                self:notify(_("Uninstalled. Restart to apply."))
                 self:showBrowser()
             end
         end,

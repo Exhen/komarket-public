@@ -15,23 +15,55 @@ local Config = require("config")
 -- Ensure LuaSec is loaded so https:// URLs work via LuaSocket scheme handling.
 pcall(require, "ssl.https")
 
+local _ = require("komarket_gettext")
+
 local Catalog = {}
+
+local GetText = require("gettext")
+
+--- Resolve editorial note for display (default: English).
+function Catalog.currentLang()
+    return GetText.current_lang or "en"
+end
+
+function Catalog.resolveEditorialNote(note, lang)
+    lang = lang or Catalog.currentLang()
+    if type(note) == "string" then
+        local s = note:match("^%s*(.-)%s*$") or ""
+        if s == "" then
+            return ""
+        end
+        if lang:match("^zh") then
+            return s
+        end
+        return ""
+    end
+    if type(note) == "table" then
+        local en = tostring(note.en or ""):match("^%s*(.-)%s*$") or ""
+        local zh = tostring(note.zh or note.zh_CN or ""):match("^%s*(.-)%s*$") or ""
+        if lang:match("^zh") then
+            return zh ~= "" and zh or en
+        end
+        return en ~= "" and en or zh
+    end
+    return ""
+end
 
 local CACHE_DIR = DataStorage:getDataDir() .. "/cache/komarket"
 local CACHE_FILE = CACHE_DIR .. "/index.json"
 local CATEGORIES_CACHE_FILE = CACHE_DIR .. "/categories.json"
 
 local DEFAULT_CATEGORIES = {
-    { id = "beautify", name = "美化" },
-    { id = "sync", name = "同步" },
-    { id = "download", name = "下载" },
-    { id = "bookstore", name = "三方书库" },
+    { id = "beautify", name = _("Beautify") },
+    { id = "sync", name = _("Sync") },
+    { id = "download", name = _("Download") },
+    { id = "bookstore", name = _("Bookstore") },
     { id = "llm", name = "LLM" },
     { id = "rss", name = "RSS" },
-    { id = "ime", name = "输入法" },
-    { id = "remote", name = "遥控" },
-    { id = "comic", name = "漫画" },
-    { id = "other", name = "其他" },
+    { id = "ime", name = _("Input method") },
+    { id = "remote", name = _("Remote control") },
+    { id = "comic", name = _("Comics") },
+    { id = "other", name = _("Other") },
 }
 local MAX_REDIRECTS = 5
 
@@ -235,10 +267,37 @@ function Catalog.fetchCategories()
     return Catalog.loadCachedCategories(), last_err and ("fallback:" .. tostring(last_err)) or "builtin"
 end
 
+function Catalog.resolveCategoryName(cat, lang)
+    lang = lang or Catalog.currentLang()
+    if type(cat) ~= "table" then
+        return tostring(cat or "")
+    end
+    local name = cat.name
+    if type(name) == "string" then
+        local legacy_en = tostring(cat.name_en or "")
+        if lang:match("^zh") then
+            return name
+        end
+        if legacy_en ~= "" and legacy_en ~= name then
+            return legacy_en
+        end
+        return name
+    end
+    if type(name) == "table" then
+        local en = tostring(name.en or ""):match("^%s*(.-)%s*$") or ""
+        local zh = tostring(name.zh or name.zh_CN or ""):match("^%s*(.-)%s*$") or ""
+        if lang:match("^zh") then
+            return zh ~= "" and zh or en
+        end
+        return en ~= "" and en or zh
+    end
+    return tostring(cat.id or "")
+end
+
 function Catalog.categoryName(categories, id)
     for _, c in ipairs(categories or DEFAULT_CATEGORIES) do
         if c.id == id then
-            return c.name or id
+            return Catalog.resolveCategoryName(c)
         end
     end
     return id
@@ -272,7 +331,7 @@ function Catalog.filterPlugins(plugins, query, category_id)
         local hay = table.concat({
             tostring(p.name or ""),
             tostring(p.summary or ""),
-            tostring(p.editorial_note or ""),
+            tostring(Catalog.resolveEditorialNote(p.editorial_note) or ""),
             tostring(p.owner or ""),
             tostring(p.repo or ""),
             table.concat(p.topics or {}, " "),

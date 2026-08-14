@@ -1,6 +1,6 @@
-local _ = require("gettext")
+local _ = require("komarket_gettext")
 return {
     name = "komarket",
-    fullname = _("卡欧市场"),
+    fullname = _("KOMarket"),
     description = _([[Browse, search, download and install KOReader community plugins from the KOMarket catalog.]]),
 }

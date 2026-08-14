@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-14T03:51:43.636Z",
+  "updated_at": "2026-08-14T09:08:07.715Z",
   "featured_groups": [
     {
       "id": "editors-picks",
@@ -19,569 +19,2261 @@
     }
   ],
   "notes": {
-    "doctorhetfield-cmd/simpleui.koplugin": "自定义主屏、底栏与状态栏",
-    "ZlibraryKO/zlibrary.koplugin": "浏览并下载Z-library书籍到设备",
-    "AndyHazz/bookshelf.koplugin": "美化主屏，展示书架并自定义预览信息",
-    "AnthonyGress/zen_ui.koplugin": "极简界面，整合设置与快捷面板",
-    "finlater/weread.koplugin": "使用微信读书，同步进度与时长",
-    "omer-faruq/appstore.koplugin": "浏览、安装、更新社区插件与补丁",
-    "Billiam/hardcoverapp.koplugin": "同步阅读状态到 Hardcover",
-    "patelneeraj/filebrowserplus.koplugin": "运行文件浏览器，无线管理文件",
-    "pengcw/legado.koplugin": "阅读 Legado 书库网文，支持缓存与进度同步",
-    "AndyHazz/bookends.koplugin": "可配置文本覆盖层，支持令牌、图标与样式",
-    "pxlflux/customisablesleepscreen.koplugin": "自定义睡眠屏，显示阅读统计与书籍信息",
-    "gitalexcampos/highlightsync.koplugin": "跨设备同步高亮、笔记与书签",
-    "Ajatt-Tools/anki.koplugin": "查词后生成 Anki 卡片",
-    "zeeyado/koassistant.koplugin": "集成多种 AI 模型的阅读助手，支持翻译、解释、生成图片与 X-Ray 分析",
-    "OGKevin/kobo.koplugin": "虚拟书库、阅读进度同步与蓝牙管理",
-    "greywolf1499/opds_plus.koplugin": "增强 OPDS 目录浏览，支持封面、网格/列表视图与自定义",
-    "ckilb/pocketbooksync.koplugin": "同步阅读进度到 PocketBook 书库",
-    "dani84bs/AnnotationSync.koplugin": "跨设备同步批注、书签与阅读进度",
-    "mysticknits/pencil.koplugin": "用触控笔在 EPUB 上手写批注",
-    "stelzch/zotero.koplugin": "浏览 Zotero 文献库",
-    "stradichenko/audiobook.koplugin": "提供 TTS 朗读与蓝牙控制",
-    "iceyear/readeck.koplugin": "同步 Readeck 文章、标注与阅读进度",
-    "advokatb/updatesmanager.koplugin": "管理多个 GitHub 仓库的补丁与插件更新",
-    "koplugin-swipe-animation/Swipe_Animation.koplugin": "为无硬件动画的设备提供流畅擦除渐显翻页效果",
-    "kristianpennacchia/zzz-readermenuredesign.koplugin": "重绘阅读器菜单与弹窗界面",
-    "Euphoriyy/appearance.koplugin": "自定义界面配色、主题、字体与背景图",
-    "AlgusDark/miniflux.koplugin": "阅读 Miniflux 的 RSS 条目，支持离线与同步",
-    "omer-faruq/rssreader.koplugin": "聚合阅读 RSS 订阅，支持多账户与离线阅读",
-    "omer-faruq/webbrowser.koplugin": "在阅读器内浏览网页与搜索",
-    "IntrovertedMage/AO3Downloader.koplugin": "浏览、下载并阅读 AO3 上的作品，支持追踪章节与作者主页",
-    "KORComic/comicreader.koplugin": "双页并排阅读漫画，横屏自动启用",
-    "naleo/audiobookshelf.koplugin": "同步有声书进度与书架",
-    "peterboda236/readinginsights.koplugin": "全屏展示阅读历史统计与趋势",
-    "onatbas/bluetooth.koplugin": "用蓝牙遥控器翻页并控制 KOReader",
-    "xusoo/shortcutstoolbar.koplugin": "在阅读器与文件浏览器添加可配置快捷栏",
-    "hesan1232/fanqie.koplugin": "阅读番茄小说，支持扫码登录、书架、进度同步与段评",
-    "0xmiki/telegramhighlights.koplugin": "将书摘与截图发送到 Telegram 机器人生成图片语录",
-    "finlater/kindlebtcontroller.koplugin": "用蓝牙手柄/遥控器控制 Kindle 翻页、调亮度等",
-    "ebanDev/iconschanger.koplugin": "更换应用图标包，支持下载与备份恢复",
-    "qewer33/quickrss.koplugin": "快速离线阅读 RSS 订阅源，支持全文提取与图片缓存",
-    "Lalocaballero/readmastery.koplugin": "将阅读变成 RPG 冒险，赚经验升级解锁成就",
-    "KORComic/comicmeta.koplugin": "从 CBZ/CBR 压缩包提取漫画元数据",
-    "gytwo/pinyin_enhancement.koplugin": "拼音输入法候选词栏增强，支持词频排序与扩展码表",
-    "kaikozlov/acsm.koplugin": "直接打开图书馆借阅的ACSM文件并下载EPUB/PDF",
-    "kristianpennacchia/wordreference.koplugin": "在阅读中直接查词或短语的 WordReference 释义",
-    "prasy-loyola/notes.koplugin": "手写笔记，可多页保存为 PNG",
-    "grimmory-tools/grimmory.koplugin": "从 Grimmory 读书、同步书架并自动追踪进度",
-    "omer-faruq/simpleui_ext.koplugin": "为 SimpleUI 主屏添加阅读统计与进度模块",
-    "advokatb/readingstreak.koplugin": "追踪每日与每周阅读连续天数，含日历视图与目标提醒",
-    "kodermike/airplanemode.koplugin": "一键开关网络与指定插件，并备份恢复设置",
-    "xblain/annotationsviewer.koplugin": "统一浏览、筛选与管理所有书籍的批注和划线",
-    "moritz-john/homeassistant.koplugin": "在阅读中控制 Home Assistant 设备",
-    "Shac0x/charactertracker.koplugin": "跟踪阅读中的人物、关系与笔记，支持跨书系列共享",
-    "Shac0x/maximum.koplugin": "漫画网格缩放与横页自动旋转",
-    "fpammer/kamare.koplugin": "连接 Kavita 书库阅读漫画，支持长条滚动与双页模式",
-    "omer-faruq/sudoku.koplugin": "玩数独，支持多难度与进度保存",
-    "omer-faruq/instapaper.koplugin": "浏览、下载并管理 Instapaper 文章",
-    "marinov752/emailtokoreader.koplugin": "从邮箱自动下载 EPUB 附件到设备",
-    "Evgeniy-94/TelegramDownloader.koplugin": "通过 Telegram 机器人向阅读器发送文件",
-    "brendanlefebvre/supersync.koplugin": "将完整阅读元数据备份到自有云存储",
-    "artemartemenko/KOReader_MultiUser.koplugin": "多用户独立配置、历史与阅读统计",
-    "Kaito0/panelreader.koplugin": "漫画分镜逐格导航阅读",
-    "Tukks/onyxbooxsync.koplugin": "将阅读进度与统计同步到文石书库",
-    "abrahamnm/filesync.koplugin": "无线管理阅读器文件",
-    "agaragou/illustrations.koplugin": "浏览、预览并跳转 EPUB 内全部插图",
-    "omer-faruq/memobook.koplugin": "在书内记录单词笔记并建立个人词典",
-    "norude/TTS.koplugin": "通过独立服务器进行文本朗读",
-    "quanganhdo/plainui.koplugin": "极简主屏，快速访问书库与状态控制",
-    "d0nizam/kosyncthing_plus.koplugin": "内嵌 Syncthing 守护进程，实现书籍与批注的端到端同步",
-    "PedroMachado1/kopet.koplugin": "将阅读行为转化为虚拟宠物养成游戏",
-    "gytwo/quickui.koplugin": "整合快捷操作、封面美化、挖空复习与页眉页脚",
-    "omer-faruq/ankiviewer.koplugin": "在阅读器内导入并复习 Anki 卡片",
-    "anezih/bubblezoom.koplugin": "点按放大漫画/漫画中的对话气泡",
-    "omer-faruq/applauncher.koplugin": "将已装插件动作分组为图标标签页，支持手势快速打开",
-    "Merpyzf/pinyinime.koplugin": "增强简体中文键盘，支持双拼与整句输入",
-    "DucNg/digitalclock.koplugin": "将电子书用作时钟，显示时间、日期与图片",
-    "kktse/dtdisplay.koplugin": "全屏显示时间与日期",
-    "d0nizam/syncery.koplugin": "跨设备同步阅读进度、批注、元数据与字体样式",
-    "DisastrousPatience83/Floating-Dictionary.koplugin": "将词典弹窗替换为可定制的浮动卡片，支持生词复习",
-    "omer-faruq/tbrplanner.koplugin": "规划待读书单，支持日历视图与阅读时长计算",
-    "Lalocaballero/solitaire.koplugin": "玩经典纸牌接龙",
-    "Euphoriyy/derainbowify.koplugin": "去除 Kaleido 3 彩屏彩虹纹",
-    "j-v/remotenote.koplugin": "用另一台设备远程输入批注与文本",
-    "omer-faruq/wordsearch.koplugin": "在设备上生成单词搜索谜题游戏",
-    "asxelot/wordwise.koplugin": "在难词上方显示简短释义，可调难度",
-    "stevenzamora1/covercalendar.koplugin": "以月历形式展示阅读历史与书籍封面",
-    "KitanaCode/booknookcharms.koplugin": "为阅读界面添加书签丝带与折角装饰",
-    "omer-faruq/nonogram.koplugin": "玩数织解谜，支持提示与进度保存",
-    "LoShady/DoctorBattery.koplugin": "查看电池健康、充电状态与硬件信息",
-    "stefan-misik/game2048.koplugin": "玩 2048 小游戏",
-    "Auri3l/leadingmangazoom.koplugin": "漫画网格缩放、自动旋转与分页",
-    "komadorirobin/library-sync.koplugin": "从 OPDS 服务器同步缺失书籍到本地书库",
-    "kbarni/frotz.koplugin": "游玩交互式小说游戏",
-    "sadatdaniel/splitread.koplugin": "分屏显示实时翻译，辅助外语阅读",
-    "omer-faruq/crossword.koplugin": "玩填字游戏，支持本地文件、下载与生成",
-    "reuerendo/pocketbooktools.koplugin": "同步阅读进度、开机显示末页、移除已读书籍并美化界面",
-    "cristenger/gota.koplugin-for-raindrop": "浏览、搜索并阅读 Raindrop.io 书签",
-    "bozo22/imagebookmarks.koplugin": "快速保存并回看图片书签",
-    "gytwo/cloudlibrary.koplugin": "跨设备同步书籍与阅读数据",
-    "omer-faruq/kotranslate.koplugin": "多引擎翻译，支持离线与在线服务",
-    "DenisovichDev/randomquote.koplugin": "解锁时随机展示自己的摘录名言",
-    "jbreizh/quickmenu.koplugin": "自定义快捷菜单，集中常用操作与设置",
-    "Craftwork2720/foldermemory.koplugin": "记住每个文件夹的排序、显示模式等偏好并自动恢复",
-    "Mr54233/pickthought.koplugin": "把微信读书的划线与想法注入本地 EPUB",
-    "CezaryPukownik/notionsync.koplugin": "同步标注到 Notion 数据库",
-    "richbeatty/burrow.koplugin": "以封面为中心的图书馆式界面，支持 OPDS 下载与阅读控制",
-    "titandrive/bluetoothconfigurator.koplugin": "映射蓝牙手柄、翻页器与键盘按键到阅读操作",
-    "hashi173/truyenviet.koplugin": "聚合多个越南语小说与漫画源，支持搜索、下载与阅读",
-    "agaragou/errol.koplugin": "同步高亮到 Telegram/Discord，支持离线队列与书籍下载",
-    "Sirozha1337/storytellersync.koplugin": "与 Storyteller 应用同步阅读进度",
-    "cdrso/backlog.koplugin": "记录多文章 EPUB 的已读进度",
-    "Estela-Zelin84/inkstain.koplugin": "根据阅读统计生成账单风格休眠壁纸",
-    "ZHA30/metadata.koplugin": "搜索并应用在线书籍元数据与封面",
-    "jperon/clock.koplugin": "显示模拟时钟",
-    "omer-faruq/slidepuzzle.koplugin": "玩经典滑块拼图",
-    "THE-XSX/readingfolio.koplugin": "将阅读数据编排成可预览的休眠屏保卡片",
-    "finlater/one.koplugin": "每日推送一张图片、一篇文章和一个问答",
-    "Sirozha1337/fastdictlookup.koplugin": "用方向键移动光标即时查词，支持高亮与脚注预览",
-    "zhouwt/pinyin.koplugin": "在汉字上方叠加拼音，可按常用度分级注音",
-    "LK4D4/suwayomi.koplugin": "浏览 Suwayomi 服务器、管理源、同步阅读进度并下载章节",
-    "Craftwork2720/incognito.koplugin": "无痕打开书籍，不留下任何记录",
-    "THE-XSX/typefolio.koplugin": "为 EPUB 提供下划线、高亮等排版微调与预设",
-    "kbarni/sokoban.koplugin": "玩推箱子游戏",
-    "nojux-official/HighlightImport.koplugin": "导入 Kindle 剪贴笔记为高亮",
-    "TomasDiLeo/pageturner.koplugin": "通过UDP远程翻页，需安卓配套应用",
-    "rameezk/rebind.koplugin": "在设备上从 Hardcover 更新 EPUB 内嵌元数据",
-    "kaikozlov/kindle.koplugin": "读取 Kindle 书库并阅读",
-    "tachibana-shin/smartdelete.koplugin": "删除文件时提示关联书签与阅读记录",
-    "Bitboss2/Time-and-day-clock.koplugin": "屏保时钟，支持多种表盘与自定义",
-    "markleenders/stopwatchtimer.koplugin": "提供秒表与倒计时功能，支持后台运行",
-    "moritz-john/heartbeat.koplugin": "将阅读状态与书籍元数据暴露给 Home Assistant",
-    "fvelsg/timesync-fork.koplugin": "自动同步设备时间，支持时区检测与手动设置",
-    "tachibana-shin/crop_enhancer.koplugin": "用连通域分析优化自动裁边与面板缩放",
-    "asxelot/wifiindicator.koplugin": "抑制Wi-Fi弹窗，显示状态图标并支持点击切换",
-    "zhouwt/englishannot.koplugin": "阅读英文书时自动给生词叠加中文释义并加下划线",
-    "JimDBh/kokomga.koplugin": "浏览 Komga 书库、下载并同步阅读进度",
-    "KitanaCode/boardgames.koplugin": "内置六款经典棋类与益智游戏",
-    "luizcorreia/metaguiding.koplugin": "将 EPUB 每词首字母加粗，引导视线快速阅读",
-    "omer-faruq/phrasedeck.koplugin": "收集书中短语，用间隔重复卡片学习",
-    "koesac/OPDSfoldersync.koplugin": "增强 OPDS 目录同步与过滤功能",
-    "bps/syncthing.koplugin": "直接运行 Syncthing 同步文件",
-    "j-v/slopquiz.koplugin": "AI 生成章节测验，提升阅读理解",
-    "omer-faruq/merchant.koplugin": "回合制贸易游戏，低买高卖还债",
-    "hluiz2628-blip/tarot.koplugin": "抽塔罗牌并解读含义，支持日记与书签",
-    "s4m-mo/pomodoro.koplugin": "番茄钟计时，专注与休息循环",
-    "KodeshKit/tabbedreader.koplugin": "浏览器式多标签页",
-    "yupmoon/vocabdeck.koplugin": "阅读时存词、AI 补全释义并间隔复习",
-    "onatbas/htmlreplacer.koplugin": "用正则替换修改 EPUB 内容",
-    "anezih/imageprocessing.koplugin": "高质量漫画缩放与图像后处理",
-    "wtb04/wireguard.koplugin": "从菜单启停 WireGuard VPN 隧道",
-    "dwigunakd/collectionsmosaic.koplugin": "将收藏集显示为虚拟文件夹，支持排序与重命名",
-    "laughedelic/mcp.koplugin": "让 AI 助手实时访问和操作电子书内容",
-    "SimonLiu423/eraser.koplugin": "按住橡皮擦按钮滑动删除高亮",
-    "right9code/fontswitcher.koplugin": "快速切换字体",
-    "ksaMask123/artgallery.koplugin": "阅读中浏览书内图片，支持缩放平移与进度同步",
-    "luizcorreia/meclivros.koplugin": "借阅并下载巴西MEC平台电子书",
-    "right9code/annas-fetch.koplugin": "搜索并下载安娜档案书籍",
-    "mcurmi05/contextcreator.koplugin": "阅读时记录人物、地点等并构建知识图谱",
-    "dani84bs/kojump.koplugin": "记录阅读跳转历史，支持前进后退与历史列表",
-    "anezih/offlinetranslator.koplugin": "离线翻译与 OCR 识别，支持漫画气泡",
-    "ysfsvm/kagi-news.koplugin": "浏览多分类新闻，支持AI摘要与离线缓存",
-    "TomasDiLeo/killersudoku.koplugin": "玩杀手数独，含数万题库与笔记功能",
-    "DavidMakin/royalroad.koplugin": "下载 Royal Road 网文为 EPUB 并自动更新章节",
-    "shiggsy365/minesweeper.koplugin": "玩扫雷游戏",
-    "omer-faruq/smartdeck.koplugin": "阅读时收集单词短语，AI 生成释义并制卡复习",
-    "neodb-social/neodb.koplugin": "同步阅读进度、笔记、评分到 NeoDB",
-    "federico1176-wq/Page_turn_animation.koplugin": "配置翻页动画速度与步数",
-    "holyspiritomb/weather.koplugin": "显示当日及未来两天的天气预报",
-    "aureliofng/screensaver-overlay.koplugin": "锁屏时叠加透明PNG图片",
-    "DHaizon/tabbar.koplugin": "多标签页同时打开多本书，快速切换并记住进度",
-    "RafaelMeirim/metafileextract.koplugin": "从文件名解析元数据，批量重命名并同步描述",
-    "gustjose/sidekick.koplugin": "用本地文件同步阅读进度，支持冲突解决",
-    "omer-faruq/send2telegram.koplugin": "将笔记和书摘直接发送到 Telegram 机器人",
-    "dwigunakd/classicscover.koplugin": "自动生成并应用经典风格书籍封面",
-    "inkee08/webdav-autosync.koplugin": "从 WebDAV 服务器同步文件到设备",
-    "omer-faruq/notificationlistener.koplugin": "通过 HTTP 接收通知并在阅读时显示",
-    "thekimberleyann/cozyhome.koplugin": "定制主屏、高亮浏览与间隔重复卡片复习",
-    "dourofficer/assistant.koplugin": "阅读中调用 AI 提问、翻译、总结与解释",
-    "TomasDiLeo/sumpuzzle.koplugin": "数字求和网格解谜游戏",
-    "kerivin/stylus-annotations.koplugin": "手写笔迹批注 PDF、EPUB 等文档",
-    "wtfffffffff511/kindle-menu.koplugin": "菜单弹出时叠加压暗网格背景，仿 Kindle 质感",
-    "DRDTR001/fulltextunderline.koplugin": "在可重排文档中绘制可配置的下划线",
-    "Intedai/sendtodiscord.koplugin": "将高亮文本或剪贴板内容发送到 Discord",
-    "HoseanRC/kdeconnect.koplugin": "连接 KDE Connect，同步通知与剪贴板",
-    "ura23/customtapzones.koplugin": "自定义点击分区，实现翻页等操作",
-    "right9code/githubbrowser.koplugin": "浏览 GitHub 仓库、克隆编辑并推送提交",
-    "maerlin/screenmargins.koplugin": "调整屏幕边缘遮挡区域，修正视口偏移",
-    "mgrimace/startrakuyomi.koplugin": "启动时直接打开漫画库视图",
-    "tachibana-shin/calibre_filemon.koplugin": "同步文件操作到 Calibre 元数据",
-    "jgarcia24n/readaloud.koplugin": "同步播放 EPUB3 媒体覆盖音频并高亮当前文本",
-    "right9code/imagesearch.koplugin": "以图搜图，识别图片内容",
-    "kbarni/checkers.koplugin": "玩国际跳棋，支持人机对战",
-    "vardan-developer/20-20-20.koplugin": "定时提醒休息并全屏倒计时",
-    "omer-faruq/send2notion.koplugin": "将笔记和书摘发送到 Notion 页面",
-    "jandamm/wpmstats.koplugin": "显示阅读速度（WPM）统计",
-    "titandrive/syncest.koplugin": "将阅读数据同步到自建 WebDAV 文件夹",
-    "wtfffffffff511/koreader-kobolike-dogear.koplugin": "自定义书签折角的图标与大小",
-    "AhzeLeSteak/komgasync.koplugin": "浏览 Komga 服务器上的漫画",
-    "Craftwork2720/pagenumbercrop.koplugin": "自动裁掉漫画页底页码，可跳过空白页",
-    "ksaMask123/poker24.koplugin": "在墨水屏上玩二十四点扑克牌游戏",
-    "fundacja-reborn/offlinetranslate-koplugin": "离线翻译选中文本，支持生词标记与 Anki 导出",
-    "denialbb/markdownreader.koplugin": "在墨水屏上渲染 Markdown 文件，支持数学公式",
-    "omer-faruq/calendar.koplugin": "在锁屏与交互视图中查看 Google 日历",
-    "mewforest/androidapplauncher.koplugin": "从菜单或手势直接启动安卓应用",
-    "asxelot/fastdict.koplugin": "内置 StarDict 引擎，免去逐次调用 sdcv 的查词延迟",
-    "sypianski/rosetta.koplugin": "AI 双语对照阅读面板",
-    "naraxian/palmasleepscreen.koplugin": "用书籍封面与阅读进度生成全屏睡眠屏",
-    "jperon/excludehistory.koplugin": "将书籍排除出历史与统计",
-    "yangyingchao/chinese.koplugin": "中文排版增强与优化",
-    "tadeasf/chartingsleepscreen_koplugin": "在锁屏上绘制阅读统计图表",
-    "William9923/folderlock.koplugin": "为文件管理器中的文件夹添加密码保护",
-    "DHaizon/pinnedelements.koplugin": "固定文本、图片与页面，随时快速参考",
-    "lamida/calibreplus.koplugin": "直接浏览 Calibre 书库并打开书籍",
-    "nhanhhunter/AI_Dictionary.koplugin": "用 AI 解释选中文本，支持多种模型",
-    "mgrimace/stretch.koplugin": "拉伸漫画页面填满屏幕，免滚动阅读",
-    "CalebLinGit/eyerest.koplugin": "按阅读时长提醒休息与睡眠定时",
-    "hudsonbrendon/hatelemetry.koplugin": "推送阅读与设备遥测到 Home Assistant 并接收控制指令",
-    "karlb/webdavfetcher.koplugin": "从 WebDAV 服务器拉取文件到阅读器",
-    "ndieschburg/varbook.koplugin": "同步阅读进度到 Varbook 服务器",
-    "valterschutz/coloronhighlight.koplugin": "高亮后立即弹出颜色选择器",
-    "Saterz/betterwifi.koplugin": "改进 WiFi 连接体验",
-    "kelvinalfaro/cwamagicdownload.koplugin": "同步 Calibre-Web 书架到本地文件夹",
-    "Wolfazzo/myexport.koplugin": "导出批注为多种格式",
-    "igarizio/pocketbook8bitdo.koplugin": "用 8BitDo 蓝牙手柄控制 Pocketbook 阅读器",
-    "tphLatte/ankiconnect.koplugin": "在阅读器内进行 Anki 复习",
-    "monch1962/fleeting-notes.koplugin": "阅读时快速记录 Markdown 笔记并自动保存",
-    "mm-malkani/screenshotorganizer.koplugin": "自动将截图按书名归档整理",
-    "esverde/kindle-bluetooth.koplugin": "蓝牙遥控翻页与连接管理",
-    "DHaizon/korekindle.koplugin": "从 KOReader 一键打开 Rekindle 网站",
-    "right9code/sleepwaketracker.koplugin": "记录睡眠与清醒时间",
-    "MaoMao-Corp/MaoMao-Dict.koplugin": "按上下文语境取词释义，提升阅读流畅度",
-    "TomasDiLeo/lightsout.koplugin": "玩 5×5 关灯解谜小游戏",
-    "jsfaint/zhihudaily.koplugin": "抓取知乎日报并构建 EPUB 离线阅读",
-    "Zwipfy/autoturnplus.koplugin": "增强自动翻页，支持自适应计时与进度条",
-    "zhangweiii/wereaddesktop.koplugin": "将微信读书书架、书城、下载与进度同步搬到阅读器",
-    "zackify/picturefeed.koplugin": "在阅读时于屏幕角落轮播摄像头画面",
-    "lysak-yurii/lingueez.koplugin": "阅读时保存生词并同步到 Lingueez 词库",
-    "jadehawk/bookorbit.koplugin": "同步 BookOrbit 插件发布版本",
-    "paulbockewitz/kocatchup.koplugin": "按阅读进度生成防剧透的AI剧情回顾",
-    "ksaMask123/batterymonitor.koplugin": "绘制电量曲线并追踪休眠唤醒",
-    "hesan1232/koobone.koplugin": "浏览、下载并同步阅读漫画网站内容",
-    "Estela-Zelin84/tomatodo.koplugin": "番茄工作法计时，含任务管理与统计",
-    "new-usemame/cwasync.koplugin": "同步阅读进度到 Calibre-Web NextGen 服务器",
-    "HighLibrarian/BookKeeper.koplugin": "将阅读统计通过 Webhook 发送到自动化平台",
-    "t2ym5u/wordle.koplugin": "玩 Wordle 猜词游戏",
-    "t2ym5u/pictionary.koplugin": "多人猜词游戏",
-    "t2ym5u/gomoku.koplugin": "玩五子棋，支持人机与双人",
-    "t2ym5u/dashboard.koplugin": "汇总阅读与游戏插件状态的主屏仪表盘",
-    "t2ym5u/boggleparty.koplugin": "多人联机玩 Boggle 拼字游戏",
-    "wtfffffffff511/koreader-lightflow.koplugin": "边缘滑动连续调光，亮度随手指实时变化",
-    "OGKevin/statistics.koplugin": "阅读统计与日历视图",
-    "eikopf/paragraph-spacing.koplugin": "按书调整段落间距，集成到底栏菜单",
-    "Saterz/kanisync.koplugin": "同步阅读进度到 AniList",
-    "ura23/batterygraph.koplugin": "跟踪并绘制电池使用曲线",
-    "titandrive/rotator.koplugin": "控制安卓系统屏幕旋转方向",
-    "ZHA30/novel.koplugin": "在线阅读小说，管理书架并缓存章节",
-    "montalvito02/kindle-loc-calc.koplugin": "计算 EPUB 的 Kindle 位置数",
-    "sypianski/hairline.koplugin": "将底部进度条改为极简贴边细线",
-    "sypianski/textolimiti.koplugin": "按真实正文起止修正阅读进度百分比",
-    "sypianski/kotheme.koplugin": "圆角化通知、按钮与高亮框等界面元素",
-    "sypianski/marjenoti.koplugin": "在页边距显示批注，像学术版式",
-    "thorondir/hotspot.koplugin": "把阅读器变成无线热点，供其他设备直连传书",
-    "hluiz2628-blip/biscoitodasorte.koplugin": "显示励志名言，支持在线获取与本地自定义",
-    "right9code/kocalculator.koplugin": "提供标准与科学计算器，支持历史记录与光标导航",
-    "echoriiku/notesnook.koplugin": "将书籍及阅读数据导出为结构化笔记",
-    "iav/taskscheduler.koplugin": "按定时或设备事件自动执行可绑定操作",
-    "dani84bs/RemoteLibrary.koplugin": "在文件管理器中叠加浏览远程云盘文件",
-    "Devsur11/bookmeta.koplugin": "编辑并写入 EPUB/PDF 的书籍元数据与封面",
-    "stanevt/chitanka.koplugin": "搜索并下载保加利亚语电子书",
-    "chaulagainrupak/bookorbit-koplugin": "同步阅读统计与进度到 BookOrbit",
-    "tachibana-shin/lunar.koplugin": "多历法农历/公历查询，含天文数据与节日",
-    "rayanestefani8-collab/translatordoc.koplugin": "翻译 EPUB、HTML 和 TXT 文档并另存新文件",
-    "limploomp/dictwarmup.koplugin": "预加载词典缓存，消除首次查词卡顿",
-    "markleenders/stoicquote.koplugin": "解锁后随机展示斯多葛名言",
-    "sjjd26/gloss.koplugin": "阅读时学习指定词汇表",
-    "SirProdigle/tana.koplugin": "主屏书架，漫画按系列折叠显示",
-    "wuyscc/opdsnav.koplugin": "OPDS 目录中自动无缝续读下一项",
-    "MJCopper/simplewiki.koplugin": "离线查询简易英语维基百科文章",
-    "ElPandaP/taletrack.koplugin": "同步阅读进度到 TaleTrack",
-    "LK4D4/statusbardisabler.koplugin": "按书路径自动隐藏或恢复底部状态栏",
-    "LK4D4/statusstats.koplugin": "在状态栏显示本次阅读与今日统计",
-    "adapik/hebrew.koplugin": "查词典时自动剥离希伯来语常见前缀",
-    "lheimbs/SSH-android.koplugin": "在 Android 上提供 SSH 服务，支持 scp 与 rsync 传输",
-    "arthurrump/logseq-highlights.koplugin": "导出高亮为 Logseq 兼容格式",
-    "lheimbs/kosync-cloud.koplugin": "通过云服务同步阅读进度",
-    "fvelsg/autosuspend-fork.koplugin": "修复 Kindle 上自动休眠禁用功能",
-    "Inku0/lazierlibrarian.koplugin": "添加书籍到 LazyLibrarian 并下载",
-    "heredos/vnds.koplugin": "玩 VNDS 视觉小说游戏",
-    "HaukeCornell/mtastop.koplugin": "实时显示公交到站与天气",
-    "zoyahav/dropboxsync.koplugin": "一键双向同步 Kindle 与 Dropbox 文件夹",
-    "maxcaplan/readinglist.koplugin": "管理阅读清单",
-    "kkris0/focus_mode.koplugin": "设定时段并加 PIN 锁，防止分心阅读",
-    "omer-biz/capture.koplugin": "将高亮摘录捕获为 Org-mode 笔记",
-    "tekofx/coppermind.koplugin": "在 Coppermind 维基中搜索词条",
-    "breeze101792/ailearning.koplugin": "选中文本或查词时调用 AI 翻译、解析与讲解",
-    "Fiddelis/linefocus.koplugin": "可配置的阅读聚焦行，减少周围行干扰",
-    "archbtww/vncviewer.koplugin": "在阅读器内启动 VNC 远程桌面",
-    "Kerwin75631591/xray-zh.koplugin": "用 AI 分析书籍的人物、时间线、地点与主题",
-    "Kerwin75631591/assistant_zh.koplugin": "中文 AI 助手，支持 DeepSeek 联网搜索与中文分词",
-    "garlicwjj/fanqielite.koplugin": "读取番茄小说公开章节并生成本地XHTML阅读",
-    "4285f4/dither256.koplugin": "将256阶灰度图抖动为16阶，优化墨水屏显示",
-    "h4rryhaller/todotxt.koplugin": "管理 Todo.txt 任务清单",
-    "KodeshKit/simplemenu.koplugin": "自定义主屏菜单与快捷入口",
-    "encodedLife/karabridge.koplugin": "双向同步书籍、高亮与笔记到 Karakeep",
-    "trigon1998/wordwise.koplugin-custom": "阅读时在页面上直接显示英越释义，支持短语识别与已学词管理",
-    "Exhen/EpubImageEnhance.koplugin": "按页增强漫画EPUB图像，可调伽马、对比度等",
-    "sam-don/kogrim.koplugin": "浏览自托管书库并下载书籍，同步阅读进度",
-    "tianlang1997/bookshelfex.koplugin": "增强书架管理功能",
-    "dororo42/weread_K4.koplugin": "读微信读书书籍与公众号文章，同步阅读时长",
-    "noame19/copyparty.koplugin": "将阅读器变为文件服务器，支持 HTTP、WebDAV 与 FTP",
-    "jyliuu/insightful.koplugin": "让 AI 按需检索书中内容并回答提问",
-    "eznas/ESP-Key.koplugin": "用 ESP32 作遥控器按键",
-    "FDSFDS123/matrix.koplugin": "接入 Matrix 通讯，注意数据泄露风险",
-    "leshier/weui.koplugin": "集成微信读书与 Z-Library 的下载和阅读界面",
-    "iDynbek/kazakh.koplugin": "对屈折变化的哈萨克语单词进行形态学分析并查词典",
-    "Cusanity/settingsync.koplugin": "同步插件设置与状态",
-    "PotatoInfinity/kolichess.koplugin": "解 Lichess 国际象棋谜题",
-    "denialbb/flashcards.koplugin": "用闪卡方式测验笔记内容",
-    "hesan1232/reading.koplugin": "同步书架、书库与阅读进度",
-    "t2ym5u/sudokukiller.koplugin": "玩杀手数独",
-    "t2ym5u/wordladder.koplugin": "单词接龙益智游戏，支持难度与提示",
-    "t2ym5u/thermosudoku.koplugin": "玩温度计数独",
-    "t2ym5u/windoku.koplugin": "玩风窗数独，含笔记与撤销",
-    "t2ym5u/tents.koplugin": "在网格中放置帐篷配对树木的解谜游戏",
-    "t2ym5u/tatami.koplugin": "玩榻榻米拼图游戏，覆盖网格配对多米诺",
-    "t2ym5u/taboo.koplugin": "玩禁忌派对游戏",
-    "t2ym5u/tapa.koplugin": "在网格上玩 Tapa 填黑谜题",
-    "t2ym5u/suguru.koplugin": "玩数独变体谜题",
-    "t2ym5u/sudokux.koplugin": "带对角线约束的数独游戏",
-    "t2ym5u/startmenu.koplugin": "启动时弹出菜单，直达阅读或游戏插件",
-    "t2ym5u/starbattle.koplugin": "星战谜题，行列区域各放一星且不相邻",
-    "t2ym5u/slitherlink.koplugin": "在网格上画闭合回路解谜题",
-    "t2ym5u/skyscraper.koplugin": "在网格中按天际线线索填入楼高",
-    "t2ym5u/sandwichsudoku.koplugin": "玩三明治数独，含提示、笔记与检查",
-    "t2ym5u/rippleeffect.koplugin": "玩涟漪效应数独谜题",
-    "t2ym5u/shikaku.koplugin": "在网格上玩四角游戏拼图",
-    "t2ym5u/quiz.koplugin": "玩问答游戏",
-    "t2ym5u/pluginmanager.koplugin": "浏览、安装、更新和移除游戏插件",
-    "t2ym5u/pickomino.koplugin": "掷骰子收集蠕虫砖块的桌游",
-    "t2ym5u/othello.koplugin": "黑白棋小游戏，支持 AI 对战与双人模式",
-    "t2ym5u/nurikabe.koplugin": "玩数墙逻辑谜题",
-    "t2ym5u/numletters.koplugin": "数字与字母游戏插件",
-    "t2ym5u/numberlink.koplugin": "在网格上连接数字对并覆盖所有格子的益智游戏",
-    "t2ym5u/numbrix.koplugin": "数字蛇形填格解谜游戏",
-    "t2ym5u/mentalmath.koplugin": "心算练习，自适应难度并记录成绩",
-    "t2ym5u/memory.koplugin": "翻牌配对记忆游戏",
-    "t2ym5u/masyu.koplugin": "在网格上画闭环解谜题",
-    "t2ym5u/mastermind.koplugin": "猜颜色推理游戏，支持自动求解与统计",
-    "t2ym5u/kenken.koplugin": "玩 KenKen 数字谜题",
-    "t2ym5u/lightup.koplugin": "在网格中放置灯泡解谜的益智游戏",
-    "t2ym5u/hitori.koplugin": "在方格中解黑白逻辑谜题，支持多尺寸与难度",
-    "t2ym5u/hidato.koplugin": "在网格上玩 Hidato 数字连线谜题",
-    "t2ym5u/hanoi.koplugin": "玩汉诺塔小游戏",
-    "t2ym5u/hangman.koplugin": "猜单词游戏，支持多语言与难度设置",
-    "t2ym5u/futoshiki.koplugin": "在网格中解 Futoshiki 逻辑谜题",
-    "t2ym5u/go.koplugin": "双人对弈围棋，支持多尺寸棋盘与自动提子",
-    "t2ym5u/fillomino.koplugin": "玩数独式填数谜题",
-    "t2ym5u/fifteen.koplugin": "玩滑块拼图，支持多种尺寸与图片模式",
-    "t2ym5u/doubleornothing.koplugin": "双人或零赌分问答游戏，支持自定义题库",
-    "t2ym5u/dice.koplugin": "掷骰子，支持多种面数与数量",
-    "t2ym5u/cryptogram.koplugin": "解谜替换密码字谜游戏",
-    "t2ym5u/connect4.koplugin": "玩四子棋，支持双人对战与AI",
-    "t2ym5u/colornonogram.koplugin": "玩彩色数织谜题",
-    "t2ym5u/chesscourse.koplugin": "通过棋盘习题学习国际象棋",
-    "t2ym5u/chess.koplugin": "下国际象棋，支持双人、计时与PGN",
-    "t2ym5u/cave.koplugin": "在网格中解洞穴谜题",
-    "t2ym5u/bridges.koplugin": "玩数桥谜题",
-    "t2ym5u/boggle.koplugin": "在字母网格中找单词的拼字游戏",
-    "t2ym5u/binairo.koplugin": "玩 Binairo 逻辑谜题",
-    "t2ym5u/betweenlines.koplugin": "玩连线数独",
-    "t2ym5u/battleship.koplugin": "在网格中推理舰艇位置的逻辑谜题",
-    "t2ym5u/backgammon.koplugin": "双人双陆棋，支持完整规则与自动存档",
-    "t2ym5u/balance.koplugin": "天平称球逻辑谜题游戏",
-    "t2ym5u/anagram.koplugin": "字母重排猜词解谜游戏",
-    "t2ym5u/2048.koplugin": "玩 2048 数字合并游戏",
-    "aoguside/portable-reading-archive.koplugin": "导出阅读历史、进度、批注与统计并同步 WebDAV",
-    "t2ym5u/arrowsudoku.koplugin": "玩箭头数独，含难度与笔记模式",
-    "t2ym5u/_skeleton.koplugin": "游戏插件开发模板，含界面与逻辑骨架",
-    "MoreVista/pixiv.koplugin": "浏览、搜索并下载 pixiv 作品，可存为 CBZ",
-    "Exhen/koreader-pinyin.koplugin": "中文拼音输入法",
-    "trunghaiy/bookstreak.koplugin": "同步阅读进度、高亮与笔记到 BookStreak",
-    "milh0usec/touchlockbuttons.koplugin": "为 Kindle Paperwhite 4 添加屏幕导航栏、触摸锁定与电源键控制",
-    "kaikozlov/koplugin-dev": "开发环境与测试工具集",
-    "aoguside/legadosync.koplugin": "在 KOReader 与 Legado 间同步阅读进度",
-    "lolwierd/codex.koplugin": "用 ChatGPT 订阅账号进行多轮对话与划词问答",
-    "denialbb/syncnotes.koplugin": "从 GitHub 仓库增量同步 Markdown 笔记",
-    "titandrive/momentsofzen.koplugin": "在主屏添加引语小组件，支持自定义与批注来源",
-    "arduinodude456/quicky.koplugin": "增强版笔记，支持多彩笔迹与手写笔",
-    "komadorirobin/koreader-sdr-backup.koplugin": "备份与恢复阅读状态，支持局域网传输",
-    "eznas/plugin_manager.koplugin": "安装、更新与卸载插件，自动启用禁用项",
-    "xdHampus/ereolen.koplugin": "浏览丹麦电子书库并下载书籍",
-    "t2ym5u/hypersudoku.koplugin": "玩超数独，含额外宫格与笔记模式",
-    "saya6k/kobosync.koplugin": "同步自托管书库与阅读进度",
-    "reubensinha/jnc-reader.koplugin": "阅读 J-Novel Club 订阅内容",
-    "zeeyado/quran.koplugin": "浏览古兰经、译文、经注与词根词典",
-    "LoShady/MangaPinch.koplugin": "搜索并下载意大利漫画为 CBZ 文件",
-    "Khady/tap_zone_guides.koplugin": "显示点击区域边界与触摸区诊断图",
-    "MatthewBriggs/fetcher.koplugin": "一键同步 KOReader、书籍、插件与补丁更新",
-    "Owaranai/Shuangpin.koplugin": "小鹤双拼输入键盘",
-    "arduinodude456/tiktok.koplugin": "在墨水屏上刷短视频",
-    "WojtekHenszke/CloudflareAccess.koplugin": "为指定域名注入 Cloudflare 或自定义 HTTP 头",
-    "Bjane658/chapterinsights.koplugin": "用大模型总结当前章节或提问",
-    "rachelmgaldino/anilistsync.koplugin": "自动同步漫画阅读进度到 AniList",
-    "leocg/dreamdiary.koplugin": "离线优先的梦境记录与回顾",
-    "rachelmgaldino/iconbrowser.koplugin": "浏览 Nerd Font 图标并查询名称，支持搜索与收藏",
-    "arduinodude456/square.koplugin": "玩几何冲刺式跳跃游戏",
-    "5kxh2dxqmd-afk/instaparserquickrss.koplugin": "快速解析 RSS 订阅源",
-    "omer-faruq/inlinehints.koplugin": "阅读时在难词上方显示简短释义",
-    "maxmordon113/Focuslock.koplugin": "锁定菜单，强制专注阅读",
-    "fisalazarm/wallpaperScreensaver.koplugin": "自动将当前书籍封面导出为图片，用作设备屏保",
-    "markus1189/bookbuddy.koplugin": "与 Claude 对话，基于全书内容回答",
-    "ramonhpr/todoist.koplugin": "查看并完成 Todoist 任务，支持到期提醒",
-    "aisaiev/rork.koplugin": "同步阅读进度到 Rork 服务器",
-    "ZHA30/qireader.koplugin": "同步阅读 QiReader 订阅与文章状态",
-    "lawshinpersona/einkfixer.koplugin": "通过角落持续刷新缓解墨水屏残影线",
-    "lolwierd/flickturn.koplugin": "通过加速度计手势翻页",
-    "lnbentes/voltorbflip.koplugin": "玩宝可梦翻牌小游戏",
-    "3gnome/tagbankhighlightsync.koplugin": "标注高亮、云同步并导出 Markdown 引文库",
-    "3gnome/AnkiKOAi.koplugin": "长按生词或高亮生成AI/词典/背诵卡片并同步Anki",
-    "ashbruh/metafetch.koplugin": "获取设备上书籍的元数据",
-    "timonbldw/readerheader.koplugin": "在阅读页顶部显示可配置的状态栏",
-    "midastruth/caudex.koplugin": "管理生词本与复习",
-    "DHaizon/mangapanel.koplugin": "逐格阅读漫画，支持RTL/LTR与预取",
-    "DHaizon/imagecrop.koplugin": "在图片查看器中交互式裁剪并保存或固定",
-    "rayanestefani8-collab/autonightmode.koplugin": "按设定时间自动切换夜间模式并调节亮度色温",
-    "ashbruh/pluginlauncher.koplugin": "自定义插件启动菜单",
-    "owofeima/MonochromeReigns.koplugin": "将阅读界面变为单色显示",
-    "right9code/obsidian-sync.koplugin": "双向同步 Obsidian 笔记库到 WebDAV",
-    "discordimpound/yomitan.koplugin": "从 KOReader 查询 Yomitan 词典",
-    "Eernie/komga.koplugin": "同步漫画与阅读进度到 Komga 服务器",
-    "sntc06/qrsharescreenshot.koplugin": "通过 Wi-Fi 二维码分享最近截图",
-    "unitreign/vocabgrid.koplugin": "以网格视图展示生词本，支持点按查词与快速移除",
-    "Martus0/autowarmth.koplugin": "增强自动色温，独立晨昏控制与可配置过渡",
-    "bitesized/annasarchive.koplugin": "搜索并下载书籍到设备",
-    "rayanestefani8-collab/bibliogram.koplugin": "将 Telegram 频道变为私人 OPDS 书库",
-    "AlexKucera/absaudio.koplugin": "连接自建 Audiobookshelf，浏览、下载并同步播放有声书",
-    "last-available-username/pocketbook-bluetooth.koplugin": "一键开关蓝牙，免退出阅读器",
-    "lolwierd/scratchpad.koplugin": "随手记笔记，支持分节与全局便签",
-    "CalebLinGit/pokedex-koplugin": "长按宝可梦名查看图鉴与介绍",
-    "darkivist/loc.koplugin": "显示当前阅读位置信息",
-    "hudsonbrendon/koremote.koplugin": "通过 HTTP 远程控制阅读器并读取书籍信息",
-    "Myrly/BionicReading.koplugin": "将文本重点词加粗，辅助快速阅读",
-    "momadacoding/provider-acorny-highlights.koplugin": "同步 Acorny 高亮笔记",
-    "SulaimanLmn/wordmaster.koplugin": "按掌握程度给生词高亮着色",
-    "esaaksvu/srtviewer.koplugin": "播放字幕文件，支持跳转与进度记忆",
-    "omer-faruq/send2tasks.koplugin": "将笔记和摘录发送到 Google Tasks",
-    "valentderah/sleepscreenwidgets.koplugin": "在休眠屏上显示可自定义的 iOS 风格小组件网格",
-    "yupmoon/timesyncplus.koplugin": "按所选时区校准 Kindle 系统时钟",
-    "Zucker-jex/testsyn.koplugin": "同步测试插件",
-    "CattiusW/skyremote.koplugin": "用天空遥控器控制阅读器",
-    "SirProdigle/maki.koplugin": "按目录批量下载 OPDS 漫画并保留系列子文件夹",
-    "jenningsb2/matter.koplugin": "同步并下载 Matter 文章到阅读器",
-    "Frenzie/stardictbook.koplugin": "以类似实体词典的方式阅读 StarDict 词典",
-    "AronnaxM/hitokoto.koplugin": "在休眠屏显示一言句子",
-    "anatoly314/speakword.koplugin": "朗读选中词句，支持安卓TTS与ElevenLabs",
-    "RussellR725/fantasydict.koplugin": "在阅读中查词并显示释义",
-    "kodermike/opds_plus_plus.koplugin": "增强 OPDS 目录浏览，支持封面与多视图",
-    "narendraj9/german_daily.koplugin": "每日学习德语词汇",
-    "MJCopper/koboko.koplugin": "管理 Kobo 的 kepub 文件夹与同步服务",
-    "Exhen/kosync_plus.koplugin": "以 ISBN 为文档 ID 同步阅读进度",
-    "benwoody/bookwyrm.koplugin": "查看 BookWyrm 书架并匹配本地书籍",
-    "PriyanshuPansari/booksyncer.koplugin": "一键上传侧载书籍到 Calibre 书库",
-    "moohaad/gdrive.koplugin": "通过 Google Drive 双向同步批注、书签与阅读进度，支持浏览下载",
-    "ginqi7/calibredb-reading-tracking.koplugin": "同步阅读进度到 Calibre 数据库",
-    "gilgulgamesh/readest.koplugin": "同步阅读进度、高亮与批注",
-    "AndyHazz/readingspeedinspector.koplugin": "展示阅读速度与剩余时间估算的详细统计",
-    "jonparmesan/appleIIe.koplugin": "在 Kindle 上模拟 Apple IIe 电脑",
-    "Tasty-Murder/wizlight.koplugin": "控制智能灯亮度与色温",
-    "33Mic/bongocat.koplugin": "敲击屏幕玩 Bongo Cat",
-    "gilgulgamesh/xkcd.koplugin": "随机浏览 xkcd 漫画",
-    "danhenrydev/highlightcompose.koplugin": "将高亮弹窗替换为紧凑宽面板",
-    "oraliahdz/closebookonsuspend.koplugin": "挂起时自动关闭当前书籍并回到主屏",
-    "mf1-labs/schulte_table.koplugin": "生成舒尔特方格训练表",
-    "IT-Yohan/annas.koplugin": "搜索并下载安娜的档案文件",
-    "DiegoShan/ext_dict_switcher.koplugin": "在词典弹窗中一键查询外部词典",
-    "GuerraSa/NotionKoSync.koplugin": "同步高亮与阅读进度到 Notion",
-    "thekimberleyann/tp1_pageturner.koplugin": "翻页器控制插件",
-    "majjam/USBSSH.koplugin": "通过 USB 网络启用 SSH 连接",
-    "eliasbuenosdias/koreader-kindle-sync.koplugin": "导出批注为 Kindle 剪贴格式并同步",
-    "AgustinGalante19/readit.koplugin": "在阅读器内浏览 Reddit 帖子",
-    "senorGPT/fliptap.koplugin": "通过 HTTP 远程翻页，支持手机、电脑或 ESP8266 按钮控制",
-    "duongital/zlockscreen.koplugin": "自定义锁屏界面",
-    "adnaanbheda/autosyncthing.koplugin": "自动同步阅读进度与文件",
-    "milinami/opentgc.koplugin": "按 ID 下载 OpenTGC 帖子并打开",
-    "miumiupy98-art/miuread-koreader": "微信读书客户端，支持书架、下载、划线同步",
-    "roygbyte/crossword.koplugin": "玩填字游戏",
-    "SahandMalaei/ai-dictionary-koreader": "按上下文解释选中文本，支持发音与词汇学习",
-    "oleasteo/koreader-screenlockpin": "用 PIN 码锁定阅读器，保护隐私",
-    "arthurrump/syncthing.koplugin": "在阅读器内启停 Syncthing 服务",
-    "Syakhisk/readingruler.koplugin": "添加可移动下划线，辅助逐行阅读",
-    "kbarni/KinAMP": "在阅读时播放本地音乐与网络电台",
-    "ckilb/dictionarymode.koplugin": "点击单词直接查词典",
-    "JorgeTheFox/koreader-dynamic-panelzoom": "逐格放大漫画与连环画面板，支持预载与自由缩放",
-    "ProfBlack/ao3updater.koplugin": "自动检测并更新AO3小说EPUB",
-    "AlgusDark/karakeep.koplugin": "保存链接、笔记与图片到 Karakeep 书签，支持离线队列同步",
-    "fairlygood/provider-webdav-highlights.koplugin": "将批注导出为 Markdown 到 WebDAV",
-    "sadke8465/Koreader-Custom-Bookmark-Manager": "自定义书签图标、大小与位置",
-    "ckilb/pocketbookcover.koplugin": "自动同步书籍封面到关机画面",
-    "titandrive/koboard": "用安卓系统键盘替换内置虚拟键盘",
-    "xZenLabs/zen-mtp": "一键切换 Kindle 至 MTP 文件传输模式",
-    "reuerendo/homepage.koplugin": "启动与读完时展示书籍信息、评分与状态",
-    "yanllsama/koreader-physical-page-sync": "将阅读进度与实体书页码同步",
-    "Billiam/crashlog.koplugin": "查看崩溃日志并按标签筛选",
-    "clach04/wallabag2.koplugin": "同步 Wallabag 文章到阅读器",
-    "roygbyte/weather.koplugin": "显示当前及未来两天的天气与逐时预报",
-    "helitra/koreader-remote": "用手机浏览器远程控制阅读器翻页与批注",
-    "odrling/connections.koplugin": "玩 NYT Connections 猜词游戏",
-    "nbngoc93/vocabulary.koplugin": "生词本与闪卡学习",
-    "edoput/gotobed.koplugin": "到点强制锁屏，督促睡觉",
-    "graphirus-prog/koreader-session-cleaner": "检查并安全清理阅读统计中的异常会话记录",
-    "b-/libgen-opds.koplugin": "在阅读器内启停 libgen-opds 服务",
-    "reuerendo/pocketbook-db-calibre.koplugin": "将Calibre发送的书籍信息写入PocketBook数据库，免重启识别书籍，支持收藏与阅读状态同步",
-    "BeatrizCastex/SmartCollections": "按元数据筛选书库并自动更新智能书架",
-    "Wolfazzo/KOReader-page-calculator": "按印刷页码计算阅读页数",
-    "TnS-hun/KOkobo": "下载 Kobo 已购书籍并查看心愿单",
-    "lgallard/anki-flashcards-koreader": "划词生成 AI 记忆卡片并同步到 Anki",
-    "nefelodamon/KoCharacters": "用 Gemini 自动提取并追踪书中人物档案，可生成 AI 肖像",
-    "roygbyte/gazette.koplugin": "阅读 RSS/Atom 订阅源",
-    "ThePixelPro366/KoStatsMulti-Plugin": "上传阅读统计到网页仪表盘，分析阅读习惯",
-    "tachibana-shin/koreader_remote_turner": "手机或电脑远程翻页与休眠控制",
-    "myEngAPI/KOReader-TranslatorChanger": "切换 KOReader 翻译引擎，支持 DeepL、DeepSeek 等",
-    "bubblegumisnice/chinese.koplugin": "选中汉字时按最长词匹配查词典",
-    "bogorad/koreader-chapter-summarizer.koplugin": "用 AI 生成当前章节摘要",
-    "unitreign/Mythos": "浏览、追踪并导出网络小说为 EPUB",
-    "tva2000hn/wnreader.koplugin": "浏览并下载网络小说，支持离线阅读与书签管理",
-    "cbrxyz/beeminder.koplugin": "自动将阅读进度记录到 Beeminder",
-    "GarionBracken/PagePair": "同步两台Kindle翻页，组成双屏阅读",
-    "yparitcher/tuya.koplugin": "控制涂鸦智能灯泡",
-    "cyanjnpr/copytoxochitl.koplugin": "将高亮文本复制到 reMarkable 笔记本",
-    "consoleaf/hello.koplugin": "启动时显示 Hello World",
-    "m-tky/koreader-skk": "日文假名与汉字转换输入",
-    "cxzx150133/philosopher.koplugin": "随机显示 TXT 中的哲言警句",
-    "ankitchouhan1020/flowread": "逐词速读，支持滚动模式与章节导航",
-    "acanoe/forcerefresh.koplugin": "翻页时强制刷新屏幕，可选睡眠前刷新",
-    "KikyTokamuro/weighttracker.koplugin": "记录体重并查看统计与历史",
-    "5ecret99/grep.koplugin": "在 EPUB 书库中全文搜索并打开结果",
-    "h-sigma/rfcreader.koplugin": "下载并阅读 RFC 文档",
-    "Syakhisk/mdns.koplugin": "通过 mDNS 以 kindle.local 访问设备",
-    "matthewashton-k/pixelart.koplugin": "绘制像素画并保存图片",
-    "Billiam/charactersheet.koplugin": "编辑角色卡数据",
-    "samfoy/marginalia": "AI 阅读助手：生成书籍索引、问答与笔记同步",
-    "yparitcher/zmanim.koplugin": "显示希伯来历与每日zmanim，可作屏保",
-    "breno5g/koreadersync.koplugin": "将批注同步到自建服务器，便于接入 Obsidian 等笔记服务",
-    "yparitcher/chitas.koplugin": "按希伯来历显示每日学习内容",
-    "asayake-b5/jpdb.koplugin": "在阅读时集成 JPDB 生词本与复习",
-    "dodgemaster42/KoMahjong": "玩日式麻将，支持役种与AI对局",
-    "sypianski/keyreader": "将外接物理键盘变成主要输入设备，支持按键重映射、命令面板、单词搜索与可视选择",
-    "EthicalHacker92/inkfire": "自定义主屏，聚合书库、漫画续读与阅读统计",
-    "abertellini2810-dev/whitakers_words.koplugin": "查拉丁语单词的变格与释义",
-    "jwillikers/koreader-break-timer": "定时提醒休息，强制暂停阅读",
-    "hongducdev/doconline.koplugin": "在线阅读越南新闻，支持多来源与分类",
-    "NightlyDegen/soxplayer.koplugin": "用 sox 播放音频",
-    "iddu01linux/kohome.koplugin": "在阅读时调用 Home Assistant 语音助手控制智能家居",
-    "MuteMini/puzzle.koplugin": "玩纸面谜题",
-    "sypianski/kopad": "用手柄控制阅读、选词查词与AI查询",
-    "consoleaf/repl.koplugin": "在阅读器内运行 REPL 交互环境",
-    "AvatoAvenue/calibre-to-koreader_metadataexporter": "提取 PDF 中的 Calibre 元数据并写入 KOReader",
-    "lunabirkeland/ao3.koplugin": "浏览与下载 AO3 同人作品",
-    "tphLatte/tadoku.koplugin": "自动记录阅读时长到 tadoku",
-    "code2344/calculator.koplugin": "直接进行数学计算与单位换算",
-    "Syakhisk/roller.koplugin": "滚动翻页与自动滚动",
-    "abhignan-rakshith/kindle-askai": "在阅读中随时向 AI 提问，支持划词、截图与聊天",
-    "dsyang/simple-journal": "写日记并同步到 Notion",
-    "rixx/koreader-scriptorium": "读完的书推送至 Scriptorium 待审队列，含高亮与阅读时长"
+    "doctorhetfield-cmd/simpleui.koplugin": {
+      "en": "Customize home screen, bottom bar, and status bar",
+      "zh": "自定义主屏、底栏与状态栏"
+    },
+    "ZlibraryKO/zlibrary.koplugin": {
+      "en": "Browse and download Z-library books to your device",
+      "zh": "浏览并下载Z-library书籍到设备"
+    },
+    "AndyHazz/bookshelf.koplugin": {
+      "en": "Beautify the home screen, display bookshelf and customize preview info",
+      "zh": "美化主屏，展示书架并自定义预览信息"
+    },
+    "AnthonyGress/zen_ui.koplugin": {
+      "en": "Minimalist UI integrating settings and quick panel",
+      "zh": "极简界面，整合设置与快捷面板"
+    },
+    "finlater/weread.koplugin": {
+      "en": "Use WeRead to sync progress and reading time",
+      "zh": "使用微信读书，同步进度与时长"
+    },
+    "omer-faruq/appstore.koplugin": {
+      "en": "Browse, install, and update community plugins and patches",
+      "zh": "浏览、安装、更新社区插件与补丁"
+    },
+    "Billiam/hardcoverapp.koplugin": {
+      "en": "Sync reading progress to Hardcover",
+      "zh": "同步阅读状态到 Hardcover"
+    },
+    "patelneeraj/filebrowserplus.koplugin": {
+      "en": "Run file browser to manage files wirelessly",
+      "zh": "运行文件浏览器，无线管理文件"
+    },
+    "pengcw/legado.koplugin": {
+      "en": "Read Legado library web novels with caching and progress sync",
+      "zh": "阅读 Legado 书库网文，支持缓存与进度同步"
+    },
+    "AndyHazz/bookends.koplugin": {
+      "en": "Configurable text overlay with tokens, icons, and styles",
+      "zh": "可配置文本覆盖层，支持令牌、图标与样式"
+    },
+    "pxlflux/customisablesleepscreen.koplugin": {
+      "en": "Custom sleep screen showing reading stats and book info",
+      "zh": "自定义睡眠屏，显示阅读统计与书籍信息"
+    },
+    "gitalexcampos/highlightsync.koplugin": {
+      "en": "Sync highlights, notes, and bookmarks across devices",
+      "zh": "跨设备同步高亮、笔记与书签"
+    },
+    "Ajatt-Tools/anki.koplugin": {
+      "en": "Generate Anki cards after looking up words",
+      "zh": "查词后生成 Anki 卡片"
+    },
+    "zeeyado/koassistant.koplugin": {
+      "en": "AI reading assistant with translation, explanation, image generation, and X-Ray",
+      "zh": "集成多种 AI 模型的阅读助手，支持翻译、解释、生成图片与 X-Ray 分析"
+    },
+    "OGKevin/kobo.koplugin": {
+      "en": "Virtual library, reading progress sync, and Bluetooth management",
+      "zh": "虚拟书库、阅读进度同步与蓝牙管理"
+    },
+    "greywolf1499/opds_plus.koplugin": {
+      "en": "Enhanced OPDS catalog browsing with covers, grid/list views, and customization",
+      "zh": "增强 OPDS 目录浏览，支持封面、网格/列表视图与自定义"
+    },
+    "ckilb/pocketbooksync.koplugin": {
+      "en": "Sync reading progress to PocketBook library",
+      "zh": "同步阅读进度到 PocketBook 书库"
+    },
+    "dani84bs/AnnotationSync.koplugin": {
+      "en": "Sync annotations, bookmarks, and reading progress across devices",
+      "zh": "跨设备同步批注、书签与阅读进度"
+    },
+    "mysticknits/pencil.koplugin": {
+      "en": "Handwrite annotations on EPUB with a stylus",
+      "zh": "用触控笔在 EPUB 上手写批注"
+    },
+    "stelzch/zotero.koplugin": {
+      "en": "Browse your Zotero library",
+      "zh": "浏览 Zotero 文献库"
+    },
+    "stradichenko/audiobook.koplugin": {
+      "en": "Provides TTS reading and Bluetooth control",
+      "zh": "提供 TTS 朗读与蓝牙控制"
+    },
+    "iceyear/readeck.koplugin": {
+      "en": "Sync Readeck articles, annotations, and reading progress",
+      "zh": "同步 Readeck 文章、标注与阅读进度"
+    },
+    "advokatb/updatesmanager.koplugin": {
+      "en": "Manage patches and plugin updates from multiple GitHub repos",
+      "zh": "管理多个 GitHub 仓库的补丁与插件更新"
+    },
+    "koplugin-swipe-animation/Swipe_Animation.koplugin": {
+      "en": "Provides smooth wipe-fade page turns for devices without hardware animation",
+      "zh": "为无硬件动画的设备提供流畅擦除渐显翻页效果"
+    },
+    "kristianpennacchia/zzz-readermenuredesign.koplugin": {
+      "en": "Redraw reader menu and popup interface",
+      "zh": "重绘阅读器菜单与弹窗界面"
+    },
+    "Euphoriyy/appearance.koplugin": {
+      "en": "Customize UI colors, themes, fonts, and background images",
+      "zh": "自定义界面配色、主题、字体与背景图"
+    },
+    "AlgusDark/miniflux.koplugin": {
+      "en": "Read Miniflux RSS entries with offline and sync support",
+      "zh": "阅读 Miniflux 的 RSS 条目，支持离线与同步"
+    },
+    "omer-faruq/rssreader.koplugin": {
+      "en": "Aggregated RSS reading with multi-account and offline support",
+      "zh": "聚合阅读 RSS 订阅，支持多账户与离线阅读"
+    },
+    "omer-faruq/webbrowser.koplugin": {
+      "en": "Browse the web and search within the reader",
+      "zh": "在阅读器内浏览网页与搜索"
+    },
+    "IntrovertedMage/AO3Downloader.koplugin": {
+      "en": "Browse, download, and read AO3 works with chapter tracking and author pages",
+      "zh": "浏览、下载并阅读 AO3 上的作品，支持追踪章节与作者主页"
+    },
+    "KORComic/comicreader.koplugin": {
+      "en": "Read comics in two-page spread, auto-enabled in landscape",
+      "zh": "双页并排阅读漫画，横屏自动启用"
+    },
+    "naleo/audiobookshelf.koplugin": {
+      "en": "Sync audiobook progress and bookshelf",
+      "zh": "同步有声书进度与书架"
+    },
+    "peterboda236/readinginsights.koplugin": {
+      "en": "Full-screen display of reading history stats and trends",
+      "zh": "全屏展示阅读历史统计与趋势"
+    },
+    "onatbas/bluetooth.koplugin": {
+      "en": "Use a Bluetooth remote to turn pages and control KOReader",
+      "zh": "用蓝牙遥控器翻页并控制 KOReader"
+    },
+    "xusoo/shortcutstoolbar.koplugin": {
+      "en": "Add a configurable shortcut bar to the reader and file browser",
+      "zh": "在阅读器与文件浏览器添加可配置快捷栏"
+    },
+    "hesan1232/fanqie.koplugin": {
+      "en": "Read Fanqie novels with QR login, bookshelf, progress sync, and paragraph commen",
+      "zh": "阅读番茄小说，支持扫码登录、书架、进度同步与段评"
+    },
+    "0xmiki/telegramhighlights.koplugin": {
+      "en": "Send book excerpts and screenshots to a Telegram bot to generate image quotes",
+      "zh": "将书摘与截图发送到 Telegram 机器人生成图片语录"
+    },
+    "finlater/kindlebtcontroller.koplugin": {
+      "en": "Control Kindle page turns, brightness, etc. via Bluetooth gamepad/remote",
+      "zh": "用蓝牙手柄/遥控器控制 Kindle 翻页、调亮度等"
+    },
+    "ebanDev/iconschanger.koplugin": {
+      "en": "Change app icon packs, supports download and backup restore",
+      "zh": "更换应用图标包，支持下载与备份恢复"
+    },
+    "qewer33/quickrss.koplugin": {
+      "en": "Quickly read RSS feeds offline with full-text extraction and image caching",
+      "zh": "快速离线阅读 RSS 订阅源，支持全文提取与图片缓存"
+    },
+    "Lalocaballero/readmastery.koplugin": {
+      "en": "Turn reading into an RPG adventure, earn XP, level up, unlock achievements",
+      "zh": "将阅读变成 RPG 冒险，赚经验升级解锁成就"
+    },
+    "KORComic/comicmeta.koplugin": {
+      "en": "Extract comic metadata from CBZ/CBR archives",
+      "zh": "从 CBZ/CBR 压缩包提取漫画元数据"
+    },
+    "gytwo/pinyin_enhancement.koplugin": {
+      "en": "Enhanced pinyin candidate bar with frequency sorting and extended code tables",
+      "zh": "拼音输入法候选词栏增强，支持词频排序与扩展码表"
+    },
+    "kaikozlov/acsm.koplugin": {
+      "en": "Open borrowed ACSM files directly and download EPUB/PDF",
+      "zh": "直接打开图书馆借阅的ACSM文件并下载EPUB/PDF"
+    },
+    "kristianpennacchia/wordreference.koplugin": {
+      "en": "Look up WordReference definitions for words or phrases while reading",
+      "zh": "在阅读中直接查词或短语的 WordReference 释义"
+    },
+    "prasy-loyola/notes.koplugin": {
+      "en": "Handwritten notes, can save multiple pages as PNG",
+      "zh": "手写笔记，可多页保存为 PNG"
+    },
+    "grimmory-tools/grimmory.koplugin": {
+      "en": "Read from Grimmory, sync bookshelf, and auto-track progress",
+      "zh": "从 Grimmory 读书、同步书架并自动追踪进度"
+    },
+    "omer-faruq/simpleui_ext.koplugin": {
+      "en": "Add reading stats and progress module to SimpleUI home screen",
+      "zh": "为 SimpleUI 主屏添加阅读统计与进度模块"
+    },
+    "advokatb/readingstreak.koplugin": {
+      "en": "Track daily and weekly reading streaks with calendar view and goal reminders",
+      "zh": "追踪每日与每周阅读连续天数，含日历视图与目标提醒"
+    },
+    "kodermike/airplanemode.koplugin": {
+      "en": "Toggle network and specified plugins with one tap, with backup and restore setti",
+      "zh": "一键开关网络与指定插件，并备份恢复设置"
+    },
+    "xblain/annotationsviewer.koplugin": {
+      "en": "Browse, filter, and manage annotations and highlights across all books",
+      "zh": "统一浏览、筛选与管理所有书籍的批注和划线"
+    },
+    "moritz-john/homeassistant.koplugin": {
+      "en": "Control Home Assistant devices while reading",
+      "zh": "在阅读中控制 Home Assistant 设备"
+    },
+    "Shac0x/charactertracker.koplugin": {
+      "en": "Track characters, relationships, and notes while reading, with cross-book series",
+      "zh": "跟踪阅读中的人物、关系与笔记，支持跨书系列共享"
+    },
+    "Shac0x/maximum.koplugin": {
+      "en": "Manga grid zoom and auto-rotate for horizontal pages",
+      "zh": "漫画网格缩放与横页自动旋转"
+    },
+    "fpammer/kamare.koplugin": {
+      "en": "Read comics from Kavita library with long-strip scrolling and dual-page mode",
+      "zh": "连接 Kavita 书库阅读漫画，支持长条滚动与双页模式"
+    },
+    "omer-faruq/sudoku.koplugin": {
+      "en": "Play Sudoku with multiple difficulty levels and progress saving",
+      "zh": "玩数独，支持多难度与进度保存"
+    },
+    "omer-faruq/instapaper.koplugin": {
+      "en": "Browse, download, and manage Instapaper articles",
+      "zh": "浏览、下载并管理 Instapaper 文章"
+    },
+    "marinov752/emailtokoreader.koplugin": {
+      "en": "Auto-download EPUB attachments from email to device",
+      "zh": "从邮箱自动下载 EPUB 附件到设备"
+    },
+    "Evgeniy-94/TelegramDownloader.koplugin": {
+      "en": "Send files to the reader via a Telegram bot",
+      "zh": "通过 Telegram 机器人向阅读器发送文件"
+    },
+    "brendanlefebvre/supersync.koplugin": {
+      "en": "Back up complete reading metadata to your own cloud storage",
+      "zh": "将完整阅读元数据备份到自有云存储"
+    },
+    "artemartemenko/KOReader_MultiUser.koplugin": {
+      "en": "Multi-user independent configs, history, and reading stats",
+      "zh": "多用户独立配置、历史与阅读统计"
+    },
+    "Kaito0/panelreader.koplugin": {
+      "en": "Navigate manga panels frame by frame",
+      "zh": "漫画分镜逐格导航阅读"
+    },
+    "Tukks/onyxbooxsync.koplugin": {
+      "en": "Sync reading progress and stats to Onyx Boox library",
+      "zh": "将阅读进度与统计同步到文石书库"
+    },
+    "abrahamnm/filesync.koplugin": {
+      "en": "Wirelessly manage reader files",
+      "zh": "无线管理阅读器文件"
+    },
+    "agaragou/illustrations.koplugin": {
+      "en": "Browse, preview, and jump to all illustrations in EPUB",
+      "zh": "浏览、预览并跳转 EPUB 内全部插图"
+    },
+    "omer-faruq/memobook.koplugin": {
+      "en": "Record word notes in books and build a personal dictionary",
+      "zh": "在书内记录单词笔记并建立个人词典"
+    },
+    "norude/TTS.koplugin": {
+      "en": "Read text aloud via a standalone server",
+      "zh": "通过独立服务器进行文本朗读"
+    },
+    "quanganhdo/plainui.koplugin": {
+      "en": "Minimalist home screen for quick library access and status control",
+      "zh": "极简主屏，快速访问书库与状态控制"
+    },
+    "d0nizam/kosyncthing_plus.koplugin": {
+      "en": "Embedded Syncthing daemon for end-to-end sync of books and annotations",
+      "zh": "内嵌 Syncthing 守护进程，实现书籍与批注的端到端同步"
+    },
+    "PedroMachado1/kopet.koplugin": {
+      "en": "Turn reading habits into a virtual pet raising game",
+      "zh": "将阅读行为转化为虚拟宠物养成游戏"
+    },
+    "gytwo/quickui.koplugin": {
+      "en": "Integrates quick actions, cover beautification, cloze review, and headers/footer",
+      "zh": "整合快捷操作、封面美化、挖空复习与页眉页脚"
+    },
+    "omer-faruq/ankiviewer.koplugin": {
+      "en": "Import and review Anki cards within the reader",
+      "zh": "在阅读器内导入并复习 Anki 卡片"
+    },
+    "anezih/bubblezoom.koplugin": {
+      "en": "Tap to zoom comic panels and speech bubbles",
+      "zh": "点按放大漫画/漫画中的对话气泡"
+    },
+    "omer-faruq/applauncher.koplugin": {
+      "en": "Group installed plugin actions into icon tabs for quick gesture access",
+      "zh": "将已装插件动作分组为图标标签页，支持手势快速打开"
+    },
+    "Merpyzf/pinyinime.koplugin": {
+      "en": "Enhanced Simplified Chinese keyboard with double pinyin and full sentence input",
+      "zh": "增强简体中文键盘，支持双拼与整句输入"
+    },
+    "DucNg/digitalclock.koplugin": {
+      "en": "Use your e-book as a clock, showing time, date, and images",
+      "zh": "将电子书用作时钟，显示时间、日期与图片"
+    },
+    "kktse/dtdisplay.koplugin": {
+      "en": "Display time and date in full screen",
+      "zh": "全屏显示时间与日期"
+    },
+    "d0nizam/syncery.koplugin": {
+      "en": "Sync reading progress, annotations, metadata, and font styles across devices",
+      "zh": "跨设备同步阅读进度、批注、元数据与字体样式"
+    },
+    "DisastrousPatience83/Floating-Dictionary.koplugin": {
+      "en": "Replace dictionary popups with customizable floating cards for vocabulary review",
+      "zh": "将词典弹窗替换为可定制的浮动卡片，支持生词复习"
+    },
+    "omer-faruq/tbrplanner.koplugin": {
+      "en": "Plan your to-read list with calendar view and reading time calculation",
+      "zh": "规划待读书单，支持日历视图与阅读时长计算"
+    },
+    "Lalocaballero/solitaire.koplugin": {
+      "en": "Play classic solitaire card game",
+      "zh": "玩经典纸牌接龙"
+    },
+    "Euphoriyy/derainbowify.koplugin": {
+      "en": "Remove rainbow patterns from Kaleido 3 color screens",
+      "zh": "去除 Kaleido 3 彩屏彩虹纹"
+    },
+    "j-v/remotenote.koplugin": {
+      "en": "Use another device to input annotations and text remotely",
+      "zh": "用另一台设备远程输入批注与文本"
+    },
+    "omer-faruq/wordsearch.koplugin": {
+      "en": "Generate word search puzzle games on your device",
+      "zh": "在设备上生成单词搜索谜题游戏"
+    },
+    "asxelot/wordwise.koplugin": {
+      "en": "Show brief definitions above difficult words, adjustable difficulty",
+      "zh": "在难词上方显示简短释义，可调难度"
+    },
+    "stevenzamora1/covercalendar.koplugin": {
+      "en": "Display reading history and book covers in a monthly calendar",
+      "zh": "以月历形式展示阅读历史与书籍封面"
+    },
+    "KitanaCode/booknookcharms.koplugin": {
+      "en": "Add bookmark ribbons and corner folds to the reading interface",
+      "zh": "为阅读界面添加书签丝带与折角装饰"
+    },
+    "omer-faruq/nonogram.koplugin": {
+      "en": "Play nonogram puzzles with hints and progress saving",
+      "zh": "玩数织解谜，支持提示与进度保存"
+    },
+    "LoShady/DoctorBattery.koplugin": {
+      "en": "View battery health, charging status, and hardware info",
+      "zh": "查看电池健康、充电状态与硬件信息"
+    },
+    "stefan-misik/game2048.koplugin": {
+      "en": "Play the 2048 mini-game",
+      "zh": "玩 2048 小游戏"
+    },
+    "Auri3l/leadingmangazoom.koplugin": {
+      "en": "Manga grid zoom, auto-rotate, and pagination",
+      "zh": "漫画网格缩放、自动旋转与分页"
+    },
+    "komadorirobin/library-sync.koplugin": {
+      "en": "Sync missing books from OPDS server to local library",
+      "zh": "从 OPDS 服务器同步缺失书籍到本地书库"
+    },
+    "kbarni/frotz.koplugin": {
+      "en": "Play interactive fiction games",
+      "zh": "游玩交互式小说游戏"
+    },
+    "sadatdaniel/splitread.koplugin": {
+      "en": "Split-screen real-time translation to aid foreign language reading",
+      "zh": "分屏显示实时翻译，辅助外语阅读"
+    },
+    "omer-faruq/crossword.koplugin": {
+      "en": "Play crossword puzzles with local files, downloads, and generation",
+      "zh": "玩填字游戏，支持本地文件、下载与生成"
+    },
+    "reuerendo/pocketbooktools.koplugin": {
+      "en": "Sync reading progress, show last page on startup, remove finished books, and bea",
+      "zh": "同步阅读进度、开机显示末页、移除已读书籍并美化界面"
+    },
+    "cristenger/gota.koplugin-for-raindrop": {
+      "en": "Browse, search, and read Raindrop.io bookmarks",
+      "zh": "浏览、搜索并阅读 Raindrop.io 书签"
+    },
+    "bozo22/imagebookmarks.koplugin": {
+      "en": "Quickly save and review image bookmarks",
+      "zh": "快速保存并回看图片书签"
+    },
+    "gytwo/cloudlibrary.koplugin": {
+      "en": "Sync books and reading data across devices",
+      "zh": "跨设备同步书籍与阅读数据"
+    },
+    "omer-faruq/kotranslate.koplugin": {
+      "en": "Multi-engine translation, supports offline and online services",
+      "zh": "多引擎翻译，支持离线与在线服务"
+    },
+    "DenisovichDev/randomquote.koplugin": {
+      "en": "Show random quotes from your collection on unlock",
+      "zh": "解锁时随机展示自己的摘录名言"
+    },
+    "jbreizh/quickmenu.koplugin": {
+      "en": "Custom quick menu to centralize common actions and settings",
+      "zh": "自定义快捷菜单，集中常用操作与设置"
+    },
+    "Craftwork2720/foldermemory.koplugin": {
+      "en": "Remember and restore per-folder preferences like sorting and view mode",
+      "zh": "记住每个文件夹的排序、显示模式等偏好并自动恢复"
+    },
+    "Mr54233/pickthought.koplugin": {
+      "en": "Inject WeRead highlights and thoughts into local EPUBs",
+      "zh": "把微信读书的划线与想法注入本地 EPUB"
+    },
+    "CezaryPukownik/notionsync.koplugin": {
+      "en": "Sync annotations to Notion database",
+      "zh": "同步标注到 Notion 数据库"
+    },
+    "richbeatty/burrow.koplugin": {
+      "en": "Cover-centered library interface with OPDS downloads and reading controls",
+      "zh": "以封面为中心的图书馆式界面，支持 OPDS 下载与阅读控制"
+    },
+    "titandrive/bluetoothconfigurator.koplugin": {
+      "en": "Map Bluetooth gamepad, page turner, and keyboard keys to reading actions",
+      "zh": "映射蓝牙手柄、翻页器与键盘按键到阅读操作"
+    },
+    "hashi173/truyenviet.koplugin": {
+      "en": "Aggregates multiple Vietnamese novel and manga sources with search, download, an",
+      "zh": "聚合多个越南语小说与漫画源，支持搜索、下载与阅读"
+    },
+    "agaragou/errol.koplugin": {
+      "en": "Sync highlights to Telegram/Discord with offline queue and book downloads",
+      "zh": "同步高亮到 Telegram/Discord，支持离线队列与书籍下载"
+    },
+    "Sirozha1337/storytellersync.koplugin": {
+      "en": "Sync reading progress with the Storyteller app",
+      "zh": "与 Storyteller 应用同步阅读进度"
+    },
+    "cdrso/backlog.koplugin": {
+      "en": "Track reading progress across multi-article EPUBs",
+      "zh": "记录多文章 EPUB 的已读进度"
+    },
+    "Estela-Zelin84/inkstain.koplugin": {
+      "en": "Generate bill-style sleep wallpapers based on reading stats",
+      "zh": "根据阅读统计生成账单风格休眠壁纸"
+    },
+    "ZHA30/metadata.koplugin": {
+      "en": "Search and apply online book metadata and covers",
+      "zh": "搜索并应用在线书籍元数据与封面"
+    },
+    "jperon/clock.koplugin": {
+      "en": "Display an analog clock",
+      "zh": "显示模拟时钟"
+    },
+    "omer-faruq/slidepuzzle.koplugin": {
+      "en": "Play the classic sliding puzzle",
+      "zh": "玩经典滑块拼图"
+    },
+    "THE-XSX/readingfolio.koplugin": {
+      "en": "Arrange reading data into previewable sleep screen cards",
+      "zh": "将阅读数据编排成可预览的休眠屏保卡片"
+    },
+    "finlater/one.koplugin": {
+      "en": "Daily push of one image, one article, and one Q&A",
+      "zh": "每日推送一张图片、一篇文章和一个问答"
+    },
+    "Sirozha1337/fastdictlookup.koplugin": {
+      "en": "Move cursor with arrow keys for instant word lookup, with highlight and footnote",
+      "zh": "用方向键移动光标即时查词，支持高亮与脚注预览"
+    },
+    "zhouwt/pinyin.koplugin": {
+      "en": "Overlay pinyin above Chinese characters, tiered by frequency",
+      "zh": "在汉字上方叠加拼音，可按常用度分级注音"
+    },
+    "LK4D4/suwayomi.koplugin": {
+      "en": "Browse Suwayomi server, manage sources, sync reading progress, and download chap",
+      "zh": "浏览 Suwayomi 服务器、管理源、同步阅读进度并下载章节"
+    },
+    "Craftwork2720/incognito.koplugin": {
+      "en": "Open books without leaving any traces",
+      "zh": "无痕打开书籍，不留下任何记录"
+    },
+    "THE-XSX/typefolio.koplugin": {
+      "en": "Adds underline, highlight, and other typography tweaks and presets for EPUB",
+      "zh": "为 EPUB 提供下划线、高亮等排版微调与预设"
+    },
+    "kbarni/sokoban.koplugin": {
+      "en": "Play the Sokoban puzzle game",
+      "zh": "玩推箱子游戏"
+    },
+    "nojux-official/HighlightImport.koplugin": {
+      "en": "Import Kindle clippings as highlights",
+      "zh": "导入 Kindle 剪贴笔记为高亮"
+    },
+    "TomasDiLeo/pageturner.koplugin": {
+      "en": "Remote page turning via UDP, requires Android companion app",
+      "zh": "通过UDP远程翻页，需安卓配套应用"
+    },
+    "rameezk/rebind.koplugin": {
+      "en": "Update EPUB embedded metadata from Hardcover on device",
+      "zh": "在设备上从 Hardcover 更新 EPUB 内嵌元数据"
+    },
+    "kaikozlov/kindle.koplugin": {
+      "en": "Read Kindle library and read books",
+      "zh": "读取 Kindle 书库并阅读"
+    },
+    "tachibana-shin/smartdelete.koplugin": {
+      "en": "Prompt for linked bookmarks and reading history when deleting files",
+      "zh": "删除文件时提示关联书签与阅读记录"
+    },
+    "Bitboss2/Time-and-day-clock.koplugin": {
+      "en": "Screensaver clock with multiple dials and customization",
+      "zh": "屏保时钟，支持多种表盘与自定义"
+    },
+    "markleenders/stopwatchtimer.koplugin": {
+      "en": "Provides stopwatch and countdown with background support",
+      "zh": "提供秒表与倒计时功能，支持后台运行"
+    },
+    "moritz-john/heartbeat.koplugin": {
+      "en": "Expose reading status and book metadata to Home Assistant",
+      "zh": "将阅读状态与书籍元数据暴露给 Home Assistant"
+    },
+    "fvelsg/timesync-fork.koplugin": {
+      "en": "Auto-sync device time, with timezone detection and manual override",
+      "zh": "自动同步设备时间，支持时区检测与手动设置"
+    },
+    "tachibana-shin/crop_enhancer.koplugin": {
+      "en": "Optimize auto-crop and panel zoom using connected component analysis",
+      "zh": "用连通域分析优化自动裁边与面板缩放"
+    },
+    "asxelot/wifiindicator.koplugin": {
+      "en": "Suppress Wi-Fi popups, show status icon, and support tap to toggle",
+      "zh": "抑制Wi-Fi弹窗，显示状态图标并支持点击切换"
+    },
+    "zhouwt/englishannot.koplugin": {
+      "en": "Add Chinese definitions and underlines to unknown words while reading English bo",
+      "zh": "阅读英文书时自动给生词叠加中文释义并加下划线"
+    },
+    "JimDBh/kokomga.koplugin": {
+      "en": "Browse Komga library, download, and sync reading progress",
+      "zh": "浏览 Komga 书库、下载并同步阅读进度"
+    },
+    "KitanaCode/boardgames.koplugin": {
+      "en": "Includes six classic board and puzzle games",
+      "zh": "内置六款经典棋类与益智游戏"
+    },
+    "luizcorreia/metaguiding.koplugin": {
+      "en": "Bold the first letter of each word in EPUBs to guide fast reading",
+      "zh": "将 EPUB 每词首字母加粗，引导视线快速阅读"
+    },
+    "omer-faruq/phrasedeck.koplugin": {
+      "en": "Collect phrases from books and learn with spaced repetition cards",
+      "zh": "收集书中短语，用间隔重复卡片学习"
+    },
+    "koesac/OPDSfoldersync.koplugin": {
+      "en": "Enhanced OPDS catalog sync and filtering",
+      "zh": "增强 OPDS 目录同步与过滤功能"
+    },
+    "bps/syncthing.koplugin": {
+      "en": "Run Syncthing directly to sync files",
+      "zh": "直接运行 Syncthing 同步文件"
+    },
+    "j-v/slopquiz.koplugin": {
+      "en": "AI-generated chapter quizzes to boost reading comprehension",
+      "zh": "AI 生成章节测验，提升阅读理解"
+    },
+    "omer-faruq/merchant.koplugin": {
+      "en": "Turn-based trading game: buy low, sell high, repay debts",
+      "zh": "回合制贸易游戏，低买高卖还债"
+    },
+    "hluiz2628-blip/tarot.koplugin": {
+      "en": "Draw tarot cards and interpret meanings, with journal and bookmark support",
+      "zh": "抽塔罗牌并解读含义，支持日记与书签"
+    },
+    "s4m-mo/pomodoro.koplugin": {
+      "en": "Pomodoro timer for focus and rest cycles",
+      "zh": "番茄钟计时，专注与休息循环"
+    },
+    "KodeshKit/tabbedreader.koplugin": {
+      "en": "Browser-style multi-tab pages",
+      "zh": "浏览器式多标签页"
+    },
+    "yupmoon/vocabdeck.koplugin": {
+      "en": "Save words while reading, AI completes definitions, and review with spaced repet",
+      "zh": "阅读时存词、AI 补全释义并间隔复习"
+    },
+    "onatbas/htmlreplacer.koplugin": {
+      "en": "Use regex replacements to modify EPUB content",
+      "zh": "用正则替换修改 EPUB 内容"
+    },
+    "anezih/imageprocessing.koplugin": {
+      "en": "High-quality manga scaling and image post-processing",
+      "zh": "高质量漫画缩放与图像后处理"
+    },
+    "wtb04/wireguard.koplugin": {
+      "en": "Start or stop the WireGuard VPN tunnel from the menu",
+      "zh": "从菜单启停 WireGuard VPN 隧道"
+    },
+    "dwigunakd/collectionsmosaic.koplugin": {
+      "en": "Display collections as virtual folders with sorting and renaming",
+      "zh": "将收藏集显示为虚拟文件夹，支持排序与重命名"
+    },
+    "laughedelic/mcp.koplugin": {
+      "en": "Let AI assistants access and manipulate e-book content in real time",
+      "zh": "让 AI 助手实时访问和操作电子书内容"
+    },
+    "SimonLiu423/eraser.koplugin": {
+      "en": "Hold the eraser button and slide to delete highlights",
+      "zh": "按住橡皮擦按钮滑动删除高亮"
+    },
+    "right9code/fontswitcher.koplugin": {
+      "en": "Quickly switch fonts",
+      "zh": "快速切换字体"
+    },
+    "ksaMask123/artgallery.koplugin": {
+      "en": "Browse in-book images while reading, with zoom, pan, and progress sync",
+      "zh": "阅读中浏览书内图片，支持缩放平移与进度同步"
+    },
+    "luizcorreia/meclivros.koplugin": {
+      "en": "Borrow and download e-books from Brazil's MEC platform",
+      "zh": "借阅并下载巴西MEC平台电子书"
+    },
+    "right9code/annas-fetch.koplugin": {
+      "en": "Search and download books from Anna's Archive",
+      "zh": "搜索并下载安娜档案书籍"
+    },
+    "mcurmi05/contextcreator.koplugin": {
+      "en": "Record characters, places while reading to build a knowledge graph",
+      "zh": "阅读时记录人物、地点等并构建知识图谱"
+    },
+    "dani84bs/kojump.koplugin": {
+      "en": "Track reading jump history with forward/back and history list",
+      "zh": "记录阅读跳转历史，支持前进后退与历史列表"
+    },
+    "anezih/offlinetranslator.koplugin": {
+      "en": "Offline translation and OCR for comic bubbles",
+      "zh": "离线翻译与 OCR 识别，支持漫画气泡"
+    },
+    "ysfsvm/kagi-news.koplugin": {
+      "en": "Browse multi-category news with AI summaries and offline caching",
+      "zh": "浏览多分类新闻，支持AI摘要与离线缓存"
+    },
+    "TomasDiLeo/killersudoku.koplugin": {
+      "en": "Play Killer Sudoku with tens of thousands of puzzles and note features",
+      "zh": "玩杀手数独，含数万题库与笔记功能"
+    },
+    "DavidMakin/royalroad.koplugin": {
+      "en": "Download Royal Road web novels as EPUB and auto-update chapters",
+      "zh": "下载 Royal Road 网文为 EPUB 并自动更新章节"
+    },
+    "shiggsy365/minesweeper.koplugin": {
+      "en": "Play Minesweeper game",
+      "zh": "玩扫雷游戏"
+    },
+    "omer-faruq/smartdeck.koplugin": {
+      "en": "Collect words while reading, AI generates definitions for card review",
+      "zh": "阅读时收集单词短语，AI 生成释义并制卡复习"
+    },
+    "neodb-social/neodb.koplugin": {
+      "en": "Sync reading progress, notes, and ratings to NeoDB",
+      "zh": "同步阅读进度、笔记、评分到 NeoDB"
+    },
+    "federico1176-wq/Page_turn_animation.koplugin": {
+      "en": "Configure page turn animation speed and steps",
+      "zh": "配置翻页动画速度与步数"
+    },
+    "holyspiritomb/weather.koplugin": {
+      "en": "Shows today's and next two days' weather forecast",
+      "zh": "显示当日及未来两天的天气预报"
+    },
+    "aureliofng/screensaver-overlay.koplugin": {
+      "en": "Overlay transparent PNG images on lock screen",
+      "zh": "锁屏时叠加透明PNG图片"
+    },
+    "DHaizon/tabbar.koplugin": {
+      "en": "Open multiple books in tabs, switch quickly and remember progress",
+      "zh": "多标签页同时打开多本书，快速切换并记住进度"
+    },
+    "RafaelMeirim/metafileextract.koplugin": {
+      "en": "Parse metadata from filenames, batch rename, and sync descriptions",
+      "zh": "从文件名解析元数据，批量重命名并同步描述"
+    },
+    "gustjose/sidekick.koplugin": {
+      "en": "Sync reading progress via local files, with conflict resolution",
+      "zh": "用本地文件同步阅读进度，支持冲突解决"
+    },
+    "omer-faruq/send2telegram.koplugin": {
+      "en": "Send notes and book excerpts directly to a Telegram bot",
+      "zh": "将笔记和书摘直接发送到 Telegram 机器人"
+    },
+    "dwigunakd/classicscover.koplugin": {
+      "en": "Automatically generate and apply classic-style book covers",
+      "zh": "自动生成并应用经典风格书籍封面"
+    },
+    "inkee08/webdav-autosync.koplugin": {
+      "en": "Sync files from WebDAV server to device",
+      "zh": "从 WebDAV 服务器同步文件到设备"
+    },
+    "omer-faruq/notificationlistener.koplugin": {
+      "en": "Receive notifications via HTTP and display them while reading",
+      "zh": "通过 HTTP 接收通知并在阅读时显示"
+    },
+    "thekimberleyann/cozyhome.koplugin": {
+      "en": "Custom home screen, highlighted browsing, and spaced repetition card review",
+      "zh": "定制主屏、高亮浏览与间隔重复卡片复习"
+    },
+    "dourofficer/assistant.koplugin": {
+      "en": "Call AI for questions, translation, summary, and explanation while reading",
+      "zh": "阅读中调用 AI 提问、翻译、总结与解释"
+    },
+    "TomasDiLeo/sumpuzzle.koplugin": {
+      "en": "Number sum grid puzzle game",
+      "zh": "数字求和网格解谜游戏"
+    },
+    "kerivin/stylus-annotations.koplugin": {
+      "en": "Annotate PDFs, EPUBs, and more with handwritten notes",
+      "zh": "手写笔迹批注 PDF、EPUB 等文档"
+    },
+    "wtfffffffff511/kindle-menu.koplugin": {
+      "en": "Dim grid background overlay when menu pops up, mimicking Kindle texture",
+      "zh": "菜单弹出时叠加压暗网格背景，仿 Kindle 质感"
+    },
+    "DRDTR001/fulltextunderline.koplugin": {
+      "en": "Draw configurable underlines in reflowable documents",
+      "zh": "在可重排文档中绘制可配置的下划线"
+    },
+    "Intedai/sendtodiscord.koplugin": {
+      "en": "Send highlighted text or clipboard content to Discord",
+      "zh": "将高亮文本或剪贴板内容发送到 Discord"
+    },
+    "HoseanRC/kdeconnect.koplugin": {
+      "en": "Connect KDE Connect to sync notifications and clipboard",
+      "zh": "连接 KDE Connect，同步通知与剪贴板"
+    },
+    "ura23/customtapzones.koplugin": {
+      "en": "Custom tap zones for page turns and other actions",
+      "zh": "自定义点击分区，实现翻页等操作"
+    },
+    "right9code/githubbrowser.koplugin": {
+      "en": "Browse GitHub repos, clone, edit, and push commits",
+      "zh": "浏览 GitHub 仓库、克隆编辑并推送提交"
+    },
+    "maerlin/screenmargins.koplugin": {
+      "en": "Adjust screen edge occlusion area to correct viewport offset",
+      "zh": "调整屏幕边缘遮挡区域，修正视口偏移"
+    },
+    "mgrimace/startrakuyomi.koplugin": {
+      "en": "Open the manga library view directly on startup",
+      "zh": "启动时直接打开漫画库视图"
+    },
+    "tachibana-shin/calibre_filemon.koplugin": {
+      "en": "Sync file operations to Calibre metadata",
+      "zh": "同步文件操作到 Calibre 元数据"
+    },
+    "jgarcia24n/readaloud.koplugin": {
+      "en": "Sync EPUB3 media overlay audio playback and highlight current text",
+      "zh": "同步播放 EPUB3 媒体覆盖音频并高亮当前文本"
+    },
+    "right9code/imagesearch.koplugin": {
+      "en": "Search by image to identify image content",
+      "zh": "以图搜图，识别图片内容"
+    },
+    "kbarni/checkers.koplugin": {
+      "en": "Play international checkers with AI opponent support",
+      "zh": "玩国际跳棋，支持人机对战"
+    },
+    "vardan-developer/20-20-20.koplugin": {
+      "en": "Timed rest reminders with fullscreen countdown",
+      "zh": "定时提醒休息并全屏倒计时"
+    },
+    "omer-faruq/send2notion.koplugin": {
+      "en": "Send notes and book excerpts to a Notion page",
+      "zh": "将笔记和书摘发送到 Notion 页面"
+    },
+    "jandamm/wpmstats.koplugin": {
+      "en": "Display reading speed (WPM) statistics",
+      "zh": "显示阅读速度（WPM）统计"
+    },
+    "titandrive/syncest.koplugin": {
+      "en": "Sync reading data to your self-hosted WebDAV folder",
+      "zh": "将阅读数据同步到自建 WebDAV 文件夹"
+    },
+    "wtfffffffff511/koreader-kobolike-dogear.koplugin": {
+      "en": "Customize the icon and size of the bookmark dog-ear",
+      "zh": "自定义书签折角的图标与大小"
+    },
+    "AhzeLeSteak/komgasync.koplugin": {
+      "en": "Browse comics on your Komga server",
+      "zh": "浏览 Komga 服务器上的漫画"
+    },
+    "Craftwork2720/pagenumbercrop.koplugin": {
+      "en": "Auto-crop page numbers at the bottom of comic pages, can skip blank pages",
+      "zh": "自动裁掉漫画页底页码，可跳过空白页"
+    },
+    "ksaMask123/poker24.koplugin": {
+      "en": "Play the 24-point poker game on e-ink screens",
+      "zh": "在墨水屏上玩二十四点扑克牌游戏"
+    },
+    "fundacja-reborn/offlinetranslate-koplugin": {
+      "en": "Offline translation for selected text, with vocabulary marking and Anki export",
+      "zh": "离线翻译选中文本，支持生词标记与 Anki 导出"
+    },
+    "denialbb/markdownreader.koplugin": {
+      "en": "Render Markdown files on e-ink screens with math formula support",
+      "zh": "在墨水屏上渲染 Markdown 文件，支持数学公式"
+    },
+    "omer-faruq/calendar.koplugin": {
+      "en": "View Google Calendar in lock screen and interactive views",
+      "zh": "在锁屏与交互视图中查看 Google 日历"
+    },
+    "mewforest/androidapplauncher.koplugin": {
+      "en": "Launch Android apps directly from menu or gesture",
+      "zh": "从菜单或手势直接启动安卓应用"
+    },
+    "asxelot/fastdict.koplugin": {
+      "en": "Built-in StarDict engine eliminates per-lookup sdcv delay",
+      "zh": "内置 StarDict 引擎，免去逐次调用 sdcv 的查词延迟"
+    },
+    "sypianski/rosetta.koplugin": {
+      "en": "AI bilingual reading comparison panel",
+      "zh": "AI 双语对照阅读面板"
+    },
+    "naraxian/palmasleepscreen.koplugin": {
+      "en": "Generate a full-screen sleep screen using book cover and reading progress",
+      "zh": "用书籍封面与阅读进度生成全屏睡眠屏"
+    },
+    "jperon/excludehistory.koplugin": {
+      "en": "Exclude books from history and statistics",
+      "zh": "将书籍排除出历史与统计"
+    },
+    "yangyingchao/chinese.koplugin": {
+      "en": "Chinese typesetting enhancement and optimization",
+      "zh": "中文排版增强与优化"
+    },
+    "tadeasf/chartingsleepscreen_koplugin": {
+      "en": "Draw reading statistics charts on the lock screen",
+      "zh": "在锁屏上绘制阅读统计图表"
+    },
+    "William9923/folderlock.koplugin": {
+      "en": "Add password protection to folders in the file manager",
+      "zh": "为文件管理器中的文件夹添加密码保护"
+    },
+    "DHaizon/pinnedelements.koplugin": {
+      "en": "Pin text, images, and pages for quick reference anytime",
+      "zh": "固定文本、图片与页面，随时快速参考"
+    },
+    "lamida/calibreplus.koplugin": {
+      "en": "Browse Calibre library directly and open books",
+      "zh": "直接浏览 Calibre 书库并打开书籍"
+    },
+    "nhanhhunter/AI_Dictionary.koplugin": {
+      "en": "Explain selected text with AI, supporting multiple models",
+      "zh": "用 AI 解释选中文本，支持多种模型"
+    },
+    "mgrimace/stretch.koplugin": {
+      "en": "Stretch comic pages to fill the screen for scroll-free reading",
+      "zh": "拉伸漫画页面填满屏幕，免滚动阅读"
+    },
+    "CalebLinGit/eyerest.koplugin": {
+      "en": "Remind rest and sleep timer based on reading duration",
+      "zh": "按阅读时长提醒休息与睡眠定时"
+    },
+    "hudsonbrendon/hatelemetry.koplugin": {
+      "en": "Push reading and device telemetry to Home Assistant and receive control commands",
+      "zh": "推送阅读与设备遥测到 Home Assistant 并接收控制指令"
+    },
+    "karlb/webdavfetcher.koplugin": {
+      "en": "Fetch files from a WebDAV server to the reader",
+      "zh": "从 WebDAV 服务器拉取文件到阅读器"
+    },
+    "ndieschburg/varbook.koplugin": {
+      "en": "Sync reading progress to Varbook server",
+      "zh": "同步阅读进度到 Varbook 服务器"
+    },
+    "valterschutz/coloronhighlight.koplugin": {
+      "en": "Color picker pops up immediately after highlighting",
+      "zh": "高亮后立即弹出颜色选择器"
+    },
+    "Saterz/betterwifi.koplugin": {
+      "en": "Improve WiFi connection experience",
+      "zh": "改进 WiFi 连接体验"
+    },
+    "kelvinalfaro/cwamagicdownload.koplugin": {
+      "en": "Sync Calibre-Web bookshelf to local folder",
+      "zh": "同步 Calibre-Web 书架到本地文件夹"
+    },
+    "Wolfazzo/myexport.koplugin": {
+      "en": "Export annotations to multiple formats",
+      "zh": "导出批注为多种格式"
+    },
+    "igarizio/pocketbook8bitdo.koplugin": {
+      "en": "Control PocketBook reader with 8BitDo Bluetooth gamepad",
+      "zh": "用 8BitDo 蓝牙手柄控制 Pocketbook 阅读器"
+    },
+    "tphLatte/ankiconnect.koplugin": {
+      "en": "Review Anki cards directly in the reader",
+      "zh": "在阅读器内进行 Anki 复习"
+    },
+    "monch1962/fleeting-notes.koplugin": {
+      "en": "Quickly capture Markdown notes while reading, auto-saved",
+      "zh": "阅读时快速记录 Markdown 笔记并自动保存"
+    },
+    "mm-malkani/screenshotorganizer.koplugin": {
+      "en": "Automatically organize screenshots by book title",
+      "zh": "自动将截图按书名归档整理"
+    },
+    "esverde/kindle-bluetooth.koplugin": {
+      "en": "Bluetooth remote page turning and connection management",
+      "zh": "蓝牙遥控翻页与连接管理"
+    },
+    "DHaizon/korekindle.koplugin": {
+      "en": "Open Rekindle website from KOReader with one tap",
+      "zh": "从 KOReader 一键打开 Rekindle 网站"
+    },
+    "right9code/sleepwaketracker.koplugin": {
+      "en": "Track sleep and wake times",
+      "zh": "记录睡眠与清醒时间"
+    },
+    "MaoMao-Corp/MaoMao-Dict.koplugin": {
+      "en": "Look up words by context for smoother reading",
+      "zh": "按上下文语境取词释义，提升阅读流畅度"
+    },
+    "TomasDiLeo/lightsout.koplugin": {
+      "en": "Play a 5x5 Lights Out puzzle game",
+      "zh": "玩 5×5 关灯解谜小游戏"
+    },
+    "jsfaint/zhihudaily.koplugin": {
+      "en": "Fetch Zhihu Daily and build EPUB for offline reading",
+      "zh": "抓取知乎日报并构建 EPUB 离线阅读"
+    },
+    "Zwipfy/autoturnplus.koplugin": {
+      "en": "Enhanced auto page turning with adaptive timing and progress bar",
+      "zh": "增强自动翻页，支持自适应计时与进度条"
+    },
+    "zhangweiii/wereaddesktop.koplugin": {
+      "en": "Bring WeRead bookshelf, bookstore, downloads, and progress sync to your reader",
+      "zh": "将微信读书书架、书城、下载与进度同步搬到阅读器"
+    },
+    "zackify/picturefeed.koplugin": {
+      "en": "Cycle camera feed in a screen corner while reading",
+      "zh": "在阅读时于屏幕角落轮播摄像头画面"
+    },
+    "lysak-yurii/lingueez.koplugin": {
+      "en": "Save new words while reading and sync them to Lingueez vocabulary",
+      "zh": "阅读时保存生词并同步到 Lingueez 词库"
+    },
+    "jadehawk/bookorbit.koplugin": {
+      "en": "Sync with BookOrbit plugin release version",
+      "zh": "同步 BookOrbit 插件发布版本"
+    },
+    "paulbockewitz/kocatchup.koplugin": {
+      "en": "Generate spoiler-free AI plot recaps based on reading progress",
+      "zh": "按阅读进度生成防剧透的AI剧情回顾"
+    },
+    "ksaMask123/batterymonitor.koplugin": {
+      "en": "Plot battery curve and track sleep/wake",
+      "zh": "绘制电量曲线并追踪休眠唤醒"
+    },
+    "hesan1232/koobone.koplugin": {
+      "en": "Browse, download, and sync manga site content",
+      "zh": "浏览、下载并同步阅读漫画网站内容"
+    },
+    "Estela-Zelin84/tomatodo.koplugin": {
+      "en": "Pomodoro timer with task management and statistics",
+      "zh": "番茄工作法计时，含任务管理与统计"
+    },
+    "new-usemame/cwasync.koplugin": {
+      "en": "Sync reading progress to Calibre-Web NextGen server",
+      "zh": "同步阅读进度到 Calibre-Web NextGen 服务器"
+    },
+    "HighLibrarian/BookKeeper.koplugin": {
+      "en": "Send reading stats to automation platforms via webhook",
+      "zh": "将阅读统计通过 Webhook 发送到自动化平台"
+    },
+    "t2ym5u/wordle.koplugin": {
+      "en": "Play the Wordle word-guessing game",
+      "zh": "玩 Wordle 猜词游戏"
+    },
+    "t2ym5u/pictionary.koplugin": {
+      "en": "Multiplayer word-guessing game",
+      "zh": "多人猜词游戏"
+    },
+    "t2ym5u/gomoku.koplugin": {
+      "en": "Play Gomoku, supports human vs AI and two-player",
+      "zh": "玩五子棋，支持人机与双人"
+    },
+    "t2ym5u/dashboard.koplugin": {
+      "en": "Main-screen dashboard summarizing reading and game plugin statuses",
+      "zh": "汇总阅读与游戏插件状态的主屏仪表盘"
+    },
+    "t2ym5u/boggleparty.koplugin": {
+      "en": "Play Boggle word game with multiple players online",
+      "zh": "多人联机玩 Boggle 拼字游戏"
+    },
+    "wtfffffffff511/koreader-lightflow.koplugin": {
+      "en": "Edge swipe for continuous brightness adjustment, real-time changes with finger",
+      "zh": "边缘滑动连续调光，亮度随手指实时变化"
+    },
+    "OGKevin/statistics.koplugin": {
+      "en": "Reading statistics and calendar view",
+      "zh": "阅读统计与日历视图"
+    },
+    "eikopf/paragraph-spacing.koplugin": {
+      "en": "Adjust paragraph spacing per book, integrated into bottom menu",
+      "zh": "按书调整段落间距，集成到底栏菜单"
+    },
+    "Saterz/kanisync.koplugin": {
+      "en": "Sync reading progress to AniList",
+      "zh": "同步阅读进度到 AniList"
+    },
+    "ura23/batterygraph.koplugin": {
+      "en": "Track and plot battery usage curves",
+      "zh": "跟踪并绘制电池使用曲线"
+    },
+    "titandrive/rotator.koplugin": {
+      "en": "Control Android screen rotation direction",
+      "zh": "控制安卓系统屏幕旋转方向"
+    },
+    "ZHA30/novel.koplugin": {
+      "en": "Read novels online, manage bookshelf, and cache chapters",
+      "zh": "在线阅读小说，管理书架并缓存章节"
+    },
+    "montalvito02/kindle-loc-calc.koplugin": {
+      "en": "Calculate Kindle location numbers for EPUBs",
+      "zh": "计算 EPUB 的 Kindle 位置数"
+    },
+    "sypianski/hairline.koplugin": {
+      "en": "Change the bottom progress bar to a minimal edge-to-edge thin line",
+      "zh": "将底部进度条改为极简贴边细线"
+    },
+    "sypianski/textolimiti.koplugin": {
+      "en": "Correct reading progress percentage based on actual text boundaries",
+      "zh": "按真实正文起止修正阅读进度百分比"
+    },
+    "sypianski/kotheme.koplugin": {
+      "en": "Rounds corners of UI elements like notifications, buttons, and highlight boxes",
+      "zh": "圆角化通知、按钮与高亮框等界面元素"
+    },
+    "sypianski/marjenoti.koplugin": {
+      "en": "Show annotations in margins, like academic layout",
+      "zh": "在页边距显示批注，像学术版式"
+    },
+    "thorondir/hotspot.koplugin": {
+      "en": "Turn the reader into a wireless hotspot for direct file transfer",
+      "zh": "把阅读器变成无线热点，供其他设备直连传书"
+    },
+    "hluiz2628-blip/biscoitodasorte.koplugin": {
+      "en": "Displays inspirational quotes, supports online fetching and local customization",
+      "zh": "显示励志名言，支持在线获取与本地自定义"
+    },
+    "right9code/kocalculator.koplugin": {
+      "en": "Offers standard and scientific calculators with history and cursor navigation",
+      "zh": "提供标准与科学计算器，支持历史记录与光标导航"
+    },
+    "echoriiku/notesnook.koplugin": {
+      "en": "Export books and reading data as structured notes",
+      "zh": "将书籍及阅读数据导出为结构化笔记"
+    },
+    "iav/taskscheduler.koplugin": {
+      "en": "Execute bindable actions automatically on schedule or device events",
+      "zh": "按定时或设备事件自动执行可绑定操作"
+    },
+    "dani84bs/RemoteLibrary.koplugin": {
+      "en": "Browse remote cloud files overlaid in the file manager",
+      "zh": "在文件管理器中叠加浏览远程云盘文件"
+    },
+    "Devsur11/bookmeta.koplugin": {
+      "en": "Edit and write book metadata and covers for EPUB/PDF",
+      "zh": "编辑并写入 EPUB/PDF 的书籍元数据与封面"
+    },
+    "stanevt/chitanka.koplugin": {
+      "en": "Search and download Bulgarian e-books",
+      "zh": "搜索并下载保加利亚语电子书"
+    },
+    "chaulagainrupak/bookorbit-koplugin": {
+      "en": "Sync reading stats and progress to BookOrbit",
+      "zh": "同步阅读统计与进度到 BookOrbit"
+    },
+    "tachibana-shin/lunar.koplugin": {
+      "en": "Multi-calendar lunar/Gregorian lookup with astronomical data and holidays",
+      "zh": "多历法农历/公历查询，含天文数据与节日"
+    },
+    "rayanestefani8-collab/translatordoc.koplugin": {
+      "en": "Translate EPUB, HTML, and TXT documents and save as new files",
+      "zh": "翻译 EPUB、HTML 和 TXT 文档并另存新文件"
+    },
+    "limploomp/dictwarmup.koplugin": {
+      "en": "Preload dictionary cache to eliminate first-lookup lag",
+      "zh": "预加载词典缓存，消除首次查词卡顿"
+    },
+    "markleenders/stoicquote.koplugin": {
+      "en": "Show random Stoic quotes after unlock",
+      "zh": "解锁后随机展示斯多葛名言"
+    },
+    "sjjd26/gloss.koplugin": {
+      "en": "Learn a specified vocabulary list while reading",
+      "zh": "阅读时学习指定词汇表"
+    },
+    "SirProdigle/tana.koplugin": {
+      "en": "Main screen bookshelf, comics folded by series",
+      "zh": "主屏书架，漫画按系列折叠显示"
+    },
+    "wuyscc/opdsnav.koplugin": {
+      "en": "Auto-continue reading next item seamlessly in OPDS catalog",
+      "zh": "OPDS 目录中自动无缝续读下一项"
+    },
+    "MJCopper/simplewiki.koplugin": {
+      "en": "Offline lookup of simplified English Wikipedia articles",
+      "zh": "离线查询简易英语维基百科文章"
+    },
+    "ElPandaP/taletrack.koplugin": {
+      "en": "Sync reading progress to TaleTrack",
+      "zh": "同步阅读进度到 TaleTrack"
+    },
+    "LK4D4/statusbardisabler.koplugin": {
+      "en": "Auto hide or restore bottom status bar by book path",
+      "zh": "按书路径自动隐藏或恢复底部状态栏"
+    },
+    "LK4D4/statusstats.koplugin": {
+      "en": "Show reading session and daily stats in the status bar",
+      "zh": "在状态栏显示本次阅读与今日统计"
+    },
+    "adapik/hebrew.koplugin": {
+      "en": "Strip common Hebrew prefixes when looking up words in the dictionary",
+      "zh": "查词典时自动剥离希伯来语常见前缀"
+    },
+    "lheimbs/SSH-android.koplugin": {
+      "en": "Provides SSH service on Android, supporting scp and rsync transfers",
+      "zh": "在 Android 上提供 SSH 服务，支持 scp 与 rsync 传输"
+    },
+    "arthurrump/logseq-highlights.koplugin": {
+      "en": "Export highlights to Logseq-compatible format",
+      "zh": "导出高亮为 Logseq 兼容格式"
+    },
+    "lheimbs/kosync-cloud.koplugin": {
+      "en": "Sync reading progress via cloud service",
+      "zh": "通过云服务同步阅读进度"
+    },
+    "fvelsg/autosuspend-fork.koplugin": {
+      "en": "Fix auto-suspend disable feature on Kindle",
+      "zh": "修复 Kindle 上自动休眠禁用功能"
+    },
+    "Inku0/lazierlibrarian.koplugin": {
+      "en": "Add books to LazyLibrarian and download",
+      "zh": "添加书籍到 LazyLibrarian 并下载"
+    },
+    "heredos/vnds.koplugin": {
+      "en": "Play VNDS visual novel games",
+      "zh": "玩 VNDS 视觉小说游戏"
+    },
+    "HaukeCornell/mtastop.koplugin": {
+      "en": "Real-time bus arrival and weather display",
+      "zh": "实时显示公交到站与天气"
+    },
+    "zoyahav/dropboxsync.koplugin": {
+      "en": "One-click two-way sync between Kindle and Dropbox folders",
+      "zh": "一键双向同步 Kindle 与 Dropbox 文件夹"
+    },
+    "maxcaplan/readinglist.koplugin": {
+      "en": "Manage reading list",
+      "zh": "管理阅读清单"
+    },
+    "kkris0/focus_mode.koplugin": {
+      "en": "Set time periods and PIN lock to prevent distracted reading",
+      "zh": "设定时段并加 PIN 锁，防止分心阅读"
+    },
+    "omer-biz/capture.koplugin": {
+      "en": "Capture highlighted excerpts as Org-mode notes",
+      "zh": "将高亮摘录捕获为 Org-mode 笔记"
+    },
+    "tekofx/coppermind.koplugin": {
+      "en": "Search entries on the Coppermind wiki",
+      "zh": "在 Coppermind 维基中搜索词条"
+    },
+    "breeze101792/ailearning.koplugin": {
+      "en": "Call AI to translate, parse, and explain selected text or queried words",
+      "zh": "选中文本或查词时调用 AI 翻译、解析与讲解"
+    },
+    "Fiddelis/linefocus.koplugin": {
+      "en": "Configurable reading focus line to reduce surrounding line distraction",
+      "zh": "可配置的阅读聚焦行，减少周围行干扰"
+    },
+    "archbtww/vncviewer.koplugin": {
+      "en": "Launch a VNC remote desktop within the reader",
+      "zh": "在阅读器内启动 VNC 远程桌面"
+    },
+    "Kerwin75631591/xray-zh.koplugin": {
+      "en": "Use AI to analyze characters, timelines, places, and themes in books",
+      "zh": "用 AI 分析书籍的人物、时间线、地点与主题"
+    },
+    "Kerwin75631591/assistant_zh.koplugin": {
+      "en": "Chinese AI assistant with DeepSeek web search and word segmentation",
+      "zh": "中文 AI 助手，支持 DeepSeek 联网搜索与中文分词"
+    },
+    "garlicwjj/fanqielite.koplugin": {
+      "en": "Reads public Fanqie novel chapters and generates local XHTML reading",
+      "zh": "读取番茄小说公开章节并生成本地XHTML阅读"
+    },
+    "4285f4/dither256.koplugin": {
+      "en": "Dither 256-level grayscale to 16 levels for better e-ink display",
+      "zh": "将256阶灰度图抖动为16阶，优化墨水屏显示"
+    },
+    "h4rryhaller/todotxt.koplugin": {
+      "en": "Manage Todo.txt task lists",
+      "zh": "管理 Todo.txt 任务清单"
+    },
+    "KodeshKit/simplemenu.koplugin": {
+      "en": "Customize the main screen menu and quick entries",
+      "zh": "自定义主屏菜单与快捷入口"
+    },
+    "encodedLife/karabridge.koplugin": {
+      "en": "Two-way sync books, highlights, and notes to Karakeep",
+      "zh": "双向同步书籍、高亮与笔记到 Karakeep"
+    },
+    "trigon1998/wordwise.koplugin-custom": {
+      "en": "Show English-Vietnamese definitions on page while reading, with phrase recogniti",
+      "zh": "阅读时在页面上直接显示英越释义，支持短语识别与已学词管理"
+    },
+    "Exhen/EpubImageEnhance.koplugin": {
+      "en": "Enhance comic EPUB images per page, adjust gamma, contrast, etc",
+      "zh": "按页增强漫画EPUB图像，可调伽马、对比度等"
+    },
+    "sam-don/kogrim.koplugin": {
+      "en": "Browse self-hosted libraries, download books, and sync reading progress",
+      "zh": "浏览自托管书库并下载书籍，同步阅读进度"
+    },
+    "tianlang1997/bookshelfex.koplugin": {
+      "en": "Enhanced bookshelf management features",
+      "zh": "增强书架管理功能"
+    },
+    "dororo42/weread_K4.koplugin": {
+      "en": "Read WeChat Read books and official account articles, sync reading time",
+      "zh": "读微信读书书籍与公众号文章，同步阅读时长"
+    },
+    "noame19/copyparty.koplugin": {
+      "en": "Turn the reader into a file server supporting HTTP, WebDAV, and FTP",
+      "zh": "将阅读器变为文件服务器，支持 HTTP、WebDAV 与 FTP"
+    },
+    "jyliuu/insightful.koplugin": {
+      "en": "Let AI search the book on demand and answer questions",
+      "zh": "让 AI 按需检索书中内容并回答提问"
+    },
+    "eznas/ESP-Key.koplugin": {
+      "en": "Use ESP32 as remote control buttons",
+      "zh": "用 ESP32 作遥控器按键"
+    },
+    "FDSFDS123/matrix.koplugin": {
+      "en": "Integrates Matrix messaging; beware of data leakage risks",
+      "zh": "接入 Matrix 通讯，注意数据泄露风险"
+    },
+    "leshier/weui.koplugin": {
+      "en": "Integrates WeRead and Z-Library download and reading interface",
+      "zh": "集成微信读书与 Z-Library 的下载和阅读界面"
+    },
+    "iDynbek/kazakh.koplugin": {
+      "en": "Morphological analysis and dictionary lookup for inflected Kazakh words",
+      "zh": "对屈折变化的哈萨克语单词进行形态学分析并查词典"
+    },
+    "Cusanity/settingsync.koplugin": {
+      "en": "Sync plugin settings and status",
+      "zh": "同步插件设置与状态"
+    },
+    "PotatoInfinity/kolichess.koplugin": {
+      "en": "Solve Lichess chess puzzles",
+      "zh": "解 Lichess 国际象棋谜题"
+    },
+    "denialbb/flashcards.koplugin": {
+      "en": "Quiz your notes with flashcards",
+      "zh": "用闪卡方式测验笔记内容"
+    },
+    "hesan1232/reading.koplugin": {
+      "en": "Sync bookshelves, library, and reading progress",
+      "zh": "同步书架、书库与阅读进度"
+    },
+    "t2ym5u/sudokukiller.koplugin": {
+      "en": "Play Killer Sudoku",
+      "zh": "玩杀手数独"
+    },
+    "t2ym5u/wordladder.koplugin": {
+      "en": "Word chain puzzle game with difficulty and hints",
+      "zh": "单词接龙益智游戏，支持难度与提示"
+    },
+    "t2ym5u/thermosudoku.koplugin": {
+      "en": "Play thermosudoku",
+      "zh": "玩温度计数独"
+    },
+    "t2ym5u/windoku.koplugin": {
+      "en": "Play Windoku Sudoku with notes and undo",
+      "zh": "玩风窗数独，含笔记与撤销"
+    },
+    "t2ym5u/tents.koplugin": {
+      "en": "Place tents in a grid to pair with trees in this puzzle game",
+      "zh": "在网格中放置帐篷配对树木的解谜游戏"
+    },
+    "t2ym5u/tatami.koplugin": {
+      "en": "Play tatami puzzle game, cover grid with dominoes",
+      "zh": "玩榻榻米拼图游戏，覆盖网格配对多米诺"
+    },
+    "t2ym5u/taboo.koplugin": {
+      "en": "Play the taboo party game",
+      "zh": "玩禁忌派对游戏"
+    },
+    "t2ym5u/tapa.koplugin": {
+      "en": "Play Tapa black-fill puzzles on a grid",
+      "zh": "在网格上玩 Tapa 填黑谜题"
+    },
+    "t2ym5u/suguru.koplugin": {
+      "en": "Play Sudoku variant puzzles",
+      "zh": "玩数独变体谜题"
+    },
+    "t2ym5u/sudokux.koplugin": {
+      "en": "Sudoku game with diagonal constraints",
+      "zh": "带对角线约束的数独游戏"
+    },
+    "t2ym5u/startmenu.koplugin": {
+      "en": "Popup menu at startup for direct access to reading or game plugins",
+      "zh": "启动时弹出菜单，直达阅读或游戏插件"
+    },
+    "t2ym5u/starbattle.koplugin": {
+      "en": "Star Battle puzzle: one star per row, column, and region, no adjacency",
+      "zh": "星战谜题，行列区域各放一星且不相邻"
+    },
+    "t2ym5u/slitherlink.koplugin": {
+      "en": "Draw closed loops on the grid to solve puzzles",
+      "zh": "在网格上画闭合回路解谜题"
+    },
+    "t2ym5u/skyscraper.koplugin": {
+      "en": "Fill in building heights in the grid based on skyline clues",
+      "zh": "在网格中按天际线线索填入楼高"
+    },
+    "t2ym5u/sandwichsudoku.koplugin": {
+      "en": "Play sandwich sudoku with hints, notes, and checking",
+      "zh": "玩三明治数独，含提示、笔记与检查"
+    },
+    "t2ym5u/rippleeffect.koplugin": {
+      "en": "Play the ripple effect sudoku puzzle",
+      "zh": "玩涟漪效应数独谜题"
+    },
+    "t2ym5u/shikaku.koplugin": {
+      "en": "Play a four-corner puzzle game on a grid",
+      "zh": "在网格上玩四角游戏拼图"
+    },
+    "t2ym5u/quiz.koplugin": {
+      "en": "Play a quiz game",
+      "zh": "玩问答游戏"
+    },
+    "t2ym5u/pluginmanager.koplugin": {
+      "en": "Browse, install, update, and remove game plugins",
+      "zh": "浏览、安装、更新和移除游戏插件"
+    },
+    "t2ym5u/pickomino.koplugin": {
+      "en": "Roll dice to collect worm tiles in this board game",
+      "zh": "掷骰子收集蠕虫砖块的桌游"
+    },
+    "t2ym5u/othello.koplugin": {
+      "en": "Othello mini-game with AI and two-player modes",
+      "zh": "黑白棋小游戏，支持 AI 对战与双人模式"
+    },
+    "t2ym5u/nurikabe.koplugin": {
+      "en": "Play the Nurikabe logic puzzle",
+      "zh": "玩数墙逻辑谜题"
+    },
+    "t2ym5u/numletters.koplugin": {
+      "en": "Number and letter game plugin",
+      "zh": "数字与字母游戏插件"
+    },
+    "t2ym5u/numberlink.koplugin": {
+      "en": "Connect number pairs on a grid, covering all cells",
+      "zh": "在网格上连接数字对并覆盖所有格子的益智游戏"
+    },
+    "t2ym5u/numbrix.koplugin": {
+      "en": "Number snake fill-grid puzzle game",
+      "zh": "数字蛇形填格解谜游戏"
+    },
+    "t2ym5u/mentalmath.koplugin": {
+      "en": "Mental math practice with adaptive difficulty and score tracking",
+      "zh": "心算练习，自适应难度并记录成绩"
+    },
+    "t2ym5u/memory.koplugin": {
+      "en": "Flip-card matching memory game",
+      "zh": "翻牌配对记忆游戏"
+    },
+    "t2ym5u/masyu.koplugin": {
+      "en": "Draw closed loops on the grid to solve puzzles",
+      "zh": "在网格上画闭环解谜题"
+    },
+    "t2ym5u/mastermind.koplugin": {
+      "en": "Color guessing deduction game with auto-solve and statistics",
+      "zh": "猜颜色推理游戏，支持自动求解与统计"
+    },
+    "t2ym5u/kenken.koplugin": {
+      "en": "Play KenKen number puzzles",
+      "zh": "玩 KenKen 数字谜题"
+    },
+    "t2ym5u/lightup.koplugin": {
+      "en": "Puzzle game placing bulbs on a grid to solve",
+      "zh": "在网格中放置灯泡解谜的益智游戏"
+    },
+    "t2ym5u/hitori.koplugin": {
+      "en": "Solve black-and-white logic puzzles in a grid, with multiple sizes and difficult",
+      "zh": "在方格中解黑白逻辑谜题，支持多尺寸与难度"
+    },
+    "t2ym5u/hidato.koplugin": {
+      "en": "Play Hidato number link puzzles on a grid",
+      "zh": "在网格上玩 Hidato 数字连线谜题"
+    },
+    "t2ym5u/hanoi.koplugin": {
+      "en": "Play the Tower of Hanoi mini-game",
+      "zh": "玩汉诺塔小游戏"
+    },
+    "t2ym5u/hangman.koplugin": {
+      "en": "Word guessing game with multilingual and difficulty settings",
+      "zh": "猜单词游戏，支持多语言与难度设置"
+    },
+    "t2ym5u/futoshiki.koplugin": {
+      "en": "Solve Futoshiki logic puzzles in the grid",
+      "zh": "在网格中解 Futoshiki 逻辑谜题"
+    },
+    "t2ym5u/go.koplugin": {
+      "en": "Two-player Go game with multiple board sizes and automatic capture",
+      "zh": "双人对弈围棋，支持多尺寸棋盘与自动提子"
+    },
+    "t2ym5u/fillomino.koplugin": {
+      "en": "Play a Sudoku-style number-filling puzzle",
+      "zh": "玩数独式填数谜题"
+    },
+    "t2ym5u/fifteen.koplugin": {
+      "en": "Play sliding puzzles with multiple sizes and image modes",
+      "zh": "玩滑块拼图，支持多种尺寸与图片模式"
+    },
+    "t2ym5u/doubleornothing.koplugin": {
+      "en": "Two-player or zero-stakes quiz game with custom question sets",
+      "zh": "双人或零赌分问答游戏，支持自定义题库"
+    },
+    "t2ym5u/dice.koplugin": {
+      "en": "Roll dice, supports multiple sides and counts",
+      "zh": "掷骰子，支持多种面数与数量"
+    },
+    "t2ym5u/cryptogram.koplugin": {
+      "en": "Solve substitution cipher puzzles in this cryptogram game",
+      "zh": "解谜替换密码字谜游戏"
+    },
+    "t2ym5u/connect4.koplugin": {
+      "en": "Play Connect Four with two-player and AI modes",
+      "zh": "玩四子棋，支持双人对战与AI"
+    },
+    "t2ym5u/colornonogram.koplugin": {
+      "en": "Play colorful nonogram puzzles",
+      "zh": "玩彩色数织谜题"
+    },
+    "t2ym5u/chesscourse.koplugin": {
+      "en": "Learn chess through board exercises",
+      "zh": "通过棋盘习题学习国际象棋"
+    },
+    "t2ym5u/chess.koplugin": {
+      "en": "Play chess with two-player, timer, and PGN support",
+      "zh": "下国际象棋，支持双人、计时与PGN"
+    },
+    "t2ym5u/cave.koplugin": {
+      "en": "Solve cave puzzles on a grid",
+      "zh": "在网格中解洞穴谜题"
+    },
+    "t2ym5u/bridges.koplugin": {
+      "en": "Play the Numberlink puzzle",
+      "zh": "玩数桥谜题"
+    },
+    "t2ym5u/boggle.koplugin": {
+      "en": "Find words in a letter grid word game",
+      "zh": "在字母网格中找单词的拼字游戏"
+    },
+    "t2ym5u/binairo.koplugin": {
+      "en": "Play Binairo logic puzzles",
+      "zh": "玩 Binairo 逻辑谜题"
+    },
+    "t2ym5u/betweenlines.koplugin": {
+      "en": "Play Link-a-Pix puzzles",
+      "zh": "玩连线数独"
+    },
+    "t2ym5u/battleship.koplugin": {
+      "en": "Logic puzzle to deduce ship positions in a grid",
+      "zh": "在网格中推理舰艇位置的逻辑谜题"
+    },
+    "t2ym5u/backgammon.koplugin": {
+      "en": "Two-player backgammon with full rules and auto-save",
+      "zh": "双人双陆棋，支持完整规则与自动存档"
+    },
+    "t2ym5u/balance.koplugin": {
+      "en": "Balance scale ball logic puzzle game",
+      "zh": "天平称球逻辑谜题游戏"
+    },
+    "t2ym5u/anagram.koplugin": {
+      "en": "Anagram word guessing puzzle game",
+      "zh": "字母重排猜词解谜游戏"
+    },
+    "t2ym5u/2048.koplugin": {
+      "en": "Play the 2048 number merging game",
+      "zh": "玩 2048 数字合并游戏"
+    },
+    "aoguside/portable-reading-archive.koplugin": {
+      "en": "Export reading history, progress, annotations, and stats, syncing to WebDAV",
+      "zh": "导出阅读历史、进度、批注与统计并同步 WebDAV"
+    },
+    "t2ym5u/arrowsudoku.koplugin": {
+      "en": "Play arrow sudoku with difficulty and note modes",
+      "zh": "玩箭头数独，含难度与笔记模式"
+    },
+    "t2ym5u/_skeleton.koplugin": {
+      "en": "Game plugin dev template with UI and logic skeleton",
+      "zh": "游戏插件开发模板，含界面与逻辑骨架"
+    },
+    "MoreVista/pixiv.koplugin": {
+      "en": "Browse, search, and download pixiv works, save as CBZ",
+      "zh": "浏览、搜索并下载 pixiv 作品，可存为 CBZ"
+    },
+    "Exhen/koreader-pinyin.koplugin": {
+      "en": "Chinese Pinyin input method",
+      "zh": "中文拼音输入法"
+    },
+    "trunghaiy/bookstreak.koplugin": {
+      "en": "Sync reading progress, highlights, and notes to BookStreak",
+      "zh": "同步阅读进度、高亮与笔记到 BookStreak"
+    },
+    "milh0usec/touchlockbuttons.koplugin": {
+      "en": "Adds screen nav bar, touch lock, and power key control for Kindle Paperwhite 4",
+      "zh": "为 Kindle Paperwhite 4 添加屏幕导航栏、触摸锁定与电源键控制"
+    },
+    "kaikozlov/koplugin-dev": {
+      "en": "Development environment and testing toolkit",
+      "zh": "开发环境与测试工具集"
+    },
+    "aoguside/legadosync.koplugin": {
+      "en": "Sync reading progress between KOReader and Legado",
+      "zh": "在 KOReader 与 Legado 间同步阅读进度"
+    },
+    "lolwierd/codex.koplugin": {
+      "en": "Use ChatGPT subscription for multi-turn dialogue and selected-text Q&A",
+      "zh": "用 ChatGPT 订阅账号进行多轮对话与划词问答"
+    },
+    "denialbb/syncnotes.koplugin": {
+      "en": "Incrementally sync Markdown notes from a GitHub repo",
+      "zh": "从 GitHub 仓库增量同步 Markdown 笔记"
+    },
+    "titandrive/momentsofzen.koplugin": {
+      "en": "Add a quote widget to the home screen, with customization and source annotation",
+      "zh": "在主屏添加引语小组件，支持自定义与批注来源"
+    },
+    "arduinodude456/quicky.koplugin": {
+      "en": "Enhanced notes with colorful strokes and handwriting",
+      "zh": "增强版笔记，支持多彩笔迹与手写笔"
+    },
+    "komadorirobin/koreader-sdr-backup.koplugin": {
+      "en": "Backup and restore reading status, supports LAN transfer",
+      "zh": "备份与恢复阅读状态，支持局域网传输"
+    },
+    "eznas/plugin_manager.koplugin": {
+      "en": "Install, update, and uninstall plugins with auto-enable/disable",
+      "zh": "安装、更新与卸载插件，自动启用禁用项"
+    },
+    "xdHampus/ereolen.koplugin": {
+      "en": "Browse Danish e-book library and download books",
+      "zh": "浏览丹麦电子书库并下载书籍"
+    },
+    "t2ym5u/hypersudoku.koplugin": {
+      "en": "Play hypersudoku with extra boxes and note mode",
+      "zh": "玩超数独，含额外宫格与笔记模式"
+    },
+    "saya6k/kobosync.koplugin": {
+      "en": "Sync self-hosted library and reading progress",
+      "zh": "同步自托管书库与阅读进度"
+    },
+    "reubensinha/jnc-reader.koplugin": {
+      "en": "Read J-Novel Club subscription content",
+      "zh": "阅读 J-Novel Club 订阅内容"
+    },
+    "zeeyado/quran.koplugin": {
+      "en": "Browse the Quran, translations, tafsir, and root dictionary",
+      "zh": "浏览古兰经、译文、经注与词根词典"
+    },
+    "LoShady/MangaPinch.koplugin": {
+      "en": "Search and download Italian comics as CBZ files",
+      "zh": "搜索并下载意大利漫画为 CBZ 文件"
+    },
+    "Khady/tap_zone_guides.koplugin": {
+      "en": "Show tap zone boundaries and touch diagnostic overlay",
+      "zh": "显示点击区域边界与触摸区诊断图"
+    },
+    "MatthewBriggs/fetcher.koplugin": {
+      "en": "One-click sync , books, plugins, and patch updates",
+      "zh": "一键同步 KOReader、书籍、插件与补丁更新"
+    },
+    "Owaranai/Shuangpin.koplugin": {
+      "en": "Xiaohe double pinyin input keyboard",
+      "zh": "小鹤双拼输入键盘"
+    },
+    "arduinodude456/tiktok.koplugin": {
+      "en": "Scroll short videos on e-ink screens",
+      "zh": "在墨水屏上刷短视频"
+    },
+    "WojtekHenszke/CloudflareAccess.koplugin": {
+      "en": "Inject Cloudflare or custom HTTP headers for specified domains",
+      "zh": "为指定域名注入 Cloudflare 或自定义 HTTP 头"
+    },
+    "Bjane658/chapterinsights.koplugin": {
+      "en": "Summarize the current chapter or ask questions using a large model",
+      "zh": "用大模型总结当前章节或提问"
+    },
+    "rachelmgaldino/anilistsync.koplugin": {
+      "en": "Auto-sync manga reading progress to AniList",
+      "zh": "自动同步漫画阅读进度到 AniList"
+    },
+    "leocg/dreamdiary.koplugin": {
+      "en": "Offline-first dream journaling and review",
+      "zh": "离线优先的梦境记录与回顾"
+    },
+    "rachelmgaldino/iconbrowser.koplugin": {
+      "en": "Browse Nerd Font icons, search names, and save favorites",
+      "zh": "浏览 Nerd Font 图标并查询名称，支持搜索与收藏"
+    },
+    "arduinodude456/square.koplugin": {
+      "en": "Play a Geometry Dash-style jumping game",
+      "zh": "玩几何冲刺式跳跃游戏"
+    },
+    "5kxh2dxqmd-afk/instaparserquickrss.koplugin": {
+      "en": "Quickly parse RSS feeds",
+      "zh": "快速解析 RSS 订阅源"
+    },
+    "omer-faruq/inlinehints.koplugin": {
+      "en": "Show brief definitions above difficult words while reading",
+      "zh": "阅读时在难词上方显示简短释义"
+    },
+    "maxmordon113/Focuslock.koplugin": {
+      "en": "Lock menu to force focused reading",
+      "zh": "锁定菜单，强制专注阅读"
+    },
+    "fisalazarm/wallpaperScreensaver.koplugin": {
+      "en": "Automatically export the current book cover as an image for the device screensav",
+      "zh": "自动将当前书籍封面导出为图片，用作设备屏保"
+    },
+    "markus1189/bookbuddy.koplugin": {
+      "en": "Chat with Claude, answering based on the entire book",
+      "zh": "与 Claude 对话，基于全书内容回答"
+    },
+    "ramonhpr/todoist.koplugin": {
+      "en": "View and complete Todoist tasks with due reminders",
+      "zh": "查看并完成 Todoist 任务，支持到期提醒"
+    },
+    "aisaiev/rork.koplugin": {
+      "en": "Sync reading progress to Rork server",
+      "zh": "同步阅读进度到 Rork 服务器"
+    },
+    "ZHA30/qireader.koplugin": {
+      "en": "Sync QiReader subscriptions and article reading status",
+      "zh": "同步阅读 QiReader 订阅与文章状态"
+    },
+    "lawshinpersona/einkfixer.koplugin": {
+      "en": "Mitigate e-ink ghosting lines via continuous corner refresh",
+      "zh": "通过角落持续刷新缓解墨水屏残影线"
+    },
+    "lolwierd/flickturn.koplugin": {
+      "en": "Turn pages via accelerometer gestures",
+      "zh": "通过加速度计手势翻页"
+    },
+    "lnbentes/voltorbflip.koplugin": {
+      "en": "Play a Pokemon-themed flip-card mini game",
+      "zh": "玩宝可梦翻牌小游戏"
+    },
+    "3gnome/tagbankhighlightsync.koplugin": {
+      "en": "Highlight annotations, cloud sync, and export Markdown quote library",
+      "zh": "标注高亮、云同步并导出 Markdown 引文库"
+    },
+    "3gnome/AnkiKOAi.koplugin": {
+      "en": "Long-press words or highlights to create AI/dictionary/recite cards and sync to",
+      "zh": "长按生词或高亮生成AI/词典/背诵卡片并同步Anki"
+    },
+    "ashbruh/metafetch.koplugin": {
+      "en": "Fetch metadata for books on the device",
+      "zh": "获取设备上书籍的元数据"
+    },
+    "timonbldw/readerheader.koplugin": {
+      "en": "Show a configurable status bar at the top of the reading page",
+      "zh": "在阅读页顶部显示可配置的状态栏"
+    },
+    "midastruth/caudex.koplugin": {
+      "en": "Manage vocabulary book and review",
+      "zh": "管理生词本与复习"
+    },
+    "DHaizon/mangapanel.koplugin": {
+      "en": "Panel-by-panel manga reading with RTL/LTR and prefetch",
+      "zh": "逐格阅读漫画，支持RTL/LTR与预取"
+    },
+    "DHaizon/imagecrop.koplugin": {
+      "en": "Interactively crop, save, or pin images in the viewer",
+      "zh": "在图片查看器中交互式裁剪并保存或固定"
+    },
+    "rayanestefani8-collab/autonightmode.koplugin": {
+      "en": "Automatically switch night mode and adjust brightness and color temperature at s",
+      "zh": "按设定时间自动切换夜间模式并调节亮度色温"
+    },
+    "ashbruh/pluginlauncher.koplugin": {
+      "en": "Custom plugin launcher menu",
+      "zh": "自定义插件启动菜单"
+    },
+    "owofeima/MonochromeReigns.koplugin": {
+      "en": "Turn the reading interface into monochrome display",
+      "zh": "将阅读界面变为单色显示"
+    },
+    "right9code/obsidian-sync.koplugin": {
+      "en": "Bidirectional sync of Obsidian vault to WebDAV",
+      "zh": "双向同步 Obsidian 笔记库到 WebDAV"
+    },
+    "discordimpound/yomitan.koplugin": {
+      "en": "Look up Yomitan dictionaries from KOReader",
+      "zh": "从 KOReader 查询 Yomitan 词典"
+    },
+    "Eernie/komga.koplugin": {
+      "en": "Sync comics and reading progress to Komga server",
+      "zh": "同步漫画与阅读进度到 Komga 服务器"
+    },
+    "sntc06/qrsharescreenshot.koplugin": {
+      "en": "Share recent screenshots via Wi-Fi QR code",
+      "zh": "通过 Wi-Fi 二维码分享最近截图"
+    },
+    "unitreign/vocabgrid.koplugin": {
+      "en": "Display vocabulary in a grid view with tap-to-look-up and quick removal",
+      "zh": "以网格视图展示生词本，支持点按查词与快速移除"
+    },
+    "Martus0/autowarmth.koplugin": {
+      "en": "Enhanced auto color temperature with independent dawn/dusk control and configura",
+      "zh": "增强自动色温，独立晨昏控制与可配置过渡"
+    },
+    "bitesized/annasarchive.koplugin": {
+      "en": "Search and download books to device",
+      "zh": "搜索并下载书籍到设备"
+    },
+    "rayanestefani8-collab/bibliogram.koplugin": {
+      "en": "Turn a Telegram channel into a private OPDS library",
+      "zh": "将 Telegram 频道变为私人 OPDS 书库"
+    },
+    "AlexKucera/absaudio.koplugin": {
+      "en": "Connect to your Audiobookshelf, browse, download, and sync audiobook playback",
+      "zh": "连接自建 Audiobookshelf，浏览、下载并同步播放有声书"
+    },
+    "last-available-username/pocketbook-bluetooth.koplugin": {
+      "en": "Toggle Bluetooth with one tap, no need to exit the reader",
+      "zh": "一键开关蓝牙，免退出阅读器"
+    },
+    "lolwierd/scratchpad.koplugin": {
+      "en": "Quick notes with sections and global sticky notes",
+      "zh": "随手记笔记，支持分节与全局便签"
+    },
+    "CalebLinGit/pokedex-koplugin": {
+      "en": "Long-press a Pokémon name to view its Pokédex entry and details",
+      "zh": "长按宝可梦名查看图鉴与介绍"
+    },
+    "darkivist/loc.koplugin": {
+      "en": "Show current reading position info",
+      "zh": "显示当前阅读位置信息"
+    },
+    "hudsonbrendon/koremote.koplugin": {
+      "en": "Control the reader remotely via HTTP and read book info",
+      "zh": "通过 HTTP 远程控制阅读器并读取书籍信息"
+    },
+    "Myrly/BionicReading.koplugin": {
+      "en": "Bold key words in text to aid fast reading",
+      "zh": "将文本重点词加粗，辅助快速阅读"
+    },
+    "momadacoding/provider-acorny-highlights.koplugin": {
+      "en": "Sync Acorny highlight notes",
+      "zh": "同步 Acorny 高亮笔记"
+    },
+    "SulaimanLmn/wordmaster.koplugin": {
+      "en": "Color-code unknown words by mastery level",
+      "zh": "按掌握程度给生词高亮着色"
+    },
+    "esaaksvu/srtviewer.koplugin": {
+      "en": "Play subtitle files with seeking and progress memory",
+      "zh": "播放字幕文件，支持跳转与进度记忆"
+    },
+    "omer-faruq/send2tasks.koplugin": {
+      "en": "Send notes and excerpts to Google Tasks",
+      "zh": "将笔记和摘录发送到 Google Tasks"
+    },
+    "valentderah/sleepscreenwidgets.koplugin": {
+      "en": "Show a customizable grid of iOS-style widgets on the sleep screen",
+      "zh": "在休眠屏上显示可自定义的 iOS 风格小组件网格"
+    },
+    "yupmoon/timesyncplus.koplugin": {
+      "en": "Calibrate Kindle system clock to selected timezone",
+      "zh": "按所选时区校准 Kindle 系统时钟"
+    },
+    "Zucker-jex/testsyn.koplugin": {
+      "en": "Sync test plugin",
+      "zh": "同步测试插件"
+    },
+    "CattiusW/skyremote.koplugin": {
+      "en": "Control the reader with the Sky remote",
+      "zh": "用天空遥控器控制阅读器"
+    },
+    "SirProdigle/maki.koplugin": {
+      "en": "Batch download OPDS comics by directory, keeping series subfolders",
+      "zh": "按目录批量下载 OPDS 漫画并保留系列子文件夹"
+    },
+    "jenningsb2/matter.koplugin": {
+      "en": "Sync and download Matter articles to the reader",
+      "zh": "同步并下载 Matter 文章到阅读器"
+    },
+    "Frenzie/stardictbook.koplugin": {
+      "en": "Read StarDict dictionaries like a physical dictionary",
+      "zh": "以类似实体词典的方式阅读 StarDict 词典"
+    },
+    "AronnaxM/hitokoto.koplugin": {
+      "en": "Display a hitokoto sentence on the sleep screen",
+      "zh": "在休眠屏显示一言句子"
+    },
+    "anatoly314/speakword.koplugin": {
+      "en": "Read selected words aloud, supports Android TTS and ElevenLabs",
+      "zh": "朗读选中词句，支持安卓TTS与ElevenLabs"
+    },
+    "RussellR725/fantasydict.koplugin": {
+      "en": "Look up words and show definitions while reading",
+      "zh": "在阅读中查词并显示释义"
+    },
+    "kodermike/opds_plus_plus.koplugin": {
+      "en": "Enhanced OPDS catalog browsing with cover and multi-view support",
+      "zh": "增强 OPDS 目录浏览，支持封面与多视图"
+    },
+    "narendraj9/german_daily.koplugin": {
+      "en": "Learn German vocabulary daily",
+      "zh": "每日学习德语词汇"
+    },
+    "MJCopper/koboko.koplugin": {
+      "en": "Manage Kobo's kepub folders and sync services",
+      "zh": "管理 Kobo 的 kepub 文件夹与同步服务"
+    },
+    "Exhen/kosync_plus.koplugin": {
+      "en": "Sync reading progress using ISBN as document ID",
+      "zh": "以 ISBN 为文档 ID 同步阅读进度"
+    },
+    "benwoody/bookwyrm.koplugin": {
+      "en": "View BookWyrm shelves and match local books",
+      "zh": "查看 BookWyrm 书架并匹配本地书籍"
+    },
+    "PriyanshuPansari/booksyncer.koplugin": {
+      "en": "One-click upload sideloaded books to Calibre library",
+      "zh": "一键上传侧载书籍到 Calibre 书库"
+    },
+    "moohaad/gdrive.koplugin": {
+      "en": "Two-way sync annotations, bookmarks, and reading progress via Google Drive, with",
+      "zh": "通过 Google Drive 双向同步批注、书签与阅读进度，支持浏览下载"
+    },
+    "ginqi7/calibredb-reading-tracking.koplugin": {
+      "en": "Sync reading progress to Calibre database",
+      "zh": "同步阅读进度到 Calibre 数据库"
+    },
+    "gilgulgamesh/readest.koplugin": {
+      "en": "Sync reading progress, highlights, and annotations",
+      "zh": "同步阅读进度、高亮与批注"
+    },
+    "AndyHazz/readingspeedinspector.koplugin": {
+      "en": "Show detailed stats on reading speed and remaining time estimates",
+      "zh": "展示阅读速度与剩余时间估算的详细统计"
+    },
+    "jonparmesan/appleIIe.koplugin": {
+      "en": "Simulate an Apple IIe computer on Kindle",
+      "zh": "在 Kindle 上模拟 Apple IIe 电脑"
+    },
+    "Tasty-Murder/wizlight.koplugin": {
+      "en": "Control smart light brightness and color temperature",
+      "zh": "控制智能灯亮度与色温"
+    },
+    "33Mic/bongocat.koplugin": {
+      "en": "Tap the screen to play with Bongo Cat",
+      "zh": "敲击屏幕玩 Bongo Cat"
+    },
+    "gilgulgamesh/xkcd.koplugin": {
+      "en": "Browse xkcd comics randomly",
+      "zh": "随机浏览 xkcd 漫画"
+    },
+    "danhenrydev/highlightcompose.koplugin": {
+      "en": "Replace highlight popup with a compact wide panel",
+      "zh": "将高亮弹窗替换为紧凑宽面板"
+    },
+    "oraliahdz/closebookonsuspend.koplugin": {
+      "en": "On suspend, auto-close the current book and return to home screen",
+      "zh": "挂起时自动关闭当前书籍并回到主屏"
+    },
+    "mf1-labs/schulte_table.koplugin": {
+      "en": "Generate a Schulte table training grid",
+      "zh": "生成舒尔特方格训练表"
+    },
+    "IT-Yohan/annas.koplugin": {
+      "en": "Search and download Anna's archive files",
+      "zh": "搜索并下载安娜的档案文件"
+    },
+    "DiegoShan/ext_dict_switcher.koplugin": {
+      "en": "One-tap lookup in external dictionaries from the dictionary popup",
+      "zh": "在词典弹窗中一键查询外部词典"
+    },
+    "GuerraSa/NotionKoSync.koplugin": {
+      "en": "Sync highlights and reading progress to Notion",
+      "zh": "同步高亮与阅读进度到 Notion"
+    },
+    "thekimberleyann/tp1_pageturner.koplugin": {
+      "en": "Page turner control plugin",
+      "zh": "翻页器控制插件"
+    },
+    "majjam/USBSSH.koplugin": {
+      "en": "Enable SSH connection over USB networking",
+      "zh": "通过 USB 网络启用 SSH 连接"
+    },
+    "eliasbuenosdias/koreader-kindle-sync.koplugin": {
+      "en": "Export annotations to Kindle clipboard format and sync",
+      "zh": "导出批注为 Kindle 剪贴格式并同步"
+    },
+    "AgustinGalante19/readit.koplugin": {
+      "en": "Browse Reddit posts inside the reader",
+      "zh": "在阅读器内浏览 Reddit 帖子"
+    },
+    "senorGPT/fliptap.koplugin": {
+      "en": "Remote page turning via HTTP, controlled by phone, computer, or ESP8266 button",
+      "zh": "通过 HTTP 远程翻页，支持手机、电脑或 ESP8266 按钮控制"
+    },
+    "duongital/zlockscreen.koplugin": {
+      "en": "Custom lock screen interface",
+      "zh": "自定义锁屏界面"
+    },
+    "adnaanbheda/autosyncthing.koplugin": {
+      "en": "Auto-sync reading progress and files",
+      "zh": "自动同步阅读进度与文件"
+    },
+    "milinami/opentgc.koplugin": {
+      "en": "Download OpenTGC posts by ID and open them",
+      "zh": "按 ID 下载 OpenTGC 帖子并打开"
+    },
+    "miumiupy98-art/miuread-koreader": {
+      "en": "WeRead client with bookshelf, downloads, and highlight sync",
+      "zh": "微信读书客户端，支持书架、下载、划线同步"
+    },
+    "roygbyte/crossword.koplugin": {
+      "en": "Play crossword puzzles",
+      "zh": "玩填字游戏"
+    },
+    "SahandMalaei/ai-dictionary-koreader": {
+      "en": "Explain selected text by context, with pronunciation and vocabulary learning",
+      "zh": "按上下文解释选中文本，支持发音与词汇学习"
+    },
+    "oleasteo/koreader-screenlockpin": {
+      "en": "Lock the reader with a PIN to protect privacy",
+      "zh": "用 PIN 码锁定阅读器，保护隐私"
+    },
+    "arthurrump/syncthing.koplugin": {
+      "en": "Start or stop the Syncthing service within the reader",
+      "zh": "在阅读器内启停 Syncthing 服务"
+    },
+    "Syakhisk/readingruler.koplugin": {
+      "en": "Add movable underline to assist line-by-line reading",
+      "zh": "添加可移动下划线，辅助逐行阅读"
+    },
+    "kbarni/KinAMP": {
+      "en": "Play local music and internet radio while reading",
+      "zh": "在阅读时播放本地音乐与网络电台"
+    },
+    "ckilb/dictionarymode.koplugin": {
+      "en": "Tap a word to look it up in the dictionary",
+      "zh": "点击单词直接查词典"
+    },
+    "JorgeTheFox/koreader-dynamic-panelzoom": {
+      "en": "Panel-by-panel zoom for comics and strips, with preloading and free scaling",
+      "zh": "逐格放大漫画与连环画面板，支持预载与自由缩放"
+    },
+    "ProfBlack/ao3updater.koplugin": {
+      "en": "Automatically detect and update AO3 fiction EPUBs",
+      "zh": "自动检测并更新AO3小说EPUB"
+    },
+    "AlgusDark/karakeep.koplugin": {
+      "en": "Save links, notes, and images to Karakeep bookmarks with offline queue sync",
+      "zh": "保存链接、笔记与图片到 Karakeep 书签，支持离线队列同步"
+    },
+    "fairlygood/provider-webdav-highlights.koplugin": {
+      "en": "Export annotations as Markdown to WebDAV",
+      "zh": "将批注导出为 Markdown 到 WebDAV"
+    },
+    "sadke8465/Koreader-Custom-Bookmark-Manager": {
+      "en": "Customize bookmark icon, size, and position",
+      "zh": "自定义书签图标、大小与位置"
+    },
+    "ckilb/pocketbookcover.koplugin": {
+      "en": "Auto-sync book covers to the shutdown screen",
+      "zh": "自动同步书籍封面到关机画面"
+    },
+    "titandrive/koboard": {
+      "en": "Replace the built-in virtual keyboard with the Android system keyboard",
+      "zh": "用安卓系统键盘替换内置虚拟键盘"
+    },
+    "xZenLabs/zen-mtp": {
+      "en": "One-tap switch Kindle to MTP file transfer mode",
+      "zh": "一键切换 Kindle 至 MTP 文件传输模式"
+    },
+    "reuerendo/homepage.koplugin": {
+      "en": "Show book info, rating, and status on startup and after finishing",
+      "zh": "启动与读完时展示书籍信息、评分与状态"
+    },
+    "yanllsama/koreader-physical-page-sync": {
+      "en": "Sync reading progress with physical book page numbers",
+      "zh": "将阅读进度与实体书页码同步"
+    },
+    "Billiam/crashlog.koplugin": {
+      "en": "View crash logs and filter by tags",
+      "zh": "查看崩溃日志并按标签筛选"
+    },
+    "clach04/wallabag2.koplugin": {
+      "en": "Sync Wallabag articles to your reader",
+      "zh": "同步 Wallabag 文章到阅读器"
+    },
+    "roygbyte/weather.koplugin": {
+      "en": "Shows current, next two days, and hourly weather forecast",
+      "zh": "显示当前及未来两天的天气与逐时预报"
+    },
+    "helitra/koreader-remote": {
+      "en": "Control page turns and annotations remotely via phone browser",
+      "zh": "用手机浏览器远程控制阅读器翻页与批注"
+    },
+    "odrling/connections.koplugin": {
+      "en": "Play the NYT Connections word guessing game",
+      "zh": "玩 NYT Connections 猜词游戏"
+    },
+    "nbngoc93/vocabulary.koplugin": {
+      "en": "Vocabulary notebook and flashcard learning",
+      "zh": "生词本与闪卡学习"
+    },
+    "edoput/gotobed.koplugin": {
+      "en": "Force lock screen at bedtime to encourage sleep",
+      "zh": "到点强制锁屏，督促睡觉"
+    },
+    "graphirus-prog/koreader-session-cleaner": {
+      "en": "Check and safely clean abnormal session records in reading statistics",
+      "zh": "检查并安全清理阅读统计中的异常会话记录"
+    },
+    "b-/libgen-opds.koplugin": {
+      "en": "Toggle the libgen-opds service within the reader",
+      "zh": "在阅读器内启停 libgen-opds 服务"
+    },
+    "reuerendo/pocketbook-db-calibre.koplugin": {
+      "en": "Writes Calibre book info into PocketBook DB for instant recognition, syncing fav",
+      "zh": "将Calibre发送的书籍信息写入PocketBook数据库，免重启识别书籍，支持收藏与阅读状态同步"
+    },
+    "BeatrizCastex/SmartCollections": {
+      "en": "Filter library by metadata and auto-update smart shelves",
+      "zh": "按元数据筛选书库并自动更新智能书架"
+    },
+    "Wolfazzo/KOReader-page-calculator": {
+      "en": "Calculate reading pages by printed page numbers",
+      "zh": "按印刷页码计算阅读页数"
+    },
+    "TnS-hun/KOkobo": {
+      "en": "Download purchased Kobo books and view wishlist",
+      "zh": "下载 Kobo 已购书籍并查看心愿单"
+    },
+    "lgallard/anki-flashcards-koreader": {
+      "en": "Create AI flashcards from selected text and sync to Anki",
+      "zh": "划词生成 AI 记忆卡片并同步到 Anki"
+    },
+    "nefelodamon/KoCharacters": {
+      "en": "Extract and track character profiles with Gemini, generating AI portraits",
+      "zh": "用 Gemini 自动提取并追踪书中人物档案，可生成 AI 肖像"
+    },
+    "roygbyte/gazette.koplugin": {
+      "en": "Read RSS/Atom feeds",
+      "zh": "阅读 RSS/Atom 订阅源"
+    },
+    "ThePixelPro366/KoStatsMulti-Plugin": {
+      "en": "Upload reading stats to a web dashboard to analyze reading habits",
+      "zh": "上传阅读统计到网页仪表盘，分析阅读习惯"
+    },
+    "tachibana-shin/koreader_remote_turner": {
+      "en": "Remote page turning and sleep control via phone or computer",
+      "zh": "手机或电脑远程翻页与休眠控制"
+    },
+    "myEngAPI/KOReader-TranslatorChanger": {
+      "en": "Switch KOReader translation engines, supporting DeepL, DeepSeek, etc",
+      "zh": "切换 KOReader 翻译引擎，支持 DeepL、DeepSeek 等"
+    },
+    "bubblegumisnice/chinese.koplugin": {
+      "en": "Look up dictionary by longest word match when selecting Chinese characters",
+      "zh": "选中汉字时按最长词匹配查词典"
+    },
+    "bogorad/koreader-chapter-summarizer.koplugin": {
+      "en": "Generate a summary of the current chapter using AI",
+      "zh": "用 AI 生成当前章节摘要"
+    },
+    "unitreign/Mythos": {
+      "en": "Browse, track, and export web novels to EPUB",
+      "zh": "浏览、追踪并导出网络小说为 EPUB"
+    },
+    "tva2000hn/wnreader.koplugin": {
+      "en": "Browse and download web novels, with offline reading and bookmark management",
+      "zh": "浏览并下载网络小说，支持离线阅读与书签管理"
+    },
+    "cbrxyz/beeminder.koplugin": {
+      "en": "Automatically log reading progress to Beeminder",
+      "zh": "自动将阅读进度记录到 Beeminder"
+    },
+    "GarionBracken/PagePair": {
+      "en": "Sync page turns between two Kindles for dual-screen reading",
+      "zh": "同步两台Kindle翻页，组成双屏阅读"
+    },
+    "yparitcher/tuya.koplugin": {
+      "en": "Control Tuya smart light bulbs",
+      "zh": "控制涂鸦智能灯泡"
+    },
+    "cyanjnpr/copytoxochitl.koplugin": {
+      "en": "Copy highlighted text to reMarkable notebook",
+      "zh": "将高亮文本复制到 reMarkable 笔记本"
+    },
+    "consoleaf/hello.koplugin": {
+      "en": "Show Hello World on startup",
+      "zh": "启动时显示 Hello World"
+    },
+    "m-tky/koreader-skk": {
+      "en": "Japanese kana and kanji conversion input",
+      "zh": "日文假名与汉字转换输入"
+    },
+    "cxzx150133/philosopher.koplugin": {
+      "en": "Randomly display philosophical quotes from TXT",
+      "zh": "随机显示 TXT 中的哲言警句"
+    },
+    "ankitchouhan1020/flowread": {
+      "en": "Word-by-word speed reading with scroll mode and chapter navigation",
+      "zh": "逐词速读，支持滚动模式与章节导航"
+    },
+    "acanoe/forcerefresh.koplugin": {
+      "en": "Force refresh screen on page turn, optional refresh before sleep",
+      "zh": "翻页时强制刷新屏幕，可选睡眠前刷新"
+    },
+    "KikyTokamuro/weighttracker.koplugin": {
+      "en": "Track weight and view stats and history",
+      "zh": "记录体重并查看统计与历史"
+    },
+    "5ecret99/grep.koplugin": {
+      "en": "Full-text search across EPUB library and open results",
+      "zh": "在 EPUB 书库中全文搜索并打开结果"
+    },
+    "h-sigma/rfcreader.koplugin": {
+      "en": "Download and read RFC documents",
+      "zh": "下载并阅读 RFC 文档"
+    },
+    "Syakhisk/mdns.koplugin": {
+      "en": "Access device via kindle.local using mDNS",
+      "zh": "通过 mDNS 以 kindle.local 访问设备"
+    },
+    "matthewashton-k/pixelart.koplugin": {
+      "en": "Draw pixel art and save the image",
+      "zh": "绘制像素画并保存图片"
+    },
+    "Billiam/charactersheet.koplugin": {
+      "en": "Edit character sheet data",
+      "zh": "编辑角色卡数据"
+    },
+    "samfoy/marginalia": {
+      "en": "AI reading assistant: book indexing, Q&A, and note sync",
+      "zh": "AI 阅读助手：生成书籍索引、问答与笔记同步"
+    },
+    "yparitcher/zmanim.koplugin": {
+      "en": "Display Hebrew calendar and daily zmanim, usable as screensaver",
+      "zh": "显示希伯来历与每日zmanim，可作屏保"
+    },
+    "breno5g/koreadersync.koplugin": {
+      "en": "Sync annotations to your own server for use with Obsidian and other note service",
+      "zh": "将批注同步到自建服务器，便于接入 Obsidian 等笔记服务"
+    },
+    "yparitcher/chitas.koplugin": {
+      "en": "Display daily study content according to the Hebrew calendar",
+      "zh": "按希伯来历显示每日学习内容"
+    },
+    "asayake-b5/jpdb.koplugin": {
+      "en": "Integrate JPDB vocabulary and review while reading",
+      "zh": "在阅读时集成 JPDB 生词本与复习"
+    },
+    "dodgemaster42/KoMahjong": {
+      "en": "Play Japanese mahjong with yaku and AI opponents",
+      "zh": "玩日式麻将，支持役种与AI对局"
+    },
+    "sypianski/keyreader": {
+      "en": "Turn an external physical keyboard into the primary input, with key remapping, c",
+      "zh": "将外接物理键盘变成主要输入设备，支持按键重映射、命令面板、单词搜索与可视选择"
+    },
+    "EthicalHacker92/inkfire": {
+      "en": "Custom home screen aggregating library, comic resume, and reading stats",
+      "zh": "自定义主屏，聚合书库、漫画续读与阅读统计"
+    },
+    "abertellini2810-dev/whitakers_words.koplugin": {
+      "en": "Look up Latin word declensions and definitions",
+      "zh": "查拉丁语单词的变格与释义"
+    },
+    "jwillikers/koreader-break-timer": {
+      "en": "Set a timer to remind you to rest and force a reading pause",
+      "zh": "定时提醒休息，强制暂停阅读"
+    },
+    "hongducdev/doconline.koplugin": {
+      "en": "Read Vietnamese news online with multiple sources and categories",
+      "zh": "在线阅读越南新闻，支持多来源与分类"
+    },
+    "NightlyDegen/soxplayer.koplugin": {
+      "en": "Play audio with sox",
+      "zh": "用 sox 播放音频"
+    },
+    "iddu01linux/kohome.koplugin": {
+      "en": "Control smart home via Home Assistant voice assistant while reading",
+      "zh": "在阅读时调用 Home Assistant 语音助手控制智能家居"
+    },
+    "MuteMini/puzzle.koplugin": {
+      "en": "Play paper puzzles",
+      "zh": "玩纸面谜题"
+    },
+    "sypianski/kopad": {
+      "en": "Use a gamepad to control reading, word selection, and AI queries",
+      "zh": "用手柄控制阅读、选词查词与AI查询"
+    },
+    "consoleaf/repl.koplugin": {
+      "en": "Run an interactive REPL environment inside the reader",
+      "zh": "在阅读器内运行 REPL 交互环境"
+    },
+    "AvatoAvenue/calibre-to-koreader_metadataexporter": {
+      "en": "Extract Calibre metadata from PDFs and write to KOReader",
+      "zh": "提取 PDF 中的 Calibre 元数据并写入 KOReader"
+    },
+    "lunabirkeland/ao3.koplugin": {
+      "en": "Browse and download AO3 fanworks",
+      "zh": "浏览与下载 AO3 同人作品"
+    },
+    "tphLatte/tadoku.koplugin": {
+      "en": "Automatically log reading time to Tadoku",
+      "zh": "自动记录阅读时长到 tadoku"
+    },
+    "code2344/calculator.koplugin": {
+      "en": "Perform math calculations and unit conversions directly",
+      "zh": "直接进行数学计算与单位换算"
+    },
+    "Syakhisk/roller.koplugin": {
+      "en": "Scroll page turning and auto-scrolling",
+      "zh": "滚动翻页与自动滚动"
+    },
+    "abhignan-rakshith/kindle-askai": {
+      "en": "Ask AI anytime while reading, with text selection, screenshots, and chat",
+      "zh": "在阅读中随时向 AI 提问，支持划词、截图与聊天"
+    },
+    "dsyang/simple-journal": {
+      "en": "Write a diary and sync it to Notion",
+      "zh": "写日记并同步到 Notion"
+    },
+    "rixx/koreader-scriptorium": {
+      "en": "Finished books are pushed to Scriptorium review queue with highlights and readin",
+      "zh": "读完的书推送至 Scriptorium 待审队列，含高亮与阅读时长"
+    }
   }
 }

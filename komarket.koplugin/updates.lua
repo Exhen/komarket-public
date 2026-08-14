@@ -6,7 +6,7 @@ local DataStorage = require("datastorage")
 local JSON = require("json")
 local lfs = require("libs/libkoreader-lfs")
 local logger = require("logger")
-local _ = require("gettext")
+local _ = require("komarket_gettext")
 local Catalog = require("catalog")
 local Config = require("config")
 local Installer = require("installer")
@@ -220,7 +220,7 @@ local function localLabel(local_version, registry)
     if registry and registry.latest_tag and registry.latest_tag ~= "" then
         return tostring(registry.latest_tag)
     end
-    return _("未知")
+    return _("Unknown")
 end
 
 function Updates.isUpdateAvailable(install_dirname, catalog_plugin, registry_entry)
@@ -291,7 +291,7 @@ function Updates.buildSelfPlugin(info)
     info = info or {}
     return {
         id = "exhen/komarket-public",
-        name = _("卡欧市场"),
+        name = _("KOMarket"),
         install_dirname = SELF_DIRNAME,
         download_url = info.download_url,
         latest_tag = info.version,

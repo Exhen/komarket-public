@@ -24,6 +24,10 @@ local Config = {
     -- Self-update via GitHub Releases API only.
     self_release_api = "https://api.github.com/repos/Exhen/komarket-public/releases/latest",
     self_install_dirname = "komarket.koplugin",
+    -- Plugin-list share API (9-digit codes on KOMarket server).
+    share_api_base = "https://ko.6ili6ili.com/api/share",
+    share_code_length = 9,
+    share_max_plugins = 64,
     user_agent = "KOMarket/" .. VERSION .. " (KOReader)",
     connect_timeout_s = 15,
     request_timeout_s = 60,
