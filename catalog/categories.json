@@ -1,15 +1,55 @@
 {
   "schema_version": 1,
   "categories": [
-    { "id": "beautify", "name": "美化", "name_en": "Beautify" },
-    { "id": "sync", "name": "同步", "name_en": "Sync" },
-    { "id": "download", "name": "下载", "name_en": "Download" },
-    { "id": "bookstore", "name": "三方书库", "name_en": "Bookstore" },
-    { "id": "llm", "name": "LLM", "name_en": "LLM" },
-    { "id": "rss", "name": "RSS", "name_en": "RSS" },
-    { "id": "ime", "name": "输入法", "name_en": "Input Method" },
-    { "id": "remote", "name": "遥控", "name_en": "Remote" },
-    { "id": "comic", "name": "漫画", "name_en": "Comic" },
-    { "id": "other", "name": "其他", "name_en": "Other" }
+    {
+      "id": "beautify",
+      "name": "美化",
+      "name_en": "Beautify"
+    },
+    {
+      "id": "sync",
+      "name": "同步",
+      "name_en": "Sync"
+    },
+    {
+      "id": "download",
+      "name": "下载",
+      "name_en": "Download"
+    },
+    {
+      "id": "bookstore",
+      "name": "三方书库",
+      "name_en": "Bookstore"
+    },
+    {
+      "id": "llm",
+      "name": "LLM",
+      "name_en": "LLM"
+    },
+    {
+      "id": "rss",
+      "name": "RSS",
+      "name_en": "RSS"
+    },
+    {
+      "id": "ime",
+      "name": "输入法",
+      "name_en": "Input Method"
+    },
+    {
+      "id": "remote",
+      "name": "遥控",
+      "name_en": "Remote"
+    },
+    {
+      "id": "comic",
+      "name": "漫画",
+      "name_en": "Comic"
+    },
+    {
+      "id": "other",
+      "name": "其他",
+      "name_en": "Other"
+    }
   ]
 }
