@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-13T08:09:32.781Z",
+  "generated_at": "2026-08-14T01:33:13.560Z",
   "source": "komarket-sync",
   "rules_version": 3,
   "plugins": [
@@ -117,11 +117,6 @@
       ],
       "screenshots": [
         "https://raw.githubusercontent.com/AndyHazz/bookshelf.koplugin/master/assets/bookshelf-logo.png",
-        "https://github.com/user-attachments/assets/82f95a3e-7914-4236-855f-31d8dd09d83c",
-        "https://github.com/user-attachments/assets/574976b3-c82d-4eeb-a8ac-848ea113aa35",
-        "https://github.com/user-attachments/assets/abcdf0b2-a06b-46d4-9055-e710f2a124b5",
-        "https://github.com/user-attachments/assets/b916c194-7423-4418-96c3-d0367119f45c",
-        "https://github.com/user-attachments/assets/95799321-18fe-4495-84f4-73388a1ecc35",
         "https://raw.githubusercontent.com/AndyHazz/bookshelf.koplugin/master/assets/hero-grid.png",
         "https://raw.githubusercontent.com/AndyHazz/bookshelf.koplugin/master/assets/start-menu.png"
       ]
@@ -877,9 +872,7 @@
       "categories": [
         "rss"
       ],
-      "screenshots": [
-        "https://github.com/user-attachments/assets/9fa52ff9-2e5a-47f1-a207-db5e2cd80d7e"
-      ]
+      "screenshots": []
     },
     {
       "id": "omer-faruq/webbrowser.koplugin",
@@ -1348,9 +1341,7 @@
       "categories": [
         "comic"
       ],
-      "screenshots": [
-        "https://github.com/user-attachments/assets/dbedf7fa-b5df-4536-8686-919342ff41ce"
-      ]
+      "screenshots": []
     },
     {
       "id": "gytwo/pinyin_enhancement.koplugin",
@@ -1660,7 +1651,6 @@
       ],
       "screenshots": [
         "https://github.com/user-attachments/assets/e2d5d86d-3376-46a6-a265-9be218021b14",
-        "https://github.com/user-attachments/assets/0b22e6fe-46ae-4f1c-82ad-01cdeca7cd70",
         "https://github.com/user-attachments/assets/66661951-c5b5-4d9c-9c4c-c1817570c885",
         "https://github.com/user-attachments/assets/cc785f42-c1ba-490d-9d4b-7643aa8bb291",
         "https://github.com/user-attachments/assets/d4b50994-75e3-432f-85fe-105f402ef5e3"
@@ -2279,9 +2269,7 @@
       "categories": [
         "other"
       ],
-      "screenshots": [
-        "https://github.com/user-attachments/assets/4654b274-e078-4e45-98fb-dcf3945ddd10"
-      ]
+      "screenshots": []
     },
     {
       "id": "kktse/dtdisplay.koplugin",
@@ -4281,9 +4269,7 @@
       "categories": [
         "comic"
       ],
-      "screenshots": [
-        "https://github.com/user-attachments/assets/c4921f71-6b73-4625-974e-7b2d19dc973f"
-      ]
+      "screenshots": []
     },
     {
       "id": "dwigunakd/collectionsmosaic.koplugin",
@@ -4510,9 +4496,7 @@
       "categories": [
         "comic"
       ],
-      "screenshots": [
-        "https://github.com/user-attachments/assets/504dc19d-37d4-4b99-b3e2-670b6c3d7bd1"
-      ]
+      "screenshots": []
     },
     {
       "id": "ksaMask123/artgallery.koplugin",
@@ -6981,7 +6965,12 @@
       "categories": [
         "other"
       ],
-      "screenshots": []
+      "screenshots": [
+        "https://raw.githubusercontent.com/Fiddelis/linefocus.koplugin/main/docs/gray_other_lines.gif",
+        "https://raw.githubusercontent.com/Fiddelis/linefocus.koplugin/main/docs/gray_focus_window.gif",
+        "https://raw.githubusercontent.com/Fiddelis/linefocus.koplugin/main/docs/underline.gif",
+        "https://raw.githubusercontent.com/Fiddelis/linefocus.koplugin/main/docs/settings.png"
+      ]
     },
     {
       "id": "sam-don/kogrim.koplugin",
@@ -11288,9 +11277,7 @@
       "categories": [
         "llm"
       ],
-      "screenshots": [
-        "https://github.com/user-attachments/assets/55a18c16-76dc-457c-9f91-60946ec79331"
-      ]
+      "screenshots": []
     },
     {
       "id": "benwoody/bookwyrm.koplugin",
