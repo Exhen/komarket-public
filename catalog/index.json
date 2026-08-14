@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-14T03:01:07.745Z",
+  "generated_at": "2026-08-14T03:43:59.900Z",
   "source": "komarket-sync",
-  "rules_version": 5,
+  "rules_version": 6,
   "plugins": [
     {
       "id": "doctorhetfield-cmd/simpleui.koplugin",
@@ -22,10 +22,10 @@
         "plugin",
         "reader"
       ],
-      "stars": 1317,
+      "stars": 1318,
       "created_at": "2026-03-13T12:34:19Z",
       "updated_at": "2026-08-12T00:45:04Z",
-      "stars_delta": 0,
+      "stars_delta": 1,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "2.1.1",
@@ -77,10 +77,10 @@
         "zlibrary",
         "zlibrary-plugin"
       ],
-      "stars": 605,
+      "stars": 606,
       "created_at": "2025-05-08T16:43:02Z",
       "updated_at": "2026-08-13T09:37:21Z",
-      "stars_delta": 2,
+      "stars_delta": 1,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v1.0.46-81fa5fb5a4f5a41bdffd6abb267ed2d8fc55e15b",
@@ -165,10 +165,10 @@
         "lua",
         "pocketbook"
       ],
-      "stars": 480,
+      "stars": 481,
       "created_at": "2026-03-27T21:01:17Z",
       "updated_at": "2026-08-13T21:01:29Z",
-      "stars_delta": 0,
+      "stars_delta": 1,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v2.5.4",
@@ -221,10 +221,10 @@
         "weread",
         "wxread"
       ],
-      "stars": 474,
+      "stars": 478,
       "created_at": "2026-06-07T08:06:01Z",
       "updated_at": "2026-08-12T17:18:17Z",
-      "stars_delta": 2,
+      "stars_delta": 4,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v1.2.0",
@@ -268,10 +268,10 @@
       "topics": [
         "koreader-plugin"
       ],
-      "stars": 430,
+      "stars": 431,
       "created_at": "2025-11-22T20:12:33Z",
       "updated_at": "2026-08-13T12:39:30Z",
-      "stars_delta": 0,
+      "stars_delta": 1,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v1.12.0",
@@ -431,8 +431,8 @@
       ],
       "stars": 263,
       "created_at": "2025-03-31T13:45:47Z",
-      "updated_at": "2026-08-11T23:58:09Z",
-      "stars_delta": 1,
+      "updated_at": "2026-08-14T03:42:43Z",
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "1.1.5",
@@ -1253,7 +1253,7 @@
       ],
       "stars": 97,
       "created_at": "2025-10-08T20:02:36Z",
-      "updated_at": "2026-05-12T17:22:44Z",
+      "updated_at": "2026-08-14T03:34:36Z",
       "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
@@ -1469,7 +1469,7 @@
       "stars": 86,
       "created_at": "2021-12-09T19:38:27Z",
       "updated_at": "2024-06-12T00:16:40Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -1488,7 +1488,8 @@
       ],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "onatbas/bluetooth.koplugin",
@@ -1575,7 +1576,7 @@
       "stars": 77,
       "created_at": "2025-05-19T21:16:50Z",
       "updated_at": "2026-07-18T22:21:36Z",
-      "stars_delta": 1,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v1.1.0",
@@ -1614,7 +1615,7 @@
       "stars": 76,
       "created_at": "2026-07-19T11:32:10Z",
       "updated_at": "2026-08-10T17:38:21Z",
-      "stars_delta": 1,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v2.2.1",
@@ -1767,45 +1768,6 @@
       "llm_enriched_at": null
     },
     {
-      "id": "qewer33/quickrss.koplugin",
-      "name": "quickrss",
-      "slug": "qewer33-quickrss-koplugin",
-      "summary": "A fast, standalone and easy to use RSS reader for KOReader",
-      "description": "A fast, standalone and easy to use RSS reader for KOReader",
-      "owner": "qewer33",
-      "repo": "quickrss.koplugin",
-      "homepage": "https://github.com/qewer33/quickrss.koplugin",
-      "topics": [],
-      "stars": 67,
-      "created_at": "2026-03-02T04:24:35Z",
-      "updated_at": "2026-03-15T19:51:52Z",
-      "stars_delta": 0,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": "v0.2.1",
-      "latest_commit": null,
-      "download_url": "https://github.com/qewer33/quickrss.koplugin/releases/download/v0.2.1/quickrss.koplugin.zip",
-      "download_source": "release_asset",
-      "sha256": null,
-      "install_dirname": "quickrss.koplugin",
-      "plugin_path": ".",
-      "layout": "name-koplugin",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": "MIT",
-      "screenshots": [
-        "https://raw.githubusercontent.com/qewer33/quickrss.koplugin/main/assets/quickrss_banner.png",
-        "https://raw.githubusercontent.com/qewer33/quickrss.koplugin/main/assets/quickrss_screenshots.png"
-      ],
-      "categories": [
-        "rss",
-        "download",
-        "network"
-      ],
-      "editorial_note": "快速离线阅读 RSS 订阅源，支持全文提取与图片缓存",
-      "llm_enriched_at": null
-    },
-    {
       "id": "KORComic/comicmeta.koplugin",
       "name": "comicmeta",
       "slug": "korcomic-comicmeta-koplugin",
@@ -1846,6 +1808,45 @@
         "bookstore"
       ],
       "editorial_note": "从 CBZ/CBR 压缩包提取漫画元数据",
+      "llm_enriched_at": null
+    },
+    {
+      "id": "qewer33/quickrss.koplugin",
+      "name": "quickrss",
+      "slug": "qewer33-quickrss-koplugin",
+      "summary": "A fast, standalone and easy to use RSS reader for KOReader",
+      "description": "A fast, standalone and easy to use RSS reader for KOReader",
+      "owner": "qewer33",
+      "repo": "quickrss.koplugin",
+      "homepage": "https://github.com/qewer33/quickrss.koplugin",
+      "topics": [],
+      "stars": 67,
+      "created_at": "2026-03-02T04:24:35Z",
+      "updated_at": "2026-03-15T19:51:52Z",
+      "stars_delta": 0,
+      "stars_delta_7d": null,
+      "stars_delta_30d": null,
+      "latest_tag": "v0.2.1",
+      "latest_commit": null,
+      "download_url": "https://github.com/qewer33/quickrss.koplugin/releases/download/v0.2.1/quickrss.koplugin.zip",
+      "download_source": "release_asset",
+      "sha256": null,
+      "install_dirname": "quickrss.koplugin",
+      "plugin_path": ".",
+      "layout": "name-koplugin",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": "MIT",
+      "screenshots": [
+        "https://raw.githubusercontent.com/qewer33/quickrss.koplugin/main/assets/quickrss_banner.png",
+        "https://raw.githubusercontent.com/qewer33/quickrss.koplugin/main/assets/quickrss_screenshots.png"
+      ],
+      "categories": [
+        "rss",
+        "download",
+        "network"
+      ],
+      "editorial_note": "快速离线阅读 RSS 订阅源，支持全文提取与图片缓存",
       "llm_enriched_at": null
     },
     {
@@ -2271,7 +2272,7 @@
       "stars": 53,
       "created_at": "2025-04-24T17:38:14Z",
       "updated_at": "2025-06-22T11:13:24Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v1.0.0",
@@ -2293,7 +2294,8 @@
       ],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "Shac0x/charactertracker.koplugin",
@@ -2349,7 +2351,7 @@
       "stars": 47,
       "created_at": "2023-12-15T16:09:02Z",
       "updated_at": "2023-12-15T16:09:22Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -2366,7 +2368,45 @@
       "screenshots": [],
       "categories": [
         "sync"
-      ]
+      ],
+      "llm_enriched_at": null
+    },
+    {
+      "id": "omer-faruq/sudoku.koplugin",
+      "name": "sudoku",
+      "slug": "omer-faruq-sudoku-koplugin",
+      "summary": "Play touch-friendly Sudoku puzzles on KOReader, resume later",
+      "description": "Play touch-friendly Sudoku puzzles on KOReader, resume later",
+      "owner": "omer-faruq",
+      "repo": "sudoku.koplugin",
+      "homepage": "https://github.com/omer-faruq/sudoku.koplugin",
+      "topics": [
+        "game",
+        "koreader-plugin"
+      ],
+      "stars": 46,
+      "created_at": "2025-11-15T16:40:11Z",
+      "updated_at": "2026-06-12T18:51:33Z",
+      "stars_delta": 1,
+      "stars_delta_7d": null,
+      "stars_delta_30d": null,
+      "latest_tag": "v1.3.0",
+      "latest_commit": null,
+      "download_url": "https://github.com/omer-faruq/sudoku.koplugin/releases/download/v1.3.0/sudoku.koplugin.zip",
+      "download_source": "release_asset",
+      "sha256": null,
+      "install_dirname": "sudoku.koplugin",
+      "plugin_path": ".",
+      "layout": "root-files",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": "GPL-3.0",
+      "screenshots": [],
+      "categories": [
+        "游戏"
+      ],
+      "editorial_note": "玩数独，支持多难度与进度保存",
+      "llm_enriched_at": null
     },
     {
       "id": "Shac0x/maximum.koplugin",
@@ -2411,43 +2451,6 @@
         "gesture"
       ],
       "editorial_note": "漫画网格缩放与横页自动旋转",
-      "llm_enriched_at": null
-    },
-    {
-      "id": "omer-faruq/sudoku.koplugin",
-      "name": "sudoku",
-      "slug": "omer-faruq-sudoku-koplugin",
-      "summary": "Play touch-friendly Sudoku puzzles on KOReader, resume later",
-      "description": "Play touch-friendly Sudoku puzzles on KOReader, resume later",
-      "owner": "omer-faruq",
-      "repo": "sudoku.koplugin",
-      "homepage": "https://github.com/omer-faruq/sudoku.koplugin",
-      "topics": [
-        "game",
-        "koreader-plugin"
-      ],
-      "stars": 45,
-      "created_at": "2025-11-15T16:40:11Z",
-      "updated_at": "2026-06-12T18:51:33Z",
-      "stars_delta": 0,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": "v1.3.0",
-      "latest_commit": null,
-      "download_url": "https://github.com/omer-faruq/sudoku.koplugin/releases/download/v1.3.0/sudoku.koplugin.zip",
-      "download_source": "release_asset",
-      "sha256": null,
-      "install_dirname": "sudoku.koplugin",
-      "plugin_path": ".",
-      "layout": "root-files",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": "GPL-3.0",
-      "screenshots": [],
-      "categories": [
-        "游戏"
-      ],
-      "editorial_note": "玩数独，支持多难度与进度保存",
       "llm_enriched_at": null
     },
     {
@@ -2985,7 +2988,7 @@
       "stars": 31,
       "created_at": "2023-07-14T14:20:15Z",
       "updated_at": "2025-09-22T17:42:50Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -3002,7 +3005,8 @@
       "screenshots": [],
       "categories": [
         "dictionary"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "d0nizam/kosyncthing_plus.koplugin",
@@ -3066,7 +3070,7 @@
       "stars": 30,
       "created_at": "2025-04-26T08:06:34Z",
       "updated_at": "2025-04-28T02:20:23Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -3083,7 +3087,8 @@
       "screenshots": [],
       "categories": [
         "file"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "gytwo/quickui.koplugin",
@@ -3152,7 +3157,7 @@
       "stars": 28,
       "created_at": "2025-04-05T14:38:00Z",
       "updated_at": "2025-05-06T20:07:39Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -3170,7 +3175,8 @@
       "categories": [
         "annotation",
         "cloud"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "PedroMachado1/kopet.koplugin",
@@ -3294,7 +3300,7 @@
       "stars": 27,
       "created_at": "2025-08-03T11:56:43Z",
       "updated_at": "2025-09-04T09:19:21Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v0.0.3",
@@ -3311,7 +3317,8 @@
       "screenshots": [],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "anezih/bubblezoom.koplugin",
@@ -3649,7 +3656,7 @@
       "stars": 25,
       "created_at": "2023-07-25T15:39:54Z",
       "updated_at": "2025-01-05T00:17:59Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -3666,7 +3673,8 @@
       "screenshots": [],
       "categories": [
         "image"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "Euphoriyy/derainbowify.koplugin",
@@ -3775,7 +3783,7 @@
       "stars": 24,
       "created_at": "2025-10-28T10:56:57Z",
       "updated_at": "2025-11-26T13:44:39Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -3799,7 +3807,8 @@
       ],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "Billiam/crashlog.koplugin",
@@ -3814,7 +3823,7 @@
       "stars": 24,
       "created_at": "2025-01-11T20:03:52Z",
       "updated_at": "2025-01-17T18:24:42Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -3833,7 +3842,45 @@
       ],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": null
+    },
+    {
+      "id": "omer-faruq/wordsearch.koplugin",
+      "name": "wordsearch",
+      "slug": "omer-faruq-wordsearch-koplugin",
+      "summary": "Word Search Puzzle Plugin for KOReader",
+      "description": "Word Search Puzzle Plugin for KOReader",
+      "owner": "omer-faruq",
+      "repo": "wordsearch.koplugin",
+      "homepage": "https://github.com/omer-faruq/wordsearch.koplugin",
+      "topics": [
+        "game",
+        "koreader-plugin"
+      ],
+      "stars": 23,
+      "created_at": "2025-11-18T06:15:49Z",
+      "updated_at": "2026-07-04T15:07:28Z",
+      "stars_delta": 0,
+      "stars_delta_7d": null,
+      "stars_delta_30d": null,
+      "latest_tag": "v1.1.0",
+      "latest_commit": null,
+      "download_url": "https://github.com/omer-faruq/wordsearch.koplugin/releases/download/v1.1.0/wordsearch.koplugin.zip",
+      "download_source": "release_asset",
+      "sha256": null,
+      "install_dirname": "wordsearch.koplugin",
+      "plugin_path": ".",
+      "layout": "root-files",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": "GPL-3.0",
+      "screenshots": [],
+      "categories": [
+        "游戏"
+      ],
+      "editorial_note": "在设备上生成单词搜索谜题游戏",
+      "llm_enriched_at": null
     },
     {
       "id": "stevenzamora1/covercalendar.koplugin",
@@ -3918,43 +3965,6 @@
       "llm_enriched_at": null
     },
     {
-      "id": "omer-faruq/wordsearch.koplugin",
-      "name": "wordsearch",
-      "slug": "omer-faruq-wordsearch-koplugin",
-      "summary": "Word Search Puzzle Plugin for KOReader",
-      "description": "Word Search Puzzle Plugin for KOReader",
-      "owner": "omer-faruq",
-      "repo": "wordsearch.koplugin",
-      "homepage": "https://github.com/omer-faruq/wordsearch.koplugin",
-      "topics": [
-        "game",
-        "koreader-plugin"
-      ],
-      "stars": 23,
-      "created_at": "2025-11-18T06:15:49Z",
-      "updated_at": "2026-07-04T15:07:28Z",
-      "stars_delta": 0,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": "v1.1.0",
-      "latest_commit": null,
-      "download_url": "https://github.com/omer-faruq/wordsearch.koplugin/releases/download/v1.1.0/wordsearch.koplugin.zip",
-      "download_source": "release_asset",
-      "sha256": null,
-      "install_dirname": "wordsearch.koplugin",
-      "plugin_path": ".",
-      "layout": "root-files",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": "GPL-3.0",
-      "screenshots": [],
-      "categories": [
-        "游戏"
-      ],
-      "editorial_note": "在设备上生成单词搜索谜题游戏",
-      "llm_enriched_at": null
-    },
-    {
       "id": "clach04/wallabag2.koplugin",
       "name": "wallabag2",
       "slug": "clach04-wallabag2-koplugin",
@@ -3976,7 +3986,7 @@
       "stars": 22,
       "created_at": "2023-07-30T15:20:38Z",
       "updated_at": "2024-08-25T11:57:30Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -3993,44 +4003,8 @@
       "screenshots": [],
       "categories": [
         "rss"
-      ]
-    },
-    {
-      "id": "roygbyte/weather.koplugin",
-      "name": "weather",
-      "slug": "roygbyte-weather-koplugin",
-      "summary": "",
-      "description": "",
-      "owner": "roygbyte",
-      "repo": "weather.koplugin",
-      "homepage": "https://github.com/roygbyte/weather.koplugin",
-      "topics": [],
-      "stars": 21,
-      "created_at": "2025-06-24T22:02:34Z",
-      "updated_at": "2025-06-24T22:03:47Z",
-      "stars_delta": null,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": null,
-      "latest_commit": null,
-      "download_url": "https://github.com/roygbyte/weather.koplugin/archive/refs/heads/master.zip",
-      "download_source": "zipball",
-      "sha256": null,
-      "install_dirname": "weather.koplugin",
-      "plugin_path": ".",
-      "layout": "root-files",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": null,
-      "screenshots": [
-        "https://user-images.githubusercontent.com/82218266/134824984-687ffe38-e9aa-491f-8c2c-7c055fc5d10e.png",
-        "https://user-images.githubusercontent.com/82218266/134824983-390021e9-30de-4f0a-a4ea-d95bcc68f6fa.png",
-        "https://user-images.githubusercontent.com/82218266/134824982-3e16e8da-fbf2-4d35-b6d5-33ece7d47d67.png",
-        "https://user-images.githubusercontent.com/82218266/134824980-32d1892b-7b24-45b5-86ba-ef9892fcacb5.png"
       ],
-      "categories": [
-        "other"
-      ]
+      "llm_enriched_at": null
     },
     {
       "id": "KitanaCode/booknookcharms.koplugin",
@@ -4072,6 +4046,44 @@
         "bookstore"
       ],
       "editorial_note": "为阅读界面添加书签丝带与折角装饰",
+      "llm_enriched_at": null
+    },
+    {
+      "id": "roygbyte/weather.koplugin",
+      "name": "weather",
+      "slug": "roygbyte-weather-koplugin",
+      "summary": "",
+      "description": "",
+      "owner": "roygbyte",
+      "repo": "weather.koplugin",
+      "homepage": "https://github.com/roygbyte/weather.koplugin",
+      "topics": [],
+      "stars": 21,
+      "created_at": "2025-06-24T22:02:34Z",
+      "updated_at": "2025-06-24T22:03:47Z",
+      "stars_delta": 0,
+      "stars_delta_7d": null,
+      "stars_delta_30d": null,
+      "latest_tag": null,
+      "latest_commit": null,
+      "download_url": "https://github.com/roygbyte/weather.koplugin/archive/refs/heads/master.zip",
+      "download_source": "zipball",
+      "sha256": null,
+      "install_dirname": "weather.koplugin",
+      "plugin_path": ".",
+      "layout": "root-files",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": null,
+      "screenshots": [
+        "https://user-images.githubusercontent.com/82218266/134824984-687ffe38-e9aa-491f-8c2c-7c055fc5d10e.png",
+        "https://user-images.githubusercontent.com/82218266/134824983-390021e9-30de-4f0a-a4ea-d95bcc68f6fa.png",
+        "https://user-images.githubusercontent.com/82218266/134824982-3e16e8da-fbf2-4d35-b6d5-33ece7d47d67.png",
+        "https://user-images.githubusercontent.com/82218266/134824980-32d1892b-7b24-45b5-86ba-ef9892fcacb5.png"
+      ],
+      "categories": [
+        "other"
+      ],
       "llm_enriched_at": null
     },
     {
@@ -4250,6 +4262,43 @@
       "llm_enriched_at": null
     },
     {
+      "id": "omer-faruq/nonogram.koplugin",
+      "name": "nonogram",
+      "slug": "omer-faruq-nonogram-koplugin",
+      "summary": "Solve picture cross puzzles on KOReader with tap-friendly controls, hints, and automatic progress saving.",
+      "description": "Solve picture cross puzzles on KOReader with tap-friendly controls, hints, and automatic progress saving.",
+      "owner": "omer-faruq",
+      "repo": "nonogram.koplugin",
+      "homepage": "https://github.com/omer-faruq/nonogram.koplugin",
+      "topics": [
+        "game",
+        "koreader-plugin"
+      ],
+      "stars": 19,
+      "created_at": "2025-11-27T15:39:35Z",
+      "updated_at": "2025-11-27T15:42:57Z",
+      "stars_delta": 0,
+      "stars_delta_7d": null,
+      "stars_delta_30d": null,
+      "latest_tag": "v1.0.0",
+      "latest_commit": null,
+      "download_url": "https://github.com/omer-faruq/nonogram.koplugin/releases/download/v1.0.0/nonogram.koplugin.zip",
+      "download_source": "release_asset",
+      "sha256": null,
+      "install_dirname": "nonogram.koplugin",
+      "plugin_path": ".",
+      "layout": "root-files",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": "GPL-3.0",
+      "screenshots": [],
+      "categories": [
+        "游戏"
+      ],
+      "editorial_note": "玩数织解谜，支持提示与进度保存",
+      "llm_enriched_at": null
+    },
+    {
       "id": "kbarni/frotz.koplugin",
       "name": "frotz",
       "slug": "kbarni-frotz-koplugin",
@@ -4287,43 +4336,6 @@
         "游戏"
       ],
       "editorial_note": "游玩交互式小说游戏",
-      "llm_enriched_at": null
-    },
-    {
-      "id": "omer-faruq/nonogram.koplugin",
-      "name": "nonogram",
-      "slug": "omer-faruq-nonogram-koplugin",
-      "summary": "Solve picture cross puzzles on KOReader with tap-friendly controls, hints, and automatic progress saving.",
-      "description": "Solve picture cross puzzles on KOReader with tap-friendly controls, hints, and automatic progress saving.",
-      "owner": "omer-faruq",
-      "repo": "nonogram.koplugin",
-      "homepage": "https://github.com/omer-faruq/nonogram.koplugin",
-      "topics": [
-        "game",
-        "koreader-plugin"
-      ],
-      "stars": 19,
-      "created_at": "2025-11-27T15:39:35Z",
-      "updated_at": "2025-11-27T15:42:57Z",
-      "stars_delta": 0,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": "v1.0.0",
-      "latest_commit": null,
-      "download_url": "https://github.com/omer-faruq/nonogram.koplugin/releases/download/v1.0.0/nonogram.koplugin.zip",
-      "download_source": "release_asset",
-      "sha256": null,
-      "install_dirname": "nonogram.koplugin",
-      "plugin_path": ".",
-      "layout": "root-files",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": "GPL-3.0",
-      "screenshots": [],
-      "categories": [
-        "游戏"
-      ],
-      "editorial_note": "玩数织解谜，支持提示与进度保存",
       "llm_enriched_at": null
     },
     {
@@ -4586,7 +4598,7 @@
       "stars": 17,
       "created_at": "2025-04-09T10:21:07Z",
       "updated_at": "2025-09-01T14:14:12Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -4603,7 +4615,8 @@
       "screenshots": [],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "DenisovichDev/randomquote.koplugin",
@@ -4658,7 +4671,7 @@
       "stars": 16,
       "created_at": "2022-03-22T03:40:06Z",
       "updated_at": "2022-03-28T13:21:58Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v1.0.0",
@@ -4684,7 +4697,8 @@
       ],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "jbreizh/quickmenu.koplugin",
@@ -4831,7 +4845,7 @@
       "stars": 15,
       "created_at": "2024-07-28T13:38:31Z",
       "updated_at": "2024-07-28T13:40:14Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -4848,7 +4862,8 @@
       "screenshots": [],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "Mr54233/pickthought.koplugin",
@@ -5192,7 +5207,7 @@
       "stars": 13,
       "created_at": "2024-07-29T03:38:56Z",
       "updated_at": "2024-08-18T11:10:50Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -5209,7 +5224,8 @@
       "screenshots": [],
       "categories": [
         "bookstore"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "Estela-Zelin84/inkstain.koplugin",
@@ -5351,7 +5367,7 @@
       "stars": 12,
       "created_at": "2025-02-08T12:54:26Z",
       "updated_at": "2025-11-26T14:30:01Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -5370,7 +5386,8 @@
       ],
       "categories": [
         "bookstore"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "THE-XSX/readingfolio.koplugin",
@@ -5795,7 +5812,7 @@
       "stars": 10,
       "created_at": "2022-06-12T21:48:48Z",
       "updated_at": "2022-11-13T13:20:56Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -5812,7 +5829,8 @@
       "screenshots": [],
       "categories": [
         "rss"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "rameezk/rebind.koplugin",
@@ -6100,38 +6118,6 @@
       ],
       "editorial_note": "自动同步设备时间，支持时区检测与手动设置",
       "llm_enriched_at": null
-    },
-    {
-      "id": "matthewashton-k/todo-koplugin",
-      "name": "todo-koplugin",
-      "slug": "matthewashton-k-todo-koplugin",
-      "summary": "a koreader plugin todo app",
-      "description": "a koreader plugin todo app",
-      "owner": "matthewashton-k",
-      "repo": "todo-koplugin",
-      "homepage": "https://github.com/matthewashton-k/todo-koplugin",
-      "topics": [],
-      "stars": 9,
-      "created_at": "2025-03-18T19:06:54Z",
-      "updated_at": "2025-03-20T04:44:48Z",
-      "stars_delta": null,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": null,
-      "latest_commit": null,
-      "download_url": "https://github.com/matthewashton-k/todo-koplugin/archive/refs/heads/main.zip",
-      "download_source": "zipball",
-      "sha256": null,
-      "install_dirname": "todo-koplugin.koplugin",
-      "plugin_path": ".",
-      "layout": "name-inferred",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": null,
-      "screenshots": [],
-      "categories": [
-        "other"
-      ]
     },
     {
       "id": "tachibana-shin/crop_enhancer.koplugin",
@@ -6711,7 +6697,7 @@
       "stars": 6,
       "created_at": "2025-09-01T01:49:49Z",
       "updated_at": "2025-09-01T04:30:59Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -6728,7 +6714,8 @@
       "screenshots": [],
       "categories": [
         "dictionary"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "yupmoon/vocabdeck.koplugin",
@@ -7021,7 +7008,7 @@
       "stars": 6,
       "created_at": "2025-10-25T15:44:32Z",
       "updated_at": "2025-10-25T16:58:12Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -7038,7 +7025,8 @@
       "screenshots": [],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "ksaMask123/artgallery.koplugin",
@@ -7384,7 +7372,7 @@
       "stars": 5,
       "created_at": "2025-06-29T21:38:58Z",
       "updated_at": "2025-06-29T21:54:57Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -7401,7 +7389,8 @@
       "screenshots": [],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "cbrxyz/beeminder.koplugin",
@@ -7416,7 +7405,7 @@
       "stars": 5,
       "created_at": "2024-03-08T17:17:40Z",
       "updated_at": "2024-03-08T17:36:34Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -7435,7 +7424,8 @@
       ],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "yparitcher/tuya.koplugin",
@@ -7450,7 +7440,7 @@
       "stars": 5,
       "created_at": "2021-12-15T15:44:01Z",
       "updated_at": "2022-10-31T00:11:05Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -7467,7 +7457,8 @@
       "screenshots": [],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "DavidMakin/royalroad.koplugin",
@@ -8118,7 +8109,7 @@
       "stars": 4,
       "created_at": "2025-08-14T11:29:47Z",
       "updated_at": "2025-08-29T16:21:41Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -8135,7 +8126,8 @@
       "screenshots": [],
       "categories": [
         "annotation"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "consoleaf/hello.koplugin",
@@ -8150,7 +8142,7 @@
       "stars": 4,
       "created_at": "2025-07-20T20:35:27Z",
       "updated_at": "2025-07-20T20:35:33Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -8167,7 +8159,8 @@
       "screenshots": [],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "notmarek/stoka.koplugin",
@@ -8182,7 +8175,7 @@
       "stars": 4,
       "created_at": "2023-11-29T00:50:01Z",
       "updated_at": "2023-11-29T01:02:39Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -8199,7 +8192,8 @@
       "screenshots": [],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "cxzx150133/philosopher.koplugin",
@@ -8220,7 +8214,7 @@
       "stars": 4,
       "created_at": "2018-01-28T17:28:47Z",
       "updated_at": "2018-05-05T06:44:29Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -8237,7 +8231,8 @@
       "screenshots": [],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "kerivin/stylus-annotations.koplugin",
@@ -8916,7 +8911,7 @@
       "stars": 3,
       "created_at": "2025-10-25T02:57:22Z",
       "updated_at": "2025-10-25T12:23:34Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -8933,7 +8928,8 @@
       "screenshots": [],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "KikyTokamuro/weighttracker.koplugin",
@@ -8952,7 +8948,7 @@
       "stars": 3,
       "created_at": "2025-09-06T18:06:29Z",
       "updated_at": "2025-09-06T18:39:09Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -8971,7 +8967,8 @@
       ],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "5ecret99/grep.koplugin",
@@ -8986,7 +8983,7 @@
       "stars": 3,
       "created_at": "2025-07-22T20:07:07Z",
       "updated_at": "2025-07-22T20:16:48Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -9003,7 +9000,8 @@
       "screenshots": [],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "Syakhisk/mdns.koplugin",
@@ -9018,7 +9016,7 @@
       "stars": 3,
       "created_at": "2025-06-15T20:04:46Z",
       "updated_at": "2025-06-22T12:45:14Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -9035,7 +9033,8 @@
       "screenshots": [],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "h-sigma/rfcreader.koplugin",
@@ -9050,7 +9049,7 @@
       "stars": 3,
       "created_at": "2025-06-03T12:16:36Z",
       "updated_at": "2025-06-03T12:21:13Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -9071,7 +9070,8 @@
       ],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "matthewashton-k/pixelart.koplugin",
@@ -9086,7 +9086,7 @@
       "stars": 3,
       "created_at": "2025-03-17T20:22:45Z",
       "updated_at": "2025-03-17T22:47:58Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -9106,7 +9106,8 @@
       ],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "Billiam/charactersheet.koplugin",
@@ -9121,7 +9122,7 @@
       "stars": 3,
       "created_at": "2024-12-07T20:37:06Z",
       "updated_at": "2025-02-16T18:44:27Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -9138,7 +9139,8 @@
       "screenshots": [],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "yparitcher/zmanim.koplugin",
@@ -9156,7 +9158,7 @@
       "stars": 3,
       "created_at": "2021-02-01T05:07:58Z",
       "updated_at": "2023-04-05T19:31:24Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -9176,7 +9178,8 @@
       "categories": [
         "screensaver",
         "calendar"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "titandrive/syncest.koplugin",
@@ -10568,7 +10571,7 @@
       "stars": 2,
       "created_at": "2025-10-24T01:12:40Z",
       "updated_at": "2025-10-28T15:43:46Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -10585,7 +10588,8 @@
       "screenshots": [],
       "categories": [
         "sync"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "yparitcher/chitas.koplugin",
@@ -10600,7 +10604,7 @@
       "stars": 2,
       "created_at": "2020-10-07T22:23:31Z",
       "updated_at": "2023-08-18T17:14:44Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -10617,7 +10621,8 @@
       "screenshots": [],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "asayake-b5/jpdb.koplugin",
@@ -10632,7 +10637,7 @@
       "stars": 2,
       "created_at": "2023-07-02T19:13:43Z",
       "updated_at": "2023-07-11T15:33:47Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -10649,7 +10654,8 @@
       "screenshots": [],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "jsfaint/zhihudaily.koplugin",
@@ -12106,41 +12112,6 @@
       "llm_enriched_at": null
     },
     {
-      "id": "chaulagainrupak/bookorbit-koplugin",
-      "name": "bookorbit-koplugin",
-      "slug": "chaulagainrupak-bookorbit-koplugin",
-      "summary": "KOReader plugin for integration with BookOrbit",
-      "description": "KOReader plugin for integration with BookOrbit",
-      "owner": "chaulagainrupak",
-      "repo": "bookorbit-koplugin",
-      "homepage": "https://github.com/chaulagainrupak/bookorbit-koplugin",
-      "topics": [],
-      "stars": 1,
-      "created_at": "2026-05-21T00:30:33Z",
-      "updated_at": "2026-06-10T17:54:13Z",
-      "stars_delta": 0,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": null,
-      "latest_commit": null,
-      "download_url": "https://github.com/chaulagainrupak/bookorbit-koplugin/archive/refs/heads/main.zip",
-      "download_source": "zipball",
-      "sha256": null,
-      "install_dirname": "bookorbit-koplugin.koplugin",
-      "plugin_path": ".",
-      "layout": "name-inferred",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": "AGPL-3.0",
-      "screenshots": [],
-      "categories": [
-        "sync",
-        "statistics"
-      ],
-      "editorial_note": "同步阅读统计与进度到 BookOrbit",
-      "llm_enriched_at": null
-    },
-    {
       "id": "rayanestefani8-collab/translatordoc.koplugin",
       "name": "translatordoc",
       "slug": "rayanestefani8-collab-translatordoc-koplugin",
@@ -13073,7 +13044,7 @@
       "stars": 1,
       "created_at": "2025-11-06T13:19:48Z",
       "updated_at": "2025-11-06T14:28:58Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -13090,7 +13061,8 @@
       "screenshots": [],
       "categories": [
         "annotation"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "hongducdev/doconline.koplugin",
@@ -13105,7 +13077,7 @@
       "stars": 1,
       "created_at": "2025-11-04T14:20:16Z",
       "updated_at": "2025-11-05T14:44:34Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -13122,7 +13094,8 @@
       "screenshots": [],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "NightlyDegen/soxplayer.koplugin",
@@ -13137,7 +13110,7 @@
       "stars": 1,
       "created_at": "2025-10-18T20:46:29Z",
       "updated_at": "2025-10-18T20:46:29Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -13154,7 +13127,8 @@
       "screenshots": [],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "iddu01linux/kohome.koplugin",
@@ -13169,7 +13143,7 @@
       "stars": 1,
       "created_at": "2025-09-13T20:57:40Z",
       "updated_at": "2025-09-14T14:06:25Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -13186,7 +13160,8 @@
       "screenshots": [],
       "categories": [
         "llm"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "MuteMini/puzzle.koplugin",
@@ -13201,7 +13176,7 @@
       "stars": 1,
       "created_at": "2025-09-08T16:55:52Z",
       "updated_at": "2025-09-08T16:55:52Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -13218,39 +13193,8 @@
       "screenshots": [],
       "categories": [
         "other"
-      ]
-    },
-    {
-      "id": "isaachsanu/jsonviewer-koplugin",
-      "name": "jsonviewer-koplugin",
-      "slug": "isaachsanu-jsonviewer-koplugin",
-      "summary": "Koreader Plugin - Showing json data from given URL",
-      "description": "Koreader Plugin - Showing json data from given URL",
-      "owner": "isaachsanu",
-      "repo": "jsonviewer-koplugin",
-      "homepage": "https://github.com/isaachsanu/jsonviewer-koplugin",
-      "topics": [],
-      "stars": 1,
-      "created_at": "2025-07-30T02:04:54Z",
-      "updated_at": "2025-07-30T02:06:02Z",
-      "stars_delta": null,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": null,
-      "latest_commit": null,
-      "download_url": "https://github.com/isaachsanu/jsonviewer-koplugin/archive/refs/heads/main.zip",
-      "download_source": "zipball",
-      "sha256": null,
-      "install_dirname": "jsonviewer-koplugin.koplugin",
-      "plugin_path": ".",
-      "layout": "name-inferred",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": null,
-      "screenshots": [],
-      "categories": [
-        "other"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "consoleaf/repl.koplugin",
@@ -13265,7 +13209,7 @@
       "stars": 1,
       "created_at": "2025-07-21T01:23:35Z",
       "updated_at": "2025-07-25T22:40:30Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -13282,39 +13226,8 @@
       "screenshots": [],
       "categories": [
         "other"
-      ]
-    },
-    {
-      "id": "stanley1984/KOPluginSDK",
-      "name": "KOPluginSDK",
-      "slug": "stanley1984-kopluginsdk",
-      "summary": "KO插件框架SDK",
-      "description": "KO插件框架SDK",
-      "owner": "stanley1984",
-      "repo": "KOPluginSDK",
-      "homepage": "https://github.com/stanley1984/KOPluginSDK",
-      "topics": [],
-      "stars": 1,
-      "created_at": "2015-12-03T13:45:58Z",
-      "updated_at": "2016-01-28T02:47:39Z",
-      "stars_delta": null,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": null,
-      "latest_commit": null,
-      "download_url": "https://github.com/stanley1984/KOPluginSDK/archive/refs/heads/master.zip",
-      "download_source": "zipball",
-      "sha256": null,
-      "install_dirname": "KOPluginSDK.koplugin",
-      "plugin_path": ".",
-      "layout": "name-inferred",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": null,
-      "screenshots": [],
-      "categories": [
-        "other"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "Fiddelis/linefocus.koplugin",
@@ -13629,51 +13542,6 @@
         "annotation"
       ],
       "editorial_note": "双向同步书籍、高亮与笔记到 Karakeep",
-      "llm_enriched_at": null
-    },
-    {
-      "id": "trigon1998/wordwise.koplugin-custom",
-      "name": "wordwise.koplugin-custom",
-      "slug": "trigon1998-wordwise-koplugin-custom",
-      "summary": "Plugin Word Wise Anh–Việt cho KOReader — giải nghĩa ngay trên trang, nhận diện cụm từ, lưu từ đã biết và cập nhật OTA an toàn.",
-      "description": "Plugin Word Wise Anh–Việt cho KOReader — giải nghĩa ngay trên trang, nhận diện cụm từ, lưu từ đã biết và cập nhật OTA an toàn.",
-      "owner": "trigon1998",
-      "repo": "wordwise.koplugin-custom",
-      "homepage": "https://github.com/trigon1998/wordwise.koplugin-custom",
-      "topics": [
-        "english-learning",
-        "epub",
-        "ereader",
-        "ireader",
-        "koreader",
-        "lua",
-        "vietnamese",
-        "wordwise"
-      ],
-      "stars": 0,
-      "created_at": "2026-07-24T04:43:50Z",
-      "updated_at": "2026-08-13T04:22:29Z",
-      "stars_delta": 0,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": null,
-      "latest_commit": null,
-      "download_url": "https://github.com/trigon1998/wordwise.koplugin-custom/archive/refs/heads/main.zip",
-      "download_source": "zipball",
-      "sha256": null,
-      "install_dirname": "wordwise.koplugin-custom.koplugin",
-      "plugin_path": ".",
-      "layout": "name-inferred",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": null,
-      "screenshots": [],
-      "categories": [
-        "translate",
-        "dictionary",
-        "英语学习"
-      ],
-      "editorial_note": "阅读时在页面上直接显示英越释义，支持短语识别与已学词管理",
       "llm_enriched_at": null
     },
     {
@@ -16485,41 +16353,6 @@
       "llm_enriched_at": null
     },
     {
-      "id": "kaikozlov/koplugin-dev",
-      "name": "koplugin-dev",
-      "slug": "kaikozlov-koplugin-dev",
-      "summary": "",
-      "description": "",
-      "owner": "kaikozlov",
-      "repo": "koplugin-dev",
-      "homepage": "https://github.com/kaikozlov/koplugin-dev",
-      "topics": [],
-      "stars": 0,
-      "created_at": "2026-05-06T02:07:58Z",
-      "updated_at": "2026-08-01T17:24:55Z",
-      "stars_delta": 0,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": null,
-      "latest_commit": null,
-      "download_url": "https://github.com/kaikozlov/koplugin-dev/archive/refs/heads/main.zip",
-      "download_source": "zipball",
-      "sha256": null,
-      "install_dirname": "koplugin-dev.koplugin",
-      "plugin_path": ".",
-      "layout": "name-inferred",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": "MIT",
-      "screenshots": [],
-      "categories": [
-        "开发",
-        "测试"
-      ],
-      "editorial_note": "开发环境与测试工具集",
-      "llm_enriched_at": null
-    },
-    {
       "id": "lolwierd/codex.koplugin",
       "name": "codex",
       "slug": "lolwierd-codex-koplugin",
@@ -18633,41 +18466,6 @@
       "llm_enriched_at": null
     },
     {
-      "id": "CalebLinGit/pokedex-koplugin",
-      "name": "pokedex-koplugin",
-      "slug": "caleblingit-pokedex-koplugin",
-      "summary": "KOReader plugin: long-press a Pokémon name to see its artwork and flavor text",
-      "description": "KOReader plugin: long-press a Pokémon name to see its artwork and flavor text",
-      "owner": "CalebLinGit",
-      "repo": "pokedex-koplugin",
-      "homepage": "https://github.com/CalebLinGit/pokedex-koplugin",
-      "topics": [],
-      "stars": 0,
-      "created_at": "2026-06-11T19:42:26Z",
-      "updated_at": "2026-06-11T19:49:26Z",
-      "stars_delta": 0,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": null,
-      "latest_commit": null,
-      "download_url": "https://github.com/CalebLinGit/pokedex-koplugin/archive/refs/heads/master.zip",
-      "download_source": "zipball",
-      "sha256": null,
-      "install_dirname": "pokedex-koplugin.koplugin",
-      "plugin_path": ".",
-      "layout": "name-inferred",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": null,
-      "screenshots": [],
-      "categories": [
-        "image",
-        "dictionary"
-      ],
-      "editorial_note": "长按宝可梦名查看图鉴与介绍",
-      "llm_enriched_at": null
-    },
-    {
       "id": "darkivist/loc.koplugin",
       "name": "loc",
       "slug": "darkivist-loc-koplugin",
@@ -20254,38 +20052,6 @@
       "llm_enriched_at": null
     },
     {
-      "id": "tphLatte/tadoku.koplugin",
-      "name": "tadoku",
-      "slug": "tphlatte-tadoku-koplugin",
-      "summary": "Automagically log to tadoku",
-      "description": "Automagically log to tadoku",
-      "owner": "tphLatte",
-      "repo": "tadoku.koplugin",
-      "homepage": "https://github.com/tphLatte/tadoku.koplugin",
-      "topics": [],
-      "stars": 0,
-      "created_at": "2025-11-06T16:14:06Z",
-      "updated_at": "2025-11-07T00:32:29Z",
-      "stars_delta": null,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": null,
-      "latest_commit": null,
-      "download_url": "https://github.com/tphLatte/tadoku.koplugin/archive/refs/heads/main.zip",
-      "download_source": "zipball",
-      "sha256": null,
-      "install_dirname": "tadoku.koplugin",
-      "plugin_path": ".",
-      "layout": "root-files",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": null,
-      "screenshots": [],
-      "categories": [
-        "other"
-      ]
-    },
-    {
       "id": "lunabirkeland/ao3.koplugin",
       "name": "ao3",
       "slug": "lunabirkeland-ao3-koplugin",
@@ -20298,7 +20064,7 @@
       "stars": 0,
       "created_at": "2025-11-10T19:02:17Z",
       "updated_at": "2025-11-24T18:20:15Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -20315,7 +20081,41 @@
       "screenshots": [],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": null
+    },
+    {
+      "id": "tphLatte/tadoku.koplugin",
+      "name": "tadoku",
+      "slug": "tphlatte-tadoku-koplugin",
+      "summary": "Automagically log to tadoku",
+      "description": "Automagically log to tadoku",
+      "owner": "tphLatte",
+      "repo": "tadoku.koplugin",
+      "homepage": "https://github.com/tphLatte/tadoku.koplugin",
+      "topics": [],
+      "stars": 0,
+      "created_at": "2025-11-06T16:14:06Z",
+      "updated_at": "2025-11-07T00:32:29Z",
+      "stars_delta": 0,
+      "stars_delta_7d": null,
+      "stars_delta_30d": null,
+      "latest_tag": null,
+      "latest_commit": null,
+      "download_url": "https://github.com/tphLatte/tadoku.koplugin/archive/refs/heads/main.zip",
+      "download_source": "zipball",
+      "sha256": null,
+      "install_dirname": "tadoku.koplugin",
+      "plugin_path": ".",
+      "layout": "root-files",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": null,
+      "screenshots": [],
+      "categories": [
+        "other"
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "code2344/calculator.koplugin",
@@ -20330,7 +20130,7 @@
       "stars": 0,
       "created_at": "2025-09-08T12:09:38Z",
       "updated_at": "2025-09-08T12:46:10Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -20351,7 +20151,8 @@
       ],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "Syakhisk/roller.koplugin",
@@ -20366,7 +20167,7 @@
       "stars": 0,
       "created_at": "2025-04-24T11:08:26Z",
       "updated_at": "2025-04-24T11:08:28Z",
-      "stars_delta": null,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -20383,7 +20184,8 @@
       "screenshots": [],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": null
     }
   ]
 }
