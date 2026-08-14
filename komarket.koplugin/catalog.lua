@@ -121,23 +121,84 @@ local function isRedirect(code)
     return code == 301 or code == 302 or code == 303 or code == 307 or code == 308
 end
 
-local function httpGet(url, max_bytes)
+local TRANSIENT_HTTP_ERRORS = {
+    "cannot assign requested address",
+    "timeout",
+    "connection refused",
+    "network is unreachable",
+}
+
+local function isTransientError(err)
+    if type(err) ~= "string" then
+        return false
+    end
+    local lower = string.lower(err)
+    for _, pat in ipairs(TRANSIENT_HTTP_ERRORS) do
+        if lower:find(pat, 1, true) then
+            return true
+        end
+    end
+    return false
+end
+
+local function preferIPv4Url(url)
+    local parsed = socketurl.parse(url)
+    if not parsed or not parsed.host or parsed.host == "" then
+        return url, nil
+    end
+    local host = parsed.host
+    if host:match("^[%d%.]+$") or host:match("^%[.+%]$") then
+        return url, nil
+    end
+    local ok, ip = pcall(socket.dns.toip, host, { family = "inet" })
+    if not ok or not ip or ip == "" then
+        return url, nil
+    end
+    local path = parsed.path or "/"
+    if parsed.params and parsed.params ~= "" then
+        path = path .. ";" .. parsed.params
+    end
+    if parsed.query and parsed.query ~= "" then
+        path = path .. "?" .. parsed.query
+    end
+    if parsed.fragment and parsed.fragment ~= "" then
+        path = path .. "#" .. parsed.fragment
+    end
+    local scheme = parsed.scheme or "http"
+    local port = parsed.port
+    local ip_url
+    if port then
+        ip_url = string.format("%s://%s:%s%s", scheme, ip, port, path)
+    else
+        ip_url = string.format("%s://%s%s", scheme, ip, path)
+    end
+    return ip_url, { Host = host }
+end
+
+local function httpGetOnce(url, max_bytes)
     local current = url
     for _ = 0, MAX_REDIRECTS do
+        local request_url, extra_headers = preferIPv4Url(current)
         local chunks = {}
         local total = 0
         local sink_error
 
         socketutil:set_timeout(Config.connect_timeout_s, Config.request_timeout_s)
+        local headers = {
+            ["User-Agent"] = Config.user_agent or socketutil.USER_AGENT,
+            ["Accept"] = "application/json,text/plain,*/*",
+            ["Connection"] = "close",
+        }
+        if extra_headers then
+            for k, v in pairs(extra_headers) do
+                headers[k] = v
+            end
+        end
         -- socket.skip(1, http.request(...)) => code, headers, status
-        local code, headers, status = socket.skip(1, http.request({
-            url = current,
+        local code, resp_headers, status = socket.skip(1, http.request({
+            url = request_url,
             method = "GET",
-            headers = {
-                ["User-Agent"] = Config.user_agent or socketutil.USER_AGENT,
-                ["Accept"] = "application/json,text/plain,*/*",
-                ["Connection"] = "close",
-            },
+            headers = headers,
             sink = function(chunk, err_msg)
                 if err_msg then
                     sink_error = err_msg
@@ -166,10 +227,10 @@ local function httpGet(url, max_bytes)
 
         local numeric = tonumber(code) or 0
         if numeric >= 200 and numeric < 300 then
-            return table.concat(chunks), headers
+            return table.concat(chunks), resp_headers
         end
         if isRedirect(numeric) then
-            local loc = headers and (headers.location or headers.Location)
+            local loc = resp_headers and (resp_headers.location or resp_headers.Location)
             if not loc then
                 return nil, "redirect without Location"
             end
@@ -180,6 +241,26 @@ local function httpGet(url, max_bytes)
         end
     end
     return nil, "too many redirects"
+end
+
+local function httpGet(url, max_bytes)
+    local retries = Config.http_retries or 3
+    local delay_s = Config.http_retry_delay_s or 1
+    local last_err
+    for attempt = 1, retries do
+        local body, headers_or_err = httpGetOnce(url, max_bytes)
+        if body then
+            return body, headers_or_err
+        end
+        last_err = headers_or_err
+        if attempt < retries and isTransientError(last_err) then
+            logger.info("KOMarket: transient HTTP error, retry", attempt, last_err)
+            socket.sleep(delay_s)
+        else
+            break
+        end
+    end
+    return nil, last_err
 end
 
 function Catalog.catalogUrls()
@@ -196,7 +277,9 @@ end
 function Catalog.fetchIndex(opts)
     opts = opts or {}
     local last_err
-    for _, url in ipairs(Catalog.catalogUrls()) do
+    local urls = Catalog.catalogUrls()
+    local url_delay_s = Config.http_retry_delay_s or 1
+    for i, url in ipairs(urls) do
         logger.info("KOMarket: fetching catalog", url)
         local body, err = httpGet(url, Config.max_catalog_bytes)
         if body then
@@ -208,6 +291,9 @@ function Catalog.fetchIndex(opts)
             last_err = "invalid catalog JSON"
         else
             last_err = err
+        end
+        if i < #urls then
+            socket.sleep(url_delay_s)
         end
     end
 
@@ -221,18 +307,20 @@ function Catalog.fetchIndex(opts)
 end
 
 function Catalog.categoriesUrls()
+    local seen = {}
     local urls = {}
-    if Config.categories_url and Config.categories_url ~= "" then
-        urls[#urls + 1] = Config.categories_url
+    local function add(url)
+        if url and url ~= "" and not seen[url] then
+            seen[url] = true
+            urls[#urls + 1] = url
+        end
     end
-    if Config.mirror_categories_url and Config.mirror_categories_url ~= "" then
-        urls[#urls + 1] = Config.mirror_categories_url
-    end
-    -- Derive from catalog URL when possible
-    for _, catalog_url in ipairs(Catalog.catalogUrls()) do
-        local derived = catalog_url:gsub("index%.json$", "categories.json")
-        if derived ~= catalog_url then
-            urls[#urls + 1] = derived
+    add(Config.categories_url)
+    add(Config.mirror_categories_url)
+    -- Derive from catalog URL when explicit categories URLs are not set
+    if not Config.categories_url or Config.categories_url == "" then
+        for _, catalog_url in ipairs(Catalog.catalogUrls()) do
+            add(catalog_url:gsub("index%.json$", "categories.json"))
         end
     end
     return urls
@@ -251,7 +339,9 @@ end
 
 function Catalog.fetchCategories()
     local last_err
-    for _, url in ipairs(Catalog.categoriesUrls()) do
+    local urls = Catalog.categoriesUrls()
+    local url_delay_s = Config.http_retry_delay_s or 1
+    for i, url in ipairs(urls) do
         local body, err = httpGet(url, 256 * 1024)
         if body then
             local ok, data = pcall(JSON.decode, body)
@@ -262,6 +352,9 @@ function Catalog.fetchCategories()
             last_err = "invalid categories JSON"
         else
             last_err = err
+        end
+        if i < #urls then
+            socket.sleep(url_delay_s)
         end
     end
     return Catalog.loadCachedCategories(), last_err and ("fallback:" .. tostring(last_err)) or "builtin"
@@ -363,6 +456,9 @@ function Catalog.isDownloadUrlAllowed(url)
 end
 
 Catalog.httpGet = httpGet
+Catalog.httpGetOnce = httpGetOnce
+Catalog.preferIPv4Url = preferIPv4Url
+Catalog.isTransientHttpError = isTransientError
 Catalog.writeFile = writeFile
 Catalog.readFile = readFile
 

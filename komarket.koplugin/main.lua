@@ -11,6 +11,8 @@ local NetworkMgr = require("ui/network/manager")
 local UIManager = require("ui/uimanager")
 local WidgetContainer = require("ui/widget/container/widgetcontainer")
 local logger = require("logger")
+local socket = require("socket")
+local Config = require("config")
 local _ = require("komarket_gettext")
 local T = require("ffi/util").template
 
@@ -109,6 +111,8 @@ function KOMarket:refreshCatalog(opts, callback)
         return
     end
     self._catalog = data
+    -- Brief pause between catalog and categories fetch to reduce ephemeral port pressure.
+    socket.sleep(Config.http_retry_delay_s or 1)
     local cats, cat_src = Catalog.fetchCategories()
     self._categories = cats or Catalog.loadCachedCategories()
     logger.info("KOMarket: catalog ready from", src_or_err, "count", #(data.plugins or {}))

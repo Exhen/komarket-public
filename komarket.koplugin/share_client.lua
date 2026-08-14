@@ -10,6 +10,7 @@ local socketutil = require("socketutil")
 local JSON = require("json")
 local logger = require("logger")
 local Config = require("config")
+local Catalog = require("catalog")
 
 pcall(require, "ssl.https")
 
@@ -64,15 +65,16 @@ local function friendlyError(err)
     return err
 end
 
-local function request(method, url, opts)
+local function requestOnce(method, url, opts)
     opts = opts or {}
     local current = url
     for _ = 0, MAX_REDIRECTS do
+        local request_url, extra_headers = Catalog.preferIPv4Url(current)
         local resp_body = {}
 
         socketutil:set_timeout(Config.connect_timeout_s, Config.request_timeout_s)
         local request_opts = {
-            url = current,
+            url = request_url,
             method = method,
             headers = {
                 ["User-Agent"] = Config.user_agent or socketutil.USER_AGENT,
@@ -82,6 +84,12 @@ local function request(method, url, opts)
             sink = ltn12.sink.table(resp_body),
             redirect = false,
         }
+
+        if extra_headers then
+            for k, v in pairs(extra_headers) do
+                request_opts.headers[k] = v
+            end
+        end
 
         for k, v in pairs(opts.headers or {}) do
             request_opts.headers[k] = v
@@ -116,6 +124,26 @@ local function request(method, url, opts)
         end
     end
     return nil, "too many redirects"
+end
+
+local function request(method, url, opts)
+    local retries = Config.http_retries or 3
+    local delay_s = Config.http_retry_delay_s or 1
+    local last_err
+    for attempt = 1, retries do
+        local numeric, body, headers = requestOnce(method, url, opts)
+        if numeric then
+            return numeric, body, headers
+        end
+        last_err = body
+        if attempt < retries and Catalog.isTransientHttpError(last_err) then
+            logger.info("KOMarket share: transient HTTP error, retry", attempt, last_err)
+            socket.sleep(delay_s)
+        else
+            break
+        end
+    end
+    return nil, last_err
 end
 
 function ShareClient.uploadPluginList(payload, label)

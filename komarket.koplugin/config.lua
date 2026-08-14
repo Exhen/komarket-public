@@ -1,19 +1,21 @@
 --[[--
 KOMarket plugin defaults.
 
-catalog_url points at the public komarket-public catalog on GitHub.
+catalog_url points at the KOMarket server mirror (ko.6ili6ili.com); GitHub raw is fallback.
 Version string lives in _version.lua (keep in sync with GitHub release tag).
 ]]
 
 local VERSION = require("_version")
 
+local GITHUB_RAW = "https://raw.githubusercontent.com/Exhen/komarket-public/main"
+
 local Config = {
-    -- Primary catalog (public repo JSON on GitHub).
-    catalog_url = "https://raw.githubusercontent.com/Exhen/komarket-public/main/catalog/index.json",
-    categories_url = "https://raw.githubusercontent.com/Exhen/komarket-public/main/catalog/categories.json",
-    -- Optional mirror (disabled; use GitHub raw URLs).
-    mirror_catalog_url = nil,
-    mirror_categories_url = nil,
+    -- Primary catalog (KOMarket server mirror; better reachability in China).
+    catalog_url = "https://ko.6ili6ili.com/catalog/index.json",
+    categories_url = "https://ko.6ili6ili.com/catalog/categories.json",
+    -- Fallback mirror (GitHub raw).
+    mirror_catalog_url = GITHUB_RAW .. "/catalog/index.json",
+    mirror_categories_url = GITHUB_RAW .. "/catalog/categories.json",
     -- Allowlist host suffixes for download_url.
     allowed_download_hosts = {
         "github.com",
@@ -31,6 +33,8 @@ local Config = {
     user_agent = "KOMarket/" .. VERSION .. " (KOReader)",
     connect_timeout_s = 15,
     request_timeout_s = 60,
+    http_retries = 3,
+    http_retry_delay_s = 1,
     max_catalog_bytes = 4 * 1024 * 1024,
     max_plugin_bytes = 32 * 1024 * 1024,
 }
