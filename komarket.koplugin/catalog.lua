@@ -150,6 +150,12 @@ local function preferIPv4Url(url)
     if host:match("^[%d%.]+$") or host:match("^%[.+%]$") then
         return url, nil
     end
+    local scheme = (parsed.scheme or "http"):lower()
+    -- HTTPS: keep the hostname so LuaSec can send SNI. Rewriting to an IP
+    -- makes Cloudflare/etc. fail with "sslv3 alert handshake failure".
+    if scheme == "https" then
+        return url, nil
+    end
     local ok, ip = pcall(socket.dns.toip, host, { family = "inet" })
     if not ok or not ip or ip == "" then
         return url, nil
@@ -164,7 +170,6 @@ local function preferIPv4Url(url)
     if parsed.fragment and parsed.fragment ~= "" then
         path = path .. "#" .. parsed.fragment
     end
-    local scheme = parsed.scheme or "http"
     local port = parsed.port
     local ip_url
     if port then

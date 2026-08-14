@@ -214,6 +214,7 @@ function KOMarket:showBrowser(filter_query, category_id)
         },
         {
             text = _("Refresh catalog"),
+            state = menuIcon("cre.render.reload"),
             callback = function()
                 self:withNetwork(function()
                     self:refreshCatalog({
@@ -225,24 +226,28 @@ function KOMarket:showBrowser(filter_query, category_id)
         },
         {
             text = _("Check installed updates…"),
+            state = menuIcon("move.up"),
             callback = function()
                 self:checkInstalledUpdates()
             end,
         },
         {
             text = T(_("Check KOMarket update (v%1)"), self:selfVersion()),
+            state = menuIcon("move.up"),
             callback = function()
                 self:checkSelfUpdate()
             end,
         },
         {
             text = _("Share my plugin list…"),
+            state = menuIcon("plus"),
             callback = function()
                 self:shareMyPlugins()
             end,
         },
         {
             text = _("Import with share code…"),
+            state = menuIcon("bookmark"),
             callback = function()
                 self:importSharedPlugins()
             end,
@@ -252,6 +257,7 @@ function KOMarket:showBrowser(filter_query, category_id)
     if cat and cat ~= "all" then
         item_table[#item_table + 1] = {
             text = T(_("Clear category: %1"), self:categoryLabel(cat)),
+            state = menuIcon("cancel"),
             callback = function()
                 self:showBrowser(q, "all")
             end,
@@ -261,6 +267,7 @@ function KOMarket:showBrowser(filter_query, category_id)
     if q and q ~= "" then
         item_table[#item_table + 1] = {
             text = T(_("Clear search: %1"), q),
+            state = menuIcon("cancel"),
             callback = function()
                 self:showBrowser("", cat)
             end,
@@ -282,16 +289,16 @@ function KOMarket:showBrowser(filter_query, category_id)
     for i, plugin in ipairs(plugins) do
         local installed = Installer.isInstalled(plugin.install_dirname)
         local stars = tonumber(plugin.stars) or 0
-        local mark = installed and "✓ " or ""
         local tags = self:formatCategoryTags(plugin)
         local text
         if tags ~= "" then
-            text = T("%1%2  [%3] ★%4", mark, plugin.name or plugin.slug or plugin.id, tags, stars)
+            text = T("%1  [%2] ★%3", plugin.name or plugin.slug or plugin.id, tags, stars)
         else
-            text = T("%1%2  ★%3", mark, plugin.name or plugin.slug or plugin.id, stars)
+            text = T("%1  ★%2", plugin.name or plugin.slug or plugin.id, stars)
         end
         item_table[#item_table + 1] = {
             text = text,
+            state = installed and menuIcon("check") or nil,
             callback = function()
                 self:showPluginActions(plugin)
             end,
@@ -341,7 +348,8 @@ function KOMarket:showCategoryPicker()
 
     local item_table = {
         {
-            text = (current == "all" and "✓ " or "") .. T(_("All (%1)"), tostring(countFor("all"))),
+            text = T(_("All (%1)"), tostring(countFor("all"))),
+            state = current == "all" and menuIcon("check") or nil,
             callback = function()
                 self:showBrowser(self._filter_query, "all")
             end,
@@ -350,10 +358,10 @@ function KOMarket:showCategoryPicker()
 
     for i, c in ipairs(categories) do
         local cid = c.id
-        local label = c.name or cid
-        local mark = current == cid and "✓ " or ""
+        local label = Catalog.resolveCategoryName(c)
         item_table[#item_table + 1] = {
-            text = T("%1%2（%3）", mark, label, tostring(countFor(cid))),
+            text = T("%1（%2）", label, tostring(countFor(cid))),
+            state = current == cid and menuIcon("check") or nil,
             callback = function()
                 self:showBrowser(self._filter_query, cid)
             end,
@@ -363,6 +371,7 @@ function KOMarket:showCategoryPicker()
     UIManager:show(Menu:new{
         title = _("Select category"),
         item_table = item_table,
+        state_w = MENU_STATE_W,
         is_borderless = true,
         is_popout = false,
     })

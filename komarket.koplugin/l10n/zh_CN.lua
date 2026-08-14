@@ -89,6 +89,7 @@ return {
     ["Share code has no plugin list"] = "分享码中没有插件列表",
     ["Import failed: %1"] = "导入失败：%1",
     ["share API outdated (server expects zip; update KOMarket server for plugin-list shares)"] = "分享服务版本过旧（仍要求 zip 包）；请更新 KOMarket 服务端以支持插件列表分享",
+    ["HTTPS/TLS handshake failed (check network or update KOMarket)"] = "HTTPS/TLS 握手失败（请检查网络或更新卡欧市场）",
     ["unsupported share kind (legacy config pack)"] = "不支持的分享类型（旧版配置包分享码）",
     ["Plugins not found in catalog:\n%1"] = "目录中找不到可安装的插件：\n%1",
     ["No plugins to install"] = "没有可安装的插件",

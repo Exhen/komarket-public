@@ -62,6 +62,12 @@ local function friendlyError(err)
     if lower:find("zip", 1, true) then
         return "share API outdated (server expects zip; update KOMarket server for plugin-list shares)"
     end
+    if lower:find("sslv3 alert", 1, true)
+        or lower:find("handshake failure", 1, true)
+        or lower:find("tls", 1, true) and lower:find("alert", 1, true)
+    then
+        return "HTTPS/TLS handshake failed (check network or update KOMarket)"
+    end
     return err
 end
 

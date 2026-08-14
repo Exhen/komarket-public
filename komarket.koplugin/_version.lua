@@ -1,2 +1,2 @@
 -- Single source of truth; must match GitHub release tag (without leading "v").
-return "0.4.2"
+return "0.4.3"
