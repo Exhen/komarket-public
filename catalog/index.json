@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-14T03:49:55.897Z",
+  "generated_at": "2026-08-14T03:51:43.657Z",
   "source": "komarket-sync",
   "rules_version": 6,
   "plugins": [
@@ -425,7 +425,9 @@
         "annotation",
         "sync",
         "statistics"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:50:30.930Z",
+      "editorial_note": "微信读书客户端，支持书架、下载、划线同步"
     },
     {
       "id": "patelneeraj/filebrowserplus.koplugin",
@@ -1536,7 +1538,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:50:31.103Z",
+      "editorial_note": "玩填字游戏"
     },
     {
       "id": "SahandMalaei/ai-dictionary-koreader",
@@ -1588,7 +1591,9 @@
       "categories": [
         "llm",
         "dictionary"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:50:32.045Z",
+      "editorial_note": "按上下文解释选中文本，支持发音与词汇学习"
     },
     {
       "id": "onatbas/bluetooth.koplugin",
@@ -1697,7 +1702,9 @@
       ],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:50:32.362Z",
+      "editorial_note": "用 PIN 码锁定阅读器，保护隐私"
     },
     {
       "id": "0xmiki/telegramhighlights.koplugin",
@@ -2431,7 +2438,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:50:34.961Z",
+      "editorial_note": "添加可移动下划线，辅助逐行阅读"
     },
     {
       "id": "Shac0x/charactertracker.koplugin",
@@ -2505,7 +2513,8 @@
       "categories": [
         "sync"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:50:34.156Z",
+      "editorial_note": "在阅读器内启停 Syncthing 服务"
     },
     {
       "id": "omer-faruq/sudoku.koplugin",
@@ -2682,7 +2691,9 @@
       ],
       "categories": [
         "comic"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:50:38.281Z",
+      "editorial_note": "逐格放大漫画与连环画面板，支持预载与自由缩放"
     },
     {
       "id": "omer-faruq/instapaper.koplugin",
@@ -3046,7 +3057,9 @@
       ],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:50:36.455Z",
+      "editorial_note": "在阅读时播放本地音乐与网络电台"
     },
     {
       "id": "agaragou/illustrations.koplugin",
@@ -3228,7 +3241,8 @@
       "categories": [
         "dictionary"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:50:37.459Z",
+      "editorial_note": "点击单词直接查词典"
     },
     {
       "id": "d0nizam/kosyncthing_plus.koplugin",
@@ -3310,7 +3324,8 @@
       "categories": [
         "file"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:50:38.514Z",
+      "editorial_note": "自动检测并更新AO3小说EPUB"
     },
     {
       "id": "gytwo/quickui.koplugin",
@@ -3398,7 +3413,8 @@
         "annotation",
         "cloud"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:50:40.567Z",
+      "editorial_note": "将批注导出为 Markdown 到 WebDAV"
     },
     {
       "id": "PedroMachado1/kopet.koplugin",
@@ -3540,7 +3556,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:50:39.966Z",
+      "editorial_note": "保存链接、笔记与图片到 Karakeep 书签，支持离线队列同步"
     },
     {
       "id": "sadke8465/Koreader-Custom-Bookmark-Manager",
@@ -3582,7 +3599,9 @@
       ],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:50:40.963Z",
+      "editorial_note": "自定义书签图标、大小与位置"
     },
     {
       "id": "anezih/bubblezoom.koplugin",
@@ -3938,7 +3957,8 @@
       "categories": [
         "image"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:50:41.679Z",
+      "editorial_note": "自动同步书籍封面到关机画面"
     },
     {
       "id": "titandrive/koboard",
@@ -3975,7 +3995,9 @@
       "screenshots": [],
       "categories": [
         "ime"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:50:42.521Z",
+      "editorial_note": "用安卓系统键盘替换内置虚拟键盘"
     },
     {
       "id": "xZenLabs/zen-mtp",
@@ -4022,7 +4044,9 @@
       ],
       "categories": [
         "beautify"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:50:42.632Z",
+      "editorial_note": "一键切换 Kindle 至 MTP 文件传输模式"
     },
     {
       "id": "Euphoriyy/derainbowify.koplugin",
@@ -4109,7 +4133,9 @@
       "categories": [
         "sync",
         "statistics"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:50:44.295Z",
+      "editorial_note": "将阅读进度与实体书页码同步"
     },
     {
       "id": "j-v/remotenote.koplugin",
@@ -4194,7 +4220,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:50:43.731Z",
+      "editorial_note": "启动与读完时展示书籍信息、评分与状态"
     },
     {
       "id": "Billiam/crashlog.koplugin",
@@ -4229,7 +4256,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:50:44.947Z",
+      "editorial_note": "查看崩溃日志并按标签筛选"
     },
     {
       "id": "omer-faruq/wordsearch.koplugin",
@@ -4390,7 +4418,8 @@
       "categories": [
         "rss"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:50:47.290Z",
+      "editorial_note": "同步 Wallabag 文章到阅读器"
     },
     {
       "id": "KitanaCode/booknookcharms.koplugin",
@@ -4470,7 +4499,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:50:47.770Z",
+      "editorial_note": "显示当前及未来两天的天气与逐时预报"
     },
     {
       "id": "stefan-misik/game2048.koplugin",
@@ -4847,7 +4877,9 @@
       ],
       "categories": [
         "network"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:50:48.897Z",
+      "editorial_note": "用手机浏览器远程控制阅读器翻页与批注"
     },
     {
       "id": "gytwo/cloudlibrary.koplugin",
@@ -5046,7 +5078,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:50:49.393Z",
+      "editorial_note": "玩 NYT Connections 猜词游戏"
     },
     {
       "id": "DenisovichDev/randomquote.koplugin",
@@ -5128,7 +5161,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:50:51.640Z",
+      "editorial_note": "生词本与闪卡学习"
     },
     {
       "id": "jbreizh/quickmenu.koplugin",
@@ -5293,7 +5327,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:50:52.224Z",
+      "editorial_note": "到点强制锁屏，督促睡觉"
     },
     {
       "id": "graphirus-prog/koreader-session-cleaner",
@@ -5329,7 +5364,9 @@
       "screenshots": [],
       "categories": [
         "statistics"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:50:53.455Z",
+      "editorial_note": "检查并安全清理阅读统计中的异常会话记录"
     },
     {
       "id": "Mr54233/pickthought.koplugin",
@@ -5691,7 +5728,8 @@
       "categories": [
         "bookstore"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:50:53.569Z",
+      "editorial_note": "在阅读器内启停 libgen-opds 服务"
     },
     {
       "id": "BeatrizCastex/SmartCollections",
@@ -5725,7 +5763,9 @@
       "screenshots": [],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:50:55.027Z",
+      "editorial_note": "按元数据筛选书库并自动更新智能书架"
     },
     {
       "id": "Estela-Zelin84/inkstain.koplugin",
@@ -5887,7 +5927,8 @@
       "categories": [
         "bookstore"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:50:54.779Z",
+      "editorial_note": "将Calibre发送的书籍信息写入PocketBook数据库，免重启识别书籍，支持收藏与阅读状态同步"
     },
     {
       "id": "Wolfazzo/KOReader-page-calculator",
@@ -5928,7 +5969,9 @@
       ],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:50:56.218Z",
+      "editorial_note": "按印刷页码计算阅读页数"
     },
     {
       "id": "TnS-hun/KOkobo",
@@ -5971,7 +6014,9 @@
       ],
       "categories": [
         "download"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:50:56.721Z",
+      "editorial_note": "下载 Kobo 已购书籍并查看心愿单"
     },
     {
       "id": "THE-XSX/readingfolio.koplugin",
@@ -6260,7 +6305,9 @@
         "llm",
         "annotation",
         "image"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:50:58.101Z",
+      "editorial_note": "划词生成 AI 记忆卡片并同步到 Anki"
     },
     {
       "id": "nefelodamon/KoCharacters",
@@ -6295,7 +6342,9 @@
       "screenshots": [],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:50:58.388Z",
+      "editorial_note": "用 Gemini 自动提取并追踪书中人物档案，可生成 AI 肖像"
     },
     {
       "id": "THE-XSX/typefolio.koplugin",
@@ -6487,7 +6536,8 @@
       "categories": [
         "rss"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:50:59.282Z",
+      "editorial_note": "阅读 RSS/Atom 订阅源"
     },
     {
       "id": "ThePixelPro366/KoStatsMulti-Plugin",
@@ -6526,7 +6576,9 @@
       "categories": [
         "sync",
         "statistics"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:51:00.331Z",
+      "editorial_note": "上传阅读统计到网页仪表盘，分析阅读习惯"
     },
     {
       "id": "rameezk/rebind.koplugin",
@@ -7225,7 +7277,9 @@
       "categories": [
         "remote",
         "network"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:51:00.858Z",
+      "editorial_note": "手机或电脑远程翻页与休眠控制"
     },
     {
       "id": "myEngAPI/KOReader-TranslatorChanger",
@@ -7262,7 +7316,9 @@
       "screenshots": [],
       "categories": [
         "translate"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:51:01.738Z",
+      "editorial_note": "切换 KOReader 翻译引擎，支持 DeepL、DeepSeek 等"
     },
     {
       "id": "hluiz2628-blip/tarot.koplugin",
@@ -7486,7 +7542,8 @@
       "categories": [
         "dictionary"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:51:02.975Z",
+      "editorial_note": "选中汉字时按最长词匹配查词典"
     },
     {
       "id": "yupmoon/vocabdeck.koplugin",
@@ -7797,7 +7854,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:51:03.193Z",
+      "editorial_note": "用 AI 生成当前章节摘要"
     },
     {
       "id": "unitreign/Mythos",
@@ -7841,7 +7899,9 @@
       ],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:51:04.627Z",
+      "editorial_note": "浏览、追踪并导出网络小说为 EPUB"
     },
     {
       "id": "ksaMask123/artgallery.koplugin",
@@ -8205,7 +8265,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:51:05.760Z",
+      "editorial_note": "浏览并下载网络小说，支持离线阅读与书签管理"
     },
     {
       "id": "cbrxyz/beeminder.koplugin",
@@ -8240,7 +8301,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:51:05.874Z",
+      "editorial_note": "自动将阅读进度记录到 Beeminder"
     },
     {
       "id": "yparitcher/tuya.koplugin",
@@ -8273,7 +8335,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:51:08.459Z",
+      "editorial_note": "控制涂鸦智能灯泡"
     },
     {
       "id": "GarionBracken/PagePair",
@@ -8315,7 +8378,9 @@
       "screenshots": [],
       "categories": [
         "sync"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:51:07.714Z",
+      "editorial_note": "同步两台Kindle翻页，组成双屏阅读"
     },
     {
       "id": "DavidMakin/royalroad.koplugin",
@@ -8984,7 +9049,8 @@
       "categories": [
         "annotation"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:51:08.900Z",
+      "editorial_note": "将高亮文本复制到 reMarkable 笔记本"
     },
     {
       "id": "consoleaf/hello.koplugin",
@@ -9017,7 +9083,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:51:10.938Z",
+      "editorial_note": "启动时显示 Hello World"
     },
     {
       "id": "notmarek/stoka.koplugin",
@@ -9050,7 +9117,7 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:51:11.315Z"
     },
     {
       "id": "cxzx150133/philosopher.koplugin",
@@ -9089,7 +9156,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:51:13.339Z",
+      "editorial_note": "随机显示 TXT 中的哲言警句"
     },
     {
       "id": "m-tky/koreader-skk",
@@ -9128,7 +9196,9 @@
       ],
       "categories": [
         "ime"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:51:12.898Z",
+      "editorial_note": "日文假名与汉字转换输入"
     },
     {
       "id": "ankitchouhan1020/flowread",
@@ -9162,7 +9232,9 @@
       "screenshots": [],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:51:14.560Z",
+      "editorial_note": "逐词速读，支持滚动模式与章节导航"
     },
     {
       "id": "kerivin/stylus-annotations.koplugin",
@@ -9859,7 +9931,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:51:14.582Z",
+      "editorial_note": "翻页时强制刷新屏幕，可选睡眠前刷新"
     },
     {
       "id": "KikyTokamuro/weighttracker.koplugin",
@@ -9898,7 +9971,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:51:15.897Z",
+      "editorial_note": "记录体重并查看统计与历史"
     },
     {
       "id": "5ecret99/grep.koplugin",
@@ -9931,7 +10005,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:51:16.109Z",
+      "editorial_note": "在 EPUB 书库中全文搜索并打开结果"
     },
     {
       "id": "Syakhisk/mdns.koplugin",
@@ -9964,7 +10039,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:51:19.102Z",
+      "editorial_note": "通过 mDNS 以 kindle.local 访问设备"
     },
     {
       "id": "h-sigma/rfcreader.koplugin",
@@ -10001,7 +10077,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:51:18.548Z",
+      "editorial_note": "下载并阅读 RFC 文档"
     },
     {
       "id": "matthewashton-k/pixelart.koplugin",
@@ -10037,7 +10114,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:51:19.909Z",
+      "editorial_note": "绘制像素画并保存图片"
     },
     {
       "id": "Billiam/charactersheet.koplugin",
@@ -10070,7 +10148,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:51:20.307Z",
+      "editorial_note": "编辑角色卡数据"
     },
     {
       "id": "yparitcher/zmanim.koplugin",
@@ -10109,7 +10188,8 @@
         "screensaver",
         "calendar"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:51:22.494Z",
+      "editorial_note": "显示希伯来历与每日zmanim，可作屏保"
     },
     {
       "id": "samfoy/marginalia",
@@ -10149,7 +10229,9 @@
       "categories": [
         "llm",
         "typography"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:51:21.927Z",
+      "editorial_note": "AI 阅读助手：生成书籍索引、问答与笔记同步"
     },
     {
       "id": "titandrive/syncest.koplugin",
@@ -11519,7 +11601,8 @@
       "categories": [
         "sync"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:51:23.106Z",
+      "editorial_note": "将批注同步到自建服务器，便于接入 Obsidian 等笔记服务"
     },
     {
       "id": "yparitcher/chitas.koplugin",
@@ -11552,7 +11635,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:51:24.890Z",
+      "editorial_note": "按希伯来历显示每日学习内容"
     },
     {
       "id": "asayake-b5/jpdb.koplugin",
@@ -11585,7 +11669,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:51:25.689Z",
+      "editorial_note": "在阅读时集成 JPDB 生词本与复习"
     },
     {
       "id": "dodgemaster42/KoMahjong",
@@ -11628,7 +11713,9 @@
       "categories": [
         "image",
         "beautify"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:51:26.544Z",
+      "editorial_note": "玩日式麻将，支持役种与AI对局"
     },
     {
       "id": "sypianski/keyreader",
@@ -11664,7 +11751,9 @@
       "categories": [
         "ime",
         "beautify"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:51:26.831Z",
+      "editorial_note": "将外接物理键盘变成主要输入设备，支持按键重映射、命令面板、单词搜索与可视选择"
     },
     {
       "id": "EthicalHacker92/inkfire",
@@ -11704,7 +11793,9 @@
         "comic",
         "statistics",
         "network"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:51:28.175Z",
+      "editorial_note": "自定义主屏，聚合书库、漫画续读与阅读统计"
     },
     {
       "id": "jwillikers/koreader-break-timer",
@@ -11740,7 +11831,9 @@
       "screenshots": [],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:51:30.119Z",
+      "editorial_note": "定时提醒休息，强制暂停阅读"
     },
     {
       "id": "jsfaint/zhihudaily.koplugin",
@@ -14112,7 +14205,8 @@
       "categories": [
         "annotation"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:51:29.617Z",
+      "editorial_note": "查拉丁语单词的变格与释义"
     },
     {
       "id": "hongducdev/doconline.koplugin",
@@ -14145,7 +14239,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:51:30.894Z",
+      "editorial_note": "在线阅读越南新闻，支持多来源与分类"
     },
     {
       "id": "NightlyDegen/soxplayer.koplugin",
@@ -14178,7 +14273,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:51:31.302Z",
+      "editorial_note": "用 sox 播放音频"
     },
     {
       "id": "iddu01linux/kohome.koplugin",
@@ -14211,7 +14307,8 @@
       "categories": [
         "llm"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:51:32.026Z",
+      "editorial_note": "在阅读时调用 Home Assistant 语音助手控制智能家居"
     },
     {
       "id": "MuteMini/puzzle.koplugin",
@@ -14244,7 +14341,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:51:33.956Z",
+      "editorial_note": "玩纸面谜题"
     },
     {
       "id": "consoleaf/repl.koplugin",
@@ -14277,7 +14375,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:51:34.895Z",
+      "editorial_note": "在阅读器内运行 REPL 交互环境"
     },
     {
       "id": "sypianski/kopad",
@@ -14312,7 +14411,9 @@
       "screenshots": [],
       "categories": [
         "remote"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:51:34.861Z",
+      "editorial_note": "用手柄控制阅读、选词查词与AI查询"
     },
     {
       "id": "AvatoAvenue/calibre-to-koreader_metadataexporter",
@@ -14348,7 +14449,9 @@
       "screenshots": [],
       "categories": [
         "bookstore"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:51:36.428Z",
+      "editorial_note": "提取 PDF 中的 Calibre 元数据并写入 KOReader"
     },
     {
       "id": "Fiddelis/linefocus.koplugin",
@@ -21203,7 +21306,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:51:37.264Z",
+      "editorial_note": "浏览与下载 AO3 同人作品"
     },
     {
       "id": "tphLatte/tadoku.koplugin",
@@ -21236,7 +21340,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:51:38.877Z",
+      "editorial_note": "自动记录阅读时长到 tadoku"
     },
     {
       "id": "code2344/calculator.koplugin",
@@ -21273,7 +21378,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:51:39.905Z",
+      "editorial_note": "直接进行数学计算与单位换算"
     },
     {
       "id": "Syakhisk/roller.koplugin",
@@ -21306,7 +21412,8 @@
       "categories": [
         "other"
       ],
-      "llm_enriched_at": null
+      "llm_enriched_at": "2026-08-14T03:51:41.602Z",
+      "editorial_note": "滚动翻页与自动滚动"
     },
     {
       "id": "abhignan-rakshith/kindle-askai",
@@ -21353,7 +21460,9 @@
         "llm",
         "annotation",
         "beautify"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:51:41.750Z",
+      "editorial_note": "在阅读中随时向 AI 提问，支持划词、截图与聊天"
     },
     {
       "id": "rixx/koreader-scriptorium",
@@ -21387,7 +21496,9 @@
       "screenshots": [],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:51:43.635Z",
+      "editorial_note": "读完的书推送至 Scriptorium 待审队列，含高亮与阅读时长"
     },
     {
       "id": "dsyang/simple-journal",
@@ -21427,7 +21538,9 @@
       "screenshots": [],
       "categories": [
         "sync"
-      ]
+      ],
+      "llm_enriched_at": "2026-08-14T03:51:43.334Z",
+      "editorial_note": "写日记并同步到 Notion"
     }
   ]
 }
