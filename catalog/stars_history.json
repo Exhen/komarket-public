@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-14T07:42:28.600Z",
+  "updated_at": "2026-08-14T07:43:46.682Z",
   "retain": 180,
   "snapshots": [
     {
-      "at": "2026-08-14T07:42:28.600Z",
+      "at": "2026-08-14T07:43:46.682Z",
       "stars": {
         "doctorhetfield-cmd/simpleui.koplugin": 1323,
         "ZlibraryKO/zlibrary.koplugin": 609,
@@ -213,8 +213,8 @@
         "DavidMakin/royalroad.koplugin": 4,
         "omer-faruq/smartdeck.koplugin": 4,
         "neodb-social/neodb.koplugin": 4,
-        "federico1176-wq/Page_turn_animation.koplugin": 4,
         "shiggsy365/minesweeper.koplugin": 4,
+        "federico1176-wq/Page_turn_animation.koplugin": 4,
         "DHaizon/tabbar.koplugin": 4,
         "aureliofng/screensaver-overlay.koplugin": 4,
         "RafaelMeirim/metafileextract.koplugin": 4,
@@ -369,6 +369,7 @@
         "consoleaf/repl.koplugin": 1,
         "sypianski/kopad": 1,
         "AvatoAvenue/calibre-to-koreader_metadataexporter": 1,
+        "noame19/webdav.koplugin": 0,
         "Fiddelis/linefocus.koplugin": 0,
         "Kerwin75631591/assistant_zh.koplugin": 0,
         "Kerwin75631591/xray-zh.koplugin": 0,
@@ -403,7 +404,6 @@
         "t2ym5u/sudokux.koplugin": 0,
         "t2ym5u/startmenu.koplugin": 0,
         "t2ym5u/starbattle.koplugin": 0,
-        "noame19/webdav.koplugin": 0,
         "t2ym5u/slitherlink.koplugin": 0,
         "t2ym5u/skyscraper.koplugin": 0,
         "t2ym5u/shikaku.koplugin": 0,
