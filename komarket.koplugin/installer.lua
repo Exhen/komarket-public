@@ -70,10 +70,20 @@ local function copyTree(src, dst)
                 return nil, err
             end
         end
-        return ffiutil.copyFile(src, dst)
+        -- ffi/util.copyFile returns nil on success, error string on failure.
+        local copy_err = ffiutil.copyFile(src, dst)
+        if copy_err then
+            return nil, copy_err
+        end
+        return true
+    end
+    if mode == "link" then
+        -- Skip symlinks; plugin packages should ship real files.
+        logger.warn("KOMarket install: skip symlink", src)
+        return true
     end
     if mode ~= "directory" then
-        return nil, "invalid source"
+        return nil, "invalid source: " .. tostring(src)
     end
     local ok, err = ensureDirectory(dst)
     if not ok then
@@ -83,10 +93,96 @@ local function copyTree(src, dst)
         if name ~= "." and name ~= ".." then
             ok, err = copyTree(src .. "/" .. name, dst .. "/" .. name)
             if not ok then
-                return nil, err
+                return nil, err or ("copy failed: " .. name)
             end
         end
     end
+    return true
+end
+
+local function safeRelPath(path)
+    if type(path) ~= "string" or path == "" then
+        return nil
+    end
+    -- Reject absolute / drive / zip-slip paths.
+    if path:sub(1, 1) == "/" or path:match("^%a:[/\\]") then
+        return nil
+    end
+    path = path:gsub("\\", "/")
+    local parts = {}
+    for part in path:gmatch("[^/]+") do
+        if part == "" or part == "." then
+            -- skip
+        elseif part == ".." then
+            return nil
+        else
+            parts[#parts + 1] = part
+        end
+    end
+    if #parts == 0 then
+        return nil
+    end
+    return table.concat(parts, "/")
+end
+
+--- Extract whole archive into dest_dir.
+--- Archiver.Reader:extractToPath(entry, dest) extracts ONE entry, not the whole zip.
+local function extractArchive(archive_path, dest_dir)
+    local ok, err = removeTree(dest_dir)
+    if not ok then
+        return nil, err or "cannot clear extract dir"
+    end
+    ok, err = ensureDirectory(dest_dir)
+    if not ok then
+        return nil, err or "cannot create extract dir"
+    end
+
+    local archive = Archiver.Reader:new()
+    if not archive:open(archive_path) then
+        return nil, archive.err or "cannot open zip"
+    end
+
+    for entry in archive:iterate() do
+        local rel = safeRelPath(entry.path)
+        if not rel then
+            archive:close()
+            removeTree(dest_dir)
+            return nil, "unsafe path in archive: " .. tostring(entry.path)
+        end
+        local dest = dest_dir .. "/" .. rel
+        if entry.mode == "directory" then
+            ok, err = ensureDirectory(dest)
+            if not ok then
+                archive:close()
+                removeTree(dest_dir)
+                return nil, err or "mkdir failed"
+            end
+        elseif entry.mode == "file" or entry.mode == "link" then
+            local parent = parentPath(dest)
+            if parent then
+                ok, err = ensureDirectory(parent)
+                if not ok then
+                    archive:close()
+                    removeTree(dest_dir)
+                    return nil, err or "mkdir failed"
+                end
+            end
+            if not archive:extractToPath(entry.path, dest) then
+                local aerr = archive.err
+                archive:close()
+                removeTree(dest_dir)
+                return nil, aerr or "extract failed"
+            end
+        end
+    end
+
+    if archive.err then
+        local aerr = archive.err
+        archive:close()
+        removeTree(dest_dir)
+        return nil, aerr
+    end
+    archive:close()
     return true
 end
 
@@ -174,15 +270,9 @@ function Installer.install(plugin, on_status)
     end
 
     status("Extracting…")
-    local archive = Archiver.Reader:new()
-    local opened = archive:open(zip_path)
-    if not opened then
-        return nil, "cannot open zip"
-    end
-    local extracted = archive:extractToPath(extract_dir)
-    archive:close()
-    if not extracted then
-        return nil, "extract failed"
+    ok, err = extractArchive(zip_path, extract_dir)
+    if not ok then
+        return nil, err or "extract failed"
     end
 
     local root = findPluginRoot(extract_dir, dirname)
@@ -220,6 +310,8 @@ function Installer.install(plugin, on_status)
     end
 
     status("Done")
+    local Updates = require("updates")
+    Updates.recordInstall(plugin)
     return true
 end
 
@@ -234,7 +326,13 @@ function Installer.uninstall(install_dirname)
     if pathMode(dest) ~= "directory" then
         return nil, "not installed"
     end
-    return removeTree(dest)
+    local ok, err = removeTree(dest)
+    if ok then
+        pcall(function()
+            require("updates").forgetInstall(install_dirname)
+        end)
+    end
+    return ok, err
 end
 
 return Installer
