@@ -1,13 +1,14 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-14T01:45:04.962Z",
+  "updated_at": "2026-08-14T01:52:49.258Z",
   "featured_groups": [
     {
       "id": "editors-picks",
       "name": "装机必备",
       "description": "卡欧市场编辑精选插件",
       "plugin_ids": [
-        "doctorhetfield-cmd/simpleui.koplugin"
+        "doctorhetfield-cmd/simpleui.koplugin",
+        "finlater/weread.koplugin"
       ]
     }
   ],
