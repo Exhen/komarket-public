@@ -1,0 +1,34 @@
+{
+  "_comment": "Add this block under packages in your KPM repo manifest.v2.json after running ./pack.sh",
+  "komarket": {
+    "name": "KOMarket",
+    "author": "Exhen",
+    "description": "Install the KOMarket (卡欧市场) KOReader plugin — browse, search, download and install community plugins from the catalog.",
+    "artifacts": [
+      {
+        "url": "packages/komarket/artifacts/komarket_0.4.2_kindle.kpkg",
+        "version": [0, 4, 2],
+        "dependencies": [{ "id": "koreader" }],
+        "supported_platforms": ["kindle"]
+      },
+      {
+        "url": "packages/komarket/artifacts/komarket_0.4.2_kindle5.kpkg",
+        "version": [0, 4, 2],
+        "dependencies": [{ "id": "koreader" }],
+        "supported_platforms": ["kindle5"]
+      },
+      {
+        "url": "packages/komarket/artifacts/komarket_0.4.2_kindlepw2.kpkg",
+        "version": [0, 4, 2],
+        "dependencies": [{ "id": "koreader" }],
+        "supported_platforms": ["kindlepw2"]
+      },
+      {
+        "url": "packages/komarket/artifacts/komarket_0.4.2_kindlehf.kpkg",
+        "version": [0, 4, 2],
+        "dependencies": [{ "id": "koreader" }],
+        "supported_platforms": ["kindlehf"]
+      }
+    ]
+  }
+}

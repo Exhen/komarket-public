@@ -5,6 +5,7 @@
 .cursor/
 *.swp
 *~
+*.zip
 kpm/payload/
 kpm/package/payload/
 kpm/dist/

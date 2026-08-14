@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "id": "komarket",
+  "name": "KOMarket",
+  "author": "Exhen",
+  "description": "Install the KOMarket (\u5361\u6b27\u5e02\u573a) KOReader plugin \u2014 browse, search, download and install community plugins from the catalog.",
+  "version": [
+    0,
+    4,
+    3
+  ],
+  "dependencies": [
+    {
+      "id": "koreader"
+    }
+  ],
+  "supported_platforms": [
+    "kindle",
+    "kindle5",
+    "kindlepw2",
+    "kindlehf"
+  ]
+}
