@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-14T01:52:49.258Z",
+  "updated_at": "2026-08-14T02:04:18.033Z",
   "featured_groups": [
     {
       "id": "editors-picks",
@@ -8,7 +8,12 @@
       "description": "卡欧市场编辑精选插件",
       "plugin_ids": [
         "doctorhetfield-cmd/simpleui.koplugin",
-        "finlater/weread.koplugin"
+        "finlater/weread.koplugin",
+        "miumiupy98-art/miuread-koreader",
+        "helitra/koreader-remote",
+        "Exhen/EpubImageEnhance.koplugin",
+        "Exhen/koreader-pinyin.koplugin",
+        "Exhen/kosync_plus.koplugin"
       ]
     }
   ],
