@@ -3,6 +3,8 @@ KOMarket — browse / search / install community koplugins.
 ]]
 
 local ConfirmBox = require("ui/widget/confirmbox")
+local Device = require("device")
+local IconWidget = require("ui/widget/iconwidget")
 local InfoMessage = require("ui/widget/infomessage")
 local InputDialog = require("ui/widget/inputdialog")
 local Menu = require("ui/widget/menu")
@@ -22,6 +24,18 @@ local Updates = require("updates")
 local SharePack = require("share_pack")
 local ShareClient = require("share_client")
 local ShareImport = require("share_import")
+
+local Screen = Device.screen
+local MENU_ICON_SIZE = Screen:scaleBySize(24)
+local MENU_STATE_W = MENU_ICON_SIZE + Screen:scaleBySize(8)
+
+local function menuIcon(name)
+    return IconWidget:new{
+        icon = name,
+        width = MENU_ICON_SIZE,
+        height = MENU_ICON_SIZE,
+    }
+end
 
 local KOMarket = WidgetContainer:extend{
     name = "komarket",
@@ -185,19 +199,21 @@ function KOMarket:showBrowser(filter_query, category_id)
 
     local item_table = {
         {
-            text = _("📂 Filter by category…"),
+            text = _("Filter by category…"),
+            state = menuIcon("appbar.search"),
             callback = function()
                 self:showCategoryPicker()
             end,
         },
         {
-            text = _("🔍 Search…"),
+            text = _("Search…"),
+            state = menuIcon("appbar.search"),
             callback = function()
                 self:showSearch(q)
             end,
         },
         {
-            text = _("↻ Refresh catalog"),
+            text = _("Refresh catalog"),
             callback = function()
                 self:withNetwork(function()
                     self:refreshCatalog({
@@ -208,25 +224,25 @@ function KOMarket:showBrowser(filter_query, category_id)
             end,
         },
         {
-            text = _("⬆ Check installed updates…"),
+            text = _("Check installed updates…"),
             callback = function()
                 self:checkInstalledUpdates()
             end,
         },
         {
-            text = T(_("⬆ Check KOMarket update (v%1)"), self:selfVersion()),
+            text = T(_("Check KOMarket update (v%1)"), self:selfVersion()),
             callback = function()
                 self:checkSelfUpdate()
             end,
         },
         {
-            text = _("📤 Share my plugin list…"),
+            text = _("Share my plugin list…"),
             callback = function()
                 self:shareMyPlugins()
             end,
         },
         {
-            text = _("📥 Import with share code…"),
+            text = _("Import with share code…"),
             callback = function()
                 self:importSharedPlugins()
             end,
@@ -299,6 +315,7 @@ function KOMarket:showBrowser(filter_query, category_id)
     local menu = Menu:new{
         title = title,
         item_table = item_table,
+        state_w = MENU_STATE_W,
         is_borderless = true,
         is_popout = false,
         title_bar_left_icon = "appbar.menu",
