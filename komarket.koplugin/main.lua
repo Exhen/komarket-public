@@ -16,7 +16,6 @@ local T = require("ffi/util").template
 local Catalog = require("catalog")
 local Installer = require("installer")
 local Updates = require("updates")
-local VERSION = require("_version")
 
 local KOMarket = WidgetContainer:extend{
     name = "komarket",
@@ -43,6 +42,11 @@ end
 
 function KOMarket:notify(text)
     UIManager:show(InfoMessage:new{ text = text, timeout = 3 })
+end
+
+--- Installed version from disk (_version.lua), not require() cache.
+function KOMarket:selfVersion()
+    return Updates.localSelfVersion() or "?"
 end
 
 function KOMarket:withNetwork(callback)
@@ -159,11 +163,16 @@ function KOMarket:showBrowser(filter_query, category_id)
     local cat = self._filter_category or "all"
     local plugins = Catalog.filterPlugins(catalog.plugins, q, cat)
     table.sort(plugins, function(a, b)
-        local sa, sb = tonumber(a.stars) or 0, tonumber(b.stars) or 0
-        if sa == sb then
-            return tostring(a.name or "") < tostring(b.name or "")
+        local ia = Installer.isInstalled(a.install_dirname) and 1 or 0
+        local ib = Installer.isInstalled(b.install_dirname) and 1 or 0
+        if ia ~= ib then
+            return ia > ib
         end
-        return sa > sb
+        local sa, sb = tonumber(a.stars) or 0, tonumber(b.stars) or 0
+        if sa ~= sb then
+            return sa > sb
+        end
+        return tostring(a.name or "") < tostring(b.name or "")
     end)
 
     local item_table = {
@@ -197,7 +206,7 @@ function KOMarket:showBrowser(filter_query, category_id)
             end,
         },
         {
-            text = T(_("⬆ 检查卡欧市场更新（v%1）"), VERSION),
+            text = T(_("⬆ 检查卡欧市场更新（v%1）"), self:selfVersion()),
             callback = function()
                 self:checkSelfUpdate()
             end,
@@ -264,7 +273,7 @@ function KOMarket:showBrowser(filter_query, category_id)
     if #parts > 0 then
         title = T(_("卡欧市场 · %1"), table.concat(parts, " · "))
     end
-    title = title .. "  v" .. tostring(VERSION)
+    title = title .. "  v" .. self:selfVersion()
 
     self:closeBrowser()
     local menu = Menu:new{
@@ -491,7 +500,7 @@ function KOMarket:checkSelfUpdate()
             return
         end
         if not update then
-            self:notify(T(_("卡欧市场已是最新版本（v%1）。"), VERSION))
+            self:notify(T(_("卡欧市场已是最新版本（v%1）。"), self:selfVersion()))
             return
         end
 
