@@ -152,11 +152,11 @@ end
 
 function Catalog.catalogUrls()
     local urls = {}
-    if Config.mirror_catalog_url and Config.mirror_catalog_url ~= "" then
-        urls[#urls + 1] = Config.mirror_catalog_url
-    end
     if Config.catalog_url and Config.catalog_url ~= "" then
         urls[#urls + 1] = Config.catalog_url
+    end
+    if Config.mirror_catalog_url and Config.mirror_catalog_url ~= "" then
+        urls[#urls + 1] = Config.mirror_catalog_url
     end
     return urls
 end
@@ -190,11 +190,11 @@ end
 
 function Catalog.categoriesUrls()
     local urls = {}
-    if Config.mirror_categories_url and Config.mirror_categories_url ~= "" then
-        urls[#urls + 1] = Config.mirror_categories_url
-    end
     if Config.categories_url and Config.categories_url ~= "" then
         urls[#urls + 1] = Config.categories_url
+    end
+    if Config.mirror_categories_url and Config.mirror_categories_url ~= "" then
+        urls[#urls + 1] = Config.mirror_categories_url
     end
     -- Derive from catalog URL when possible
     for _, catalog_url in ipairs(Catalog.catalogUrls()) do

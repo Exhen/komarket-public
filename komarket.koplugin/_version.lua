@@ -1,2 +1,2 @@
--- Keep in sync with releases / catalog self-entry when published.
-return "0.2.1"
+-- Single source of truth; must match GitHub release tag (without leading "v").
+return "0.2.3"

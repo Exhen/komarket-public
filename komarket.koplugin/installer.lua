@@ -225,7 +225,8 @@ function Installer.isInstalled(install_dirname)
     return pathMode(Installer.pluginsDir() .. "/" .. install_dirname) == "directory"
 end
 
-function Installer.install(plugin, on_status)
+function Installer.install(plugin, on_status, opts)
+    opts = opts or {}
     local function status(msg)
         if on_status then
             on_status(msg)
@@ -241,9 +242,8 @@ function Installer.install(plugin, on_status)
     if type(dirname) ~= "string" or not dirname:match("%.koplugin$") then
         return nil, "invalid install_dirname"
     end
-    if dirname == "komarket.koplugin" then
-        -- Allow self-update later; for now block accidental wipe via catalog entry mistakes.
-        -- Self-update can be added explicitly.
+    if dirname == "komarket.koplugin" and not opts.self_update then
+        return nil, "refusing to modify KOMarket without self-update flag"
     end
     if not Catalog.isDownloadUrlAllowed(url) then
         return nil, "download host not allowed"

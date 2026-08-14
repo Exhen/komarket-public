@@ -196,6 +196,12 @@ function KOMarket:showBrowser(filter_query, category_id)
                 self:checkInstalledUpdates()
             end,
         },
+        {
+            text = T(_("⬆ 检查卡欧市场更新（v%1）"), VERSION),
+            callback = function()
+                self:checkSelfUpdate()
+            end,
+        },
     }
 
     if cat and cat ~= "all" then
@@ -434,7 +440,7 @@ function KOMarket:doInstall(plugin, opts)
     local progress_fmt = opts.updating and _("更新中：%1") or _("安装中：%1")
     local ok, err = Installer.install(plugin, function(msg)
         showBusy(T(progress_fmt, msg))
-    end)
+    end, opts)
 
     closeBusy()
 
@@ -457,6 +463,96 @@ function KOMarket:doInstall(plugin, opts)
         })
     end
     return true
+end
+
+function KOMarket:checkSelfUpdate()
+    self:withNetwork(function()
+        local busy
+
+        local function closeBusy()
+            if busy then
+                UIManager:close(busy)
+                busy = nil
+            end
+        end
+
+        busy = InfoMessage:new{
+            text = _("正在检查卡欧市场更新…"),
+            force_show = true,
+        }
+        UIManager:show(busy)
+        UIManager:forceRePaint()
+
+        local update, err = Updates.checkSelfUpdate()
+        closeBusy()
+
+        if err then
+            self:notify(T(_("检查失败：%1"), tostring(err)))
+            return
+        end
+        if not update then
+            self:notify(T(_("卡欧市场已是最新版本（v%1）。"), VERSION))
+            return
+        end
+
+        UIManager:show(ConfirmBox:new{
+            text = T(
+                _("发现卡欧市场新版本：\n\n%1 → %2\n\n更新后必须重启 KOReader。"),
+                update.local_label,
+                update.remote_label
+            ),
+            ok_text = _("更新"),
+            ok_callback = function()
+                self:withNetwork(function()
+                    self:doSelfUpdate(update.plugin)
+                end)
+            end,
+            cancel_text = _("取消"),
+        })
+    end)
+end
+
+function KOMarket:doSelfUpdate(plugin)
+    local busy
+
+    local function closeBusy()
+        if busy then
+            UIManager:close(busy)
+            busy = nil
+        end
+    end
+
+    local function showBusy(text)
+        closeBusy()
+        busy = InfoMessage:new{
+            text = text,
+            force_show = true,
+        }
+        UIManager:show(busy)
+        UIManager:forceRePaint()
+    end
+
+    showBusy(T(_("正在更新卡欧市场 %1 …"), plugin.latest_tag or ""))
+
+    local ok, err = Installer.install(plugin, function(msg)
+        showBusy(T(_("更新中：%1"), msg))
+    end, { self_update = true })
+
+    closeBusy()
+
+    if not ok then
+        self:notify(T(_("更新失败：%1"), tostring(err)))
+        return
+    end
+
+    UIManager:show(ConfirmBox:new{
+        text = _("卡欧市场已更新。\n\n请完全退出并重启 KOReader 后新版本才会生效。"),
+        ok_text = _("知道了"),
+        cancel_text = _("回到市场"),
+        cancel_callback = function()
+            self:showBrowser()
+        end,
+    })
 end
 
 function KOMarket:checkInstalledUpdates()

@@ -6,14 +6,16 @@ local DataStorage = require("datastorage")
 local JSON = require("json")
 local lfs = require("libs/libkoreader-lfs")
 local logger = require("logger")
+local _ = require("gettext")
 local Catalog = require("catalog")
+local Config = require("config")
 local Installer = require("installer")
 
 local Updates = {}
 
 local CACHE_DIR = DataStorage:getDataDir() .. "/cache/komarket"
 local REGISTRY_FILE = CACHE_DIR .. "/installed.json"
-local SELF_DIRNAME = "komarket.koplugin"
+local SELF_DIRNAME = Config.self_install_dirname or "komarket.koplugin"
 
 local function pathMode(path)
     local attr = lfs.attributes(path)
@@ -279,6 +281,93 @@ function Updates.scan(catalog)
     end)
 
     return updates
+end
+
+function Updates.localSelfVersion()
+    return Updates.readLocalVersion(SELF_DIRNAME)
+end
+
+function Updates.buildSelfPlugin(info)
+    info = info or {}
+    return {
+        id = "exhen/komarket-public",
+        name = _("卡欧市场"),
+        install_dirname = SELF_DIRNAME,
+        download_url = info.download_url,
+        latest_tag = info.version,
+    }
+end
+
+local function pickReleaseAsset(assets)
+    for _, asset in ipairs(assets or {}) do
+        local name = tostring(asset.name or "")
+        if name:match("^komarket%.koplugin") and name:match("%.zip$") then
+            return asset.browser_download_url
+        end
+    end
+    return nil
+end
+
+function Updates.fetchSelfReleaseFromGitHub()
+    local api_url = Config.self_release_api
+    if type(api_url) ~= "string" or api_url == "" then
+        return nil, "release api not configured"
+    end
+
+    local body, err = Catalog.httpGet(api_url, 256 * 1024)
+    if not body then
+        return nil, err or "release api failed"
+    end
+
+    local ok, data = pcall(JSON.decode, body)
+    if not ok or type(data) ~= "table" then
+        return nil, "invalid release json"
+    end
+
+    local tag = normalizeVersion(data.tag_name)
+    if not tag then
+        return nil, "missing release tag"
+    end
+
+    local download_url = pickReleaseAsset(data.assets)
+    if not download_url then
+        return nil, "release zip asset not found"
+    end
+    if not Catalog.isDownloadUrlAllowed(download_url) then
+        return nil, "release download host not allowed"
+    end
+
+    return {
+        version = tag,
+        download_url = download_url,
+        tag_name = data.tag_name,
+    }
+end
+
+function Updates.checkSelfUpdate()
+    local local_version = Updates.localSelfVersion()
+
+    local release, err = Updates.fetchSelfReleaseFromGitHub()
+    if not release then
+        return nil, err
+    end
+
+    local remote_version = release.version
+    local plugin_entry = Updates.buildSelfPlugin(release)
+
+    if local_version and Updates.compareVersion(local_version, remote_version) >= 0 then
+        return nil
+    end
+
+    local registry_entry = Updates.loadRegistry()[SELF_DIRNAME]
+    return {
+        plugin = plugin_entry,
+        install_dirname = SELF_DIRNAME,
+        local_version = local_version,
+        local_label = localLabel(local_version, registry_entry),
+        remote_label = remoteLabel(plugin_entry),
+        is_self = true,
+    }
 end
 
 return Updates

@@ -2,5 +2,6 @@
 *.log
 .idea/
 .vscode/
+.cursor/
 *.swp
 *~
