@@ -21,10 +21,8 @@ git push
 
 ## 设备端：添加此软件源
 
-将下方 URL 换成你实际托管的 `manifest.v2.json` 地址（GitHub raw、GitHub Pages、任意 HTTPS 静态托管均可）：
-
 ```text
-;kpm add-repo https://raw.githubusercontent.com/Exhen/komarket-public/main/kpm-repo/manifest.v2.json
+;kpm add-repo https://repo.6ili6ili.com
 ;kpm update
 ;kpm search komarket
 ;kpm install komarket
@@ -34,19 +32,8 @@ git push
 
 ## 托管说明
 
-KPM 会通过 `add-repo` 的 URL 拉取 JSON manifest；artifact 的 `url` 字段为**相对路径**，会相对于 manifest 所在目录解析。
-
-例如 manifest 位于：
-
-`https://example.com/kpm-repo/manifest.v2.json`
-
-则 artifact：
-
-`packages/komarket/artifacts/komarket_0.4.3_kindlehf.kpkg`
-
-会解析为：
-
-`https://example.com/kpm-repo/packages/komarket/artifacts/komarket_0.4.3_kindlehf.kpkg`
+- manifest 内 artifact `url` 使用 **GitHub 绝对地址**，安装包下载直连 GitHub，不经短域名。
+- `repo.6ili6ili.com` 仅用于 `add-repo` / `update` 拉 manifest；Cloudflare 规则应**只重定向根路径 `/`**，不要用 `/*` 通配（否则 `.kpkg` 请求也会被重定向到 JSON）。
 
 ## 查看已添加的软件源
 
