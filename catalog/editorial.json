@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-14T03:08:16.474Z",
+  "updated_at": "2026-08-14T03:13:03.036Z",
   "featured_groups": [
     {
       "id": "editors-picks",
@@ -13,7 +13,8 @@
         "helitra/koreader-remote",
         "Exhen/EpubImageEnhance.koplugin",
         "Exhen/koreader-pinyin.koplugin",
-        "Exhen/kosync_plus.koplugin"
+        "Exhen/kosync_plus.koplugin",
+        "koplugin-swipe-animation/Swipe_Animation.koplugin"
       ]
     }
   ],
