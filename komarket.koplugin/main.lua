@@ -24,6 +24,7 @@ local Updates = require("updates")
 local SharePack = require("share_pack")
 local ShareClient = require("share_client")
 local ShareImport = require("share_import")
+local Settings = require("settings")
 
 local Screen = Device.screen
 local MENU_ICON_SIZE = Screen:scaleBySize(24)
@@ -47,6 +48,7 @@ function KOMarket:init()
     self._catalog = Catalog.loadCached()
     self._categories = Catalog.loadCachedCategories()
     self._filter_category = "all"
+    self._filter_kind = "all"
     self._filter_query = nil
 end
 
@@ -69,20 +71,49 @@ function KOMarket:selfVersion()
     return Updates.localSelfVersion() or "?"
 end
 
+--- Require Wi-Fi + a working connection before any network action.
+--- Uses KOReader NetworkMgr: query state, then the native Wi-Fi prompt if needed.
 function KOMarket:withNetwork(callback)
-    NetworkMgr:runWhenOnline(function()
+    if type(callback) ~= "function" then
+        return
+    end
+
+    NetworkMgr:queryNetworkState()
+    local wifi_on = NetworkMgr:isWifiOn()
+    local connected = NetworkMgr:isConnected()
+    logger.info("KOMarket: network wifi=", wifi_on, "connected=", connected)
+
+    -- Wi-Fi on and associated (got a link). Do not require isOnline():
+    -- that does a DNS lookup to dns.msftncsi.com, which is often blocked in CN.
+    if wifi_on and connected then
         callback()
-    end)
+        return
+    end
+
+    local retry = function()
+        self:withNetwork(callback)
+    end
+
+    -- Radio on but not associated: native "Connect" dialog.
+    if wifi_on then
+        NetworkMgr:promptWifi(retry, false, true)
+        return
+    end
+
+    -- Radio off: native beforeWifiAction (prompt / turn-on / ignore).
+    NetworkMgr:beforeWifiAction(retry)
 end
 
 function KOMarket:openMarket()
-    self:withNetwork(function()
-        self:showBrowser()
-        self:refreshCatalog({
-            loading_dialog = true,
-            refresh_browser = true,
-        })
-    end)
+    self:showBrowser()
+    if Settings.getAutoRefreshCatalog() then
+        self:withNetwork(function()
+            self:refreshCatalog({
+                loading_dialog = true,
+                refresh_browser = true,
+            })
+        end)
+    end
 end
 
 function KOMarket:refreshCatalog(opts, callback)
@@ -165,7 +196,17 @@ function KOMarket:closeBrowser()
     end
 end
 
-function KOMarket:showBrowser(filter_query, category_id)
+function KOMarket:kindLabel(kind)
+    if kind == Catalog.KIND_PATCH then
+        return _("Patch")
+    end
+    if kind == Catalog.KIND_PLUGIN then
+        return _("Plugin")
+    end
+    return _("All types")
+end
+
+function KOMarket:showBrowser(filter_query, category_id, kind)
     if filter_query ~= nil then
         self._filter_query = filter_query
         if filter_query == "" then
@@ -175,6 +216,9 @@ function KOMarket:showBrowser(filter_query, category_id)
     if category_id ~= nil then
         self._filter_category = category_id
     end
+    if kind ~= nil then
+        self._filter_kind = kind
+    end
 
     local catalog = self._catalog or Catalog.loadCached()
     if not catalog or type(catalog.plugins) ~= "table" then
@@ -183,10 +227,11 @@ function KOMarket:showBrowser(filter_query, category_id)
 
     local q = self._filter_query
     local cat = self._filter_category or "all"
-    local plugins = Catalog.filterPlugins(catalog.plugins, q, cat)
+    local kind_filter = self._filter_kind or "all"
+    local plugins = Catalog.filterPlugins(catalog.plugins, q, cat, kind_filter)
     table.sort(plugins, function(a, b)
-        local ia = Installer.isInstalled(a.install_dirname) and 1 or 0
-        local ib = Installer.isInstalled(b.install_dirname) and 1 or 0
+        local ia = Installer.isInstalled(a) and 1 or 0
+        local ib = Installer.isInstalled(b) and 1 or 0
         if ia ~= ib then
             return ia > ib
         end
@@ -203,6 +248,13 @@ function KOMarket:showBrowser(filter_query, category_id)
             state = menuIcon("appbar.search"),
             callback = function()
                 self:showCategoryPicker()
+            end,
+        },
+        {
+            text = T(_("Filter by type (%1)…"), self:kindLabel(kind_filter)),
+            state = menuIcon("appbar.search"),
+            callback = function()
+                self:showKindPicker()
             end,
         },
         {
@@ -252,6 +304,13 @@ function KOMarket:showBrowser(filter_query, category_id)
                 self:importSharedPlugins()
             end,
         },
+        {
+            text = T(_("Settings (%1)…"), Settings.modeLabel()),
+            state = menuIcon("appbar.settings"),
+            callback = function()
+                self:showSettings()
+            end,
+        },
     }
 
     if cat and cat ~= "all" then
@@ -260,6 +319,16 @@ function KOMarket:showBrowser(filter_query, category_id)
             state = menuIcon("cancel"),
             callback = function()
                 self:showBrowser(q, "all")
+            end,
+        }
+    end
+
+    if kind_filter and kind_filter ~= "all" then
+        item_table[#item_table + 1] = {
+            text = T(_("Clear type: %1"), self:kindLabel(kind_filter)),
+            state = menuIcon("cancel"),
+            callback = function()
+                self:showBrowser(q, cat, "all")
             end,
         }
     end
@@ -274,27 +343,44 @@ function KOMarket:showBrowser(filter_query, category_id)
         }
     end
 
+    local n_plugins, n_patches = 0, 0
+    for _, p in ipairs(plugins) do
+        if Catalog.itemKind(p) == Catalog.KIND_PATCH then
+            n_patches = n_patches + 1
+        else
+            n_plugins = n_plugins + 1
+        end
+    end
+    local heading
+    if kind_filter == Catalog.KIND_PATCH then
+        heading = T(_("—— %1 patches ——"), tostring(#plugins))
+    elseif kind_filter == Catalog.KIND_PLUGIN then
+        heading = T(_("—— %1 plugins ——"), tostring(#plugins))
+    else
+        heading = T(_("—— %1 plugins, %2 patches ——"), tostring(n_plugins), tostring(n_patches))
+    end
     item_table[#item_table + 1] = {
-        text = T(_("—— %1 plugins ——"), tostring(#plugins)),
+        text = heading,
         enabled = false,
     }
 
     if #plugins == 0 then
         item_table[#item_table + 1] = {
-            text = _("(no matching plugins)"),
+            text = _("(no matching items)"),
             enabled = false,
         }
     end
 
     for i, plugin in ipairs(plugins) do
-        local installed = Installer.isInstalled(plugin.install_dirname)
+        local installed = Installer.isInstalled(plugin)
         local stars = tonumber(plugin.stars) or 0
         local tags = self:formatCategoryTags(plugin)
+        local kind_tag = self:kindLabel(Catalog.itemKind(plugin))
         local text
         if tags ~= "" then
-            text = T("%1  [%2] ★%3", plugin.name or plugin.slug or plugin.id, tags, stars)
+            text = T("[%1] %2  [%3] ★%4", kind_tag, plugin.name or plugin.slug or plugin.id, tags, stars)
         else
-            text = T("%1  ★%2", plugin.name or plugin.slug or plugin.id, stars)
+            text = T("[%1] %2  ★%3", kind_tag, plugin.name or plugin.slug or plugin.id, stars)
         end
         item_table[#item_table + 1] = {
             text = text,
@@ -307,6 +393,9 @@ function KOMarket:showBrowser(filter_query, category_id)
 
     local title = _("KOMarket")
     local parts = {}
+    if kind_filter and kind_filter ~= "all" then
+        parts[#parts + 1] = self:kindLabel(kind_filter)
+    end
     if cat and cat ~= "all" then
         parts[#parts + 1] = self:categoryLabel(cat)
     end
@@ -377,6 +466,48 @@ function KOMarket:showCategoryPicker()
     })
 end
 
+function KOMarket:showKindPicker()
+    local catalog = self._catalog or Catalog.loadCached()
+    local all_plugins = (catalog and catalog.plugins) or {}
+    local current = self._filter_kind or "all"
+
+    local function countFor(kind)
+        return #Catalog.filterByKind(all_plugins, kind)
+    end
+
+    local item_table = {
+        {
+            text = T(_("All types (%1)"), tostring(countFor("all"))),
+            state = current == "all" and menuIcon("check") or nil,
+            callback = function()
+                self:showBrowser(self._filter_query, self._filter_category, "all")
+            end,
+        },
+        {
+            text = T(_("Plugins (%1)"), tostring(countFor(Catalog.KIND_PLUGIN))),
+            state = current == Catalog.KIND_PLUGIN and menuIcon("check") or nil,
+            callback = function()
+                self:showBrowser(self._filter_query, self._filter_category, Catalog.KIND_PLUGIN)
+            end,
+        },
+        {
+            text = T(_("Patches (%1)"), tostring(countFor(Catalog.KIND_PATCH))),
+            state = current == Catalog.KIND_PATCH and menuIcon("check") or nil,
+            callback = function()
+                self:showBrowser(self._filter_query, self._filter_category, Catalog.KIND_PATCH)
+            end,
+        },
+    }
+
+    UIManager:show(Menu:new{
+        title = _("Select type"),
+        item_table = item_table,
+        state_w = MENU_STATE_W,
+        is_borderless = true,
+        is_popout = false,
+    })
+end
+
 function KOMarket:showSearch(prefill)
     local dialog
     dialog = InputDialog:new{
@@ -407,8 +538,180 @@ function KOMarket:showSearch(prefill)
     dialog:onShowKeyboard()
 end
 
+function KOMarket:closeSettingsMenu()
+    if self._settings_menu then
+        UIManager:close(self._settings_menu)
+        self._settings_menu = nil
+    end
+end
+
+function KOMarket:_showSettingsMenu(title, item_table, opts)
+    opts = opts or {}
+    -- Closing the previous settings menu must not run its "back to parent" hook.
+    self._settings_navigating = true
+    self:closeSettingsMenu()
+    self._settings_navigating = false
+
+    local menu
+    menu = Menu:new{
+        title = title,
+        item_table = item_table,
+        state_w = MENU_STATE_W,
+        is_borderless = true,
+        is_popout = false,
+        close_callback = function()
+            if self._settings_menu == menu then
+                self._settings_menu = nil
+            end
+            if self._settings_navigating or self._settings_skip_parent then
+                self._settings_skip_parent = nil
+                return
+            end
+            if opts.on_close then
+                opts.on_close()
+            end
+        end,
+    }
+    self._settings_menu = menu
+    UIManager:show(menu)
+end
+
+function KOMarket:showSettings()
+    local auto_refresh = Settings.getAutoRefreshCatalog()
+    local item_table = {
+        {
+            text = T(_("Auto-refresh catalog (%1)"),
+                auto_refresh and _("On") or _("Off")),
+            callback = function()
+                self:showCatalogSettings()
+            end,
+        },
+        {
+            text = T(_("Connection (%1)"), Settings.modeLabel()),
+            callback = function()
+                self:showConnectionSettings()
+            end,
+        },
+    }
+    self:_showSettingsMenu(_("KOMarket settings"), item_table)
+end
+
+function KOMarket:showCatalogSettings()
+    local auto_refresh = Settings.getAutoRefreshCatalog()
+    local item_table = {
+        {
+            text = _("On"),
+            state = auto_refresh and menuIcon("check") or nil,
+            callback = function()
+                Settings.setAutoRefreshCatalog(true)
+                self:showCatalogSettings()
+            end,
+        },
+        {
+            text = _("Off"),
+            state = not auto_refresh and menuIcon("check") or nil,
+            callback = function()
+                Settings.setAutoRefreshCatalog(false)
+                self:showCatalogSettings()
+            end,
+        },
+    }
+    self:_showSettingsMenu(_("Auto-refresh catalog"), item_table, {
+        on_close = function()
+            self:showSettings()
+        end,
+    })
+end
+
+function KOMarket:showConnectionSettings()
+    local mode = Settings.getMode()
+    local item_table = {
+        {
+            text = _("GitHub"),
+            state = mode == Settings.MODE_GITHUB and menuIcon("check") or nil,
+            callback = function()
+                self:applyConnectionMode(Settings.MODE_GITHUB)
+            end,
+        },
+        {
+            text = _("CN Mirror"),
+            state = mode == Settings.MODE_MIRROR and menuIcon("check") or nil,
+            callback = function()
+                self:applyConnectionMode(Settings.MODE_MIRROR)
+            end,
+        },
+        {
+            text = _("Custom"),
+            state = mode == Settings.MODE_CUSTOM and menuIcon("check") or nil,
+            callback = function()
+                self:showCustomCatalogDialog()
+            end,
+        },
+    }
+    self:_showSettingsMenu(_("Connection"), item_table, {
+        on_close = function()
+            self:showSettings()
+        end,
+    })
+end
+
+function KOMarket:applyConnectionMode(mode)
+    local ok, err = Settings.setMode(mode)
+    if not ok then
+        self:notify(T(_("Failed to save settings: %1"), tostring(err)))
+        return
+    end
+    self._settings_skip_parent = true
+    self:closeSettingsMenu()
+    self:notify(T(_("Connection set to %1"), Settings.modeLabel(mode)))
+    self:withNetwork(function()
+        self:refreshCatalog({
+            loading_dialog = true,
+            loading_text = _("Refreshing plugin catalog…"),
+            refresh_browser = true,
+        })
+    end)
+end
+
+function KOMarket:showCustomCatalogDialog()
+    local dialog
+    dialog = InputDialog:new{
+        title = _("Custom catalog JSON URL"),
+        input = Settings.getCustomCatalogUrl() or "",
+        description = _("https://…/catalog/index.json"),
+        buttons = {
+            {
+                {
+                    text = _("Cancel"),
+                    id = "close",
+                    callback = function()
+                        UIManager:close(dialog)
+                    end,
+                },
+                {
+                    text = _("Save"),
+                    is_enter_default = true,
+                    callback = function()
+                        local url = dialog:getInputText() or ""
+                        local ok, err = Settings.setCustomCatalogUrl(url)
+                        if not ok then
+                            self:notify(T(_("Invalid URL: %1"), tostring(err)))
+                            return
+                        end
+                        UIManager:close(dialog)
+                        self:applyConnectionMode(Settings.MODE_CUSTOM)
+                    end,
+                },
+            },
+        },
+    }
+    UIManager:show(dialog)
+    dialog:onShowKeyboard()
+end
+
 function KOMarket:showPluginActions(plugin)
-    local installed = Installer.isInstalled(plugin.install_dirname)
+    local installed = Installer.isInstalled(plugin)
+    local kind = Catalog.itemKind(plugin)
     local tags = self:formatCategoryTags(plugin)
     local lines = {
         plugin.name or plugin.id,
@@ -421,9 +724,13 @@ function KOMarket:showPluginActions(plugin)
         lines[#lines + 1] = T(_("Editor's note: %1"), note)
         lines[#lines + 1] = ""
     end
+    lines[#lines + 1] = T(_("Type: %1"), self:kindLabel(kind))
     lines[#lines + 1] = T(_("Author: %1"), plugin.owner or "?")
     lines[#lines + 1] = T(_("Repository: %1/%2"), plugin.owner or "?", plugin.repo or "?")
     lines[#lines + 1] = T(_("Install dir: %1"), plugin.install_dirname or "?")
+    if kind == Catalog.KIND_PATCH then
+        lines[#lines + 1] = _("User patches are copied to patches/")
+    end
     if tags ~= "" then
         lines[#lines + 1] = T(_("Categories: %1"), tags)
     end
@@ -436,10 +743,21 @@ function KOMarket:showPluginActions(plugin)
     local ok_callback = function()
         self:confirmInstall(plugin, false)
     end
+    local other_buttons
     if installed then
         ok_text = _("Update / reinstall")
         ok_callback = function()
             self:confirmInstall(plugin, true)
+        end
+        if plugin.install_dirname ~= "komarket.koplugin" then
+            other_buttons = {{
+                {
+                    text = _("Uninstall"),
+                    callback = function()
+                        self:confirmUninstall(plugin)
+                    end,
+                },
+            }}
         end
     end
 
@@ -448,13 +766,26 @@ function KOMarket:showPluginActions(plugin)
         ok_text = ok_text,
         ok_callback = ok_callback,
         cancel_text = _("Close"),
+        other_buttons = other_buttons,
+        other_buttons_first = true,
     })
 end
 
 function KOMarket:confirmInstall(plugin, is_update)
-    local tip = is_update
-        and T(_("Update/reinstall \"%1\"?\nThird-party plugin code will be downloaded."), plugin.name or plugin.id)
-        or T(_("Install \"%1\"?\nThird-party plugin code will be downloaded."), plugin.name or plugin.id)
+    if not Installer.expectedSha256(plugin) then
+        self:notify(_("Cannot install: missing sha256 in catalog. Refresh catalog or switch connection."))
+        return
+    end
+    local tip
+    if Catalog.itemKind(plugin) == Catalog.KIND_PATCH then
+        tip = is_update
+            and T(_("Update/reinstall \"%1\"?\nUser patch files will be downloaded into patches/."), plugin.name or plugin.id)
+            or T(_("Install \"%1\"?\nUser patch files will be downloaded into patches/."), plugin.name or plugin.id)
+    else
+        tip = is_update
+            and T(_("Update/reinstall \"%1\"?\nThird-party plugin code will be downloaded."), plugin.name or plugin.id)
+            or T(_("Install \"%1\"?\nThird-party plugin code will be downloaded."), plugin.name or plugin.id)
+    end
 
     UIManager:show(ConfirmBox:new{
         text = tip,
@@ -507,10 +838,18 @@ function KOMarket:doInstall(plugin, opts)
     end
 
     if not opts.quiet then
-        UIManager:show(ConfirmBox:new{
-            text = opts.updating
+        local done_text
+        if Catalog.itemKind(plugin) == Catalog.KIND_PATCH then
+            done_text = opts.updating
+                and _("Update complete. Restart KOReader to load the new patch.")
+                or _("Install complete. Restart KOReader to load the new patch.")
+        else
+            done_text = opts.updating
                 and _("Update complete. Restart KOReader to load the new version.")
-                or _("Install complete. Restart KOReader to load the new plugin."),
+                or _("Install complete. Restart KOReader to load the new plugin.")
+        end
+        UIManager:show(ConfirmBox:new{
+            text = done_text,
             ok_text = _("OK"),
             cancel_text = _("Back to market"),
             cancel_callback = function()
@@ -1028,7 +1367,7 @@ function KOMarket:confirmUninstall(plugin)
         text = T(_("Uninstall \"%1\"?"), plugin.name or plugin.id),
         ok_text = _("Uninstall"),
         ok_callback = function()
-            local ok, err = Installer.uninstall(plugin.install_dirname)
+            local ok, err = Installer.uninstall(plugin)
             if not ok then
                 self:notify(T(_("Uninstall failed: %1"), tostring(err)))
             else

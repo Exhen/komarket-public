@@ -150,16 +150,21 @@ function Updates.recordInstall(plugin)
     if type(plugin) ~= "table" or type(plugin.install_dirname) ~= "string" then
         return
     end
-    local reg = Updates.loadRegistry()
-    reg[plugin.install_dirname] = {
+    local rec = {
         id = plugin.id,
         name = plugin.name,
-        download_url = plugin.download_url,
+        kind = Catalog.itemKind(plugin),
+        download_url = Catalog.resolveDownloadUrl(plugin) or plugin.download_url,
         latest_tag = plugin.latest_tag,
         updated_at = plugin.updated_at,
         local_version = Updates.readLocalVersion(plugin.install_dirname),
         installed_at = os.date("!%Y-%m-%dT%H:%M:%SZ"),
     }
+    if type(plugin._patch_files) == "table" and #plugin._patch_files > 0 then
+        rec.patch_files = plugin._patch_files
+    end
+    local reg = Updates.loadRegistry()
+    reg[plugin.install_dirname] = rec
     Updates.saveRegistry(reg)
 end
 
@@ -180,18 +185,30 @@ function Updates.indexCatalog(catalog)
 end
 
 function Updates.listUserInstalled()
-    local dir = Installer.pluginsDir()
-    if pathMode(dir) ~= "directory" then
-        return {}
-    end
     local names = {}
-    for name in lfs.dir(dir) do
-        if name ~= "." and name ~= ".." and name:match("%.koplugin$") then
-            if name ~= SELF_DIRNAME then
+    local seen = {}
+    local dir = Installer.pluginsDir()
+    if pathMode(dir) == "directory" then
+        for name in lfs.dir(dir) do
+            if name ~= "." and name ~= ".." and name:match("%.koplugin$") and name ~= SELF_DIRNAME then
                 local plugin_dir = dir .. "/" .. name
                 if pathMode(plugin_dir) == "directory"
                     and pathMode(plugin_dir .. "/_meta.lua") == "file" then
+                    seen[name] = true
                     names[#names + 1] = name
+                end
+            end
+        end
+    end
+    local registry = Updates.loadRegistry()
+    for dirname, rec in pairs(registry) do
+        if not seen[dirname] and dirname ~= SELF_DIRNAME
+            and type(rec) == "table" and type(rec.patch_files) == "table" then
+            for _, filename in ipairs(rec.patch_files) do
+                if Installer.patchFileInstalled(filename) then
+                    seen[dirname] = true
+                    names[#names + 1] = dirname
+                    break
                 end
             end
         end
@@ -224,35 +241,24 @@ local function localLabel(local_version, registry)
 end
 
 function Updates.isUpdateAvailable(install_dirname, catalog_plugin, registry_entry)
-    if not catalog_plugin or not Catalog.isDownloadUrlAllowed(catalog_plugin.download_url) then
+    if not catalog_plugin
+        or not Catalog.resolveDownloadUrl(catalog_plugin)
+        or not Installer.expectedSha256(catalog_plugin) then
         return false
     end
 
     local local_version = Updates.readLocalVersion(install_dirname)
     local remote_version = catalog_plugin.latest_tag
+    local baseline = local_version
+        or (registry_entry and registry_entry.latest_tag)
+        or (registry_entry and registry_entry.local_version)
 
-    if local_version and remote_version then
-        if Updates.compareVersion(local_version, remote_version) < 0 then
-            return true
-        end
+    if not baseline or not remote_version then
+        return false
     end
 
-    if registry_entry then
-        if registry_entry.download_url
-            and catalog_plugin.download_url
-            and registry_entry.download_url ~= catalog_plugin.download_url then
-            return true
-        end
-        if registry_entry.latest_tag
-            and remote_version
-            and registry_entry.latest_tag ~= remote_version then
-            if not local_version or Updates.compareVersion(local_version, remote_version) <= 0 then
-                return true
-            end
-        end
-    end
-
-    return false
+    -- Remote must be strictly newer; equal versions are not updates.
+    return Updates.compareVersion(baseline, remote_version) < 0
 end
 
 function Updates.scan(catalog)
@@ -295,14 +301,19 @@ function Updates.buildSelfPlugin(info)
         install_dirname = SELF_DIRNAME,
         download_url = info.download_url,
         latest_tag = info.version,
+        sha256 = info.sha256,
     }
+end
+
+local function digestToSha256(digest)
+    return Installer.normalizeSha256(digest)
 end
 
 local function pickReleaseAsset(assets)
     for _, asset in ipairs(assets or {}) do
         local name = tostring(asset.name or "")
         if name:match("^komarket%.koplugin") and name:match("%.zip$") then
-            return asset.browser_download_url
+            return asset.browser_download_url, digestToSha256(asset.digest)
         end
     end
     return nil
@@ -329,17 +340,21 @@ function Updates.fetchSelfReleaseFromGitHub()
         return nil, "missing release tag"
     end
 
-    local download_url = pickReleaseAsset(data.assets)
+    local download_url, sha256 = pickReleaseAsset(data.assets)
     if not download_url then
         return nil, "release zip asset not found"
     end
     if not Catalog.isDownloadUrlAllowed(download_url) then
         return nil, "release download host not allowed"
     end
+    if not sha256 then
+        return nil, _("missing sha256 in catalog")
+    end
 
     return {
         version = tag,
         download_url = download_url,
+        sha256 = sha256,
         tag_name = data.tag_name,
     }
 end
@@ -355,7 +370,8 @@ function Updates.checkSelfUpdate()
     local remote_version = release.version
     local plugin_entry = Updates.buildSelfPlugin(release)
 
-    if local_version and Updates.compareVersion(local_version, remote_version) >= 0 then
+    -- Only offer an update when remote is strictly newer.
+    if not local_version or Updates.compareVersion(local_version, remote_version) >= 0 then
         return nil
     end
 

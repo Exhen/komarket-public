@@ -33,7 +33,7 @@ function ShareImport.resolvePlugins(share_plugins, catalog)
         if not plugin and item.id then
             plugin = by_id[item.id]
         end
-        if plugin and Catalog.isDownloadUrlAllowed(plugin.download_url) then
+        if plugin and Catalog.resolveDownloadUrl(plugin) and Installer.expectedSha256(plugin) then
             resolved[#resolved + 1] = plugin
         else
             missing[#missing + 1] = item.name or dirname or "?"
@@ -57,7 +57,7 @@ function ShareImport.installSequential(plugins, callbacks)
             callbacks.on_item(i, total, plugin, "start")
         end
 
-        if Installer.isInstalled(plugin.install_dirname) then
+        if Installer.isInstalled(plugin) then
             skipped = skipped + 1
             ok_count = ok_count + 1
             if callbacks.on_item then

@@ -1,5 +1,6 @@
 --[[--
-Download and install a plugin zip into KOReader plugins/.
+Download and install a plugin zip into KOReader plugins/, and/or user
+patches (numbered N-*.lua) into patches/.
 ]]
 
 local Archiver = require("ffi/archiver")
@@ -7,8 +8,10 @@ local DataStorage = require("datastorage")
 local ffiutil = require("ffi/util")
 local lfs = require("libs/libkoreader-lfs")
 local logger = require("logger")
+local sha2 = require("ffi/sha2")
 local Catalog = require("catalog")
 local Config = require("config")
+local _ = require("komarket_gettext")
 
 local Installer = {}
 
@@ -266,12 +269,126 @@ local function findPluginRoot(extract_dir, expected_dirname)
     return scan(extract_dir, 0)
 end
 
+-- KOReader user patches: numbered Lua files, e.g. 2-foo.lua (see userpatch.lua).
+local PATCH_FILENAME = "^%d+%-.+%.lua$"
+
+local function isPatchFilename(name)
+    return type(name) == "string" and name:match(PATCH_FILENAME) ~= nil
+end
+
+--- Numbered patch Lua files that are not inside a real *.koplugin package.
+local function findPatchFiles(extract_dir)
+    local files = {}
+    local function scan(dir, skip, depth)
+        if depth > 6 or pathMode(dir) ~= "directory" then
+            return
+        end
+        for name in lfs.dir(dir) do
+            if name ~= "." and name ~= ".." then
+                local child = dir .. "/" .. name
+                local mode = pathMode(child)
+                if mode == "directory" then
+                    local skip_children = skip
+                        or (name:match("%.koplugin$") and hasPluginMarkers(child))
+                    scan(child, skip_children, depth + 1)
+                elseif not skip and mode == "file" and isPatchFilename(name) then
+                    files[#files + 1] = { src = child, name = name }
+                end
+            end
+        end
+    end
+    scan(extract_dir, hasPluginMarkers(extract_dir), 0)
+    return files
+end
+
+local function isSafeDirname(dirname)
+    return type(dirname) == "string"
+        and dirname ~= ""
+        and not dirname:find("[/\\]")
+        and not dirname:match("%.%.")
+end
+
 function Installer.pluginsDir()
     return DataStorage:getDataDir() .. "/plugins"
 end
 
-function Installer.isInstalled(install_dirname)
-    return pathMode(Installer.pluginsDir() .. "/" .. install_dirname) == "directory"
+function Installer.patchesDir()
+    return DataStorage:getDataDir() .. "/patches"
+end
+
+function Installer.patchFileInstalled(filename)
+    if not isPatchFilename(filename) then
+        return false
+    end
+    local dir = Installer.patchesDir()
+    return pathMode(dir .. "/" .. filename) == "file"
+        or pathMode(dir .. "/" .. filename .. ".disabled") == "file"
+end
+
+function Installer.isInstalled(plugin_or_dirname)
+    local dirname
+    if type(plugin_or_dirname) == "table" then
+        dirname = plugin_or_dirname.install_dirname
+    else
+        dirname = plugin_or_dirname
+    end
+    if not isSafeDirname(dirname) then
+        return false
+    end
+    if pathMode(Installer.pluginsDir() .. "/" .. dirname) == "directory" then
+        return true
+    end
+    local ok, Updates = pcall(require, "updates")
+    if not ok or not Updates.loadRegistry then
+        return false
+    end
+    local rec = Updates.loadRegistry()[dirname]
+    if type(rec) ~= "table" or type(rec.patch_files) ~= "table" then
+        return false
+    end
+    for _, name in ipairs(rec.patch_files) do
+        if Installer.patchFileInstalled(name) then
+            return true
+        end
+    end
+    return false
+end
+
+--- Normalize catalog / GitHub digest to lowercase 64-char hex, or nil.
+function Installer.normalizeSha256(value)
+    if type(value) ~= "string" then
+        return nil
+    end
+    local s = value:match("^%s*(.-)%s*$") or ""
+    s = s:lower()
+    local hex = s:match("^sha256:(%x+)$") or s:match("^(%x+)$")
+    if hex and #hex == 64 then
+        return hex
+    end
+    return nil
+end
+
+function Installer.expectedSha256(plugin)
+    if type(plugin) ~= "table" then
+        return nil
+    end
+    return Installer.normalizeSha256(plugin.sha256)
+end
+
+function Installer.verifySha256(body, expected_hex)
+    expected_hex = Installer.normalizeSha256(expected_hex)
+    if not expected_hex then
+        return nil, _("missing sha256 in catalog")
+    end
+    if type(body) ~= "string" then
+        return nil, _("sha256 verification failed")
+    end
+    local actual = sha2.sha256(body)
+    if actual ~= expected_hex then
+        logger.warn("KOMarket install: sha256 mismatch expected", expected_hex, "got", actual)
+        return nil, _("sha256 mismatch")
+    end
+    return true
 end
 
 function Installer.install(plugin, on_status, opts)
@@ -287,15 +404,19 @@ function Installer.install(plugin, on_status, opts)
         return nil, "invalid plugin"
     end
     local dirname = plugin.install_dirname
-    local url = plugin.download_url
-    if type(dirname) ~= "string" or not dirname:match("%.koplugin$") then
+    local urls = Catalog.downloadCandidates(plugin)
+    local expected_sha = Installer.expectedSha256(plugin)
+    if not isSafeDirname(dirname) then
         return nil, "invalid install_dirname"
     end
     if dirname == "komarket.koplugin" and not opts.self_update then
         return nil, "refusing to modify KOMarket without self-update flag"
     end
-    if not Catalog.isDownloadUrlAllowed(url) then
+    if #urls == 0 then
         return nil, "download host not allowed"
+    end
+    if not expected_sha then
+        return nil, _("missing sha256 in catalog")
     end
 
     removeTree(WORK_DIR)
@@ -308,11 +429,32 @@ function Installer.install(plugin, on_status, opts)
     local extract_dir = WORK_DIR .. "/extract"
     ensureDirectory(extract_dir)
 
-    status("Downloading…")
-    local body, get_err = Catalog.httpGet(url, Config.max_plugin_bytes)
-    if not body then
-        return nil, get_err or "download failed"
+    local body
+    local last_err
+    for i, url in ipairs(urls) do
+        if i == 1 then
+            status("Downloading…")
+        else
+            status(_("OSS package missing, falling back to GitHub…"))
+            logger.info("KOMarket install: fallback download", url, "after", tostring(last_err))
+        end
+        body, last_err = Catalog.httpGet(url, Config.max_plugin_bytes)
+        if body then
+            status(_("Verifying SHA-256…"))
+            ok, err = Installer.verifySha256(body, expected_sha)
+            if ok then
+                last_err = nil
+                break
+            end
+            body = nil
+            last_err = err
+            logger.warn("KOMarket install: sha256 failed for", url, err)
+        end
     end
+    if not body then
+        return nil, last_err or "download failed"
+    end
+
     ok, err = Catalog.writeFile(zip_path, body)
     if not ok then
         return nil, err or "cannot write zip"
@@ -325,63 +467,120 @@ function Installer.install(plugin, on_status, opts)
     end
 
     local root = findPluginRoot(extract_dir, dirname)
-    if not root then
-        return nil, "plugin root (_meta.lua) not found in archive"
+    local patch_files = findPatchFiles(extract_dir)
+    if not root and #patch_files == 0 then
+        return nil, "plugin or patch files not found in archive"
+    end
+    if root and not dirname:match("%.koplugin$") then
+        return nil, "invalid install_dirname"
     end
 
-    local dest = Installer.pluginsDir() .. "/" .. dirname
-    local backup = WORK_DIR .. "/backup-" .. dirname
-    if pathMode(dest) == "directory" then
-        status("Backing up previous install…")
-        removeTree(backup)
-        ok, err = copyTree(dest, backup)
+    local dest, backup
+    if root then
+        dest = Installer.pluginsDir() .. "/" .. dirname
+        backup = WORK_DIR .. "/backup-" .. dirname
+        if pathMode(dest) == "directory" then
+            status("Backing up previous install…")
+            removeTree(backup)
+            ok, err = copyTree(dest, backup)
+            if not ok then
+                return nil, err or "backup failed"
+            end
+            removeTree(dest)
+        end
+
+        status("Installing…")
+        ok, err = copyTree(root, dest)
         if not ok then
-            return nil, err or "backup failed"
+            if pathMode(backup) == "directory" then
+                copyTree(backup, dest)
+            end
+            return nil, err or "install copy failed"
         end
-        removeTree(dest)
+
+        if pathMode(dest .. "/_meta.lua") ~= "file" or pathMode(dest .. "/main.lua") ~= "file" then
+            removeTree(dest)
+            if pathMode(backup) == "directory" then
+                copyTree(backup, dest)
+            end
+            return nil, "installed files incomplete"
+        end
     end
 
-    status("Installing…")
-    ok, err = copyTree(root, dest)
-    if not ok then
-        if pathMode(backup) == "directory" then
-            copyTree(backup, dest)
+    local installed_patches = {}
+    if #patch_files > 0 then
+        status(_("Installing patches…"))
+        ok, err = ensureDirectory(Installer.patchesDir())
+        if not ok then
+            if dest and pathMode(backup) == "directory" then
+                removeTree(dest)
+                copyTree(backup, dest)
+            end
+            return nil, err or "cannot create patches dir"
         end
-        return nil, err or "install copy failed"
-    end
-
-    if pathMode(dest .. "/_meta.lua") ~= "file" or pathMode(dest .. "/main.lua") ~= "file" then
-        removeTree(dest)
-        if pathMode(backup) == "directory" then
-            copyTree(backup, dest)
+        for _, item in ipairs(patch_files) do
+            local patch_dest = Installer.patchesDir() .. "/" .. item.name
+            os.remove(patch_dest)
+            os.remove(patch_dest .. ".disabled")
+            ok, err = copyTree(item.src, patch_dest)
+            if not ok then
+                return nil, err or ("patch copy failed: " .. item.name)
+            end
+            installed_patches[#installed_patches + 1] = item.name
         end
-        return nil, "installed files incomplete"
     end
 
     status("Done")
+    plugin._patch_files = installed_patches
     local Updates = require("updates")
     Updates.recordInstall(plugin)
+    plugin._patch_files = nil
     return true
 end
 
-function Installer.uninstall(install_dirname)
-    if type(install_dirname) ~= "string" or not install_dirname:match("%.koplugin$") then
+function Installer.uninstall(plugin_or_dirname)
+    local dirname
+    if type(plugin_or_dirname) == "table" then
+        dirname = plugin_or_dirname.install_dirname
+    else
+        dirname = plugin_or_dirname
+    end
+    if not isSafeDirname(dirname) then
         return nil, "invalid install_dirname"
     end
-    if install_dirname == "komarket.koplugin" then
+    if dirname == "komarket.koplugin" then
         return nil, "refusing to uninstall KOMarket itself"
     end
-    local dest = Installer.pluginsDir() .. "/" .. install_dirname
-    if pathMode(dest) ~= "directory" then
+
+    local removed = false
+    local dest = Installer.pluginsDir() .. "/" .. dirname
+    if pathMode(dest) == "directory" then
+        local ok, err = removeTree(dest)
+        if not ok then
+            return nil, err
+        end
+        removed = true
+    end
+
+    local Updates = require("updates")
+    local rec = Updates.loadRegistry()[dirname]
+    if type(rec) == "table" and type(rec.patch_files) == "table" then
+        for _, name in ipairs(rec.patch_files) do
+            if isPatchFilename(name) then
+                os.remove(Installer.patchesDir() .. "/" .. name)
+                os.remove(Installer.patchesDir() .. "/" .. name .. ".disabled")
+                removed = true
+            end
+        end
+    end
+
+    if not removed then
         return nil, "not installed"
     end
-    local ok, err = removeTree(dest)
-    if ok then
-        pcall(function()
-            require("updates").forgetInstall(install_dirname)
-        end)
-    end
-    return ok, err
+    pcall(function()
+        Updates.forgetInstall(dirname)
+    end)
+    return true
 end
 
 return Installer

@@ -11,6 +11,7 @@ local socketutil = require("socketutil")
 local lfs = require("libs/libkoreader-lfs")
 local logger = require("logger")
 local Config = require("config")
+local Settings = require("settings")
 
 -- Ensure LuaSec is loaded so https:// URLs work via LuaSocket scheme handling.
 pcall(require, "ssl.https")
@@ -18,6 +19,51 @@ pcall(require, "ssl.https")
 local _ = require("komarket_gettext")
 
 local Catalog = {}
+
+--- Wi-Fi on + link up, using KOReader NetworkMgr (no HTTP).
+function Catalog.ensureNetworkReady()
+    local ok, NetworkMgr = pcall(require, "ui/network/manager")
+    if not ok or not NetworkMgr then
+        return true
+    end
+    NetworkMgr:queryNetworkState()
+    if NetworkMgr:isWifiOn() and NetworkMgr:isConnected() then
+        return true
+    end
+    if NetworkMgr:isOnline() then
+        return true
+    end
+    return nil, _("network unavailable")
+end
+
+local function hostFromUrl(url)
+    if type(url) ~= "string" then
+        return nil
+    end
+    local host = url:match("^https?://([^/]+)")
+    if not host then
+        return nil
+    end
+    return host:lower()
+end
+
+local function isGithubHost(host)
+    if not host then
+        return false
+    end
+    return host == "github.com"
+        or host:sub(-11) == ".github.com"
+        or host:find("githubusercontent.com", 1, true)
+        or host == "codeload.github.com"
+end
+
+local function isOssHost(host)
+    if not host then
+        return false
+    end
+    return host == "oss.ko.6ili6ili.com"
+        or host:find("aliyuncs.com", 1, true)
+end
 
 local GetText = require("gettext")
 
@@ -249,6 +295,10 @@ local function httpGetOnce(url, max_bytes)
 end
 
 local function httpGet(url, max_bytes)
+    local ready, net_err = Catalog.ensureNetworkReady()
+    if not ready then
+        return nil, net_err
+    end
     local retries = Config.http_retries or 3
     local delay_s = Config.http_retry_delay_s or 1
     local last_err
@@ -270,11 +320,9 @@ end
 
 function Catalog.catalogUrls()
     local urls = {}
-    if Config.catalog_url and Config.catalog_url ~= "" then
-        urls[#urls + 1] = Config.catalog_url
-    end
-    if Config.mirror_catalog_url and Config.mirror_catalog_url ~= "" then
-        urls[#urls + 1] = Config.mirror_catalog_url
+    local primary = Settings.catalogUrl()
+    if primary and primary ~= "" then
+        urls[#urls + 1] = primary
     end
     return urls
 end
@@ -320,10 +368,9 @@ function Catalog.categoriesUrls()
             urls[#urls + 1] = url
         end
     end
-    add(Config.categories_url)
-    add(Config.mirror_categories_url)
-    -- Derive from catalog URL when explicit categories URLs are not set
-    if not Config.categories_url or Config.categories_url == "" then
+    add(Settings.categoriesUrl())
+    -- Derive from catalog URL if categories URL is missing
+    if #urls == 0 then
         for _, catalog_url in ipairs(Catalog.catalogUrls()) do
             add(catalog_url:gsub("index%.json$", "categories.json"))
         end
@@ -401,6 +448,45 @@ function Catalog.categoryName(categories, id)
     return id
 end
 
+Catalog.KIND_PLUGIN = "plugin"
+Catalog.KIND_PATCH = "patch"
+
+--- Classify a catalog item. Matches App Store / storefront: GitHub topic
+--- `koreader-user-patch` (or an explicit `kind` field) is a user patch;
+--- everything else is a plugin.
+function Catalog.itemKind(plugin)
+    if type(plugin) ~= "table" then
+        return Catalog.KIND_PLUGIN
+    end
+    local explicit = plugin.kind or plugin.item_kind
+    if explicit == Catalog.KIND_PATCH or explicit == Catalog.KIND_PLUGIN then
+        return explicit
+    end
+    for _, topic in ipairs(plugin.topics or {}) do
+        if topic == "koreader-user-patch" then
+            return Catalog.KIND_PATCH
+        end
+    end
+    local repo = string.lower(tostring(plugin.repo or ""))
+    if repo:match("%.patches$") or repo:find("koreader.patches", 1, true) then
+        return Catalog.KIND_PATCH
+    end
+    return Catalog.KIND_PLUGIN
+end
+
+function Catalog.filterByKind(plugins, kind)
+    if not kind or kind == "" or kind == "all" then
+        return plugins
+    end
+    local out = {}
+    for _, p in ipairs(plugins or {}) do
+        if Catalog.itemKind(p) == kind then
+            out[#out + 1] = p
+        end
+    end
+    return out
+end
+
 function Catalog.filterByCategory(plugins, category_id)
     if not category_id or category_id == "" or category_id == "all" then
         return plugins
@@ -418,8 +504,8 @@ function Catalog.filterByCategory(plugins, category_id)
     return out
 end
 
-function Catalog.filterPlugins(plugins, query, category_id)
-    local list = Catalog.filterByCategory(plugins, category_id)
+function Catalog.filterPlugins(plugins, query, category_id, kind)
+    local list = Catalog.filterByKind(Catalog.filterByCategory(plugins, category_id), kind)
     if not query or query == "" then
         return list
     end
@@ -446,18 +532,84 @@ function Catalog.isDownloadUrlAllowed(url)
     if type(url) ~= "string" or url == "" then
         return false
     end
-    local host = url:match("^https?://([^/]+)")
+    local host = hostFromUrl(url)
     if not host then
         return false
     end
-    host = host:lower()
     for _, suffix in ipairs(Config.allowed_download_hosts or {}) do
         suffix = suffix:lower()
         if host == suffix or host:sub(-(#suffix + 1)) == "." .. suffix then
             return true
         end
     end
+    -- Custom connection: also allow the host of the user-provided catalog URL.
+    if Settings.getMode() == Settings.MODE_CUSTOM then
+        local catalog_host = hostFromUrl(Settings.getCustomCatalogUrl())
+        if catalog_host and (host == catalog_host or host:sub(-(#catalog_host + 1)) == "." .. catalog_host) then
+            return true
+        end
+    end
     return false
+end
+
+local function addDownloadCandidate(urls, seen, url)
+    if type(url) ~= "string" or url == "" or seen[url] then
+        return
+    end
+    if not Catalog.isDownloadUrlAllowed(url) then
+        return
+    end
+    seen[url] = true
+    urls[#urls + 1] = url
+end
+
+--- Ordered download URLs for the active connection mode.
+--- Mirror: OSS first, then GitHub origin if the OSS package is missing.
+function Catalog.downloadCandidates(plugin)
+    if type(plugin) ~= "table" then
+        return {}
+    end
+    local mode = Settings.getMode()
+    local primary = plugin.download_url
+    local origin = plugin.download_url_origin
+    local urls, seen = {}, {}
+
+    if mode == Settings.MODE_GITHUB then
+        if isGithubHost(hostFromUrl(origin)) then
+            addDownloadCandidate(urls, seen, origin)
+        end
+        if isGithubHost(hostFromUrl(primary)) then
+            addDownloadCandidate(urls, seen, primary)
+        end
+        addDownloadCandidate(urls, seen, origin)
+        addDownloadCandidate(urls, seen, primary)
+        return urls
+    end
+
+    if mode == Settings.MODE_MIRROR then
+        if isOssHost(hostFromUrl(primary)) then
+            addDownloadCandidate(urls, seen, primary)
+        end
+        if isGithubHost(hostFromUrl(origin)) then
+            addDownloadCandidate(urls, seen, origin)
+        end
+        if isGithubHost(hostFromUrl(primary)) then
+            addDownloadCandidate(urls, seen, primary)
+        end
+        addDownloadCandidate(urls, seen, primary)
+        addDownloadCandidate(urls, seen, origin)
+        return urls
+    end
+
+    addDownloadCandidate(urls, seen, primary)
+    addDownloadCandidate(urls, seen, origin)
+    return urls
+end
+
+--- First allowed download URL (eligibility / display).
+function Catalog.resolveDownloadUrl(plugin)
+    local urls = Catalog.downloadCandidates(plugin)
+    return urls[1]
 end
 
 Catalog.httpGet = httpGet

@@ -133,6 +133,10 @@ local function requestOnce(method, url, opts)
 end
 
 local function request(method, url, opts)
+    local ready, net_err = Catalog.ensureNetworkReady()
+    if not ready then
+        return nil, net_err
+    end
     local retries = Config.http_retries or 3
     local delay_s = Config.http_retry_delay_s or 1
     local last_err

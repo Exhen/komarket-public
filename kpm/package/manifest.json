@@ -6,8 +6,8 @@
   "description": "Install the KOMarket KOReader plugin - browse, search, download and install community plugins from the catalog.",
   "version": [
     0,
-    4,
-    4
+    5,
+    0
   ],
   "dependencies": [
     {
