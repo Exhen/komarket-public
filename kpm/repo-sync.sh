@@ -16,7 +16,7 @@ HELPER_URL="https://raw.githubusercontent.com/KindleModding/KPM/main/kpm-helper.
 MANIFEST="${REPO}/manifest.v2.json"
 VERSION_FILE="${ROOT}/komarket.koplugin/_version.lua"
 PKG_MANIFEST="${KPM}/package/manifest.json"
-PLATFORMS="kindle kindle5 kindlepw2 kindlehf"
+PLATFORMS="kindlehf kindlepw2"
 
 if [ ! -f "${HELPER}" ]; then
     echo "Downloading kpm-helper.py..."

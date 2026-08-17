@@ -13,7 +13,7 @@ MANIFEST="${PKG}/manifest.json"
 
 # KPM platform identifiers — see:
 # https://kindlemodding.org/kindle-dev/kpm/creating-a-package.html
-PLATFORMS="kindle kindle5 kindlepw2 kindlehf"
+PLATFORMS="kindlehf kindlepw2"
 
 PLUGIN_SRC="${ROOT}/komarket.koplugin"
 if [ ! -d "${PLUGIN_SRC}" ]; then
@@ -57,7 +57,7 @@ import json
 import sys
 
 manifest_path = sys.argv[1]
-platforms = ["kindle", "kindle5", "kindlepw2", "kindlehf"]
+platforms = ["kindlehf", "kindlepw2"]
 with open(manifest_path, encoding="utf-8") as fh:
     manifest = json.load(fh)
 manifest["supported_platforms"] = platforms

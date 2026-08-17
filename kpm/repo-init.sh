@@ -22,7 +22,7 @@ cat > "${MANIFEST}" <<'EOF'
   "manifest_version": 2,
   "id": "komarket",
   "name": "KOMarket Repository",
-  "description": "KOMarket (卡欧市场) KOReader plugin packages by Exhen.",
+  "description": "KOMarket KOReader plugin packages by Exhen.",
   "packages": {}
 }
 EOF

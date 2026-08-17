@@ -2,25 +2,13 @@
   "manifest_version": 2,
   "id": "komarket",
   "name": "KOMarket Repository",
-  "description": "KOMarket (卡欧市场) KOReader plugin packages by Exhen.",
+  "description": "KOMarket KOReader plugin packages by Exhen.",
   "packages": {
     "komarket": {
       "name": "KOMarket",
       "author": "Exhen",
-      "description": "Install the KOMarket (卡欧市场) KOReader plugin — browse, search, download and install community plugins from the catalog.",
+      "description": "Install the KOMarket KOReader plugin - browse, search, download and install community plugins from the catalog.",
       "artifacts": [
-        {
-          "url": "https://raw.githubusercontent.com/Exhen/komarket-public/main/kpm-repo/packages/komarket/artifacts/komarket_0.4.3_kindle.kpkg",
-          "version": [0, 4, 3],
-          "dependencies": [{ "id": "koreader" }],
-          "supported_platforms": ["kindle"]
-        },
-        {
-          "url": "https://raw.githubusercontent.com/Exhen/komarket-public/main/kpm-repo/packages/komarket/artifacts/komarket_0.4.3_kindle5.kpkg",
-          "version": [0, 4, 3],
-          "dependencies": [{ "id": "koreader" }],
-          "supported_platforms": ["kindle5"]
-        },
         {
           "url": "https://raw.githubusercontent.com/Exhen/komarket-public/main/kpm-repo/packages/komarket/artifacts/komarket_0.4.3_kindlehf.kpkg",
           "version": [0, 4, 3],
