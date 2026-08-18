@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-18T10:00:53.070Z",
+  "generated_at": "2026-08-18T22:10:33.208Z",
   "source": "komarket-sync",
   "rules_version": 6,
   "plugins": [
@@ -22,10 +22,10 @@
         "plugin",
         "reader"
       ],
-      "stars": 1396,
+      "stars": 1404,
       "created_at": "2026-03-13T12:34:19Z",
-      "updated_at": "2026-08-17T18:43:27Z",
-      "stars_delta": 14,
+      "updated_at": "2026-08-18T20:17:26Z",
+      "stars_delta": 8,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "2.1.1",
@@ -80,7 +80,7 @@
         "zlibrary",
         "zlibrary-plugin"
       ],
-      "stars": 647,
+      "stars": 649,
       "created_at": "2025-05-08T16:43:02Z",
       "updated_at": "2026-08-16T20:40:48Z",
       "stars_delta": 2,
@@ -120,10 +120,10 @@
       "repo": "bookshelf.koplugin",
       "homepage": "https://github.com/AndyHazz/bookshelf.koplugin",
       "topics": [],
-      "stars": 636,
+      "stars": 642,
       "created_at": "2026-05-05T07:06:04Z",
       "updated_at": "2026-08-18T07:00:41Z",
-      "stars_delta": 4,
+      "stars_delta": 6,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v4.1.1",
@@ -173,10 +173,10 @@
         "weread",
         "wxread"
       ],
-      "stars": 549,
+      "stars": 552,
       "created_at": "2026-06-07T08:06:01Z",
       "updated_at": "2026-08-16T03:09:08Z",
-      "stars_delta": 10,
+      "stars_delta": 3,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v1.2.0",
@@ -233,10 +233,10 @@
         "lua",
         "pocketbook"
       ],
-      "stars": 512,
+      "stars": 513,
       "created_at": "2026-03-27T21:01:17Z",
-      "updated_at": "2026-08-18T03:00:48Z",
-      "stars_delta": 2,
+      "updated_at": "2026-08-18T18:08:46Z",
+      "stars_delta": 1,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v2.5.4",
@@ -283,9 +283,9 @@
       "topics": [
         "koreader-plugin"
       ],
-      "stars": 461,
+      "stars": 463,
       "created_at": "2025-11-22T20:12:33Z",
-      "updated_at": "2026-08-17T18:35:51Z",
+      "updated_at": "2026-08-18T20:26:39Z",
       "stars_delta": 2,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
@@ -322,10 +322,10 @@
       "repo": "hardcoverapp.koplugin",
       "homepage": "https://github.com/Billiam/hardcoverapp.koplugin",
       "topics": [],
-      "stars": 405,
+      "stars": 406,
       "created_at": "2024-11-18T06:23:42Z",
       "updated_at": "2026-04-23T14:13:44Z",
-      "stars_delta": 0,
+      "stars_delta": 1,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "0.4.0",
@@ -371,10 +371,10 @@
       "topics": [
         "koreader-plugin"
       ],
-      "stars": 388,
+      "stars": 391,
       "created_at": "2026-03-27T23:20:03Z",
       "updated_at": "2026-07-27T08:52:13Z",
-      "stars_delta": 1,
+      "stars_delta": 3,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v5.22.0",
@@ -426,10 +426,10 @@
         "weread",
         "wxread"
       ],
-      "stars": 371,
+      "stars": 381,
       "created_at": "2026-07-18T15:24:14Z",
-      "updated_at": "2026-08-17T20:04:52Z",
-      "stars_delta": 7,
+      "updated_at": "2026-08-18T15:52:48Z",
+      "stars_delta": 10,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v4.3.2",
@@ -469,7 +469,7 @@
       "stars": 279,
       "created_at": "2025-10-05T17:43:17Z",
       "updated_at": "2026-08-16T16:34:10Z",
-      "stars_delta": 1,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "1.1.0",
@@ -508,10 +508,10 @@
         "koreader-plugin",
         "legado"
       ],
-      "stars": 273,
+      "stars": 274,
       "created_at": "2025-03-31T13:45:47Z",
-      "updated_at": "2026-08-16T04:02:24Z",
-      "stars_delta": 2,
+      "updated_at": "2026-08-18T12:27:43Z",
+      "stars_delta": 1,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "1.1.5",
@@ -556,10 +556,10 @@
         "plugin",
         "sleep-screen"
       ],
-      "stars": 230,
+      "stars": 231,
       "created_at": "2026-02-03T13:13:51Z",
       "updated_at": "2026-05-09T16:31:14Z",
-      "stars_delta": 2,
+      "stars_delta": 1,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v2.2.0",
@@ -703,10 +703,10 @@
         "x-ray",
         "xray"
       ],
-      "stars": 207,
+      "stars": 208,
       "created_at": "2025-07-10T18:04:19Z",
-      "updated_at": "2026-08-17T23:25:53Z",
-      "stars_delta": 2,
+      "updated_at": "2026-08-18T19:10:43Z",
+      "stars_delta": 1,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v0.20.0",
@@ -738,6 +738,52 @@
       "editorial_note": {
         "en": "AI reading assistant with translation, explanation, image generation, and X-Ray",
         "zh": "集成多种 AI 模型的阅读助手，支持翻译、解释、生成图片与 X-Ray 分析"
+      },
+      "llm_enriched_at": null
+    },
+    {
+      "id": "OGKevin/kobo.koplugin",
+      "name": "kobo",
+      "slug": "ogkevin-kobo-koplugin",
+      "summary": "A KoReader plugin that enhances your kobo experience",
+      "description": "A KoReader plugin that enhances your kobo experience",
+      "owner": "OGKevin",
+      "repo": "kobo.koplugin",
+      "homepage": "https://github.com/OGKevin/kobo.koplugin",
+      "topics": [
+        "kobo",
+        "kobo-ereader",
+        "koplugin",
+        "koreader",
+        "koreader-plugin",
+        "plugin"
+      ],
+      "stars": 166,
+      "created_at": "2025-11-12T18:32:38Z",
+      "updated_at": "2026-08-04T13:33:59Z",
+      "stars_delta": 2,
+      "stars_delta_7d": null,
+      "stars_delta_30d": null,
+      "latest_tag": "v0.4.1",
+      "latest_commit": null,
+      "download_url": "https://github.com/OGKevin/kobo.koplugin/releases/download/v0.4.1/kobo-patches.zip",
+      "download_source": "release_asset",
+      "sha256": null,
+      "install_dirname": "kobo.koplugin",
+      "plugin_path": ".",
+      "layout": "root-files",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": "GPL-3.0",
+      "screenshots": [],
+      "categories": [
+        "bookstore",
+        "sync",
+        "remote"
+      ],
+      "editorial_note": {
+        "en": "Virtual library, reading progress sync, and Bluetooth management",
+        "zh": "虚拟书库、阅读进度同步与蓝牙管理"
       },
       "llm_enriched_at": null
     },
@@ -802,52 +848,6 @@
       "llm_enriched_at": null
     },
     {
-      "id": "OGKevin/kobo.koplugin",
-      "name": "kobo",
-      "slug": "ogkevin-kobo-koplugin",
-      "summary": "A KoReader plugin that enhances your kobo experience",
-      "description": "A KoReader plugin that enhances your kobo experience",
-      "owner": "OGKevin",
-      "repo": "kobo.koplugin",
-      "homepage": "https://github.com/OGKevin/kobo.koplugin",
-      "topics": [
-        "kobo",
-        "kobo-ereader",
-        "koplugin",
-        "koreader",
-        "koreader-plugin",
-        "plugin"
-      ],
-      "stars": 164,
-      "created_at": "2025-11-12T18:32:38Z",
-      "updated_at": "2026-08-04T13:33:59Z",
-      "stars_delta": 0,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": "v0.4.1",
-      "latest_commit": null,
-      "download_url": "https://github.com/OGKevin/kobo.koplugin/releases/download/v0.4.1/kobo-patches.zip",
-      "download_source": "release_asset",
-      "sha256": null,
-      "install_dirname": "kobo.koplugin",
-      "plugin_path": ".",
-      "layout": "root-files",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": "GPL-3.0",
-      "screenshots": [],
-      "categories": [
-        "bookstore",
-        "sync",
-        "remote"
-      ],
-      "editorial_note": {
-        "en": "Virtual library, reading progress sync, and Bluetooth management",
-        "zh": "虚拟书库、阅读进度同步与蓝牙管理"
-      },
-      "llm_enriched_at": null
-    },
-    {
       "id": "dani84bs/AnnotationSync.koplugin",
       "name": "AnnotationSync",
       "slug": "dani84bs-annotationsync-koplugin",
@@ -863,7 +863,7 @@
       ],
       "stars": 160,
       "created_at": "2025-08-30T20:08:44Z",
-      "updated_at": "2026-08-17T19:21:14Z",
+      "updated_at": "2026-08-18T21:24:10Z",
       "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
@@ -974,6 +974,50 @@
       "llm_enriched_at": null
     },
     {
+      "id": "stradichenko/audiobook.koplugin",
+      "name": "audiobook",
+      "slug": "stradichenko-audiobook-koplugin",
+      "summary": "A plugin to give TTS-capabilities, includes bluetooth controllers.",
+      "description": "A plugin to give TTS-capabilities, includes bluetooth controllers.",
+      "owner": "stradichenko",
+      "repo": "audiobook.koplugin",
+      "homepage": "https://github.com/stradichenko/audiobook.koplugin",
+      "topics": [
+        "audio-streaming",
+        "audiobooks",
+        "koreader-plugin",
+        "koreader-plugins",
+        "tts-engines"
+      ],
+      "stars": 124,
+      "created_at": "2026-02-14T15:07:10Z",
+      "updated_at": "2026-08-18T10:56:01Z",
+      "stars_delta": 2,
+      "stars_delta_7d": null,
+      "stars_delta_30d": null,
+      "latest_tag": "v0.1.17.24",
+      "latest_commit": null,
+      "download_url": "https://github.com/stradichenko/audiobook.koplugin/releases/download/v0.1.17.24/audiobook-koplugin-v0.1.17.24.zip",
+      "download_source": "release_asset",
+      "sha256": null,
+      "install_dirname": "audiobook.koplugin",
+      "plugin_path": ".",
+      "layout": "root-files",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": "AGPL-3.0",
+      "screenshots": [],
+      "categories": [
+        "audio",
+        "remote"
+      ],
+      "editorial_note": {
+        "en": "Provides TTS reading and Bluetooth control",
+        "zh": "提供 TTS 朗读与蓝牙控制"
+      },
+      "llm_enriched_at": null
+    },
+    {
       "id": "mysticknits/pencil.koplugin",
       "name": "pencil",
       "slug": "mysticknits-pencil-koplugin",
@@ -1016,50 +1060,6 @@
       "llm_enriched_at": null
     },
     {
-      "id": "stradichenko/audiobook.koplugin",
-      "name": "audiobook",
-      "slug": "stradichenko-audiobook-koplugin",
-      "summary": "A plugin to give TTS-capabilities, includes bluetooth controllers.",
-      "description": "A plugin to give TTS-capabilities, includes bluetooth controllers.",
-      "owner": "stradichenko",
-      "repo": "audiobook.koplugin",
-      "homepage": "https://github.com/stradichenko/audiobook.koplugin",
-      "topics": [
-        "audio-streaming",
-        "audiobooks",
-        "koreader-plugin",
-        "koreader-plugins",
-        "tts-engines"
-      ],
-      "stars": 122,
-      "created_at": "2026-02-14T15:07:10Z",
-      "updated_at": "2026-08-16T14:20:47Z",
-      "stars_delta": 0,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": "v0.1.17.24",
-      "latest_commit": null,
-      "download_url": "https://github.com/stradichenko/audiobook.koplugin/releases/download/v0.1.17.24/audiobook-koplugin-v0.1.17.24.zip",
-      "download_source": "release_asset",
-      "sha256": null,
-      "install_dirname": "audiobook.koplugin",
-      "plugin_path": ".",
-      "layout": "root-files",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": "AGPL-3.0",
-      "screenshots": [],
-      "categories": [
-        "audio",
-        "remote"
-      ],
-      "editorial_note": {
-        "en": "Provides TTS reading and Bluetooth control",
-        "zh": "提供 TTS 朗读与蓝牙控制"
-      },
-      "llm_enriched_at": null
-    },
-    {
       "id": "koplugin-swipe-animation/Swipe_Animation.koplugin",
       "name": "Swipe_Animation",
       "slug": "koplugin-swipe-animation-swipe-animation-koplugin",
@@ -1076,10 +1076,10 @@
         "koreader-plugins",
         "koreader-user-patch"
       ],
-      "stars": 117,
+      "stars": 118,
       "created_at": "2026-07-05T12:43:40Z",
       "updated_at": "2026-08-18T06:50:36Z",
-      "stars_delta": 2,
+      "stars_delta": 1,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v4.1",
@@ -1165,7 +1165,7 @@
       "repo": "updatesmanager.koplugin",
       "homepage": "https://github.com/advokatb/updatesmanager.koplugin",
       "topics": [],
-      "stars": 106,
+      "stars": 107,
       "created_at": "2025-11-12T21:45:14Z",
       "updated_at": "2026-07-29T15:02:22Z",
       "stars_delta": 1,
@@ -1216,10 +1216,10 @@
         "plugin",
         "reader"
       ],
-      "stars": 105,
+      "stars": 106,
       "created_at": "2026-04-06T04:48:19Z",
       "updated_at": "2026-07-27T02:26:59Z",
-      "stars_delta": 0,
+      "stars_delta": 1,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v1.6.0",
@@ -1259,7 +1259,7 @@
       "stars": 104,
       "created_at": "2026-07-19T11:32:10Z",
       "updated_at": "2026-08-10T17:38:21Z",
-      "stars_delta": 4,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v2.2.1",
@@ -1303,7 +1303,7 @@
       "stars": 102,
       "created_at": "2025-10-08T20:02:36Z",
       "updated_at": "2026-08-17T18:01:54Z",
-      "stars_delta": 1,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v0.7.0",
@@ -1388,7 +1388,7 @@
       "stars": 102,
       "created_at": "2025-08-19T11:30:36Z",
       "updated_at": "2026-07-08T23:28:31Z",
-      "stars_delta": 1,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v1.0.7",
@@ -1486,7 +1486,7 @@
       "stars": 101,
       "created_at": "2025-06-04T06:55:36Z",
       "updated_at": "2026-04-27T07:05:30Z",
-      "stars_delta": 1,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v0.0.12",
@@ -1529,7 +1529,7 @@
         "koreader",
         "koreader-plugin"
       ],
-      "stars": 99,
+      "stars": 100,
       "created_at": "2025-08-16T21:23:54Z",
       "updated_at": "2026-08-06T04:42:55Z",
       "stars_delta": 1,
@@ -1574,10 +1574,10 @@
       "topics": [
         "koreader-plugin"
       ],
-      "stars": 95,
+      "stars": 97,
       "created_at": "2026-07-01T06:27:51Z",
       "updated_at": "2026-08-16T12:39:29Z",
-      "stars_delta": 0,
+      "stars_delta": 2,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v5.1.6",
@@ -1793,43 +1793,6 @@
       "llm_enriched_at": null
     },
     {
-      "id": "onatbas/bluetooth.koplugin",
-      "name": "bluetooth",
-      "slug": "onatbas-bluetooth-koplugin",
-      "summary": "A plugin to easily turn bluetooth on and off in KOReader for Kobo Devices.",
-      "description": "A plugin to easily turn bluetooth on and off in KOReader for Kobo Devices.",
-      "owner": "onatbas",
-      "repo": "bluetooth.koplugin",
-      "homepage": "https://github.com/onatbas/bluetooth.koplugin",
-      "topics": [],
-      "stars": 82,
-      "created_at": "2024-08-05T15:33:17Z",
-      "updated_at": "2026-01-04T17:38:06Z",
-      "stars_delta": 1,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": null,
-      "latest_commit": null,
-      "download_url": "https://github.com/onatbas/bluetooth.koplugin/archive/refs/heads/main.zip",
-      "download_source": "zipball",
-      "sha256": null,
-      "install_dirname": "bluetooth.koplugin",
-      "plugin_path": ".",
-      "layout": "name-koplugin",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": "MIT",
-      "screenshots": [],
-      "categories": [
-        "remote"
-      ],
-      "editorial_note": {
-        "en": "Use a Bluetooth remote to turn pages and control KOReader",
-        "zh": "用蓝牙遥控器翻页并控制 KOReader"
-      },
-      "llm_enriched_at": null
-    },
-    {
       "id": "finlater/kindlebtcontroller.koplugin",
       "name": "kindlebtcontroller",
       "slug": "finlater-kindlebtcontroller-koplugin",
@@ -1848,10 +1811,10 @@
         "plugins",
         "remote-control"
       ],
-      "stars": 81,
+      "stars": 82,
       "created_at": "2026-02-12T12:45:07Z",
-      "updated_at": "2026-07-14T15:38:01Z",
-      "stars_delta": 2,
+      "updated_at": "2026-08-18T11:37:04Z",
+      "stars_delta": 1,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v0.1.6",
@@ -1880,6 +1843,43 @@
       "editorial_note": {
         "en": "Control Kindle page turns, brightness, etc. via Bluetooth gamepad/remote",
         "zh": "用蓝牙手柄/遥控器控制 Kindle 翻页、调亮度等"
+      },
+      "llm_enriched_at": null
+    },
+    {
+      "id": "onatbas/bluetooth.koplugin",
+      "name": "bluetooth",
+      "slug": "onatbas-bluetooth-koplugin",
+      "summary": "A plugin to easily turn bluetooth on and off in KOReader for Kobo Devices.",
+      "description": "A plugin to easily turn bluetooth on and off in KOReader for Kobo Devices.",
+      "owner": "onatbas",
+      "repo": "bluetooth.koplugin",
+      "homepage": "https://github.com/onatbas/bluetooth.koplugin",
+      "topics": [],
+      "stars": 82,
+      "created_at": "2024-08-05T15:33:17Z",
+      "updated_at": "2026-01-04T17:38:06Z",
+      "stars_delta": 0,
+      "stars_delta_7d": null,
+      "stars_delta_30d": null,
+      "latest_tag": null,
+      "latest_commit": null,
+      "download_url": "https://github.com/onatbas/bluetooth.koplugin/archive/refs/heads/main.zip",
+      "download_source": "zipball",
+      "sha256": null,
+      "install_dirname": "bluetooth.koplugin",
+      "plugin_path": ".",
+      "layout": "name-koplugin",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": "MIT",
+      "screenshots": [],
+      "categories": [
+        "remote"
+      ],
+      "editorial_note": {
+        "en": "Use a Bluetooth remote to turn pages and control KOReader",
+        "zh": "用蓝牙遥控器翻页并控制 KOReader"
       },
       "llm_enriched_at": null
     },
@@ -2203,10 +2203,10 @@
         "koreader",
         "koreader-plugin"
       ],
-      "stars": 66,
+      "stars": 67,
       "created_at": "2026-04-01T22:50:20Z",
       "updated_at": "2026-08-01T17:37:25Z",
-      "stars_delta": 0,
+      "stars_delta": 1,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v0.0.12",
@@ -2245,10 +2245,10 @@
         "koreader",
         "koreader-plugin"
       ],
-      "stars": 61,
+      "stars": 62,
       "created_at": "2025-08-13T23:16:00Z",
       "updated_at": "2026-07-08T23:23:13Z",
-      "stars_delta": 0,
+      "stars_delta": 1,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v1.4.3",
@@ -2274,6 +2274,47 @@
       "editorial_note": {
         "en": "Look up WordReference definitions for words or phrases while reading",
         "zh": "在阅读中直接查词或短语的 WordReference 释义"
+      },
+      "llm_enriched_at": null
+    },
+    {
+      "id": "omer-faruq/simpleui_ext.koplugin",
+      "name": "simpleui_ext",
+      "slug": "omer-faruq-simpleui-ext-koplugin",
+      "summary": "Extra homescreen modules and patches for SimpleUI on KOReader",
+      "description": "Extra homescreen modules and patches for SimpleUI on KOReader",
+      "owner": "omer-faruq",
+      "repo": "simpleui_ext.koplugin",
+      "homepage": "https://github.com/omer-faruq/simpleui_ext.koplugin",
+      "topics": [
+        "koreader-plugin"
+      ],
+      "stars": 60,
+      "created_at": "2026-05-21T22:42:36Z",
+      "updated_at": "2026-08-16T06:47:09Z",
+      "stars_delta": 1,
+      "stars_delta_7d": null,
+      "stars_delta_30d": null,
+      "latest_tag": "v1.13.3",
+      "latest_commit": null,
+      "download_url": "https://github.com/omer-faruq/simpleui_ext.koplugin/releases/download/v1.13.3/simpleui_ext.koplugin.zip",
+      "download_source": "release_asset",
+      "sha256": null,
+      "install_dirname": "simpleui_ext.koplugin",
+      "plugin_path": ".",
+      "layout": "root-files",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": "AGPL-3.0",
+      "screenshots": [],
+      "categories": [
+        "beautify",
+        "statistics",
+        "bookstore"
+      ],
+      "editorial_note": {
+        "en": "Add reading stats and progress module to SimpleUI home screen",
+        "zh": "为 SimpleUI 主屏添加阅读统计与进度模块"
       },
       "llm_enriched_at": null
     },
@@ -2357,47 +2398,6 @@
       "llm_enriched_at": null
     },
     {
-      "id": "omer-faruq/simpleui_ext.koplugin",
-      "name": "simpleui_ext",
-      "slug": "omer-faruq-simpleui-ext-koplugin",
-      "summary": "Extra homescreen modules and patches for SimpleUI on KOReader",
-      "description": "Extra homescreen modules and patches for SimpleUI on KOReader",
-      "owner": "omer-faruq",
-      "repo": "simpleui_ext.koplugin",
-      "homepage": "https://github.com/omer-faruq/simpleui_ext.koplugin",
-      "topics": [
-        "koreader-plugin"
-      ],
-      "stars": 59,
-      "created_at": "2026-05-21T22:42:36Z",
-      "updated_at": "2026-08-16T06:47:09Z",
-      "stars_delta": 0,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": "v1.13.3",
-      "latest_commit": null,
-      "download_url": "https://github.com/omer-faruq/simpleui_ext.koplugin/releases/download/v1.13.3/simpleui_ext.koplugin.zip",
-      "download_source": "release_asset",
-      "sha256": null,
-      "install_dirname": "simpleui_ext.koplugin",
-      "plugin_path": ".",
-      "layout": "root-files",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": "AGPL-3.0",
-      "screenshots": [],
-      "categories": [
-        "beautify",
-        "statistics",
-        "bookstore"
-      ],
-      "editorial_note": {
-        "en": "Add reading stats and progress module to SimpleUI home screen",
-        "zh": "为 SimpleUI 主屏添加阅读统计与进度模块"
-      },
-      "llm_enriched_at": null
-    },
-    {
       "id": "moritz-john/homeassistant.koplugin",
       "name": "homeassistant",
       "slug": "moritz-john-homeassistant-koplugin",
@@ -2411,7 +2411,7 @@
         "koreader",
         "koreader-plugin"
       ],
-      "stars": 58,
+      "stars": 59,
       "created_at": "2025-11-29T13:41:33Z",
       "updated_at": "2026-03-27T17:05:35Z",
       "stars_delta": 1,
@@ -2589,10 +2589,10 @@
         "koreader-plugin",
         "reading-ruler"
       ],
-      "stars": 54,
+      "stars": 55,
       "created_at": "2025-04-24T17:38:14Z",
       "updated_at": "2025-06-22T11:13:24Z",
-      "stars_delta": 0,
+      "stars_delta": 1,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v1.0.0",
@@ -2717,7 +2717,7 @@
       "stars": 48,
       "created_at": "2025-12-11T23:03:29Z",
       "updated_at": "2026-02-08T22:27:59Z",
-      "stars_delta": 1,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -2935,6 +2935,48 @@
       "llm_enriched_at": null
     },
     {
+      "id": "Merpyzf/pinyinime.koplugin",
+      "name": "pinyinime",
+      "slug": "merpyzf-pinyinime-koplugin",
+      "summary": "KOReader 中文拼音输入法，提供通用及专业领域词库、候选排序、下一词联想、全拼、简拼和多种双拼方案",
+      "description": "KOReader 中文拼音输入法，提供通用及专业领域词库、候选排序、下一词联想、全拼、简拼和多种双拼方案",
+      "owner": "Merpyzf",
+      "repo": "pinyinime.koplugin",
+      "homepage": "https://github.com/Merpyzf/pinyinime.koplugin",
+      "topics": [],
+      "stars": 41,
+      "created_at": "2026-07-17T14:31:38Z",
+      "updated_at": "2026-08-16T02:39:12Z",
+      "stars_delta": 3,
+      "stars_delta_7d": null,
+      "stars_delta_30d": null,
+      "latest_tag": "v1.1.0",
+      "latest_commit": null,
+      "download_url": "https://github.com/Merpyzf/pinyinime.koplugin/releases/download/v1.1.0/pinyinime.koplugin-v1.1.0.zip",
+      "download_source": "release_asset",
+      "sha256": null,
+      "install_dirname": "pinyinime.koplugin",
+      "plugin_path": ".",
+      "layout": "name-koplugin",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": "AGPL-3.0",
+      "screenshots": [
+        "https://raw.githubusercontent.com/Merpyzf/pinyinime.koplugin/main/assets/screenshots/v1.0.0/input-candidates.png",
+        "https://raw.githubusercontent.com/Merpyzf/pinyinime.koplugin/main/assets/screenshots/v1.0.0/expanded-candidates.png",
+        "https://raw.githubusercontent.com/Merpyzf/pinyinime.koplugin/main/assets/screenshots/v1.0.0/settings-overview.png",
+        "https://raw.githubusercontent.com/Merpyzf/pinyinime.koplugin/main/assets/screenshots/qrcode_1784473014681.jpg"
+      ],
+      "categories": [
+        "ime"
+      ],
+      "editorial_note": {
+        "en": "Enhanced Simplified Chinese keyboard with double pinyin and full sentence input",
+        "zh": "增强简体中文键盘，支持双拼与整句输入"
+      },
+      "llm_enriched_at": null
+    },
+    {
       "id": "Evgeniy-94/TelegramDownloader.koplugin",
       "name": "TelegramDownloader",
       "slug": "evgeniy-94-telegramdownloader-koplugin",
@@ -3110,48 +3152,6 @@
       "llm_enriched_at": null
     },
     {
-      "id": "Merpyzf/pinyinime.koplugin",
-      "name": "pinyinime",
-      "slug": "merpyzf-pinyinime-koplugin",
-      "summary": "KOReader 中文拼音输入法，提供通用及专业领域词库、候选排序、下一词联想、全拼、简拼和多种双拼方案",
-      "description": "KOReader 中文拼音输入法，提供通用及专业领域词库、候选排序、下一词联想、全拼、简拼和多种双拼方案",
-      "owner": "Merpyzf",
-      "repo": "pinyinime.koplugin",
-      "homepage": "https://github.com/Merpyzf/pinyinime.koplugin",
-      "topics": [],
-      "stars": 38,
-      "created_at": "2026-07-17T14:31:38Z",
-      "updated_at": "2026-08-16T02:39:12Z",
-      "stars_delta": 1,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": "v1.1.0",
-      "latest_commit": null,
-      "download_url": "https://github.com/Merpyzf/pinyinime.koplugin/releases/download/v1.1.0/pinyinime.koplugin-v1.1.0.zip",
-      "download_source": "release_asset",
-      "sha256": null,
-      "install_dirname": "pinyinime.koplugin",
-      "plugin_path": ".",
-      "layout": "name-koplugin",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": "AGPL-3.0",
-      "screenshots": [
-        "https://raw.githubusercontent.com/Merpyzf/pinyinime.koplugin/main/assets/screenshots/v1.0.0/input-candidates.png",
-        "https://raw.githubusercontent.com/Merpyzf/pinyinime.koplugin/main/assets/screenshots/v1.0.0/expanded-candidates.png",
-        "https://raw.githubusercontent.com/Merpyzf/pinyinime.koplugin/main/assets/screenshots/v1.0.0/settings-overview.png",
-        "https://raw.githubusercontent.com/Merpyzf/pinyinime.koplugin/main/assets/screenshots/qrcode_1784473014681.jpg"
-      ],
-      "categories": [
-        "ime"
-      ],
-      "editorial_note": {
-        "en": "Enhanced Simplified Chinese keyboard with double pinyin and full sentence input",
-        "zh": "增强简体中文键盘，支持双拼与整句输入"
-      },
-      "llm_enriched_at": null
-    },
-    {
       "id": "gytwo/quickui.koplugin",
       "name": "quickui",
       "slug": "gytwo-quickui-koplugin",
@@ -3168,7 +3168,7 @@
       "stars": 37,
       "created_at": "2026-07-04T01:55:41Z",
       "updated_at": "2026-08-17T15:19:37Z",
-      "stars_delta": 2,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v1.0.3",
@@ -3344,10 +3344,10 @@
       "repo": "illustrations.koplugin",
       "homepage": "https://github.com/agaragou/illustrations.koplugin",
       "topics": [],
-      "stars": 34,
+      "stars": 35,
       "created_at": "2025-11-20T17:48:59Z",
       "updated_at": "2026-04-25T01:00:44Z",
-      "stars_delta": 0,
+      "stars_delta": 1,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v0.5.2",
@@ -3517,7 +3517,7 @@
       "stars": 33,
       "created_at": "2025-08-17T10:25:43Z",
       "updated_at": "2026-04-26T14:46:46Z",
-      "stars_delta": 1,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -3837,6 +3837,62 @@
       }
     },
     {
+      "id": "d0nizam/syncery.koplugin",
+      "name": "syncery",
+      "slug": "d0nizam-syncery-koplugin",
+      "summary": "Cross-device reading progress, annotations, metadata and font & style sync for KOReader.",
+      "description": "Cross-device reading progress, annotations, metadata and font & style sync for KOReader.",
+      "owner": "d0nizam",
+      "repo": "syncery.koplugin",
+      "homepage": "https://github.com/d0nizam/syncery.koplugin",
+      "topics": [
+        "android",
+        "annotation-sync",
+        "annotations",
+        "cloud-sync",
+        "e-ink",
+        "ebook-reader",
+        "kindle",
+        "kobo",
+        "koplugin",
+        "koreader",
+        "koreader-plugin",
+        "koreader-plugins",
+        "metadata-sync",
+        "reading",
+        "reading-progress",
+        "syncthing"
+      ],
+      "stars": 28,
+      "created_at": "2026-06-23T21:43:22Z",
+      "updated_at": "2026-08-14T15:27:23Z",
+      "stars_delta": 1,
+      "stars_delta_7d": null,
+      "stars_delta_30d": null,
+      "latest_tag": "v1.2.3",
+      "latest_commit": null,
+      "download_url": "https://github.com/d0nizam/syncery.koplugin/releases/download/v1.2.3/syncery.koplugin.zip",
+      "download_source": "release_asset",
+      "sha256": null,
+      "install_dirname": "syncery.koplugin",
+      "plugin_path": ".",
+      "layout": "root-files",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": "NOASSERTION",
+      "screenshots": [],
+      "categories": [
+        "sync",
+        "annotation",
+        "bookstore"
+      ],
+      "editorial_note": {
+        "en": "Sync reading progress, annotations, metadata, and font styles across devices",
+        "zh": "跨设备同步阅读进度、批注、元数据与字体样式"
+      },
+      "llm_enriched_at": null
+    },
+    {
       "id": "KitanaCode/booknookcharms.koplugin",
       "name": "booknookcharms",
       "slug": "kitanacode-booknookcharms-koplugin",
@@ -3849,7 +3905,7 @@
       "stars": 28,
       "created_at": "2026-05-27T20:05:12Z",
       "updated_at": "2026-06-19T19:36:06Z",
-      "stars_delta": 2,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "V1.1.1",
@@ -3925,58 +3981,42 @@
       }
     },
     {
-      "id": "d0nizam/syncery.koplugin",
-      "name": "syncery",
-      "slug": "d0nizam-syncery-koplugin",
-      "summary": "Cross-device reading progress, annotations, metadata and font & style sync for KOReader.",
-      "description": "Cross-device reading progress, annotations, metadata and font & style sync for KOReader.",
-      "owner": "d0nizam",
-      "repo": "syncery.koplugin",
-      "homepage": "https://github.com/d0nizam/syncery.koplugin",
-      "topics": [
-        "android",
-        "annotation-sync",
-        "annotations",
-        "cloud-sync",
-        "e-ink",
-        "ebook-reader",
-        "kindle",
-        "kobo",
-        "koplugin",
-        "koreader",
-        "koreader-plugin",
-        "koreader-plugins",
-        "metadata-sync",
-        "reading",
-        "reading-progress",
-        "syncthing"
-      ],
+      "id": "Lalocaballero/solitaire.koplugin",
+      "name": "solitaire",
+      "slug": "lalocaballero-solitaire-koplugin",
+      "summary": "",
+      "description": "",
+      "owner": "Lalocaballero",
+      "repo": "solitaire.koplugin",
+      "homepage": "https://github.com/Lalocaballero/solitaire.koplugin",
+      "topics": [],
       "stars": 27,
-      "created_at": "2026-06-23T21:43:22Z",
-      "updated_at": "2026-08-14T15:27:23Z",
-      "stars_delta": 1,
+      "created_at": "2025-12-29T11:25:51Z",
+      "updated_at": "2026-03-16T11:06:30Z",
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
-      "latest_tag": "v1.2.3",
+      "latest_tag": "2.1",
       "latest_commit": null,
-      "download_url": "https://github.com/d0nizam/syncery.koplugin/releases/download/v1.2.3/syncery.koplugin.zip",
+      "download_url": "https://github.com/Lalocaballero/solitaire.koplugin/releases/download/2.1/solitaire.koplugin.zip",
       "download_source": "release_asset",
       "sha256": null,
-      "install_dirname": "syncery.koplugin",
+      "install_dirname": "solitaire.koplugin",
       "plugin_path": ".",
       "layout": "root-files",
       "koreader_min": null,
       "koreader_max": null,
-      "license": "NOASSERTION",
-      "screenshots": [],
+      "license": "MIT",
+      "screenshots": [
+        "https://raw.githubusercontent.com/Lalocaballero/solitaire.koplugin/main/screenshots/game_board.png",
+        "https://raw.githubusercontent.com/Lalocaballero/solitaire.koplugin/main/screenshots/win.png"
+      ],
       "categories": [
-        "sync",
-        "annotation",
-        "bookstore"
+        "游戏"
       ],
       "editorial_note": {
-        "en": "Sync reading progress, annotations, metadata, and font styles across devices",
-        "zh": "跨设备同步阅读进度、批注、元数据与字体样式"
+        "en": "Play classic solitaire card game",
+        "zh": "玩经典纸牌接龙"
       },
       "llm_enriched_at": null
     },
@@ -4040,7 +4080,7 @@
       "stars": 27,
       "created_at": "2026-07-04T20:59:07Z",
       "updated_at": "2026-07-31T03:37:28Z",
-      "stars_delta": 1,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -4063,6 +4103,45 @@
       "editorial_note": {
         "en": "Replace dictionary popups with customizable floating cards for vocabulary review",
         "zh": "将词典弹窗替换为可定制的浮动卡片，支持生词复习"
+      },
+      "llm_enriched_at": null
+    },
+    {
+      "id": "stevenzamora1/covercalendar.koplugin",
+      "name": "covercalendar",
+      "slug": "stevenzamora1-covercalendar-koplugin",
+      "summary": "A KOReader plugin that displays book covers in a calendar format for reading stats",
+      "description": "A KOReader plugin that displays book covers in a calendar format for reading stats",
+      "owner": "stevenzamora1",
+      "repo": "covercalendar.koplugin",
+      "homepage": "https://github.com/stevenzamora1/covercalendar.koplugin",
+      "topics": [],
+      "stars": 27,
+      "created_at": "2026-06-30T10:13:39Z",
+      "updated_at": "2026-07-24T04:08:27Z",
+      "stars_delta": 1,
+      "stars_delta_7d": null,
+      "stars_delta_30d": null,
+      "latest_tag": "v2.0.1",
+      "latest_commit": null,
+      "download_url": "https://github.com/stevenzamora1/covercalendar.koplugin/releases/download/v2.0.1/covercalendar.koplugin.zip",
+      "download_source": "release_asset",
+      "sha256": null,
+      "install_dirname": "covercalendar.koplugin",
+      "plugin_path": ".",
+      "layout": "name-koplugin",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": null,
+      "screenshots": [],
+      "categories": [
+        "statistics",
+        "calendar",
+        "bookstore"
+      ],
+      "editorial_note": {
+        "en": "Display reading history and book covers in a monthly calendar",
+        "zh": "以月历形式展示阅读历史与书籍封面"
       },
       "llm_enriched_at": null
     },
@@ -4112,46 +4191,6 @@
       "editorial_note": {
         "en": "Show brief definitions above difficult words, adjustable difficulty",
         "zh": "在难词上方显示简短释义，可调难度"
-      },
-      "llm_enriched_at": null
-    },
-    {
-      "id": "Lalocaballero/solitaire.koplugin",
-      "name": "solitaire",
-      "slug": "lalocaballero-solitaire-koplugin",
-      "summary": "",
-      "description": "",
-      "owner": "Lalocaballero",
-      "repo": "solitaire.koplugin",
-      "homepage": "https://github.com/Lalocaballero/solitaire.koplugin",
-      "topics": [],
-      "stars": 27,
-      "created_at": "2025-12-29T11:25:51Z",
-      "updated_at": "2026-03-16T11:06:30Z",
-      "stars_delta": 0,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": "2.1",
-      "latest_commit": null,
-      "download_url": "https://github.com/Lalocaballero/solitaire.koplugin/releases/download/2.1/solitaire.koplugin.zip",
-      "download_source": "release_asset",
-      "sha256": null,
-      "install_dirname": "solitaire.koplugin",
-      "plugin_path": ".",
-      "layout": "root-files",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": "MIT",
-      "screenshots": [
-        "https://raw.githubusercontent.com/Lalocaballero/solitaire.koplugin/main/screenshots/game_board.png",
-        "https://raw.githubusercontent.com/Lalocaballero/solitaire.koplugin/main/screenshots/win.png"
-      ],
-      "categories": [
-        "游戏"
-      ],
-      "editorial_note": {
-        "en": "Play classic solitaire card game",
-        "zh": "玩经典纸牌接龙"
       },
       "llm_enriched_at": null
     },
@@ -4358,27 +4397,27 @@
       "llm_enriched_at": null
     },
     {
-      "id": "stevenzamora1/covercalendar.koplugin",
-      "name": "covercalendar",
-      "slug": "stevenzamora1-covercalendar-koplugin",
-      "summary": "A KOReader plugin that displays book covers in a calendar format for reading stats",
-      "description": "A KOReader plugin that displays book covers in a calendar format for reading stats",
-      "owner": "stevenzamora1",
-      "repo": "covercalendar.koplugin",
-      "homepage": "https://github.com/stevenzamora1/covercalendar.koplugin",
+      "id": "ckilb/pocketbookcover.koplugin",
+      "name": "pocketbookcover",
+      "slug": "ckilb-pocketbookcover-koplugin",
+      "summary": "Automatically updates the book cover which is displayed when the Pocketbook device is turned off.",
+      "description": "Automatically updates the book cover which is displayed when the Pocketbook device is turned off.",
+      "owner": "ckilb",
+      "repo": "pocketbookcover.koplugin",
+      "homepage": "https://github.com/ckilb/pocketbookcover.koplugin",
       "topics": [],
       "stars": 26,
-      "created_at": "2026-06-30T10:13:39Z",
-      "updated_at": "2026-07-24T04:08:27Z",
-      "stars_delta": 0,
+      "created_at": "2023-07-25T15:39:54Z",
+      "updated_at": "2025-01-05T00:17:59Z",
+      "stars_delta": 1,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
-      "latest_tag": "v2.0.1",
+      "latest_tag": null,
       "latest_commit": null,
-      "download_url": "https://github.com/stevenzamora1/covercalendar.koplugin/releases/download/v2.0.1/covercalendar.koplugin.zip",
-      "download_source": "release_asset",
+      "download_url": "https://github.com/ckilb/pocketbookcover.koplugin/archive/refs/heads/main.zip",
+      "download_source": "zipball",
       "sha256": null,
-      "install_dirname": "covercalendar.koplugin",
+      "install_dirname": "pocketbookcover.koplugin",
       "plugin_path": ".",
       "layout": "name-koplugin",
       "koreader_min": null,
@@ -4386,15 +4425,13 @@
       "license": null,
       "screenshots": [],
       "categories": [
-        "statistics",
-        "calendar",
-        "bookstore"
+        "image"
       ],
+      "llm_enriched_at": "2026-08-14T03:50:41.679Z",
       "editorial_note": {
-        "en": "Display reading history and book covers in a monthly calendar",
-        "zh": "以月历形式展示阅读历史与书籍封面"
-      },
-      "llm_enriched_at": null
+        "en": "Auto-sync book covers to the shutdown screen",
+        "zh": "自动同步书籍封面到关机画面"
+      }
     },
     {
       "id": "Euphoriyy/derainbowify.koplugin",
@@ -4526,43 +4563,6 @@
       "editorial_note": {
         "en": "View crash logs and filter by tags",
         "zh": "查看崩溃日志并按标签筛选"
-      }
-    },
-    {
-      "id": "ckilb/pocketbookcover.koplugin",
-      "name": "pocketbookcover",
-      "slug": "ckilb-pocketbookcover-koplugin",
-      "summary": "Automatically updates the book cover which is displayed when the Pocketbook device is turned off.",
-      "description": "Automatically updates the book cover which is displayed when the Pocketbook device is turned off.",
-      "owner": "ckilb",
-      "repo": "pocketbookcover.koplugin",
-      "homepage": "https://github.com/ckilb/pocketbookcover.koplugin",
-      "topics": [],
-      "stars": 25,
-      "created_at": "2023-07-25T15:39:54Z",
-      "updated_at": "2025-01-05T00:17:59Z",
-      "stars_delta": 0,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": null,
-      "latest_commit": null,
-      "download_url": "https://github.com/ckilb/pocketbookcover.koplugin/archive/refs/heads/main.zip",
-      "download_source": "zipball",
-      "sha256": null,
-      "install_dirname": "pocketbookcover.koplugin",
-      "plugin_path": ".",
-      "layout": "name-koplugin",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": null,
-      "screenshots": [],
-      "categories": [
-        "image"
-      ],
-      "llm_enriched_at": "2026-08-14T03:50:41.679Z",
-      "editorial_note": {
-        "en": "Auto-sync book covers to the shutdown screen",
-        "zh": "自动同步书籍封面到关机画面"
       }
     },
     {
@@ -4760,7 +4760,7 @@
       "stars": 23,
       "created_at": "2025-06-24T22:02:34Z",
       "updated_at": "2025-06-24T22:03:47Z",
-      "stars_delta": 1,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -4836,6 +4836,46 @@
       }
     },
     {
+      "id": "sadatdaniel/splitread.koplugin",
+      "name": "splitread",
+      "slug": "sadatdaniel-splitread-koplugin",
+      "summary": "A KOReader plugin that displays real-time translations in a split panel, designed for language learners reading foreign-language books",
+      "description": "A KOReader plugin that displays real-time translations in a split panel, designed for language learners reading foreign-language books",
+      "owner": "sadatdaniel",
+      "repo": "splitread.koplugin",
+      "homepage": "https://github.com/sadatdaniel/splitread.koplugin",
+      "topics": [],
+      "stars": 22,
+      "created_at": "2026-06-22T10:44:13Z",
+      "updated_at": "2026-08-04T10:51:20Z",
+      "stars_delta": 1,
+      "stars_delta_7d": null,
+      "stars_delta_30d": null,
+      "latest_tag": "v1.2.0",
+      "latest_commit": null,
+      "download_url": "https://github.com/sadatdaniel/splitread.koplugin/releases/download/v1.2.0/splitread.koplugin.zip",
+      "download_source": "release_asset",
+      "sha256": null,
+      "install_dirname": "splitread.koplugin",
+      "plugin_path": ".",
+      "layout": "root-files",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": "GPL-3.0",
+      "screenshots": [
+        "https://raw.githubusercontent.com/sadatdaniel/splitread.koplugin/main/screenshots/readingview.png",
+        "https://raw.githubusercontent.com/sadatdaniel/splitread.koplugin/main/screenshots/settings.png"
+      ],
+      "categories": [
+        "translate"
+      ],
+      "editorial_note": {
+        "en": "Split-screen real-time translation to aid foreign language reading",
+        "zh": "分屏显示实时翻译，辅助外语阅读"
+      },
+      "llm_enriched_at": null
+    },
+    {
       "id": "LoShady/DoctorBattery.koplugin",
       "name": "DoctorBattery",
       "slug": "loshady-doctorbattery-koplugin",
@@ -4867,7 +4907,7 @@
       "stars": 21,
       "created_at": "2026-07-29T08:30:30Z",
       "updated_at": "2026-08-05T07:43:50Z",
-      "stars_delta": 2,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v1.2.0",
@@ -4900,42 +4940,43 @@
       "llm_enriched_at": null
     },
     {
-      "id": "sadatdaniel/splitread.koplugin",
-      "name": "splitread",
-      "slug": "sadatdaniel-splitread-koplugin",
-      "summary": "A KOReader plugin that displays real-time translations in a split panel, designed for language learners reading foreign-language books",
-      "description": "A KOReader plugin that displays real-time translations in a split panel, designed for language learners reading foreign-language books",
-      "owner": "sadatdaniel",
-      "repo": "splitread.koplugin",
-      "homepage": "https://github.com/sadatdaniel/splitread.koplugin",
+      "id": "Auri3l/leadingmangazoom.koplugin",
+      "name": "leadingmangazoom",
+      "slug": "auri3l-leadingmangazoom-koplugin",
+      "summary": "KOReader manga/comic plugin - grid zoom, auto-rotate & page split. Forked from Maximum by @Shac0x",
+      "description": "KOReader manga/comic plugin - grid zoom, auto-rotate & page split. Forked from Maximum by @Shac0x",
+      "owner": "Auri3l",
+      "repo": "leadingmangazoom.koplugin",
+      "homepage": "https://github.com/Auri3l/leadingmangazoom.koplugin",
       "topics": [],
-      "stars": 21,
-      "created_at": "2026-06-22T10:44:13Z",
-      "updated_at": "2026-08-04T10:51:20Z",
-      "stars_delta": 0,
+      "stars": 20,
+      "created_at": "2026-04-11T10:38:08Z",
+      "updated_at": "2026-07-24T21:33:03Z",
+      "stars_delta": 1,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
-      "latest_tag": "v1.2.0",
+      "latest_tag": "v1.1.1",
       "latest_commit": null,
-      "download_url": "https://github.com/sadatdaniel/splitread.koplugin/releases/download/v1.2.0/splitread.koplugin.zip",
+      "download_url": "https://github.com/Auri3l/leadingmangazoom.koplugin/releases/download/v1.1.1/leadingmangazoom.koplugin.zip",
       "download_source": "release_asset",
       "sha256": null,
-      "install_dirname": "splitread.koplugin",
+      "install_dirname": "leadingmangazoom.koplugin",
       "plugin_path": ".",
-      "layout": "root-files",
+      "layout": "name-koplugin",
       "koreader_min": null,
       "koreader_max": null,
       "license": "GPL-3.0",
       "screenshots": [
-        "https://raw.githubusercontent.com/sadatdaniel/splitread.koplugin/main/screenshots/readingview.png",
-        "https://raw.githubusercontent.com/sadatdaniel/splitread.koplugin/main/screenshots/settings.png"
+        "https://raw.githubusercontent.com/Auri3l/leadingmangazoom.koplugin/master/img/Img1.png",
+        "https://raw.githubusercontent.com/Auri3l/leadingmangazoom.koplugin/master/img/Img2.png"
       ],
       "categories": [
-        "translate"
+        "comic",
+        "image"
       ],
       "editorial_note": {
-        "en": "Split-screen real-time translation to aid foreign language reading",
-        "zh": "分屏显示实时翻译，辅助外语阅读"
+        "en": "Manga grid zoom, auto-rotate, and pagination",
+        "zh": "漫画网格缩放、自动旋转与分页"
       },
       "llm_enriched_at": null
     },
@@ -5112,47 +5153,6 @@
       "editorial_note": {
         "en": "Play the 2048 mini-game",
         "zh": "玩 2048 小游戏"
-      },
-      "llm_enriched_at": null
-    },
-    {
-      "id": "Auri3l/leadingmangazoom.koplugin",
-      "name": "leadingmangazoom",
-      "slug": "auri3l-leadingmangazoom-koplugin",
-      "summary": "KOReader manga/comic plugin - grid zoom, auto-rotate & page split. Forked from Maximum by @Shac0x",
-      "description": "KOReader manga/comic plugin - grid zoom, auto-rotate & page split. Forked from Maximum by @Shac0x",
-      "owner": "Auri3l",
-      "repo": "leadingmangazoom.koplugin",
-      "homepage": "https://github.com/Auri3l/leadingmangazoom.koplugin",
-      "topics": [],
-      "stars": 19,
-      "created_at": "2026-04-11T10:38:08Z",
-      "updated_at": "2026-07-24T21:33:03Z",
-      "stars_delta": 0,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": "v1.1.1",
-      "latest_commit": null,
-      "download_url": "https://github.com/Auri3l/leadingmangazoom.koplugin/releases/download/v1.1.1/leadingmangazoom.koplugin.zip",
-      "download_source": "release_asset",
-      "sha256": null,
-      "install_dirname": "leadingmangazoom.koplugin",
-      "plugin_path": ".",
-      "layout": "name-koplugin",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": "GPL-3.0",
-      "screenshots": [
-        "https://raw.githubusercontent.com/Auri3l/leadingmangazoom.koplugin/master/img/Img1.png",
-        "https://raw.githubusercontent.com/Auri3l/leadingmangazoom.koplugin/master/img/Img2.png"
-      ],
-      "categories": [
-        "comic",
-        "image"
-      ],
-      "editorial_note": {
-        "en": "Manga grid zoom, auto-rotate, and pagination",
-        "zh": "漫画网格缩放、自动旋转与分页"
       },
       "llm_enriched_at": null
     },
@@ -5684,6 +5684,52 @@
       "llm_enriched_at": null
     },
     {
+      "id": "Estela-Zelin84/inkstain.koplugin",
+      "name": "inkstain",
+      "slug": "estela-zelin84-inkstain-koplugin",
+      "summary": "一个根据 KOReader 阅读统计生成 ReadTrace 风格“阅读账单”休眠壁纸的插件。",
+      "description": "一个根据 KOReader 阅读统计生成 ReadTrace 风格“阅读账单”休眠壁纸的插件。",
+      "owner": "Estela-Zelin84",
+      "repo": "inkstain.koplugin",
+      "homepage": "https://github.com/Estela-Zelin84/inkstain.koplugin",
+      "topics": [
+        "koreader-kindle",
+        "koreader-patch",
+        "koreader-plugin",
+        "koreader-plugins"
+      ],
+      "stars": 15,
+      "created_at": "2026-08-01T09:09:10Z",
+      "updated_at": "2026-08-16T23:35:04Z",
+      "stars_delta": 1,
+      "stars_delta_7d": null,
+      "stars_delta_30d": null,
+      "latest_tag": "v2.0.7",
+      "latest_commit": null,
+      "download_url": "https://github.com/Estela-Zelin84/inkstain.koplugin/releases/download/v2.0.7/inkstain.koplugin-v2.0.7.zip",
+      "download_source": "release_asset",
+      "sha256": null,
+      "install_dirname": "inkstain.koplugin",
+      "plugin_path": ".",
+      "layout": "root-files",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": "GPL-3.0",
+      "screenshots": [
+        "https://raw.githubusercontent.com/Estela-Zelin84/inkstain.koplugin/main/docs/preview.jpg"
+      ],
+      "categories": [
+        "screensaver",
+        "statistics",
+        "beautify"
+      ],
+      "editorial_note": {
+        "en": "Generate bill-style sleep wallpapers based on reading stats",
+        "zh": "根据阅读统计生成账单风格休眠壁纸"
+      },
+      "llm_enriched_at": null
+    },
+    {
       "id": "zhouwt/pinyin.koplugin",
       "name": "pinyin",
       "slug": "zhouwt-pinyin-koplugin",
@@ -5696,7 +5742,7 @@
       "stars": 15,
       "created_at": "2026-07-10T07:44:47Z",
       "updated_at": "2026-08-15T15:06:27Z",
-      "stars_delta": 1,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": null,
@@ -5853,52 +5899,6 @@
         "en": "Check and safely clean abnormal session records in reading statistics",
         "zh": "检查并安全清理阅读统计中的异常会话记录"
       }
-    },
-    {
-      "id": "Estela-Zelin84/inkstain.koplugin",
-      "name": "inkstain",
-      "slug": "estela-zelin84-inkstain-koplugin",
-      "summary": "一个根据 KOReader 阅读统计生成 ReadTrace 风格“阅读账单”休眠壁纸的插件。",
-      "description": "一个根据 KOReader 阅读统计生成 ReadTrace 风格“阅读账单”休眠壁纸的插件。",
-      "owner": "Estela-Zelin84",
-      "repo": "inkstain.koplugin",
-      "homepage": "https://github.com/Estela-Zelin84/inkstain.koplugin",
-      "topics": [
-        "koreader-kindle",
-        "koreader-patch",
-        "koreader-plugin",
-        "koreader-plugins"
-      ],
-      "stars": 14,
-      "created_at": "2026-08-01T09:09:10Z",
-      "updated_at": "2026-08-16T23:35:04Z",
-      "stars_delta": 0,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": "v2.0.7",
-      "latest_commit": null,
-      "download_url": "https://github.com/Estela-Zelin84/inkstain.koplugin/releases/download/v2.0.7/inkstain.koplugin-v2.0.7.zip",
-      "download_source": "release_asset",
-      "sha256": null,
-      "install_dirname": "inkstain.koplugin",
-      "plugin_path": ".",
-      "layout": "root-files",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": "GPL-3.0",
-      "screenshots": [
-        "https://raw.githubusercontent.com/Estela-Zelin84/inkstain.koplugin/main/docs/preview.jpg"
-      ],
-      "categories": [
-        "screensaver",
-        "statistics",
-        "beautify"
-      ],
-      "editorial_note": {
-        "en": "Generate bill-style sleep wallpapers based on reading stats",
-        "zh": "根据阅读统计生成账单风格休眠壁纸"
-      },
-      "llm_enriched_at": null
     },
     {
       "id": "finlater/one.koplugin",
@@ -6394,6 +6394,44 @@
       }
     },
     {
+      "id": "THE-XSX/typefolio.koplugin",
+      "name": "typefolio",
+      "slug": "the-xsx-typefolio-koplugin",
+      "summary": "\"文笺\"为 EPUB 等 CRE 排版书提供下划线与排版微调(初次使用设置完成之后请退出书籍重新打开)：逐行/段落/强调词下划线、 荧光笔高亮、引用块装饰、章节标题线条、首字下沉、纯黑增强等，并附三个一键预设。 生成的 CSS 通过 KOReader 官方 Style tweaks（样式微调） 机制装载。与\"阅笺 / Reading Folio\"为同族插件。",
+      "description": "\"文笺\"为 EPUB 等 CRE 排版书提供下划线与排版微调(初次使用设置完成之后请退出书籍重新打开)：逐行/段落/强调词下划线、 荧光笔高亮、引用块装饰、章节标题线条、首字下沉、纯黑增强等，并附三个一键预设。 生成的 CSS 通过 KOReader 官方 Style tweaks（样式微调） 机制装载。与\"阅笺 / Reading Folio\"为同族插件。",
+      "owner": "THE-XSX",
+      "repo": "typefolio.koplugin",
+      "homepage": "https://github.com/THE-XSX/typefolio.koplugin",
+      "topics": [],
+      "stars": 12,
+      "created_at": "2026-07-27T04:08:53Z",
+      "updated_at": "2026-08-17T10:44:34Z",
+      "stars_delta": 1,
+      "stars_delta_7d": null,
+      "stars_delta_30d": null,
+      "latest_tag": "v2.1.2",
+      "latest_commit": null,
+      "download_url": "https://github.com/THE-XSX/typefolio.koplugin/releases/download/v2.1.2/typefolio.koplugin.zip",
+      "download_source": "release_asset",
+      "sha256": null,
+      "install_dirname": "typefolio.koplugin",
+      "plugin_path": ".",
+      "layout": "root-files",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": null,
+      "screenshots": [],
+      "categories": [
+        "typography",
+        "beautify"
+      ],
+      "editorial_note": {
+        "en": "Adds underline, highlight, and other typography tweaks and presets for EPUB",
+        "zh": "为 EPUB 提供下划线、高亮等排版微调与预设"
+      },
+      "llm_enriched_at": null
+    },
+    {
       "id": "omer-faruq/slidepuzzle.koplugin",
       "name": "slidepuzzle",
       "slug": "omer-faruq-slidepuzzle-koplugin",
@@ -6477,6 +6515,49 @@
         "en": "Writes Calibre book info into PocketBook DB for instant recognition, syncing fav",
         "zh": "将Calibre发送的书籍信息写入PocketBook数据库，免重启识别书籍，支持收藏与阅读状态同步"
       }
+    },
+    {
+      "id": "codep-alt/bookdrop",
+      "name": "bookdrop",
+      "slug": "codep-alt-bookdrop",
+      "summary": "",
+      "description": "",
+      "owner": "codep-alt",
+      "repo": "bookdrop",
+      "homepage": "https://github.com/codep-alt/bookdrop",
+      "topics": [
+        "koreader-plugin"
+      ],
+      "stars": 12,
+      "created_at": "2026-08-09T00:29:00Z",
+      "updated_at": "2026-08-16T20:18:24Z",
+      "stars_delta": 3,
+      "stars_delta_7d": null,
+      "stars_delta_30d": null,
+      "latest_tag": "v1.0.0",
+      "latest_commit": null,
+      "download_url": "https://github.com/codep-alt/bookdrop/releases/download/v1.0.0/Bookdrop-latest.zip",
+      "download_source": "release_asset",
+      "sha256": null,
+      "install_dirname": "bookdrop.koplugin",
+      "plugin_path": "bookdrop.koplugin",
+      "layout": "root-koplugin-dir",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": "AGPL-3.0",
+      "screenshots": [
+        "https://raw.githubusercontent.com/codep-alt/bookdrop/master/Images/bookdrop-menu-entry.png",
+        "https://raw.githubusercontent.com/codep-alt/bookdrop/master/Images/bookdrop-home-wide.png",
+        "https://raw.githubusercontent.com/codep-alt/bookdrop/master/Images/bookdrop-settings.png",
+        "https://raw.githubusercontent.com/codep-alt/bookdrop/master/Images/library-filter.png",
+        "https://raw.githubusercontent.com/codep-alt/bookdrop/master/Images/format-filter.png",
+        "https://raw.githubusercontent.com/codep-alt/bookdrop/master/Images/book-search-cover-results.png",
+        "https://raw.githubusercontent.com/codep-alt/bookdrop/master/Images/manga-search-results.png"
+      ],
+      "categories": [
+        "other"
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "lgallard/anki-flashcards-koreader",
@@ -6648,44 +6729,6 @@
       "llm_enriched_at": null
     },
     {
-      "id": "THE-XSX/typefolio.koplugin",
-      "name": "typefolio",
-      "slug": "the-xsx-typefolio-koplugin",
-      "summary": "\"文笺\"为 EPUB 等 CRE 排版书提供下划线与排版微调(初次使用设置完成之后请退出书籍重新打开)：逐行/段落/强调词下划线、 荧光笔高亮、引用块装饰、章节标题线条、首字下沉、纯黑增强等，并附三个一键预设。 生成的 CSS 通过 KOReader 官方 Style tweaks（样式微调） 机制装载。与\"阅笺 / Reading Folio\"为同族插件。",
-      "description": "\"文笺\"为 EPUB 等 CRE 排版书提供下划线与排版微调(初次使用设置完成之后请退出书籍重新打开)：逐行/段落/强调词下划线、 荧光笔高亮、引用块装饰、章节标题线条、首字下沉、纯黑增强等，并附三个一键预设。 生成的 CSS 通过 KOReader 官方 Style tweaks（样式微调） 机制装载。与\"阅笺 / Reading Folio\"为同族插件。",
-      "owner": "THE-XSX",
-      "repo": "typefolio.koplugin",
-      "homepage": "https://github.com/THE-XSX/typefolio.koplugin",
-      "topics": [],
-      "stars": 11,
-      "created_at": "2026-07-27T04:08:53Z",
-      "updated_at": "2026-08-17T10:44:34Z",
-      "stars_delta": 1,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": "v2.1.2",
-      "latest_commit": null,
-      "download_url": "https://github.com/THE-XSX/typefolio.koplugin/releases/download/v2.1.2/typefolio.koplugin.zip",
-      "download_source": "release_asset",
-      "sha256": null,
-      "install_dirname": "typefolio.koplugin",
-      "plugin_path": ".",
-      "layout": "root-files",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": null,
-      "screenshots": [],
-      "categories": [
-        "typography",
-        "beautify"
-      ],
-      "editorial_note": {
-        "en": "Adds underline, highlight, and other typography tweaks and presets for EPUB",
-        "zh": "为 EPUB 提供下划线、高亮等排版微调与预设"
-      },
-      "llm_enriched_at": null
-    },
-    {
       "id": "kaikozlov/kindle.koplugin",
       "name": "kindle",
       "slug": "kaikozlov-kindle-koplugin",
@@ -6704,7 +6747,7 @@
       "stars": 11,
       "created_at": "2026-04-13T00:07:44Z",
       "updated_at": "2026-08-17T07:13:20Z",
-      "stars_delta": 1,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v0.0.4",
@@ -7602,49 +7645,6 @@
       "llm_enriched_at": null
     },
     {
-      "id": "codep-alt/bookdrop",
-      "name": "bookdrop",
-      "slug": "codep-alt-bookdrop",
-      "summary": "",
-      "description": "",
-      "owner": "codep-alt",
-      "repo": "bookdrop",
-      "homepage": "https://github.com/codep-alt/bookdrop",
-      "topics": [
-        "koreader-plugin"
-      ],
-      "stars": 9,
-      "created_at": "2026-08-09T00:29:00Z",
-      "updated_at": "2026-08-16T20:18:24Z",
-      "stars_delta": 5,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": "v1.0.0",
-      "latest_commit": null,
-      "download_url": "https://github.com/codep-alt/bookdrop/releases/download/v1.0.0/Bookdrop-latest.zip",
-      "download_source": "release_asset",
-      "sha256": null,
-      "install_dirname": "bookdrop.koplugin",
-      "plugin_path": "bookdrop.koplugin",
-      "layout": "root-koplugin-dir",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": "AGPL-3.0",
-      "screenshots": [
-        "https://raw.githubusercontent.com/codep-alt/bookdrop/master/Images/bookdrop-menu-entry.png",
-        "https://raw.githubusercontent.com/codep-alt/bookdrop/master/Images/bookdrop-home-wide.png",
-        "https://raw.githubusercontent.com/codep-alt/bookdrop/master/Images/bookdrop-settings.png",
-        "https://raw.githubusercontent.com/codep-alt/bookdrop/master/Images/library-filter.png",
-        "https://raw.githubusercontent.com/codep-alt/bookdrop/master/Images/format-filter.png",
-        "https://raw.githubusercontent.com/codep-alt/bookdrop/master/Images/book-search-cover-results.png",
-        "https://raw.githubusercontent.com/codep-alt/bookdrop/master/Images/manga-search-results.png"
-      ],
-      "categories": [
-        "other"
-      ],
-      "llm_enriched_at": null
-    },
-    {
       "id": "myEngAPI/KOReader-TranslatorChanger",
       "name": "xiaosiji_translator",
       "slug": "myengapi-koreader-translatorchanger",
@@ -7685,6 +7685,45 @@
         "en": "Switch KOReader translation engines, supporting DeepL, DeepSeek, etc",
         "zh": "切换 KOReader 翻译引擎，支持 DeepL、DeepSeek 等"
       }
+    },
+    {
+      "id": "SeriousHornet/vos.koplugin",
+      "name": "vos",
+      "slug": "serioushornet-vos-koplugin",
+      "summary": "Visual Overhaul Suite (VOS), now a plugin with lots of customizations",
+      "description": "Visual Overhaul Suite (VOS), now a plugin with lots of customizations",
+      "owner": "SeriousHornet",
+      "repo": "vos.koplugin",
+      "homepage": "https://github.com/SeriousHornet/vos.koplugin",
+      "topics": [],
+      "stars": 8,
+      "created_at": "2026-08-13T01:09:35Z",
+      "updated_at": "2026-08-18T13:49:47Z",
+      "stars_delta": null,
+      "stars_delta_7d": null,
+      "stars_delta_30d": null,
+      "latest_tag": "v1.3.0",
+      "latest_commit": null,
+      "download_url": "https://github.com/SeriousHornet/vos.koplugin/releases/download/v1.3.0/vos.koplugin-v1.3.0.zip",
+      "download_source": "release_asset",
+      "sha256": "70bfc9721a3c5ca43417327619ed1c003e8f4c9c17155594d76f5244026981ea",
+      "install_dirname": "vos.koplugin",
+      "plugin_path": ".",
+      "layout": "root-files",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": null,
+      "screenshots": [
+        "https://github.com/user-attachments/assets/cd8cadc4-4a10-4d37-b470-84d2bc16a9dc",
+        "https://github.com/user-attachments/assets/ceb5a6cc-28a6-4e58-bfff-bef1665cc582",
+        "https://github.com/user-attachments/assets/bc4f76e0-6b91-4a71-b717-f713b7f6fdb9",
+        "https://github.com/user-attachments/assets/769e0de8-0673-4207-b3d1-6fed0d607e4e",
+        "https://github.com/user-attachments/assets/e33ddb4a-71ed-410e-a7f6-8df61ef91394",
+        "https://github.com/user-attachments/assets/36ce9ccf-4b3a-4bfd-8c63-5440ffb0a410"
+      ],
+      "categories": [
+        "beautify"
+      ]
     },
     {
       "id": "asxelot/wifiindicator.koplugin",
@@ -7948,6 +7987,47 @@
       }
     },
     {
+      "id": "yupmoon/vocabdeck.koplugin",
+      "name": "vocabdeck",
+      "slug": "yupmoon-vocabdeck-koplugin",
+      "summary": "A vocabulary deck and flashcard plugin for KOReader. Save words while reading, enrich them with AI, and review with spaced repetition.",
+      "description": "A vocabulary deck and flashcard plugin for KOReader. Save words while reading, enrich them with AI, and review with spaced repetition.",
+      "owner": "yupmoon",
+      "repo": "vocabdeck.koplugin",
+      "homepage": "https://github.com/yupmoon/vocabdeck.koplugin",
+      "topics": [
+        "koreader-plugin"
+      ],
+      "stars": 7,
+      "created_at": "2026-05-25T19:07:54Z",
+      "updated_at": "2026-08-18T11:02:33Z",
+      "stars_delta": 0,
+      "stars_delta_7d": null,
+      "stars_delta_30d": null,
+      "latest_tag": "v1.2.1",
+      "latest_commit": null,
+      "download_url": "https://github.com/yupmoon/vocabdeck.koplugin/releases/download/v1.2.1/vocabdeck.koplugin.zip",
+      "download_source": "release_asset",
+      "sha256": null,
+      "install_dirname": "vocabdeck.koplugin",
+      "plugin_path": ".",
+      "layout": "root-files",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": "GPL-3.0",
+      "screenshots": [],
+      "categories": [
+        "生词本",
+        "llm",
+        "复习"
+      ],
+      "editorial_note": {
+        "en": "Save words while reading, AI completes definitions, and review with spaced repet",
+        "zh": "阅读时存词、AI 补全释义并间隔复习"
+      },
+      "llm_enriched_at": null
+    },
+    {
       "id": "ksaMask123/artgallery.koplugin",
       "name": "artgallery",
       "slug": "ksamask123-artgallery-koplugin",
@@ -8168,47 +8248,6 @@
       "llm_enriched_at": null
     },
     {
-      "id": "yupmoon/vocabdeck.koplugin",
-      "name": "vocabdeck",
-      "slug": "yupmoon-vocabdeck-koplugin",
-      "summary": "A vocabulary deck and flashcard plugin for KOReader. Save words while reading, enrich them with AI, and review with spaced repetition.",
-      "description": "A vocabulary deck and flashcard plugin for KOReader. Save words while reading, enrich them with AI, and review with spaced repetition.",
-      "owner": "yupmoon",
-      "repo": "vocabdeck.koplugin",
-      "homepage": "https://github.com/yupmoon/vocabdeck.koplugin",
-      "topics": [
-        "koreader-plugin"
-      ],
-      "stars": 7,
-      "created_at": "2026-05-25T19:07:54Z",
-      "updated_at": "2026-06-11T11:19:45Z",
-      "stars_delta": 0,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": "v1.2.1",
-      "latest_commit": null,
-      "download_url": "https://github.com/yupmoon/vocabdeck.koplugin/releases/download/v1.2.1/vocabdeck.koplugin.zip",
-      "download_source": "release_asset",
-      "sha256": null,
-      "install_dirname": "vocabdeck.koplugin",
-      "plugin_path": ".",
-      "layout": "root-files",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": "GPL-3.0",
-      "screenshots": [],
-      "categories": [
-        "生词本",
-        "llm",
-        "复习"
-      ],
-      "editorial_note": {
-        "en": "Save words while reading, AI completes definitions, and review with spaced repet",
-        "zh": "阅读时存词、AI 补全释义并间隔复习"
-      },
-      "llm_enriched_at": null
-    },
-    {
       "id": "right9code/fontswitcher.koplugin",
       "name": "fontswitcher",
       "slug": "right9code-fontswitcher-koplugin",
@@ -8340,6 +8379,48 @@
         "en": "Browse, track, and export web novels to EPUB",
         "zh": "浏览、追踪并导出网络小说为 EPUB"
       }
+    },
+    {
+      "id": "jadehawk/libby-dashboard.koplugin",
+      "name": "libby-dashboard",
+      "slug": "jadehawk-libby-dashboard-koplugin",
+      "summary": "KOReader plugin for browsing Libby loans, downloading EPUB/PDF books, and managing Adobe/ByteBooks authorization.",
+      "description": "KOReader plugin for browsing Libby loans, downloading EPUB/PDF books, and managing Adobe/ByteBooks authorization.",
+      "owner": "jadehawk",
+      "repo": "libby-dashboard.koplugin",
+      "homepage": "https://github.com/jadehawk/libby-dashboard.koplugin",
+      "topics": [
+        "koreader-plugin"
+      ],
+      "stars": 6,
+      "created_at": "2026-08-15T01:25:58Z",
+      "updated_at": "2026-08-18T13:31:20Z",
+      "stars_delta": 1,
+      "stars_delta_7d": null,
+      "stars_delta_30d": null,
+      "latest_tag": "v0.1.0",
+      "latest_commit": null,
+      "download_url": "https://github.com/jadehawk/libby-dashboard.koplugin/releases/download/v0.1.0/libby-dashboard.koplugin.zip",
+      "download_source": "release_asset",
+      "sha256": null,
+      "install_dirname": "libby-dashboard.koplugin",
+      "plugin_path": "libby-dashboard.koplugin",
+      "layout": "root-koplugin-dir",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": null,
+      "screenshots": [
+        "https://raw.githubusercontent.com/jadehawk/libby-dashboard.koplugin/main/assets/01-Main%20UI.png",
+        "https://raw.githubusercontent.com/jadehawk/libby-dashboard.koplugin/main/assets/02-Main%20UI.png",
+        "https://raw.githubusercontent.com/jadehawk/libby-dashboard.koplugin/main/assets/03-Settings.png",
+        "https://raw.githubusercontent.com/jadehawk/libby-dashboard.koplugin/main/assets/04-Libby%20Setup.png",
+        "https://raw.githubusercontent.com/jadehawk/libby-dashboard.koplugin/main/assets/05-Libby%20Setup.png",
+        "https://raw.githubusercontent.com/jadehawk/libby-dashboard.koplugin/main/assets/06a-AdobeBytebooks%20Setup.png"
+      ],
+      "categories": [
+        "bookstore"
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "wtb04/wireguard.koplugin",
@@ -8768,48 +8849,6 @@
       }
     },
     {
-      "id": "jadehawk/libby-dashboard.koplugin",
-      "name": "libby-dashboard",
-      "slug": "jadehawk-libby-dashboard-koplugin",
-      "summary": "KOReader plugin for browsing Libby loans, downloading EPUB/PDF books, and managing Adobe/ByteBooks authorization.",
-      "description": "KOReader plugin for browsing Libby loans, downloading EPUB/PDF books, and managing Adobe/ByteBooks authorization.",
-      "owner": "jadehawk",
-      "repo": "libby-dashboard.koplugin",
-      "homepage": "https://github.com/jadehawk/libby-dashboard.koplugin",
-      "topics": [
-        "koreader-plugin"
-      ],
-      "stars": 5,
-      "created_at": "2026-08-15T01:25:58Z",
-      "updated_at": "2026-08-18T09:06:38Z",
-      "stars_delta": 4,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": "v0.1.0",
-      "latest_commit": null,
-      "download_url": "https://github.com/jadehawk/libby-dashboard.koplugin/releases/download/v0.1.0/libby-dashboard.koplugin.zip",
-      "download_source": "release_asset",
-      "sha256": null,
-      "install_dirname": "libby-dashboard.koplugin",
-      "plugin_path": "libby-dashboard.koplugin",
-      "layout": "root-koplugin-dir",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": null,
-      "screenshots": [
-        "https://raw.githubusercontent.com/jadehawk/libby-dashboard.koplugin/main/assets/01-Main%20UI.png",
-        "https://raw.githubusercontent.com/jadehawk/libby-dashboard.koplugin/main/assets/02-Main%20UI.png",
-        "https://raw.githubusercontent.com/jadehawk/libby-dashboard.koplugin/main/assets/03-Settings.png",
-        "https://raw.githubusercontent.com/jadehawk/libby-dashboard.koplugin/main/assets/04-Libby%20Setup.png",
-        "https://raw.githubusercontent.com/jadehawk/libby-dashboard.koplugin/main/assets/05-Libby%20Setup.png",
-        "https://raw.githubusercontent.com/jadehawk/libby-dashboard.koplugin/main/assets/06a-AdobeBytebooks%20Setup.png"
-      ],
-      "categories": [
-        "bookstore"
-      ],
-      "llm_enriched_at": null
-    },
-    {
       "id": "DRDTR001/fulltextunderline.koplugin",
       "name": "fulltextunderline",
       "slug": "drdtr001-fulltextunderline-koplugin",
@@ -8895,6 +8934,47 @@
       "editorial_note": {
         "en": "Annotate PDFs, EPUBs, and more with handwritten notes",
         "zh": "手写笔迹批注 PDF、EPUB 等文档"
+      },
+      "llm_enriched_at": null
+    },
+    {
+      "id": "RafaelMeirim/metafileextract.koplugin",
+      "name": "metafileextract",
+      "slug": "rafaelmeirim-metafileextract-koplugin",
+      "summary": "KOReader plugin to automatically parse metadata from filenames and sync local .meta description files.",
+      "description": "KOReader plugin to automatically parse metadata from filenames and sync local .meta description files.",
+      "owner": "RafaelMeirim",
+      "repo": "metafileextract.koplugin",
+      "homepage": "https://github.com/RafaelMeirim/metafileextract.koplugin",
+      "topics": [
+        "koreader-plugin"
+      ],
+      "stars": 5,
+      "created_at": "2026-06-06T20:54:56Z",
+      "updated_at": "2026-06-20T18:19:42Z",
+      "stars_delta": 1,
+      "stars_delta_7d": null,
+      "stars_delta_30d": null,
+      "latest_tag": "v1.5.6",
+      "latest_commit": null,
+      "download_url": "https://github.com/RafaelMeirim/metafileextract.koplugin/releases/download/v1.5.6/metafileextract.koplugin.zip",
+      "download_source": "release_asset",
+      "sha256": null,
+      "install_dirname": "metafileextract.koplugin",
+      "plugin_path": ".",
+      "layout": "root-files",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": "MIT",
+      "screenshots": [],
+      "categories": [
+        "bookstore",
+        "file",
+        "annotation"
+      ],
+      "editorial_note": {
+        "en": "Parse metadata from filenames, batch rename, and sync descriptions",
+        "zh": "从文件名解析元数据，批量重命名并同步描述"
       },
       "llm_enriched_at": null
     },
@@ -9145,6 +9225,47 @@
       }
     },
     {
+      "id": "jnjnnjzch/leko-reader",
+      "name": "leko",
+      "slug": "jnjnnjzch-leko-reader",
+      "summary": "全程本地运行的 KOReader 网络小说插件，支持 Legado 兼容书源，致力于让阅读轻快流畅。 An on-device KOReader web novel reader with Legado-compatible sources, built for fast and fluid reading.",
+      "description": "全程本地运行的 KOReader 网络小说插件，支持 Legado 兼容书源，致力于让阅读轻快流畅。 An on-device KOReader web novel reader with Legado-compatible sources, built for fast and fluid reading.",
+      "owner": "jnjnnjzch",
+      "repo": "leko-reader",
+      "homepage": "https://github.com/jnjnnjzch/leko-reader",
+      "topics": [
+        "kindle",
+        "koreader",
+        "koreader-plugin",
+        "legado",
+        "lua",
+        "web-novel"
+      ],
+      "stars": 5,
+      "created_at": "2026-08-08T02:32:10Z",
+      "updated_at": "2026-08-15T15:03:02Z",
+      "stars_delta": 1,
+      "stars_delta_7d": null,
+      "stars_delta_30d": null,
+      "latest_tag": "v0.15.37",
+      "latest_commit": null,
+      "download_url": "https://github.com/jnjnnjzch/leko-reader/releases/download/v0.15.37/Leko-Reader-KOReader-0.15.37.zip",
+      "download_source": "release_asset",
+      "sha256": null,
+      "install_dirname": "leko.koplugin",
+      "plugin_path": "leko.koplugin",
+      "layout": "root-koplugin-dir",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": "AGPL-3.0",
+      "screenshots": [],
+      "categories": [
+        "bookstore",
+        "network"
+      ],
+      "llm_enriched_at": null
+    },
+    {
       "id": "GarionBracken/PagePair",
       "name": "pagepair",
       "slug": "garionbracken-pagepair",
@@ -9190,6 +9311,53 @@
         "en": "Sync page turns between two Kindles for dual-screen reading",
         "zh": "同步两台Kindle翻页，组成双屏阅读"
       }
+    },
+    {
+      "id": "DavidMakin/royalroad.koplugin",
+      "name": "royalroad",
+      "slug": "davidmakin-royalroad-koplugin",
+      "summary": "Royalroad plugin for koreader",
+      "description": "Royalroad plugin for koreader",
+      "owner": "DavidMakin",
+      "repo": "royalroad.koplugin",
+      "homepage": "https://github.com/DavidMakin/royalroad.koplugin",
+      "topics": [
+        "koreader-plugin"
+      ],
+      "stars": 4,
+      "created_at": "2026-04-23T13:33:58Z",
+      "updated_at": "2026-08-18T16:36:08Z",
+      "stars_delta": 0,
+      "stars_delta_7d": null,
+      "stars_delta_30d": null,
+      "latest_tag": "v0.18.1",
+      "latest_commit": null,
+      "download_url": "https://github.com/DavidMakin/royalroad.koplugin/releases/download/v0.18.1/royalroad.koplugin.zip",
+      "download_source": "release_asset",
+      "sha256": null,
+      "install_dirname": "royalroad.koplugin",
+      "plugin_path": ".",
+      "layout": "name-koplugin",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": null,
+      "screenshots": [
+        "https://raw.githubusercontent.com/DavidMakin/royalroad.koplugin/main/docs/screenshots/search_results.png",
+        "https://raw.githubusercontent.com/DavidMakin/royalroad.koplugin/main/docs/screenshots/main_screen.png",
+        "https://raw.githubusercontent.com/DavidMakin/royalroad.koplugin/main/docs/screenshots/update_dialog.png",
+        "https://raw.githubusercontent.com/DavidMakin/royalroad.koplugin/main/docs/screenshots/menu.png",
+        "https://raw.githubusercontent.com/DavidMakin/royalroad.koplugin/main/docs/screenshots/downloads.png",
+        "https://raw.githubusercontent.com/DavidMakin/royalroad.koplugin/main/docs/screenshots/story_menu.png"
+      ],
+      "categories": [
+        "download",
+        "bookstore"
+      ],
+      "editorial_note": {
+        "en": "Download Royal Road web novels as EPUB and auto-update chapters",
+        "zh": "下载 Royal Road 网文为 EPUB 并自动更新章节"
+      },
+      "llm_enriched_at": null
     },
     {
       "id": "neodb-social/neodb.koplugin",
@@ -9238,53 +9406,6 @@
       "editorial_note": {
         "en": "Sync reading progress, notes, and ratings to NeoDB",
         "zh": "同步阅读进度、笔记、评分到 NeoDB"
-      },
-      "llm_enriched_at": null
-    },
-    {
-      "id": "DavidMakin/royalroad.koplugin",
-      "name": "royalroad",
-      "slug": "davidmakin-royalroad-koplugin",
-      "summary": "Royalroad plugin for koreader",
-      "description": "Royalroad plugin for koreader",
-      "owner": "DavidMakin",
-      "repo": "royalroad.koplugin",
-      "homepage": "https://github.com/DavidMakin/royalroad.koplugin",
-      "topics": [
-        "koreader-plugin"
-      ],
-      "stars": 4,
-      "created_at": "2026-04-23T13:33:58Z",
-      "updated_at": "2026-08-13T15:13:36Z",
-      "stars_delta": 0,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": "v0.18.1",
-      "latest_commit": null,
-      "download_url": "https://github.com/DavidMakin/royalroad.koplugin/releases/download/v0.18.1/royalroad.koplugin.zip",
-      "download_source": "release_asset",
-      "sha256": null,
-      "install_dirname": "royalroad.koplugin",
-      "plugin_path": ".",
-      "layout": "name-koplugin",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": null,
-      "screenshots": [
-        "https://raw.githubusercontent.com/DavidMakin/royalroad.koplugin/main/docs/screenshots/search_results.png",
-        "https://raw.githubusercontent.com/DavidMakin/royalroad.koplugin/main/docs/screenshots/main_screen.png",
-        "https://raw.githubusercontent.com/DavidMakin/royalroad.koplugin/main/docs/screenshots/update_dialog.png",
-        "https://raw.githubusercontent.com/DavidMakin/royalroad.koplugin/main/docs/screenshots/menu.png",
-        "https://raw.githubusercontent.com/DavidMakin/royalroad.koplugin/main/docs/screenshots/downloads.png",
-        "https://raw.githubusercontent.com/DavidMakin/royalroad.koplugin/main/docs/screenshots/story_menu.png"
-      ],
-      "categories": [
-        "download",
-        "bookstore"
-      ],
-      "editorial_note": {
-        "en": "Download Royal Road web novels as EPUB and auto-update chapters",
-        "zh": "下载 Royal Road 网文为 EPUB 并自动更新章节"
       },
       "llm_enriched_at": null
     },
@@ -9408,6 +9529,45 @@
       "llm_enriched_at": null
     },
     {
+      "id": "shiggsy365/minesweeper.koplugin",
+      "name": "minesweeper",
+      "slug": "shiggsy365-minesweeper-koplugin",
+      "summary": "Minesweeper plugin for koreader",
+      "description": "Minesweeper plugin for koreader",
+      "owner": "shiggsy365",
+      "repo": "minesweeper.koplugin",
+      "homepage": "https://github.com/shiggsy365/minesweeper.koplugin",
+      "topics": [],
+      "stars": 4,
+      "created_at": "2025-12-07T01:34:17Z",
+      "updated_at": "2026-01-08T12:05:59Z",
+      "stars_delta": 0,
+      "stars_delta_7d": null,
+      "stars_delta_30d": null,
+      "latest_tag": null,
+      "latest_commit": null,
+      "download_url": "https://github.com/shiggsy365/minesweeper.koplugin/archive/refs/heads/main.zip",
+      "download_source": "zipball",
+      "sha256": null,
+      "install_dirname": "minesweeper.koplugin",
+      "plugin_path": ".",
+      "layout": "root-files",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": null,
+      "screenshots": [
+        "https://raw.githubusercontent.com/shiggsy365/AIOStreamsKODI/main/.github/support_me_on_kofi_red.png"
+      ],
+      "categories": [
+        "游戏"
+      ],
+      "editorial_note": {
+        "en": "Play Minesweeper game",
+        "zh": "玩扫雷游戏"
+      },
+      "llm_enriched_at": null
+    },
+    {
       "id": "DHaizon/tabbar.koplugin",
       "name": "tabbar",
       "slug": "dhaizon-tabbar-koplugin",
@@ -9447,45 +9607,6 @@
       "editorial_note": {
         "en": "Open multiple books in tabs, switch quickly and remember progress",
         "zh": "多标签页同时打开多本书，快速切换并记住进度"
-      },
-      "llm_enriched_at": null
-    },
-    {
-      "id": "shiggsy365/minesweeper.koplugin",
-      "name": "minesweeper",
-      "slug": "shiggsy365-minesweeper-koplugin",
-      "summary": "Minesweeper plugin for koreader",
-      "description": "Minesweeper plugin for koreader",
-      "owner": "shiggsy365",
-      "repo": "minesweeper.koplugin",
-      "homepage": "https://github.com/shiggsy365/minesweeper.koplugin",
-      "topics": [],
-      "stars": 4,
-      "created_at": "2025-12-07T01:34:17Z",
-      "updated_at": "2026-01-08T12:05:59Z",
-      "stars_delta": 0,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": null,
-      "latest_commit": null,
-      "download_url": "https://github.com/shiggsy365/minesweeper.koplugin/archive/refs/heads/main.zip",
-      "download_source": "zipball",
-      "sha256": null,
-      "install_dirname": "minesweeper.koplugin",
-      "plugin_path": ".",
-      "layout": "root-files",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": null,
-      "screenshots": [
-        "https://raw.githubusercontent.com/shiggsy365/AIOStreamsKODI/main/.github/support_me_on_kofi_red.png"
-      ],
-      "categories": [
-        "游戏"
-      ],
-      "editorial_note": {
-        "en": "Play Minesweeper game",
-        "zh": "玩扫雷游戏"
       },
       "llm_enriched_at": null
     },
@@ -9534,47 +9655,6 @@
       "editorial_note": {
         "en": "Overlay transparent PNG images on lock screen",
         "zh": "锁屏时叠加透明PNG图片"
-      },
-      "llm_enriched_at": null
-    },
-    {
-      "id": "RafaelMeirim/metafileextract.koplugin",
-      "name": "metafileextract",
-      "slug": "rafaelmeirim-metafileextract-koplugin",
-      "summary": "KOReader plugin to automatically parse metadata from filenames and sync local .meta description files.",
-      "description": "KOReader plugin to automatically parse metadata from filenames and sync local .meta description files.",
-      "owner": "RafaelMeirim",
-      "repo": "metafileextract.koplugin",
-      "homepage": "https://github.com/RafaelMeirim/metafileextract.koplugin",
-      "topics": [
-        "koreader-plugin"
-      ],
-      "stars": 4,
-      "created_at": "2026-06-06T20:54:56Z",
-      "updated_at": "2026-06-20T18:19:42Z",
-      "stars_delta": 0,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": "v1.5.6",
-      "latest_commit": null,
-      "download_url": "https://github.com/RafaelMeirim/metafileextract.koplugin/releases/download/v1.5.6/metafileextract.koplugin.zip",
-      "download_source": "release_asset",
-      "sha256": null,
-      "install_dirname": "metafileextract.koplugin",
-      "plugin_path": ".",
-      "layout": "root-files",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": "MIT",
-      "screenshots": [],
-      "categories": [
-        "bookstore",
-        "file",
-        "annotation"
-      ],
-      "editorial_note": {
-        "en": "Parse metadata from filenames, batch rename, and sync descriptions",
-        "zh": "从文件名解析元数据，批量重命名并同步描述"
       },
       "llm_enriched_at": null
     },
@@ -9960,42 +10040,6 @@
       "llm_enriched_at": null
     },
     {
-      "id": "jnprcyan/copytoxochitl.koplugin",
-      "name": "copytoxochitl",
-      "slug": "jnprcyan-copytoxochitl-koplugin",
-      "summary": "Copy highlighted text into reMarkable notebooks",
-      "description": "Copy highlighted text into reMarkable notebooks",
-      "owner": "jnprcyan",
-      "repo": "copytoxochitl.koplugin",
-      "homepage": "https://github.com/jnprcyan/copytoxochitl.koplugin",
-      "topics": [
-        "koreader-plugin",
-        "remarkable-tablet"
-      ],
-      "stars": 4,
-      "created_at": "2025-08-14T11:29:47Z",
-      "updated_at": "2025-08-29T16:21:41Z",
-      "stars_delta": 0,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": null,
-      "latest_commit": null,
-      "download_url": "https://github.com/jnprcyan/copytoxochitl.koplugin/archive/refs/heads/main.zip",
-      "download_source": "zipball",
-      "sha256": null,
-      "install_dirname": "copytoxochitl.koplugin",
-      "plugin_path": ".",
-      "layout": "root-files",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": "MIT",
-      "screenshots": [],
-      "categories": [
-        "annotation"
-      ],
-      "llm_enriched_at": null
-    },
-    {
       "id": "consoleaf/hello.koplugin",
       "name": "hello",
       "slug": "consoleaf-hello-koplugin",
@@ -10109,45 +10153,43 @@
       }
     },
     {
-      "id": "jnjnnjzch/leko-reader",
-      "name": "leko",
-      "slug": "jnjnnjzch-leko-reader",
-      "summary": "全程本地运行的 KOReader 网络小说插件，支持 Legado 兼容书源，致力于让阅读轻快流畅。 An on-device KOReader web novel reader with Legado-compatible sources, built for fast and fluid reading.",
-      "description": "全程本地运行的 KOReader 网络小说插件，支持 Legado 兼容书源，致力于让阅读轻快流畅。 An on-device KOReader web novel reader with Legado-compatible sources, built for fast and fluid reading.",
-      "owner": "jnjnnjzch",
-      "repo": "leko-reader",
-      "homepage": "https://github.com/jnjnnjzch/leko-reader",
+      "id": "cyanjnpr/copytoxochitl.koplugin",
+      "name": "copytoxochitl",
+      "slug": "cyanjnpr-copytoxochitl-koplugin",
+      "summary": "Copy highlighted text into reMarkable notebooks",
+      "description": "Copy highlighted text into reMarkable notebooks",
+      "owner": "cyanjnpr",
+      "repo": "copytoxochitl.koplugin",
+      "homepage": "https://github.com/cyanjnpr/copytoxochitl.koplugin",
       "topics": [
-        "kindle",
-        "koreader",
         "koreader-plugin",
-        "legado",
-        "lua",
-        "web-novel"
+        "remarkable-tablet"
       ],
       "stars": 4,
-      "created_at": "2026-08-08T02:32:10Z",
-      "updated_at": "2026-08-15T15:03:02Z",
-      "stars_delta": 4,
+      "created_at": "2025-08-14T11:29:47Z",
+      "updated_at": "2025-08-29T16:21:41Z",
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
-      "latest_tag": "v0.15.37",
+      "latest_tag": null,
       "latest_commit": null,
-      "download_url": "https://github.com/jnjnnjzch/leko-reader/releases/download/v0.15.37/Leko-Reader-KOReader-0.15.37.zip",
-      "download_source": "release_asset",
+      "download_url": "https://github.com/cyanjnpr/copytoxochitl.koplugin/archive/refs/heads/main.zip",
+      "download_source": "zipball",
       "sha256": null,
-      "install_dirname": "leko.koplugin",
-      "plugin_path": "leko.koplugin",
-      "layout": "root-koplugin-dir",
+      "install_dirname": "copytoxochitl.koplugin",
+      "plugin_path": ".",
+      "layout": "root-files",
       "koreader_min": null,
       "koreader_max": null,
-      "license": "AGPL-3.0",
+      "license": "MIT",
       "screenshots": [],
       "categories": [
-        "bookstore",
-        "network"
+        "annotation"
       ],
-      "llm_enriched_at": null
+      "editorial_note": {
+        "en": "Copy highlighted text to reMarkable notebook",
+        "zh": "将高亮文本复制到 reMarkable 笔记本"
+      }
     },
     {
       "id": "m-tky/koreader-skk",
@@ -10639,7 +10681,7 @@
       "stars": 3,
       "created_at": "2026-05-25T12:33:29Z",
       "updated_at": "2026-05-28T18:39:09Z",
-      "stars_delta": 1,
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v0.4.0",
@@ -11298,6 +11340,52 @@
       }
     },
     {
+      "id": "mgrimace/stretch.koplugin",
+      "name": "stretch",
+      "slug": "mgrimace-stretch-koplugin",
+      "summary": "A KOReader plugin that stretches manga and comic pages to fill the screen width without extra scrolling",
+      "description": "A KOReader plugin that stretches manga and comic pages to fill the screen width without extra scrolling",
+      "owner": "mgrimace",
+      "repo": "stretch.koplugin",
+      "homepage": "https://github.com/mgrimace/stretch.koplugin",
+      "topics": [
+        "comics",
+        "companion",
+        "koreader",
+        "koreader-plugin",
+        "manga",
+        "plugin"
+      ],
+      "stars": 2,
+      "created_at": "2026-06-22T19:58:02Z",
+      "updated_at": "2026-08-18T12:16:09Z",
+      "stars_delta": 0,
+      "stars_delta_7d": null,
+      "stars_delta_30d": null,
+      "latest_tag": "v1.0.0",
+      "latest_commit": null,
+      "download_url": "https://github.com/mgrimace/stretch.koplugin/releases/download/v1.0.0/stretch.koplugin.zip",
+      "download_source": "release_asset",
+      "sha256": null,
+      "install_dirname": "stretch.koplugin",
+      "plugin_path": ".",
+      "layout": "name-koplugin",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": "MIT",
+      "screenshots": [],
+      "categories": [
+        "comic",
+        "image",
+        "typography"
+      ],
+      "editorial_note": {
+        "en": "Stretch comic pages to fill the screen for scroll-free reading",
+        "zh": "拉伸漫画页面填满屏幕，免滚动阅读"
+      },
+      "llm_enriched_at": null
+    },
+    {
       "id": "jsfaint/zhihudaily.koplugin",
       "name": "zhihudaily",
       "slug": "jsfaint-zhihudaily-koplugin",
@@ -11552,6 +11640,49 @@
       "editorial_note": {
         "en": "Cycle camera feed in a screen corner while reading",
         "zh": "在阅读时于屏幕角落轮播摄像头画面"
+      },
+      "llm_enriched_at": null
+    },
+    {
+      "id": "paulbockewitz/kocatchup.koplugin",
+      "name": "kocatchup",
+      "slug": "paulbockewitz-kocatchup-koplugin",
+      "summary": "KO Catchup — spoiler-safe AI 'story so far' recaps for KOReader, bounded to your reading position",
+      "description": "KO Catchup — spoiler-safe AI 'story so far' recaps for KOReader, bounded to your reading position",
+      "owner": "paulbockewitz",
+      "repo": "kocatchup.koplugin",
+      "homepage": "https://github.com/paulbockewitz/kocatchup.koplugin",
+      "topics": [
+        "ereader",
+        "kindle",
+        "koreader-plugin",
+        "llm"
+      ],
+      "stars": 2,
+      "created_at": "2026-08-09T16:46:48Z",
+      "updated_at": "2026-08-10T23:57:41Z",
+      "stars_delta": 1,
+      "stars_delta_7d": null,
+      "stars_delta_30d": null,
+      "latest_tag": "v0.5.5",
+      "latest_commit": null,
+      "download_url": "https://github.com/paulbockewitz/kocatchup.koplugin/releases/download/v0.5.5/kocatchup-0.5.5.zip",
+      "download_source": "release_asset",
+      "sha256": null,
+      "install_dirname": "kocatchup.koplugin",
+      "plugin_path": ".",
+      "layout": "root-files",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": "GPL-3.0",
+      "screenshots": [],
+      "categories": [
+        "llm",
+        "bookstore"
+      ],
+      "editorial_note": {
+        "en": "Generate spoiler-free AI plot recaps based on reading progress",
+        "zh": "按阅读进度生成防剧透的AI剧情回顾"
       },
       "llm_enriched_at": null
     },
@@ -12171,52 +12302,6 @@
       "editorial_note": {
         "en": "Browse Calibre library directly and open books",
         "zh": "直接浏览 Calibre 书库并打开书籍"
-      },
-      "llm_enriched_at": null
-    },
-    {
-      "id": "mgrimace/stretch.koplugin",
-      "name": "stretch",
-      "slug": "mgrimace-stretch-koplugin",
-      "summary": "A KOReader plugin that stretches manga and comic pages to fill the screen width without extra scrolling",
-      "description": "A KOReader plugin that stretches manga and comic pages to fill the screen width without extra scrolling",
-      "owner": "mgrimace",
-      "repo": "stretch.koplugin",
-      "homepage": "https://github.com/mgrimace/stretch.koplugin",
-      "topics": [
-        "comics",
-        "companion",
-        "koreader",
-        "koreader-plugin",
-        "manga",
-        "plugin"
-      ],
-      "stars": 2,
-      "created_at": "2026-06-22T19:58:02Z",
-      "updated_at": "2026-06-22T20:05:31Z",
-      "stars_delta": 0,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": "v1.0.0",
-      "latest_commit": null,
-      "download_url": "https://github.com/mgrimace/stretch.koplugin/releases/download/v1.0.0/stretch.koplugin.zip",
-      "download_source": "release_asset",
-      "sha256": null,
-      "install_dirname": "stretch.koplugin",
-      "plugin_path": ".",
-      "layout": "name-koplugin",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": "MIT",
-      "screenshots": [],
-      "categories": [
-        "comic",
-        "image",
-        "typography"
-      ],
-      "editorial_note": {
-        "en": "Stretch comic pages to fill the screen for scroll-free reading",
-        "zh": "拉伸漫画页面填满屏幕，免滚动阅读"
       },
       "llm_enriched_at": null
     },
@@ -13564,49 +13649,6 @@
       "editorial_note": {
         "en": "Plot battery curve and track sleep/wake",
         "zh": "绘制电量曲线并追踪休眠唤醒"
-      },
-      "llm_enriched_at": null
-    },
-    {
-      "id": "paulbockewitz/kocatchup.koplugin",
-      "name": "kocatchup",
-      "slug": "paulbockewitz-kocatchup-koplugin",
-      "summary": "KO Catchup — spoiler-safe AI 'story so far' recaps for KOReader, bounded to your reading position",
-      "description": "KO Catchup — spoiler-safe AI 'story so far' recaps for KOReader, bounded to your reading position",
-      "owner": "paulbockewitz",
-      "repo": "kocatchup.koplugin",
-      "homepage": "https://github.com/paulbockewitz/kocatchup.koplugin",
-      "topics": [
-        "ereader",
-        "kindle",
-        "koreader-plugin",
-        "llm"
-      ],
-      "stars": 1,
-      "created_at": "2026-08-09T16:46:48Z",
-      "updated_at": "2026-08-10T23:57:41Z",
-      "stars_delta": 0,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": "v0.5.5",
-      "latest_commit": null,
-      "download_url": "https://github.com/paulbockewitz/kocatchup.koplugin/releases/download/v0.5.5/kocatchup-0.5.5.zip",
-      "download_source": "release_asset",
-      "sha256": null,
-      "install_dirname": "kocatchup.koplugin",
-      "plugin_path": ".",
-      "layout": "root-files",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": "GPL-3.0",
-      "screenshots": [],
-      "categories": [
-        "llm",
-        "bookstore"
-      ],
-      "editorial_note": {
-        "en": "Generate spoiler-free AI plot recaps based on reading progress",
-        "zh": "按阅读进度生成防剧透的AI剧情回顾"
       },
       "llm_enriched_at": null
     },
@@ -15907,6 +15949,47 @@
       }
     },
     {
+      "id": "code2344/calculator.koplugin",
+      "name": "calculator",
+      "slug": "code2344-calculator-koplugin",
+      "summary": "A calculator plugin for KOReader",
+      "description": "A calculator plugin for KOReader",
+      "owner": "code2344",
+      "repo": "calculator.koplugin",
+      "homepage": "https://github.com/code2344/calculator.koplugin",
+      "topics": [],
+      "stars": 1,
+      "created_at": "2025-09-08T12:09:38Z",
+      "updated_at": "2025-09-08T12:46:10Z",
+      "stars_delta": 1,
+      "stars_delta_7d": null,
+      "stars_delta_30d": null,
+      "latest_tag": null,
+      "latest_commit": null,
+      "download_url": "https://github.com/code2344/calculator.koplugin/archive/refs/heads/master.zip",
+      "download_source": "zipball",
+      "sha256": null,
+      "install_dirname": "calculator.koplugin",
+      "plugin_path": ".",
+      "layout": "root-files",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": "GPL-3.0",
+      "screenshots": [
+        "https://user-images.githubusercontent.com/36999612/122679158-18967c80-d1ea-11eb-9a20-177d41908e9b.png",
+        "https://user-images.githubusercontent.com/36999612/122679584-c35b6a80-d1eb-11eb-9c31-e28a7008fe89.png",
+        "https://user-images.githubusercontent.com/36999612/122679565-af176d80-d1eb-11eb-881a-a06c100efe36.png"
+      ],
+      "categories": [
+        "other"
+      ],
+      "llm_enriched_at": "2026-08-14T03:51:39.905Z",
+      "editorial_note": {
+        "en": "Perform math calculations and unit conversions directly",
+        "zh": "直接进行数学计算与单位换算"
+      }
+    },
+    {
       "id": "consoleaf/repl.koplugin",
       "name": "repl",
       "slug": "consoleaf-repl-koplugin",
@@ -15961,8 +16044,8 @@
       ],
       "stars": 1,
       "created_at": "2026-08-18T09:20:20Z",
-      "updated_at": "2026-08-18T09:59:21Z",
-      "stars_delta": null,
+      "updated_at": "2026-08-18T10:47:53Z",
+      "stars_delta": 0,
       "stars_delta_7d": null,
       "stars_delta_30d": null,
       "latest_tag": "v0.1.0",
@@ -15981,7 +16064,8 @@
       ],
       "categories": [
         "other"
-      ]
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "sypianski/kopad",
@@ -16063,6 +16147,110 @@
         "en": "Extract Calibre metadata from PDFs and write to KOReader",
         "zh": "提取 PDF 中的 Calibre 元数据并写入 KOReader"
       }
+    },
+    {
+      "id": "xdHampus/ereolen.koplugin",
+      "name": "ereolen",
+      "slug": "xdhampus-ereolen-koplugin",
+      "summary": "KOReader plugin for interacting with eReolen.dk",
+      "description": "KOReader plugin for interacting with eReolen.dk",
+      "owner": "xdHampus",
+      "repo": "ereolen.koplugin",
+      "homepage": "https://github.com/xdHampus/ereolen.koplugin",
+      "topics": [],
+      "stars": 0,
+      "created_at": "2023-02-09T23:14:05Z",
+      "updated_at": "2026-08-18T20:47:56Z",
+      "stars_delta": 0,
+      "stars_delta_7d": null,
+      "stars_delta_30d": null,
+      "latest_tag": null,
+      "latest_commit": null,
+      "download_url": "https://github.com/xdHampus/ereolen.koplugin/archive/refs/heads/main.zip",
+      "download_source": "zipball",
+      "sha256": null,
+      "install_dirname": "ereolen.koplugin",
+      "plugin_path": ".",
+      "layout": "name-koplugin",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": "GPL-3.0",
+      "screenshots": [],
+      "categories": [
+        "bookstore",
+        "download"
+      ],
+      "editorial_note": {
+        "en": "Browse Danish e-book library and download books",
+        "zh": "浏览丹麦电子书库并下载书籍"
+      },
+      "llm_enriched_at": null
+    },
+    {
+      "id": "HelioSYep/mysimpleui_ext.koplugin",
+      "name": "mysimpleui_ext",
+      "slug": "heliosyep-mysimpleui-ext-koplugin",
+      "summary": "",
+      "description": "",
+      "owner": "HelioSYep",
+      "repo": "mysimpleui_ext.koplugin",
+      "homepage": "https://github.com/HelioSYep/mysimpleui_ext.koplugin",
+      "topics": [],
+      "stars": 0,
+      "created_at": "2026-08-18T07:16:21Z",
+      "updated_at": "2026-08-18T15:56:14Z",
+      "stars_delta": 0,
+      "stars_delta_7d": null,
+      "stars_delta_30d": null,
+      "latest_tag": null,
+      "latest_commit": null,
+      "download_url": "https://github.com/HelioSYep/mysimpleui_ext.koplugin/archive/refs/heads/main.zip",
+      "download_source": "zipball",
+      "sha256": null,
+      "install_dirname": "mysimpleui_ext.koplugin",
+      "plugin_path": ".",
+      "layout": "root-files",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": "AGPL-3.0",
+      "screenshots": [],
+      "categories": [
+        "beautify"
+      ],
+      "llm_enriched_at": null
+    },
+    {
+      "id": "tzhvh/lanfetch.koplugin",
+      "name": "lanfetch",
+      "slug": "tzhvh-lanfetch-koplugin",
+      "summary": "File download plugin for koreader (100% machine generated)",
+      "description": "File download plugin for koreader (100% machine generated)",
+      "owner": "tzhvh",
+      "repo": "lanfetch.koplugin",
+      "homepage": "https://github.com/tzhvh/lanfetch.koplugin",
+      "topics": [],
+      "stars": 0,
+      "created_at": "2026-08-18T00:19:51Z",
+      "updated_at": "2026-08-18T02:25:06Z",
+      "stars_delta": 0,
+      "stars_delta_7d": null,
+      "stars_delta_30d": null,
+      "latest_tag": "v1.0.0",
+      "latest_commit": null,
+      "download_url": "https://github.com/tzhvh/lanfetch.koplugin/releases/download/v1.0.0/lanfetch-v1.0.0.koplugin.zip",
+      "download_source": "release_asset",
+      "sha256": "b4299a4ab60d6e631f1461945d584baf1d15e443357cf5c026d69d39217f0066",
+      "install_dirname": "lanfetch.koplugin",
+      "plugin_path": "lanfetch.koplugin",
+      "layout": "root-koplugin-dir",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": null,
+      "screenshots": [],
+      "categories": [
+        "download"
+      ],
+      "llm_enriched_at": null
     },
     {
       "id": "nicotapiero/underlinesentences.koplugin",
@@ -16378,38 +16566,6 @@
         "beautify"
       ],
       "llm_enriched_at": null
-    },
-    {
-      "id": "HelioSYep/mysimpleui_ext.koplugin",
-      "name": "mysimpleui_ext",
-      "slug": "heliosyep-mysimpleui-ext-koplugin",
-      "summary": "",
-      "description": "",
-      "owner": "HelioSYep",
-      "repo": "mysimpleui_ext.koplugin",
-      "homepage": "https://github.com/HelioSYep/mysimpleui_ext.koplugin",
-      "topics": [],
-      "stars": 0,
-      "created_at": "2026-08-18T07:16:21Z",
-      "updated_at": "2026-08-18T09:52:49Z",
-      "stars_delta": null,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": null,
-      "latest_commit": null,
-      "download_url": "https://github.com/HelioSYep/mysimpleui_ext.koplugin/archive/refs/heads/main.zip",
-      "download_source": "zipball",
-      "sha256": null,
-      "install_dirname": "mysimpleui_ext.koplugin",
-      "plugin_path": ".",
-      "layout": "root-files",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": "AGPL-3.0",
-      "screenshots": [],
-      "categories": [
-        "beautify"
-      ]
     },
     {
       "id": "dwarfsawman/readest-webdav.koplugin",
@@ -17705,38 +17861,6 @@
         "zh": "星战谜题，行列区域各放一星且不相邻"
       },
       "llm_enriched_at": null
-    },
-    {
-      "id": "tzhvh/lanfetch.koplugin",
-      "name": "lanfetch",
-      "slug": "tzhvh-lanfetch-koplugin",
-      "summary": "File download plugin for koreader (100% machine generated)",
-      "description": "File download plugin for koreader (100% machine generated)",
-      "owner": "tzhvh",
-      "repo": "lanfetch.koplugin",
-      "homepage": "https://github.com/tzhvh/lanfetch.koplugin",
-      "topics": [],
-      "stars": 0,
-      "created_at": "2026-08-18T00:19:51Z",
-      "updated_at": "2026-08-18T02:25:06Z",
-      "stars_delta": null,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": "v1.0.0",
-      "latest_commit": null,
-      "download_url": "https://github.com/tzhvh/lanfetch.koplugin/releases/download/v1.0.0/lanfetch-v1.0.0.koplugin.zip",
-      "download_source": "release_asset",
-      "sha256": "b4299a4ab60d6e631f1461945d584baf1d15e443357cf5c026d69d39217f0066",
-      "install_dirname": "lanfetch.koplugin",
-      "plugin_path": "lanfetch.koplugin",
-      "layout": "root-koplugin-dir",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": null,
-      "screenshots": [],
-      "categories": [
-        "download"
-      ]
     },
     {
       "id": "t2ym5u/slitherlink.koplugin",
@@ -20080,44 +20204,6 @@
       "editorial_note": {
         "en": "Play hypersudoku with extra boxes and note mode",
         "zh": "玩超数独，含额外宫格与笔记模式"
-      },
-      "llm_enriched_at": null
-    },
-    {
-      "id": "xdHampus/ereolen.koplugin",
-      "name": "ereolen",
-      "slug": "xdhampus-ereolen-koplugin",
-      "summary": "KOReader plugin for interacting with eReolen.dk",
-      "description": "KOReader plugin for interacting with eReolen.dk",
-      "owner": "xdHampus",
-      "repo": "ereolen.koplugin",
-      "homepage": "https://github.com/xdHampus/ereolen.koplugin",
-      "topics": [],
-      "stars": 0,
-      "created_at": "2023-02-09T23:14:05Z",
-      "updated_at": "2026-07-27T23:26:24Z",
-      "stars_delta": 0,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": null,
-      "latest_commit": null,
-      "download_url": "https://github.com/xdHampus/ereolen.koplugin/archive/refs/heads/main.zip",
-      "download_source": "zipball",
-      "sha256": null,
-      "install_dirname": "ereolen.koplugin",
-      "plugin_path": ".",
-      "layout": "name-koplugin",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": "GPL-3.0",
-      "screenshots": [],
-      "categories": [
-        "bookstore",
-        "download"
-      ],
-      "editorial_note": {
-        "en": "Browse Danish e-book library and download books",
-        "zh": "浏览丹麦电子书库并下载书籍"
       },
       "llm_enriched_at": null
     },
@@ -23657,47 +23743,6 @@
       }
     },
     {
-      "id": "code2344/calculator.koplugin",
-      "name": "calculator",
-      "slug": "code2344-calculator-koplugin",
-      "summary": "A calculator plugin for KOReader",
-      "description": "A calculator plugin for KOReader",
-      "owner": "code2344",
-      "repo": "calculator.koplugin",
-      "homepage": "https://github.com/code2344/calculator.koplugin",
-      "topics": [],
-      "stars": 0,
-      "created_at": "2025-09-08T12:09:38Z",
-      "updated_at": "2025-09-08T12:46:10Z",
-      "stars_delta": 0,
-      "stars_delta_7d": null,
-      "stars_delta_30d": null,
-      "latest_tag": null,
-      "latest_commit": null,
-      "download_url": "https://github.com/code2344/calculator.koplugin/archive/refs/heads/master.zip",
-      "download_source": "zipball",
-      "sha256": null,
-      "install_dirname": "calculator.koplugin",
-      "plugin_path": ".",
-      "layout": "root-files",
-      "koreader_min": null,
-      "koreader_max": null,
-      "license": "GPL-3.0",
-      "screenshots": [
-        "https://user-images.githubusercontent.com/36999612/122679158-18967c80-d1ea-11eb-9a20-177d41908e9b.png",
-        "https://user-images.githubusercontent.com/36999612/122679584-c35b6a80-d1eb-11eb-9c31-e28a7008fe89.png",
-        "https://user-images.githubusercontent.com/36999612/122679565-af176d80-d1eb-11eb-881a-a06c100efe36.png"
-      ],
-      "categories": [
-        "other"
-      ],
-      "llm_enriched_at": "2026-08-14T03:51:39.905Z",
-      "editorial_note": {
-        "en": "Perform math calculations and unit conversions directly",
-        "zh": "直接进行数学计算与单位换算"
-      }
-    },
-    {
       "id": "Syakhisk/roller.koplugin",
       "name": "roller",
       "slug": "syakhisk-roller-koplugin",
@@ -23946,6 +23991,45 @@
         "en": "Write a diary and sync it to Notion",
         "zh": "写日记并同步到 Notion"
       }
+    },
+    {
+      "id": "fusuyfusuy/storify.koplugin",
+      "name": "storify",
+      "slug": "fusuyfusuy-storify-koplugin",
+      "summary": "In-app package manager and plugin store for KOReader",
+      "description": "In-app package manager and plugin store for KOReader",
+      "owner": "fusuyfusuy",
+      "repo": "storify.koplugin",
+      "homepage": "https://github.com/fusuyfusuy/storify.koplugin",
+      "topics": [
+        "e-reader",
+        "koreader",
+        "koreader-plugin",
+        "koreader-plugins",
+        "package-manager",
+        "plugin"
+      ],
+      "stars": 0,
+      "created_at": "2026-08-18T18:15:38Z",
+      "updated_at": "2026-08-18T20:42:47Z",
+      "stars_delta": null,
+      "stars_delta_7d": null,
+      "stars_delta_30d": null,
+      "latest_tag": "v2.0.0",
+      "latest_commit": null,
+      "download_url": "https://github.com/fusuyfusuy/storify.koplugin/releases/download/v2.0.0/storify.koplugin-v2.0.0.zip",
+      "download_source": "release_asset",
+      "sha256": "cd523976cf41d9c830243687f42b335e5d58effebb6751fe3013bcf80740d039",
+      "install_dirname": "storify.koplugin",
+      "plugin_path": ".",
+      "layout": "root-files",
+      "koreader_min": null,
+      "koreader_max": null,
+      "license": "GPL-3.0",
+      "screenshots": [],
+      "categories": [
+        "other"
+      ]
     }
   ]
 }
