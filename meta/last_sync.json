@@ -1,13 +1,13 @@
 {
   "status": "ok",
-  "started_at": "2026-08-21T22:00:01.794Z",
-  "finished_at": "2026-08-21T22:02:04.446Z",
-  "plugins_count": 590,
+  "started_at": "2026-08-22T10:00:01.852Z",
+  "finished_at": "2026-08-22T10:02:06.154Z",
+  "plugins_count": 591,
   "candidates": 687,
   "rejected_count": 61,
   "rules_version": 6,
   "category_counts": {
-    "beautify": 80,
+    "beautify": 81,
     "typography": 22,
     "image": 35,
     "rss": 17,
@@ -79,6 +79,6 @@
     "自动化": 1,
     "ocr": 1
   },
-  "message": "Synced 590 verified plugins (rules v6)",
-  "content_sha256": "26b1d05c20d6c5b90b7d4d29eb498c3f2857dc3b24c572068515a40dd6e0af15"
+  "message": "Synced 591 verified plugins (rules v6)",
+  "content_sha256": "43126f04d091e3a11857b48dd0116b9373b11a24741afbe2b264d4c698655351"
 }
