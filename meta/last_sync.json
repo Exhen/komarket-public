@@ -1,7 +1,7 @@
 {
   "status": "ok",
-  "started_at": "2026-08-27T08:25:24.219Z",
-  "finished_at": "2026-08-27T08:26:05.671Z",
+  "started_at": "2026-08-27T08:37:10.347Z",
+  "finished_at": "2026-08-27T08:38:16.516Z",
   "plugins_count": 617,
   "candidates": 722,
   "rejected_count": 67,
@@ -80,5 +80,5 @@
     "ocr": 1
   },
   "message": "Synced 617 verified plugins (rules v6)",
-  "content_sha256": "d131942eeb7295c34fefcddf7dd8deb4e50525a0b0e92cd58cae1a1dca5c6999"
+  "content_sha256": "5c0585107840c891fabb8e42fba2eb580999003c16ffc92450a1ee594532f898"
 }
