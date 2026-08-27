@@ -325,15 +325,53 @@ function Installer.patchFileInstalled(filename)
         or pathMode(dir .. "/" .. filename .. ".disabled") == "file"
 end
 
-function Installer.isInstalled(plugin_or_dirname)
-    local dirname
-    if type(plugin_or_dirname) == "table" then
-        dirname = plugin_or_dirname.install_dirname
-    else
-        dirname = plugin_or_dirname
+--- One-shot installed map for list sort/render (avoids N× loadRegistry IO).
+--- Keys are install_dirname strings; values are true.
+function Installer.buildInstalledSet()
+    local set = {}
+    local plugins_dir = Installer.pluginsDir()
+    if pathMode(plugins_dir) == "directory" then
+        for name in lfs.dir(plugins_dir) do
+            if name ~= "." and name ~= ".." and isSafeDirname(name) and name:match("%.koplugin$") then
+                if pathMode(plugins_dir .. "/" .. name) == "directory" then
+                    set[name] = true
+                end
+            end
+        end
     end
+    local ok, Updates = pcall(require, "updates")
+    if ok and Updates and Updates.loadRegistry then
+        local reg = Updates.loadRegistry()
+        for dirname, rec in pairs(reg) do
+            if type(dirname) == "string" and isSafeDirname(dirname)
+                and type(rec) == "table" and type(rec.patch_files) == "table" then
+                for _, filename in ipairs(rec.patch_files) do
+                    if Installer.patchFileInstalled(filename) then
+                        set[dirname] = true
+                        break
+                    end
+                end
+            end
+        end
+    end
+    return set
+end
+
+local function dirnameOf(plugin_or_dirname)
+    if type(plugin_or_dirname) == "table" then
+        return plugin_or_dirname.install_dirname
+    end
+    return plugin_or_dirname
+end
+
+--- @param installed_set table|nil optional map from buildInstalledSet()
+function Installer.isInstalled(plugin_or_dirname, installed_set)
+    local dirname = dirnameOf(plugin_or_dirname)
     if not isSafeDirname(dirname) then
         return false
+    end
+    if type(installed_set) == "table" then
+        return installed_set[dirname] == true
     end
     if pathMode(Installer.pluginsDir() .. "/" .. dirname) == "directory" then
         return true

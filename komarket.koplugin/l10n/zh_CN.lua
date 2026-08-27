@@ -39,6 +39,8 @@ return {
     ["Search"] = "搜索",
     ["Editor's note: %1"] = "编辑注：%1",
     ["Type: %1"] = "类型：%1",
+    ["Version: %1"] = "版本：%1",
+    ["Installed version: %1"] = "已安装版本：%1",
     ["Author: %1"] = "作者：%1",
     ["Repository: %1/%2"] = "仓库：%1/%2",
     ["Install dir: %1"] = "目录名：%1",

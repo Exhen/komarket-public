@@ -1,0 +1,161 @@
+name: Release komarket.koplugin
+
+# Bump komarket.koplugin/_version.lua on main → auto-create GitHub Release
+# with komarket.koplugin-vX.Y.Z.zip (same layout as historical releases).
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "komarket.koplugin/_version.lua"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Delete and recreate the release if the tag already exists"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-komarket-koplugin
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Read version from _version.lua
+        id: ver
+        run: |
+          set -euo pipefail
+          VERSION="$(python3 - <<'PY'
+          from pathlib import Path
+          import re
+          text = Path("komarket.koplugin/_version.lua").read_text(encoding="utf-8")
+          m = re.search(r'return\s+"([^"]+)"', text)
+          if not m:
+              raise SystemExit("cannot parse version from komarket.koplugin/_version.lua")
+          print(m.group(1))
+          PY
+          )"
+          if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+([.-][0-9A-Za-z.+-]+)?$ ]]; then
+            echo "Invalid version string: $VERSION" >&2
+            exit 1
+          fi
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "tag=v${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "asset=komarket.koplugin-v${VERSION}.zip" >> "$GITHUB_OUTPUT"
+          echo "Detected version ${VERSION} (tag v${VERSION})"
+
+      - name: Verify KPM manifest version matches
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          import re
+          from pathlib import Path
+          version = Path("komarket.koplugin/_version.lua").read_text(encoding="utf-8")
+          m = re.search(r'return\s+"([^"]+)"', version)
+          assert m, "missing _version.lua return"
+          parts = [int(x) for x in m.group(1).split(".")[:3]]
+          while len(parts) < 3:
+              parts.append(0)
+          manifest = json.loads(Path("kpm/package/manifest.json").read_text(encoding="utf-8"))
+          mv = manifest.get("version")
+          if list(mv)[:3] != parts[:3]:
+              raise SystemExit(
+                  f"kpm/package/manifest.json version {mv} != _version.lua {parts}"
+              )
+          print("KPM manifest version OK:", parts)
+          PY
+
+      - name: Check existing release
+        id: check
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ steps.ver.outputs.tag }}
+          FORCE: ${{ github.event_name == 'workflow_dispatch' && inputs.force || false }}
+        run: |
+          set -euo pipefail
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+            echo "Release $TAG already exists"
+            if [[ "$FORCE" == "true" ]]; then
+              echo "force=true" >> "$GITHUB_OUTPUT"
+              echo "Force recreate requested"
+            else
+              echo "force=false" >> "$GITHUB_OUTPUT"
+            fi
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+            echo "force=false" >> "$GITHUB_OUTPUT"
+            echo "Release $TAG does not exist yet"
+          fi
+
+      - name: Delete existing release (force)
+        if: steps.check.outputs.exists == 'true' && steps.check.outputs.force == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ steps.ver.outputs.tag }}
+        run: |
+          set -euo pipefail
+          gh release delete "$TAG" --yes --cleanup-tag
+          echo "Deleted release and tag $TAG"
+
+      - name: Build release zip
+        if: steps.check.outputs.exists != 'true' || steps.check.outputs.force == 'true'
+        env:
+          ASSET: ${{ steps.ver.outputs.asset }}
+        run: |
+          set -euo pipefail
+          # Zip must unpack to a top-level komarket.koplugin/ folder.
+          rm -f "$ASSET"
+          zip -r "$ASSET" komarket.koplugin \
+            -x "*.DS_Store" \
+            -x "**/.DS_Store" \
+            -x "**/.git/*" \
+            -x "**/.git/**"
+          unzip -l "$ASSET" | head -n 20
+          python3 - <<'PY'
+          import hashlib, os
+          asset = os.environ["ASSET"]
+          data = open(asset, "rb").read()
+          print(f"{asset}: {len(data)} bytes")
+          print("sha256:", hashlib.sha256(data).hexdigest())
+          PY
+
+      - name: Create GitHub Release
+        if: steps.check.outputs.exists != 'true' || steps.check.outputs.force == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: ${{ steps.ver.outputs.version }}
+          TAG: ${{ steps.ver.outputs.tag }}
+          ASSET: ${{ steps.ver.outputs.asset }}
+        run: |
+          set -euo pipefail
+          NOTES="$(cat <<EOF
+          ## komarket.koplugin v${VERSION}
+
+          ### 安装
+          1. 下载 \`${ASSET}\`
+          2. 解压得到 \`komarket.koplugin\` 文件夹
+          3. 复制到 KOReader 的 \`plugins/\` 目录
+          4. 重启 KOReader
+
+          或在已安装的插件内使用「检查卡欧市场更新」升级。
+
+          ### 来源
+          - Commit: ${GITHUB_SHA}
+          - Workflow: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}
+          EOF
+          )"
+          gh release create "$TAG" "$ASSET" \
+            --title "komarket.koplugin v${VERSION}" \
+            --notes "$NOTES" \
+            --latest \
+            --target "${GITHUB_SHA}"

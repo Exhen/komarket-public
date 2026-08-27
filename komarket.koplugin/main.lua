@@ -229,9 +229,12 @@ function KOMarket:showBrowser(filter_query, category_id, kind)
     local cat = self._filter_category or "all"
     local kind_filter = self._filter_kind or "all"
     local plugins = Catalog.filterPlugins(catalog.plugins, q, cat, kind_filter)
+
+    -- Build installed set once (plugins/ scan + single registry read).
+    local installed_set = Installer.buildInstalledSet()
     table.sort(plugins, function(a, b)
-        local ia = Installer.isInstalled(a) and 1 or 0
-        local ib = Installer.isInstalled(b) and 1 or 0
+        local ia = installed_set[a.install_dirname] and 1 or 0
+        local ib = installed_set[b.install_dirname] and 1 or 0
         if ia ~= ib then
             return ia > ib
         end
@@ -371,8 +374,8 @@ function KOMarket:showBrowser(filter_query, category_id, kind)
         }
     end
 
-    for i, plugin in ipairs(plugins) do
-        local installed = Installer.isInstalled(plugin)
+    for _, plugin in ipairs(plugins) do
+        local installed = installed_set[plugin.install_dirname] == true
         local stars = tonumber(plugin.stars) or 0
         local tags = self:formatCategoryTags(plugin)
         local kind_tag = self:kindLabel(Catalog.itemKind(plugin))
@@ -725,6 +728,18 @@ function KOMarket:showPluginActions(plugin)
         lines[#lines + 1] = ""
     end
     lines[#lines + 1] = T(_("Type: %1"), self:kindLabel(kind))
+    local remote_ver = plugin.latest_tag
+    if remote_ver and remote_ver ~= "" then
+        lines[#lines + 1] = T(_("Version: %1"), tostring(remote_ver))
+    else
+        lines[#lines + 1] = T(_("Version: %1"), _("Unknown"))
+    end
+    if installed then
+        local local_ver = Updates.readLocalVersion(plugin.install_dirname)
+        if local_ver and local_ver ~= "" then
+            lines[#lines + 1] = T(_("Installed version: %1"), tostring(local_ver))
+        end
+    end
     lines[#lines + 1] = T(_("Author: %1"), plugin.owner or "?")
     lines[#lines + 1] = T(_("Repository: %1/%2"), plugin.owner or "?", plugin.repo or "?")
     lines[#lines + 1] = T(_("Install dir: %1"), plugin.install_dirname or "?")
