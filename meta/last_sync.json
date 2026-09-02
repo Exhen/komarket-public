@@ -1,9 +1,9 @@
 {
   "status": "ok",
-  "started_at": "2026-09-01T22:00:02.005Z",
-  "finished_at": "2026-09-01T22:06:58.973Z",
-  "plugins_count": 635,
-  "candidates": 748,
+  "started_at": "2026-09-02T10:00:02.143Z",
+  "finished_at": "2026-09-02T10:02:37.633Z",
+  "plugins_count": 637,
+  "candidates": 750,
   "rejected_count": 72,
   "rules_version": 6,
   "category_counts": {
@@ -29,7 +29,7 @@
     "calendar": 9,
     "file": 42,
     "network": 80,
-    "other": 84,
+    "other": 86,
     "安全": 1,
     "查词": 1,
     "词汇": 1,
@@ -79,6 +79,6 @@
     "自动化": 1,
     "ocr": 1
   },
-  "message": "Synced 635 verified plugins (rules v6)",
-  "content_sha256": "9ce41524c5195744633016978f746a57a9fd3d14a76fc23e670e0685472c873d"
+  "message": "Synced 637 verified plugins (rules v6)",
+  "content_sha256": "888174993431dbb1b1d5c7f93674ad17669aa7434c79e6bb05043ce397b43603"
 }
