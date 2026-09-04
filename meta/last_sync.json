@@ -1,9 +1,9 @@
 {
   "status": "ok",
-  "started_at": "2026-09-03T22:00:02.333Z",
-  "finished_at": "2026-09-03T22:07:13.291Z",
-  "plugins_count": 647,
-  "candidates": 760,
+  "started_at": "2026-09-04T10:00:02.490Z",
+  "finished_at": "2026-09-04T10:07:28.760Z",
+  "plugins_count": 648,
+  "candidates": 761,
   "rejected_count": 72,
   "rules_version": 6,
   "category_counts": {
@@ -15,7 +15,7 @@
     "bookstore": 111,
     "llm": 28,
     "dictionary": 29,
-    "translate": 21,
+    "translate": 22,
     "annotation": 81,
     "sync": 114,
     "cloud": 17,
@@ -79,6 +79,6 @@
     "自动化": 1,
     "ocr": 1
   },
-  "message": "Synced 647 verified plugins (rules v6)",
-  "content_sha256": "fab209067e4f309cdbacbf8b3de50e88453c27078b2542a1646232d76e962ec3"
+  "message": "Synced 648 verified plugins (rules v6)",
+  "content_sha256": "27cbcd2eecb69387b9c3d5b59f50f434ed9c700c580eae24c6faf9e749873a5d"
 }
