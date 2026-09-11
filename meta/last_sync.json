@@ -1,10 +1,10 @@
 {
   "status": "ok",
-  "started_at": "2026-09-10T22:00:01.687Z",
-  "finished_at": "2026-09-10T22:02:16.050Z",
-  "plugins_count": 670,
-  "candidates": 784,
-  "rejected_count": 72,
+  "started_at": "2026-09-11T10:00:02.178Z",
+  "finished_at": "2026-09-11T10:06:09.499Z",
+  "plugins_count": 671,
+  "candidates": 785,
+  "rejected_count": 73,
   "rules_version": 6,
   "category_counts": {
     "beautify": 87,
@@ -23,10 +23,10 @@
     "remote": 24,
     "comic": 34,
     "audio": 10,
-    "screensaver": 26,
+    "screensaver": 27,
     "gesture": 33,
     "statistics": 51,
-    "calendar": 10,
+    "calendar": 11,
     "file": 42,
     "network": 81,
     "other": 102,
@@ -79,6 +79,6 @@
     "自动化": 1,
     "ocr": 1
   },
-  "message": "Synced 670 verified plugins (rules v6)",
-  "content_sha256": "aae052f595ddd3ebcfcd37e998387a310c5c8fc790d28e26bba835de07c8e909"
+  "message": "Synced 671 verified plugins (rules v6)",
+  "content_sha256": "a82389bc3b4e6ffbf1448f2294b5e6c8b1f778cdeecefeb2517c2a85601bd567"
 }
