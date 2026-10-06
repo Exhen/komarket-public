@@ -1,13 +1,13 @@
 {
   "status": "ok",
-  "started_at": "2026-10-05T22:00:02.022Z",
-  "finished_at": "2026-10-05T22:01:47.394Z",
+  "started_at": "2026-10-06T10:00:01.855Z",
+  "finished_at": "2026-10-06T10:01:47.922Z",
   "plugins_count": 799,
   "candidates": 933,
   "rejected_count": 84,
   "rules_version": 6,
   "category_counts": {
-    "beautify": 91,
+    "beautify": 92,
     "typography": 27,
     "image": 51,
     "rss": 17,
@@ -16,7 +16,7 @@
     "llm": 37,
     "dictionary": 31,
     "translate": 24,
-    "annotation": 94,
+    "annotation": 93,
     "sync": 131,
     "cloud": 22,
     "ime": 10,
@@ -25,7 +25,7 @@
     "audio": 13,
     "screensaver": 37,
     "gesture": 41,
-    "statistics": 52,
+    "statistics": 53,
     "calendar": 15,
     "file": 44,
     "network": 84,
@@ -80,5 +80,5 @@
     "ocr": 1
   },
   "message": "Synced 799 verified plugins (rules v6)",
-  "content_sha256": "0a641e0333c13691ef7bbbf8458a8590ec052f0da279842be448c74062562b03"
+  "content_sha256": "b0a7a598d758945be96ac7b616946c524615a2c29516f3152ded1b58aab22f2e"
 }
