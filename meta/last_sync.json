@@ -1,13 +1,13 @@
 {
   "status": "ok",
-  "started_at": "2026-10-15T22:00:02.545Z",
-  "finished_at": "2026-10-15T22:01:55.570Z",
-  "plugins_count": 845,
-  "candidates": 983,
+  "started_at": "2026-10-16T10:00:01.854Z",
+  "finished_at": "2026-10-16T10:03:06.079Z",
+  "plugins_count": 848,
+  "candidates": 986,
   "rejected_count": 88,
   "rules_version": 6,
   "category_counts": {
-    "beautify": 95,
+    "beautify": 96,
     "typography": 29,
     "image": 54,
     "rss": 16,
@@ -29,7 +29,7 @@
     "calendar": 16,
     "file": 44,
     "network": 85,
-    "other": 185,
+    "other": 187,
     "安全": 1,
     "查词": 1,
     "词汇": 1,
@@ -79,6 +79,6 @@
     "自动化": 1,
     "ocr": 1
   },
-  "message": "Synced 845 verified plugins (rules v6)",
-  "content_sha256": "d11c7eda172c036ac8041e0998233bcca542315e23d334379bc4bf8f7ae9035a"
+  "message": "Synced 848 verified plugins (rules v6)",
+  "content_sha256": "222c92625c9c2595132d382b806fa2bda5a2e43b3c25d522054bacd19ab22b62"
 }
