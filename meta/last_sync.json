@@ -1,9 +1,9 @@
 {
   "status": "ok",
-  "started_at": "2026-10-17T10:00:02.199Z",
-  "finished_at": "2026-10-17T10:01:50.306Z",
-  "plugins_count": 852,
-  "candidates": 990,
+  "started_at": "2026-10-17T22:00:02.409Z",
+  "finished_at": "2026-10-17T22:02:53.895Z",
+  "plugins_count": 856,
+  "candidates": 994,
   "rejected_count": 88,
   "rules_version": 6,
   "category_counts": {
@@ -12,12 +12,12 @@
     "image": 55,
     "rss": 16,
     "download": 71,
-    "bookstore": 119,
-    "llm": 38,
-    "dictionary": 31,
+    "bookstore": 120,
+    "llm": 39,
+    "dictionary": 32,
     "translate": 26,
     "annotation": 95,
-    "sync": 134,
+    "sync": 135,
     "cloud": 23,
     "ime": 10,
     "remote": 23,
@@ -29,7 +29,7 @@
     "calendar": 16,
     "file": 44,
     "network": 85,
-    "other": 190,
+    "other": 192,
     "安全": 1,
     "查词": 1,
     "词汇": 1,
@@ -79,6 +79,6 @@
     "自动化": 1,
     "ocr": 1
   },
-  "message": "Synced 852 verified plugins (rules v6)",
-  "content_sha256": "ad3a0b1b19cadc88879cf821da395a6669408355e252d407bbb63195641c8f03"
+  "message": "Synced 856 verified plugins (rules v6)",
+  "content_sha256": "3267d8f0f2ee18cbe239ca5e559ba784c9886fc1168b00e78affe5b6dd4b6a8f"
 }
