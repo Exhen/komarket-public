@@ -170,20 +170,6 @@
       }
     },
     {
-      "id": "查词",
-      "name": {
-        "en": "Lookup",
-        "zh": "查词"
-      }
-    },
-    {
-      "id": "词汇",
-      "name": {
-        "en": "Vocabulary",
-        "zh": "词汇"
-      }
-    },
-    {
       "id": "导出",
       "name": {
         "en": "Export",
@@ -216,13 +202,6 @@
       "name": {
         "en": "Review",
         "zh": "复习"
-      }
-    },
-    {
-      "id": "计时",
-      "name": {
-        "en": "Timer",
-        "zh": "计时"
       }
     },
     {
@@ -268,24 +247,10 @@
       }
     },
     {
-      "id": "模拟器",
-      "name": {
-        "en": "Emulator",
-        "zh": "模拟器"
-      }
-    },
-    {
       "id": "配置",
       "name": {
         "en": "Configuration",
         "zh": "配置"
-      }
-    },
-    {
-      "id": "拼音",
-      "name": {
-        "en": "Pinyin",
-        "zh": "拼音"
       }
     },
     {
@@ -303,31 +268,10 @@
       }
     },
     {
-      "id": "任务",
-      "name": {
-        "en": "Tasks",
-        "zh": "任务"
-      }
-    },
-    {
-      "id": "日记",
-      "name": {
-        "en": "Journal",
-        "zh": "日记"
-      }
-    },
-    {
       "id": "生词本",
       "name": {
         "en": "Word list",
         "zh": "生词本"
-      }
-    },
-    {
-      "id": "省电",
-      "name": {
-        "en": "Power saving",
-        "zh": "省电"
       }
     },
     {
@@ -338,38 +282,10 @@
       }
     },
     {
-      "id": "视频",
-      "name": {
-        "en": "Video",
-        "zh": "视频"
-      }
-    },
-    {
-      "id": "数独",
-      "name": {
-        "en": "Sudoku",
-        "zh": "数独"
-      }
-    },
-    {
       "id": "数字",
       "name": {
         "en": "Numbers",
         "zh": "数字"
-      }
-    },
-    {
-      "id": "搜索",
-      "name": {
-        "en": "Search",
-        "zh": "搜索"
-      }
-    },
-    {
-      "id": "提醒",
-      "name": {
-        "en": "Reminders",
-        "zh": "提醒"
       }
     },
     {
@@ -387,24 +303,10 @@
       }
     },
     {
-      "id": "休眠",
-      "name": {
-        "en": "Sleep",
-        "zh": "休眠"
-      }
-    },
-    {
       "id": "学习",
       "name": {
         "en": "Learning",
         "zh": "学习"
-      }
-    },
-    {
-      "id": "训练",
-      "name": {
-        "en": "Training",
-        "zh": "训练"
       }
     },
     {
@@ -429,13 +331,6 @@
       }
     },
     {
-      "id": "优化",
-      "name": {
-        "en": "Optimization",
-        "zh": "优化"
-      }
-    },
-    {
       "id": "游戏",
       "name": {
         "en": "Games",
@@ -443,45 +338,10 @@
       }
     },
     {
-      "id": "游戏化",
-      "name": {
-        "en": "Gamification",
-        "zh": "游戏化"
-      }
-    },
-    {
       "id": "娱乐",
       "name": {
         "en": "Entertainment",
         "zh": "娱乐"
-      }
-    },
-    {
-      "id": "阅读",
-      "name": {
-        "en": "Reading",
-        "zh": "阅读"
-      }
-    },
-    {
-      "id": "中文",
-      "name": {
-        "en": "Chinese",
-        "zh": "中文"
-      }
-    },
-    {
-      "id": "专注",
-      "name": {
-        "en": "Focus",
-        "zh": "专注"
-      }
-    },
-    {
-      "id": "字幕",
-      "name": {
-        "en": "Subtitles",
-        "zh": "字幕"
       }
     },
     {
