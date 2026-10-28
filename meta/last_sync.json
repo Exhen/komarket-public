@@ -1,10 +1,10 @@
 {
   "status": "ok",
-  "started_at": "2026-10-27T22:00:02.204Z",
-  "finished_at": "2026-10-27T22:06:42.109Z",
+  "started_at": "2026-10-28T10:00:02.217Z",
+  "finished_at": "2026-10-28T10:05:19.242Z",
   "plugins_count": 895,
-  "candidates": 1053,
-  "rejected_count": 98,
+  "candidates": 1054,
+  "rejected_count": 99,
   "rules_version": 6,
   "category_counts": {
     "beautify": 73,
@@ -60,5 +60,5 @@
     "ocr": 1
   },
   "message": "Synced 895 verified plugins (rules v6)",
-  "content_sha256": "101d5fa76149ed32b2a9134d31e28a3d0856b7a5a2e71167b311cbae56a5a8eb"
+  "content_sha256": "67be290b60a2f8c50c1a00bf639947b2ee904f14b7c47daa36f0a23ebab44f4d"
 }
