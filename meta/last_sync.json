@@ -1,10 +1,10 @@
 {
   "status": "ok",
-  "started_at": "2026-11-11T22:00:02.497Z",
-  "finished_at": "2026-11-11T22:06:50.685Z",
-  "plugins_count": 1016,
-  "candidates": 1182,
-  "rejected_count": 108,
+  "started_at": "2026-11-12T10:00:01.947Z",
+  "finished_at": "2026-11-12T10:02:29.508Z",
+  "plugins_count": 1021,
+  "candidates": 1184,
+  "rejected_count": 107,
   "rules_version": 6,
   "category_counts": {
     "beautify": 74,
@@ -14,7 +14,7 @@
     "download": 58,
     "bookstore": 100,
     "llm": 45,
-    "dictionary": 27,
+    "dictionary": 26,
     "translate": 17,
     "annotation": 81,
     "sync": 128,
@@ -24,12 +24,12 @@
     "comic": 42,
     "audio": 11,
     "screensaver": 33,
-    "gesture": 35,
+    "gesture": 36,
     "statistics": 44,
     "calendar": 14,
     "file": 30,
     "network": 63,
-    "other": 413,
+    "other": 418,
     "安全": 1,
     "导出": 1,
     "定时": 2,
@@ -58,6 +58,6 @@
     "自动化": 1,
     "ocr": 1
   },
-  "message": "Synced 1016 verified plugins (rules v6)",
-  "content_sha256": "312e4a2122bea606fe52dd751c1cf12172d72225badcf0379084253645ed0d9c"
+  "message": "Synced 1021 verified plugins (rules v6)",
+  "content_sha256": "0964da8f61b70c49594798aebb9eb8f49f7172469a35e182c17d8585956f5e97"
 }
