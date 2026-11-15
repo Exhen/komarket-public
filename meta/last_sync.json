@@ -1,9 +1,9 @@
 {
   "status": "ok",
-  "started_at": "2026-11-14T22:00:02.298Z",
-  "finished_at": "2026-11-14T22:11:23.669Z",
-  "plugins_count": 1031,
-  "candidates": 1192,
+  "started_at": "2026-11-15T10:00:02.168Z",
+  "finished_at": "2026-11-15T10:09:07.979Z",
+  "plugins_count": 1032,
+  "candidates": 1193,
   "rejected_count": 107,
   "rules_version": 6,
   "category_counts": {
@@ -29,7 +29,7 @@
     "calendar": 14,
     "file": 30,
     "network": 64,
-    "other": 427,
+    "other": 428,
     "安全": 1,
     "导出": 1,
     "定时": 2,
@@ -58,6 +58,6 @@
     "自动化": 1,
     "ocr": 1
   },
-  "message": "Synced 1031 verified plugins (rules v6)",
-  "content_sha256": "1e26d8e80c399b5adcdf5a9441ead5d8c5b991d5cb7b7bc7b1e3ec20abeeb4a5"
+  "message": "Synced 1032 verified plugins (rules v6)",
+  "content_sha256": "ff7d24d3d229273b2676867bc5f6f4715a622fe2bf3e54c712ed3e82c2e5ae9d"
 }
