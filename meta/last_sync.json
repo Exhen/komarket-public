@@ -1,7 +1,7 @@
 {
   "status": "ok",
-  "started_at": "2026-11-17T10:00:02.210Z",
-  "finished_at": "2026-11-17T10:02:31.569Z",
+  "started_at": "2026-11-17T22:00:02.333Z",
+  "finished_at": "2026-11-17T22:02:27.045Z",
   "plugins_count": 1040,
   "candidates": 1200,
   "rejected_count": 107,
@@ -16,12 +16,12 @@
     "llm": 45,
     "dictionary": 26,
     "translate": 17,
-    "annotation": 78,
+    "annotation": 77,
     "sync": 127,
     "cloud": 25,
     "ime": 11,
     "remote": 12,
-    "comic": 43,
+    "comic": 44,
     "audio": 11,
     "screensaver": 33,
     "gesture": 36,
@@ -59,5 +59,5 @@
     "ocr": 1
   },
   "message": "Synced 1040 verified plugins (rules v6)",
-  "content_sha256": "f6655bb0afa0b531250af69f2fe769cef4bf7649429bbb3fcfb37b21af8ec2bb"
+  "content_sha256": "c64103ae9a892207d936a3f990fdb62ec96bc32109e5b336168edbd8cf87714e"
 }
