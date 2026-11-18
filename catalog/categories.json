@@ -254,13 +254,6 @@
       }
     },
     {
-      "id": "棋类",
-      "name": {
-        "en": "Board games",
-        "zh": "棋类"
-      }
-    },
-    {
       "id": "启动",
       "name": {
         "en": "Launcher",
